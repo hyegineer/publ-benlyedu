@@ -1,0 +1,15 @@
+<svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15 2.25H2C0.89543 2.25 0 3.14543 0 4.25V15.25C0 16.3546 0.89543 17.25 2 17.25H15C16.1046 17.25 17 16.3546 17 15.25V4.25C17 3.14543 16.1046 2.25 15 2.25Z" fill="white"/>
+<path d="M15 2.75H2C1.17157 2.75 0.5 3.42157 0.5 4.25V15.25C0.5 16.0784 1.17157 16.75 2 16.75H15C15.8284 16.75 16.5 16.0784 16.5 15.25V4.25C16.5 3.42157 15.8284 2.75 15 2.75Z" stroke="#ACACAC"/>
+<path d="M4.5 0.75V4.75" stroke="#ACACAC"/>
+<path d="M12.5 0.75V4.75" stroke="#ACACAC"/>
+<path d="M4.5 6.75V7.75" stroke="#ACACAC"/>
+<path d="M8.5 6.75V7.75" stroke="#ACACAC"/>
+<path d="M12.5 6.75V7.75" stroke="#ACACAC"/>
+<path d="M4.5 9.75V10.75" stroke="#ACACAC"/>
+<path d="M8.5 9.75V10.75" stroke="#ACACAC"/>
+<path d="M12.5 9.75V10.75" stroke="#ACACAC"/>
+<path d="M4.5 12.75V13.75" stroke="#ACACAC"/>
+<path d="M8.5 12.75V13.75" stroke="#ACACAC"/>
+<path d="M12.5 12.75V13.75" stroke="#ACACAC"/>
+</svg>

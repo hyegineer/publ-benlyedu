@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>벤리에듀</title>
+
+    <!-- Open Graph -->
+    <meta name="title" content="Benly Edu">
+    <meta name="author" content="벤리에듀">
+    <meta name="description" content="벤리에듀 - AI 기억력 강화 e러닝 솔루션">
+    <meta name="keywords" content="benlyedu, Benlyedu, 벤리에듀, AI, 기억력, 강화, e러닝, 솔루션">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+
+    <!-- TODO: web url 설정해야합니다 -->
+
+    <!-- <meta property="og:url" content="해당 웹 url"> -->
+    <meta property="og:title" content="벤리에듀 (Benly Edu)">
+    <meta property="og:description" content="AI 기억력 강화 e러닝 솔루션">
+
+    <!-- TODO: meta thumbnail 설정 -->
+    <meta property="og:image" content="assets/images/og/og-thumbnail.png">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-36x36.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-72x72.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-256x256.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#017afb">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- JS -->
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+
+      <!-- TODO: PC 버전 헤더 -->
+      <div class="header">
+        <div class="header-inner">
+
+          <!-- 로고 -->
+          <h1 class="logo">
+            <a href="index.html">
+              <img src="assets/images/logo/logo-color.svg" alt="">
+            </a>
+          </h1>
+
+          <!-- END 로고 -->
+
+          <!-- 네비 -->
+          <div class="header-nav-wrap">
+            <ul class="nav-list-grp">
+              <li class="list active">
+                <a href="#" class="link">홈</a>
+              </li>
+              <li class="list">
+                <a href="#" class="link">엔터프라이즈 문의</a>
+              </li>
+              <li class="list">
+                <a href="#" class="link">과목별 랭킹</a>
+              </li>
+              <li class="list">
+                <a href="#" class="link">전체상품</a>
+              </li>
+              <li class="list">
+                <a href="#" class="link">관리자 페이지</a>
+              </li>
+              <li class="list">
+                <a href="#" class="link">내 채널</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- END 네비 -->
+
+          <!-- 우측 버튼들 -->
+          <div class="header-btn-wrap">
+            <ul class="btn-list-grp">
+              <li class="list">
+                <button type="button" onclick="location.href='result-search.html';" class="header-btn">
+                  <span class="txt-hidden">검색하기</span>
+                  <i class="ico ico-40 ico-search"></i>
+                </button>
+              </li>
+              <li class="list">
+                <button type="button" class="header-btn">
+                  <span class="txt-hidden">알림</span>
+                  <i class="ico ico-40 ico-alarm"></i>
+                </button>
+              </li>
+              <li class="list">
+                <button type="button" class="header-btn myinfo-btn">
+                  <span class="txt-hidden">내 정보</span>
+                  <figure class="thumbnail circle">
+                    <img src="assets/images/sample/img-sample-hdprofile.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <i class="ico ico-arrow-down ico-dark"></i>
+                </button>
+
+                <!-- FIXME: 서브네비 구현 -->
+                <div class="sub-nav-list-wrap">
+                  <ul class="sub-nav-list-grp">
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-user"></i>
+                        <span class="txt">계정 관리</span>
+                      </a>
+                    </li>
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-wordbook"></i>
+                        <span class="txt">내가 만든 단어장</span>
+                      </a>
+                    </li>
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-like"></i>
+                        <span class="txt">찜목록</span>
+                      </a>
+                    </li>
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-logout"></i>
+                        <span class="txt">로그아웃</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="list">
+                <button type="button" class="btn btn-h40 square-btn blue-solid-btn apply-btn">암기박스 신청</button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- END 우측 버튼들 -->
+        </div>
+      </div>
+
+      <!-- END PC 버전 헤더 -->
+
+      <!-- 페이지 -->
+      <div class="setting-sell-page page-wrapper">
+        <div class="page-container">
+
+          <!-- 페이지 : 판매관리 -->
+          <div class="page">
+
+            <!-- TODO: MOBILE 버전 헤더 -->
+            <div></div>
+
+            <!-- END MOBILE 버전 헤더 -->
+            <section class="section">
+              <div class="inner">
+
+                <!-- 레이아웃 : 플렉스 컨테이너 -->
+                <div class="l-container type-flex">
+
+                  <!-- 레이아웃 : 왼쪽 -->
+                  <div class="l-content-left">
+
+                    <!-- 왼쪽 사이드바 -->
+                    <div class="sidebar">
+
+                      <!-- 내 프로필 -->
+                      <div class="profile-card-item type-02">
+                        <figure class="thumbnail circle">
+                          <img src="assets/images/sample/img-sample-profilethumbnail1.png" alt="" class="thumbnail-img">
+                        </figure>
+                        <ul class="card-information">
+                          <li>
+                            <h3 class="card-name">benly@benlyedu.com</h3>
+                          </li>
+                          <li>
+                            <input type="file" id="profile-img" class="none">
+                            <label for="profile-img" class="btn btn-h30 square-btn gray-bd-btn">프로필 이미지 변경</label>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- END 내 프로필 -->
+
+                      <!-- 사이드 메뉴 -->
+                      <div class="sidebar-nav-wrap">
+                        <div class="sidebar-nav-ttl">
+                          <span class="ttl">채널 관리</span>
+                        </div>
+                        <ul class="sidebar-nav-list-grp">
+                          <li class="list active">
+                            <a href="setting-sell.html" class="link">판매 관리</a>
+                          </li>
+                          <li class="list">
+                            <a href="setting-subscriber.html" class="link">구독자 관리</a>
+                          </li>
+                        </ul>
+                      </div>
+
+                      <!-- END 사이드 메뉴 -->
+                    </div>
+
+                    <!-- END 왼쪽 사이드바 -->
+                  </div>
+
+                  <!-- END 레이아웃 : 왼쪽 -->
+
+                  <!-- 레이아웃 : 오른쪽 -->
+                  <div class="l-content-right">
+
+                    <!-- 오른쪽 내용 -->
+                    <div class="content-wrapper">
+                      <div class="content-container">
+
+                        <!-- 제목 -->
+                        <div class="ttl-wrap">
+                          <div class="ttl-item">
+                            <h2 class="ttl">판매관리</h2>
+                          </div>
+                        </div>
+
+                        <!-- END 제목 -->
+
+                        <!-- 내용 -->
+                        <div class="content">
+
+                          <!-- 상단 정보 -->
+                          <div class="white-box type-pd20 ss-top-box">
+                            <div class="box-dl-grp">
+                              <dl class="box-dl">
+                                <dt>
+                                  <div class="d-flex-row">
+                                    <i class="ico ico-users"></i>
+                                    <span class="txt mg-left">유료 구독자</span>
+                                  </div>
+                                </dt>
+                                <dd>
+                                  <span class="color-txt">100,000</span>
+                                </dd>
+                              </dl>
+                              <dl class="box-dl">
+                                <dt>
+                                  <div class="d-flex-row">
+                                    <i class="ico ico-bag"></i>
+                                    <span class="txt mg-left">누적 구독 결제</span>
+                                  </div>
+                                </dt>
+                                <dd>
+                                  <span class="color-txt">100,000</span>
+                                </dd>
+                              </dl>
+                              <dl class="box-dl">
+                                <dt>
+                                  <div class="d-flex-row">
+                                    <i class="ico ico-coins"></i>
+                                    <span class="txt mg-left">총 결제 금액</span>
+                                  </div>
+                                </dt>
+                                <dd>
+                                  <span class="color-txt">100,000</span>
+                                </dd>
+                              </dl>
+                              <dl class="box-dl">
+                                <dt>
+                                  <div class="d-flex-row">
+                                    <i class="ico ico-bang ico-dark"></i>
+                                    <span class="txt mg-left">취소된 결제</span>
+                                  </div>
+                                </dt>
+                                <dd>
+                                  <span class="color-txt">100,000</span>
+                                </dd>
+                              </dl>
+                            </div>
+                          </div>
+
+                          <!-- END 상단 정보 -->
+
+                          <!-- 검색 옵션들 -->
+                          <div class="search-option-container">
+                            <select class="inp">
+                              <option value="">전체채널</option>
+                            </select>
+                            <div class="d-iflex-row type-gap5">
+                              <div class="inp-btn-item type-date">
+
+                                <!-- FIXME: 데이트피커 설치 -->
+                                <input type="text" value="2023.12.14" class="inp">
+                                <button type="button" class="btn date-btn">
+                                  <span class="txt-hidden">달력</span>
+                                  <i class="ico ico-16 ico-date"></i>
+                                </button>
+                              </div>
+                              <span class="divider">~</span>
+                              <div class="inp-btn-item type-date">
+
+                                <!-- FIXME: 데이트피커 설치 -->
+                                <input type="text" value="2023.12.14" class="inp">
+                                <button type="button" class="btn date-btn">
+                                  <span class="txt-hidden">달력</span>
+                                  <i class="ico ico-16 ico-date"></i>
+                                </button>
+                              </div>
+                            </div>
+                            <div class="inp-btn-item">
+                              <input type="text" placeholder="검색어 입력" class="inp">
+                              <button type="button" class="btn btn-h30 square-btn blue-solid-btn">검색</button>
+                            </div>
+                          </div>
+
+                          <!-- END 검색 옵션들 -->
+
+                          <!-- 왼쪽 텍스트 + 오른쪽 버튼 -->
+                          <div class="txt-btn-container">
+                            <span class="left-txt">검색 결과: 4명</span>
+                            <div class="mg-left">
+                              <button type="button" class="btn btn-h30 square-btn gray-bd-btn">
+                                <span class="txt">다운로드</span>
+                                <i class="ico ico-18 ico-download"></i>
+                              </button>
+                            </div>
+                          </div>
+
+                          <!-- END 왼쪽 텍스트 + 오른쪽 버튼 -->
+
+                          <!-- 결과 섹션 -->
+                          <div class="white-box type-pd20">
+                            <div class="col-list-grp">
+
+                              <!-- 리스트 -->
+                              <div class="list">
+
+                                <!-- 카드 -->
+                                <div class="list-card-item type-01">
+                                  <div class="list-card-left">
+                                    <figure class="thumbnail circle">
+                                      <img src="assets/images/sample/img-sample-profilethumbnail2.png" alt="" class="thumbnail-img">
+                                    </figure>
+                                    <ul class="card-information">
+                                      <li>
+                                        <div class="d-iflex-row type-gap5">
+                                          <div class="card-txt">
+                                            <b>김민수</b><span>(testid)</span>
+                                          </div>
+                                          <div class="card-txt">
+                                            <b>: 홍벤리</b><span>(hongbenly.benlyedu.com)</span>
+                                          </div>
+                                        </div>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                  <div class="list-card-right">
+                                    <dl class="card-dl">
+                                      <dt>재구독</dt>
+                                      <dd>
+                                        <div class="d-iflex-row type-gap5">
+                                          <span class="color-txt">1000</span>
+                                          <span>회</span>
+                                        </div>
+                                      </dd>
+                                    </dl>
+                                    <dl class="card-dl">
+                                      <dt>결제금액</dt>
+                                      <dd>
+                                        <div class="d-iflex-row type-gap5">
+                                          <span class="color-txt">9,999,900</span>
+                                          <span>원</span>
+                                        </div>
+                                      </dd>
+                                    </dl>
+                                  </div>
+                                </div>
+
+                                <!-- END 카드 -->
+                              </div>
+
+                              <!-- END 리스트 -->
+                            </div>
+                          </div>
+
+                          <!-- END 결과 섹션 -->
+                        </div>
+
+                        <!-- END 내용 -->
+                      </div>
+                    </div>
+
+                    <!-- END 오른쪽 내용 -->
+                  </div>
+
+                  <!-- END 레이아웃 : 오른쪽 -->
+                </div>
+
+                <!-- END 레이아웃 : 플렉스 컨테이너 -->
+              </div>
+            </section>
+          </div>
+
+          <!-- END 페이지 : 판매관리 -->
+        </div>
+      </div>
+
+      <!-- END 페이지 -->
+
+      <!-- 푸터 -->
+      <div class="footer-wrap">
+
+        <!-- 푸터 가이드 -->
+        <div class="footer-txt-container">
+          <p class="txt-sm">어떤 암기박스가 필요하신가요?</p>
+          <h3 class="txt-lg">원하는 암기박스가 없다면, <br>
+            벤리에게 신청하세요!</h3>
+          <button type="button" class="blue-txt-btn">암기박스 신청하기</button>
+        </div>
+
+        <!-- END 푸터 가이드 -->
+
+        <!-- 푸터 -->
+        <footer class="footer">
+          <div class="footer-inner">
+            <h6 class="logo">
+              <a href="#">
+                <img src="assets/images/logo/logo-white.svg" alt="">
+              </a>
+            </h6>
+            <div class="footer-info-wrap">
+              <ul class="info-list-grp">
+                <li class="list">업체명 : 벤리</li>
+                <li class="list">사업자등록번호 : 368-25-01378</li>
+                <li class="list">통신판매업신고번호 : 제 2022-서울송파-00240호</li>
+                <li class="list">대표이사 : 이정윤</li>
+                <li class="list">문의: help@office.benly.kr</li>
+              </ul>
+            </div>
+            <div class="footer-btn-wrap">
+              <ul class="btn-list-grp">
+                <li class="list">
+                  <a href="#" class="link">이용 약관</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">개인정보 취급방침</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">유료 이용약관</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">청소년 보호정책</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+        <!-- END 푸터 -->
+      </div>
+
+      <!-- END 푸터 -->
+    </div>
+
+    <!-- <script src="assets/js/ui.js"></script> -->
+  </body>
+</html>
