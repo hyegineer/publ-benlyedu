@@ -1973,6 +1973,21 @@ img {
   background-image: url(../images/ico/ico-fold-arrow-white.svg);
 }
 
+/* =========== 페이지 : 목차 =========== */
+.index-page {
+  background: var(--background, #fafafa);
+  padding: 100px 0;
+  min-height: 100vh;
+}
+.index-page .tbl tbody tr:last-child td {
+  border-bottom: 0;
+}
+.index-page .ttl {
+  font-size: max(28rem, 21px);
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
 /* =========== 페이지 : 메인 =========== */
 .main-page .section .sc-cards-01:last-child {
   margin-bottom: 0;
