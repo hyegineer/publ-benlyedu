@@ -71,27 +71,33 @@
           <!-- END 로고 -->
 
           <!-- 네비 -->
-          <div class="header-nav-wrap">
-            <ul class="nav-list-grp">
-              <li class="list active">
-                <a href="#" class="link">홈</a>
-              </li>
-              <li class="list">
-                <a href="#" class="link">엔터프라이즈 문의</a>
-              </li>
-              <li class="list">
-                <a href="#" class="link">과목별 랭킹</a>
-              </li>
-              <li class="list">
-                <a href="#" class="link">전체상품</a>
-              </li>
-              <li class="list">
-                <a href="#" class="link">관리자 페이지</a>
-              </li>
-              <li class="list">
-                <a href="#" class="link">내 채널</a>
-              </li>
-            </ul>
+          <div class="header-nav-wrap mb-none">
+            <button type="button" class="header-gnb-btn">
+              <span class="txt">메뉴</span>
+              <i class="ico ico-arrow-down ico-dark"></i>
+            </button>
+            <div class="header-gnb-wrap">
+              <ul class="nav-list-grp">
+                <li class="list active">
+                  <a href="#" class="link">홈</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">엔터프라이즈 문의</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">과목별 랭킹</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">전체상품</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">관리자 페이지</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">내 채널</a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <!-- END 네비 -->
@@ -111,7 +117,7 @@
                   <i class="ico ico-40 ico-alarm"></i>
                 </button>
               </li>
-              <li class="list">
+              <li class="list mb-none">
                 <button type="button" class="header-btn myinfo-btn">
                   <span class="txt-hidden">내 정보</span>
                   <figure class="thumbnail circle">
@@ -150,8 +156,14 @@
                   </ul>
                 </div>
               </li>
-              <li class="list">
+              <li class="list mb-none">
                 <button type="button" class="btn btn-h40 square-btn blue-solid-btn apply-btn">암기박스 신청</button>
+              </li>
+              <li class="list mb-show">
+                <button type="button" class="header-btn">
+                  <span class="txt-hidden">모바일 메뉴</span>
+                  <i class="ico ico-40 ico-navlist"></i>
+                </button>
               </li>
             </ul>
           </div>
@@ -185,16 +197,6 @@
                     <li>
                       <div class="card-name-wrap">
                         <h2 class="card-name">김선우's 학습 박스</h2>
-                        <div class="d-iflex-row type-gap14">
-                          <button type="button" class="btn btn-h42 square-btn gray-bd-btn ico-btn">
-                            <i class="ico ico-20 ico-edit"></i>
-                            <span class="txt">채널편집</span>
-                          </button>
-                          <button type="button" class="btn btn-h42 square-btn gray-bd-btn ico-btn">
-                            <i class="ico ico-20 ico-setting"></i>
-                            <span class="txt">채널관리</span>
-                          </button>
-                        </div>
                       </div>
                     </li>
                     <li>
@@ -219,11 +221,12 @@
                     <li>
                       <div class="card-btn-wrap">
                         <div class="d-iflex-row type-gap8">
-                          <span class="btn btn-h32 rounded-btn gray-bd-btn">공개채널</span>
-                          <span class="btn btn-h32 rounded-btn gray-bd-btn">비공개채널</span>
-                          <button type="button" class="btn btn-h32 rounded-btn gray-bd-btn">구독하기</button>
-                          <button type="button" class="btn btn-h32 rounded-btn gray-bd-btn">구독중</button>
-                          <span class="btn btn-h32 rounded-btn gray-bd-btn">월 9,900원</span>
+                          <span class="btn btn-h42 square-btn gray-bd-btn">채널편집</span>
+                          <span class="btn btn-h42 square-btn gray-bd-btn">채널관리</span>
+                          <span class="btn btn-h42 square-btn light-blue-solid-btn">공개채널</span>
+                          <button type="button" class="btn btn-h42 square-btn light-red-solid-btn">비공개채널</button>
+                          <button type="button" class="btn btn-h42 square-btn green-solid-btn">구독하기</button>
+                          <span class="btn btn-h42 square-btn light-blue-solid-btn">월 9,900원</span>
                         </div>
                         <button type="button" class="btn more-btn">
                           <span class="txt-hidden">더보기</span>
@@ -342,23 +345,52 @@
 
                                         <!-- <span class="btn btn-h32 rounded-btn red-solid-btn">비공개</span> -->
                                       </div>
-                                      <div class="mg-left d-iflex-row">
+                                      <div class="mg-left d-iflex-row type-gap5">
                                         <button type="button" class="btn setting-btn">
-                                          <span class="txt-hidden">설정하기</span>
-                                          <i class="ico ico-dots"></i>
+                                          <span class="txt-hidden">추가하기</span>
+                                          <i class="ico ico-add"></i>
                                         </button>
+                                        <div class="btn-set d-iflex-row">
+                                          <button type="button" class="btn bsbtn setting-btn">
+                                            <span class="txt-hidden">설정하기</span>
+                                            <i class="ico ico-dots"></i>
+                                          </button>
+                                          <div class="btn-set-wrap">
+                                            <ul class="btn-set-list-grp">
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">수정하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공개로 전환</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">사본 만들기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">이동</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공유하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">세트추가</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">삭제</button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
                                   </li>
                                   <li>
                                     <h4 class="card-name">수능 전용 사자성어 300제</h4>
                                   </li>
-                                  <li>
-                                    <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
-                                  </li>
                                 </ul>
                               </div>
                               <div class="box-card-bottom">
+                                <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
                                 <div class="box-dl-grp">
                                   <dl class="box-dl">
                                     <dt>진행률</dt>
@@ -410,23 +442,52 @@
                                         <!-- <span class="btn btn-h32 rounded-btn green-solid-btn">공개</span> -->
                                         <span class="btn btn-h32 rounded-btn red-solid-btn">비공개</span>
                                       </div>
-                                      <div class="mg-left d-iflex-row">
+                                      <div class="mg-left d-iflex-row type-gap5">
                                         <button type="button" class="btn setting-btn">
-                                          <span class="txt-hidden">설정하기</span>
-                                          <i class="ico ico-dots"></i>
+                                          <span class="txt-hidden">추가하기</span>
+                                          <i class="ico ico-add"></i>
                                         </button>
+                                        <div class="btn-set d-iflex-row">
+                                          <button type="button" class="btn bsbtn setting-btn">
+                                            <span class="txt-hidden">설정하기</span>
+                                            <i class="ico ico-dots"></i>
+                                          </button>
+                                          <div class="btn-set-wrap">
+                                            <ul class="btn-set-list-grp">
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">수정하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공개로 전환</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">사본 만들기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">이동</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공유하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">세트추가</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">삭제</button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
                                   </li>
                                   <li>
                                     <h4 class="card-name">수능 전용 사자성어 300제</h4>
                                   </li>
-                                  <li>
-                                    <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
-                                  </li>
                                 </ul>
                               </div>
                               <div class="box-card-bottom">
+                                <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
                                 <div class="box-dl-grp">
                                   <dl class="box-dl">
                                     <dt>진행률</dt>
@@ -478,23 +539,52 @@
 
                                         <!-- <span class="btn btn-h32 rounded-btn red-solid-btn">비공개</span> -->
                                       </div>
-                                      <div class="mg-left d-iflex-row">
+                                      <div class="mg-left d-iflex-row type-gap5">
                                         <button type="button" class="btn setting-btn">
-                                          <span class="txt-hidden">설정하기</span>
-                                          <i class="ico ico-dots"></i>
+                                          <span class="txt-hidden">추가하기</span>
+                                          <i class="ico ico-add"></i>
                                         </button>
+                                        <div class="btn-set d-iflex-row">
+                                          <button type="button" class="btn bsbtn setting-btn">
+                                            <span class="txt-hidden">설정하기</span>
+                                            <i class="ico ico-dots"></i>
+                                          </button>
+                                          <div class="btn-set-wrap">
+                                            <ul class="btn-set-list-grp">
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">수정하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공개로 전환</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">사본 만들기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">이동</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공유하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">세트추가</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">삭제</button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
                                   </li>
                                   <li>
                                     <h4 class="card-name">수능 전용 사자성어 300제</h4>
                                   </li>
-                                  <li>
-                                    <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
-                                  </li>
                                 </ul>
                               </div>
                               <div class="box-card-bottom">
+                                <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
                                 <div class="box-dl-grp">
                                   <dl class="box-dl">
                                     <dt>진행률</dt>
@@ -546,23 +636,52 @@
                                         <!-- <span class="btn btn-h32 rounded-btn green-solid-btn">공개</span> -->
                                         <span class="btn btn-h32 rounded-btn red-solid-btn">비공개</span>
                                       </div>
-                                      <div class="mg-left d-iflex-row">
+                                      <div class="mg-left d-iflex-row type-gap5">
                                         <button type="button" class="btn setting-btn">
-                                          <span class="txt-hidden">설정하기</span>
-                                          <i class="ico ico-dots"></i>
+                                          <span class="txt-hidden">추가하기</span>
+                                          <i class="ico ico-add"></i>
                                         </button>
+                                        <div class="btn-set d-iflex-row">
+                                          <button type="button" class="btn bsbtn setting-btn">
+                                            <span class="txt-hidden">설정하기</span>
+                                            <i class="ico ico-dots"></i>
+                                          </button>
+                                          <div class="btn-set-wrap">
+                                            <ul class="btn-set-list-grp">
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">수정하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공개로 전환</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">사본 만들기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">이동</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공유하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">세트추가</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">삭제</button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
                                   </li>
                                   <li>
                                     <h4 class="card-name">수능 전용 사자성어 300제</h4>
                                   </li>
-                                  <li>
-                                    <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
-                                  </li>
                                 </ul>
                               </div>
                               <div class="box-card-bottom">
+                                <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
                                 <div class="box-dl-grp">
                                   <dl class="box-dl">
                                     <dt>진행률</dt>
@@ -614,23 +733,52 @@
 
                                         <!-- <span class="btn btn-h32 rounded-btn red-solid-btn">비공개</span> -->
                                       </div>
-                                      <div class="mg-left d-iflex-row">
+                                      <div class="mg-left d-iflex-row type-gap5">
                                         <button type="button" class="btn setting-btn">
-                                          <span class="txt-hidden">설정하기</span>
-                                          <i class="ico ico-dots"></i>
+                                          <span class="txt-hidden">추가하기</span>
+                                          <i class="ico ico-add"></i>
                                         </button>
+                                        <div class="btn-set d-iflex-row">
+                                          <button type="button" class="btn bsbtn setting-btn">
+                                            <span class="txt-hidden">설정하기</span>
+                                            <i class="ico ico-dots"></i>
+                                          </button>
+                                          <div class="btn-set-wrap">
+                                            <ul class="btn-set-list-grp">
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">수정하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공개로 전환</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">사본 만들기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">이동</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공유하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">세트추가</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">삭제</button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
                                   </li>
                                   <li>
                                     <h4 class="card-name">수능 전용 사자성어 300제</h4>
                                   </li>
-                                  <li>
-                                    <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
-                                  </li>
                                 </ul>
                               </div>
                               <div class="box-card-bottom">
+                                <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
                                 <div class="box-dl-grp">
                                   <dl class="box-dl">
                                     <dt>진행률</dt>
@@ -747,23 +895,52 @@
 
                                         <!-- <span class="btn btn-h32 rounded-btn red-solid-btn">비공개</span> -->
                                       </div>
-                                      <div class="mg-left d-iflex-row">
+                                      <div class="mg-left d-iflex-row type-gap5">
                                         <button type="button" class="btn setting-btn">
-                                          <span class="txt-hidden">설정하기</span>
-                                          <i class="ico ico-dots"></i>
+                                          <span class="txt-hidden">추가하기</span>
+                                          <i class="ico ico-add"></i>
                                         </button>
+                                        <div class="btn-set d-iflex-row">
+                                          <button type="button" class="btn bsbtn setting-btn">
+                                            <span class="txt-hidden">설정하기</span>
+                                            <i class="ico ico-dots"></i>
+                                          </button>
+                                          <div class="btn-set-wrap">
+                                            <ul class="btn-set-list-grp">
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">수정하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공개로 전환</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">사본 만들기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">이동</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공유하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">세트추가</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">삭제</button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
                                   </li>
                                   <li>
                                     <h4 class="card-name">수능 전용 사자성어 300제</h4>
                                   </li>
-                                  <li>
-                                    <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
-                                  </li>
                                 </ul>
                               </div>
                               <div class="box-card-bottom">
+                                <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
                                 <div class="box-dl-grp">
                                   <dl class="box-dl">
                                     <dt>진행률</dt>
@@ -815,23 +992,52 @@
                                         <!-- <span class="btn btn-h32 rounded-btn green-solid-btn">공개</span> -->
                                         <span class="btn btn-h32 rounded-btn red-solid-btn">비공개</span>
                                       </div>
-                                      <div class="mg-left d-iflex-row">
+                                      <div class="mg-left d-iflex-row type-gap5">
                                         <button type="button" class="btn setting-btn">
-                                          <span class="txt-hidden">설정하기</span>
-                                          <i class="ico ico-dots"></i>
+                                          <span class="txt-hidden">추가하기</span>
+                                          <i class="ico ico-add"></i>
                                         </button>
+                                        <div class="btn-set d-iflex-row">
+                                          <button type="button" class="btn bsbtn setting-btn">
+                                            <span class="txt-hidden">설정하기</span>
+                                            <i class="ico ico-dots"></i>
+                                          </button>
+                                          <div class="btn-set-wrap">
+                                            <ul class="btn-set-list-grp">
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">수정하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공개로 전환</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">사본 만들기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">이동</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공유하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">세트추가</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">삭제</button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
                                   </li>
                                   <li>
                                     <h4 class="card-name">수능 전용 사자성어 300제</h4>
                                   </li>
-                                  <li>
-                                    <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
-                                  </li>
                                 </ul>
                               </div>
                               <div class="box-card-bottom">
+                                <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
                                 <div class="box-dl-grp">
                                   <dl class="box-dl">
                                     <dt>진행률</dt>
@@ -883,23 +1089,52 @@
 
                                         <!-- <span class="btn btn-h32 rounded-btn red-solid-btn">비공개</span> -->
                                       </div>
-                                      <div class="mg-left d-iflex-row">
+                                      <div class="mg-left d-iflex-row type-gap5">
                                         <button type="button" class="btn setting-btn">
-                                          <span class="txt-hidden">설정하기</span>
-                                          <i class="ico ico-dots"></i>
+                                          <span class="txt-hidden">추가하기</span>
+                                          <i class="ico ico-add"></i>
                                         </button>
+                                        <div class="btn-set d-iflex-row">
+                                          <button type="button" class="btn bsbtn setting-btn">
+                                            <span class="txt-hidden">설정하기</span>
+                                            <i class="ico ico-dots"></i>
+                                          </button>
+                                          <div class="btn-set-wrap">
+                                            <ul class="btn-set-list-grp">
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">수정하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공개로 전환</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">사본 만들기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">이동</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공유하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">세트추가</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">삭제</button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
                                   </li>
                                   <li>
                                     <h4 class="card-name">수능 전용 사자성어 300제</h4>
                                   </li>
-                                  <li>
-                                    <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
-                                  </li>
                                 </ul>
                               </div>
                               <div class="box-card-bottom">
+                                <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
                                 <div class="box-dl-grp">
                                   <dl class="box-dl">
                                     <dt>진행률</dt>
@@ -951,23 +1186,52 @@
                                         <!-- <span class="btn btn-h32 rounded-btn green-solid-btn">공개</span> -->
                                         <span class="btn btn-h32 rounded-btn red-solid-btn">비공개</span>
                                       </div>
-                                      <div class="mg-left d-iflex-row">
+                                      <div class="mg-left d-iflex-row type-gap5">
                                         <button type="button" class="btn setting-btn">
-                                          <span class="txt-hidden">설정하기</span>
-                                          <i class="ico ico-dots"></i>
+                                          <span class="txt-hidden">추가하기</span>
+                                          <i class="ico ico-add"></i>
                                         </button>
+                                        <div class="btn-set d-iflex-row">
+                                          <button type="button" class="btn bsbtn setting-btn">
+                                            <span class="txt-hidden">설정하기</span>
+                                            <i class="ico ico-dots"></i>
+                                          </button>
+                                          <div class="btn-set-wrap">
+                                            <ul class="btn-set-list-grp">
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">수정하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공개로 전환</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">사본 만들기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">이동</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공유하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">세트추가</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">삭제</button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
                                   </li>
                                   <li>
                                     <h4 class="card-name">수능 전용 사자성어 300제</h4>
                                   </li>
-                                  <li>
-                                    <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
-                                  </li>
                                 </ul>
                               </div>
                               <div class="box-card-bottom">
+                                <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
                                 <div class="box-dl-grp">
                                   <dl class="box-dl">
                                     <dt>진행률</dt>
@@ -1019,23 +1283,52 @@
 
                                         <!-- <span class="btn btn-h32 rounded-btn red-solid-btn">비공개</span> -->
                                       </div>
-                                      <div class="mg-left d-iflex-row">
+                                      <div class="mg-left d-iflex-row type-gap5">
                                         <button type="button" class="btn setting-btn">
-                                          <span class="txt-hidden">설정하기</span>
-                                          <i class="ico ico-dots"></i>
+                                          <span class="txt-hidden">추가하기</span>
+                                          <i class="ico ico-add"></i>
                                         </button>
+                                        <div class="btn-set d-iflex-row">
+                                          <button type="button" class="btn bsbtn setting-btn">
+                                            <span class="txt-hidden">설정하기</span>
+                                            <i class="ico ico-dots"></i>
+                                          </button>
+                                          <div class="btn-set-wrap">
+                                            <ul class="btn-set-list-grp">
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">수정하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공개로 전환</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">사본 만들기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">이동</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공유하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">세트추가</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">삭제</button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
                                       </div>
                                     </div>
                                   </li>
                                   <li>
                                     <h4 class="card-name">수능 전용 사자성어 300제</h4>
                                   </li>
-                                  <li>
-                                    <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
-                                  </li>
                                 </ul>
                               </div>
                               <div class="box-card-bottom">
+                                <p class="card-desc">사자성어를 외워보자! 사자성어는 너무 어려워!</p>
                                 <div class="box-dl-grp">
                                   <dl class="box-dl">
                                     <dt>진행률</dt>
