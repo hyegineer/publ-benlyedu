@@ -43,6 +43,7 @@ html {
 
 body {
   font-size: max(16rem, 11px);
+  letter-spacing: -0.4px;
 }
 
 img {
