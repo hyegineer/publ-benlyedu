@@ -837,6 +837,9 @@ img {
   }
 }
 @media all and (max-width: 600px) {
+  .header {
+    border-bottom: 1px solid var(--sub-gray2, #C0C0C0);
+  }
   .header .logo {
     width: 93px;
   }
@@ -952,7 +955,7 @@ img {
     width: 95%;
   }
   .footer-txt-container {
-    padding: 47px 0;
+    padding: 50px 0;
     gap: 27px;
   }
   .footer-txt-container .txt-sm {
@@ -983,7 +986,7 @@ img {
   }
 }
 @media all and (max-width: 600px) {
-  .footer-txt-container {
+  .footer-txt-container .txt-sm {
     display: none;
   }
   .footer {
@@ -997,6 +1000,9 @@ img {
     padding: 0 20px;
     flex-direction: column;
     gap: 15px;
+  }
+  .footer-btn-wrap {
+    max-width: 100%;
   }
 }
 .popup-wrapper {
@@ -2578,9 +2584,7 @@ img {
   padding: 100rem 0;
 }
 .result-search-page .divider {
-  width: 90%;
-  max-width: 1532px;
-  margin: 0 auto;
+  width: 100%;
   height: 1px;
   background-color: #c0c0c0;
   display: block;
@@ -2592,17 +2596,32 @@ img {
   width: calc((100% - 190rem) / 6);
 }
 
-.rs-banner-section {
-  padding-bottom: 74rem;
+.rs-txt-section {
+  padding: 40rem 0;
 }
-.rs-banner-section .banner-container {
+.rs-txt-section .banner-container {
   margin-bottom: 30px;
 }
-.rs-banner-section .section-content {
+.rs-txt-section .section-content {
   margin-bottom: 25px;
 }
-.rs-banner-section .section-content:last-child {
+.rs-txt-section .section-content:last-child {
   margin-bottom: 0;
+}
+
+.rs-txt-box {
+  padding: 35rem 50rem;
+  border-radius: 0;
+}
+.rs-txt-box .txt {
+  font-size: 24rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #000;
+  word-break: keep-all;
+}
+.rs-txt-box .color-txt {
+  color: var(--main, #017afb);
 }
 
 .rs-channel-section {
@@ -2623,25 +2642,105 @@ img {
   padding-bottom: 100rem;
 }
 
-.rs-contents-section .inner {
-  max-width: 1450px;
+@media all and (max-width: 1500px) {
+  .result-search-page .grid-list-grp {
+    gap: 25px;
+  }
+  .result-search-page .grid-list-grp .list {
+    width: calc((100% - 110px) / 5);
+  }
+  .rs-txt-section {
+    padding: 30px 0;
+  }
+  .rs-contents-section .inner {
+    max-width: 100%;
+  }
 }
-
-.rs-txt-box {
-  padding: 35rem 50rem;
-  border-radius: 0;
+@media all and (max-width: 1280px) {
+  .result-search-page .section-divider {
+    padding: 60px 0;
+  }
+  .rs-txt-box {
+    padding: 23px 33px;
+  }
+  .rs-txt-box .txt {
+    font-size: 15px;
+  }
+  .rs-channel-section {
+    padding: 30px 0;
+  }
+  .rs-channel-section .ttl-wrap {
+    margin-bottom: 25px;
+  }
+  .rs-contents-section {
+    padding-bottom: 67px;
+  }
 }
-.rs-txt-box .txt {
-  font-size: 24rem;
-  font-weight: 500;
-  line-height: 1.4;
-  color: #000;
-  word-break: keep-all;
+@media all and (max-width: 1080px) {
+  .result-search-page .grid-list-grp {
+    gap: 20px;
+  }
+  .result-search-page .grid-list-grp .list {
+    width: calc((100% - 60px) / 4);
+  }
 }
-.rs-txt-box .color-txt {
-  color: var(--main, #017afb);
+@media all and (max-width: 991px) {
+  .result-search-page .inner {
+    width: 100%;
+  }
+  .result-search-page .grid-list-grp {
+    gap: 15px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .result-search-page .grid-list-grp .list {
+    width: calc((100% - 30px) / 3);
+  }
+  .result-search-page .ttl-wrap {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .rs-txt-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .rs-txt-box {
+    padding: 25px 20px;
+  }
+  .rs-channel-section .row-list-grp {
+    gap: 35px;
+  }
 }
-
+@media all and (max-width: 768px) {
+  .result-search-page .section-divider {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .rs-channel-section {
+    padding-bottom: 20px;
+  }
+  .rs-channel-section .row-list-grp {
+    justify-content: flex-start;
+    padding: 0 16px;
+    gap: 30px;
+    overflow: auto;
+    padding-bottom: 10px;
+  }
+}
+@media all and (max-width: 600px) {
+  .result-search-page .grid-list-grp .list {
+    width: calc((100% - 15px) / 2);
+  }
+  .rs-txt-section {
+    padding: 18px 16px 44px;
+  }
+  .rs-txt-box {
+    padding: 16px;
+  }
+  .rs-channel-section {
+    padding: 40px 0 30px;
+  }
+}
 /* =========== 페이지 : 랭킹 =========== */
 .ranking-main-page {
   background: var(--background, #fafafa);

@@ -56,7 +56,7 @@
     <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
     <script src="assets/js/vendor/swiper-bundle.min.js"></script>
   </head>
-  <body>
+  <body ontouchstart>
     <div id="app">
 
       <!-- TODO: PC 버전 헤더 -->
@@ -3892,14 +3892,17 @@
       const swiperDefaultBreakPoints = {
         450: {
           slidesPerView: 2.8,
+          spaceBetween: 15,
         },
         650: {
           slidesPerView: 3.5,
+          spaceBetween: 15,
         },
         768: {
           slidesPerView: 4,
+          spaceBetween: 20,
         },
-        1024: {
+        1080: {
           slidesPerView: 5,
           spaceBetween: 20,
         },
