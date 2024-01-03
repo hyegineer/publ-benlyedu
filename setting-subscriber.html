@@ -107,11 +107,15 @@
           <!-- 우측 버튼들 -->
           <div class="header-btn-wrap">
             <ul class="btn-list-grp">
-              <li class="list">
-                <button type="button" onclick="location.href='result-search.html';" class="header-btn">
-                  <span class="txt-hidden">검색하기</span>
+              <li class="list mb-none">
+                <div class="header-search-inp">
                   <i class="ico ico-40 ico-search"></i>
-                </button>
+                  <input type="text" placeholder="검색" class="inp">
+                  <button type="button" class="btn del-btn">
+                    <span class="txt-hidden">검색어 지우기</span>
+                    <i class="ico ico-18 ico-search-x"></i>
+                  </button>
+                </div>
               </li>
               <li class="list mb-none">
                 <button type="button" class="header-btn">
@@ -119,7 +123,7 @@
                   <i class="ico ico-40 ico-alarm"></i>
                 </button>
               </li>
-              <li class="list mb-none">
+              <li class="list mb-none list-sub-nav">
                 <button type="button" class="header-btn myinfo-btn">
                   <span class="txt-hidden">내 정보</span>
                   <figure class="thumbnail circle">
@@ -127,8 +131,6 @@
                   </figure>
                   <i class="ico ico-arrow-down ico-dark"></i>
                 </button>
-
-                <!-- FIXME: 서브네비 구현 -->
                 <div class="sub-nav-list-wrap">
                   <ul class="sub-nav-list-grp">
                     <li class="sub-nav-list">
@@ -162,7 +164,15 @@
                 <button type="button" class="btn btn-type-02 blue-solid-btn">암기박스 신청</button>
               </li>
               <li class="list mb-show">
-                <button type="button" class="header-btn">
+                <button type="button" class="header-btn" onclick="openMobileSearch();">
+                  <span class="txt-hidden">모바일 검색하기</span>
+                  <i class="ico ico-40 ico-search"></i>
+                </button>
+              </li>
+              <li class="list mb-show">
+
+                <!-- TODO: 만약 알림이 있을 시 active 클래스가 추가되고, 빨간 뱃지가 보입니다 -->
+                <button type="button" class="header-btn badge-header-btn active" onclick="openMobileNav();">
                   <span class="txt-hidden">모바일 메뉴</span>
                   <i class="ico ico-40 ico-navlist"></i>
                 </button>
@@ -171,6 +181,120 @@
           </div>
 
           <!-- END 우측 버튼들 -->
+
+          <!-- 모바일 전용 검색영역 -->
+          <div class="mobile-header-search-wrap">
+            <button type="button" class="btn back-btn" onclick="closeMobileSearch();">
+              <span class="txt-hidden">뒤로 가기</span>
+              <i class="ico ico-arrow-left"></i>
+            </button>
+            <div class="mobile-header-search-inp">
+              <i class="ico ico-18 ico-search-mobile"></i>
+              <input type="text" class="inp" placeholder="검색어를 입력하세요.">
+              <button type="button" class="btn del-btn">
+                <span class="txt-hidden">검색어 지우기</span>
+                <i class="ico ico-18 ico-search-x"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- END 모바일 전용 검색영역 -->
+
+          <!-- 모바일 전용 햄버거 네비게이션 페이지 -->
+          <div class="mobile-header-nav-container">
+            <div class="top-wrap">
+
+              <!-- 로고 -->
+              <h1 class="logo">
+                <a href="index.html">
+                  <img src="assets/images/logo/logo-color.png" alt="">
+                </a>
+              </h1>
+
+              <!-- END 로고 -->
+              <button type="button" class="btn close-btn" onclick="closeMobileNav();">
+                <span class="txt-hidden">닫기</span>
+                <i class="ico ico-x"></i>
+              </button>
+            </div>
+            <div class="middle-wrap">
+              <ul class="nav-list-grp">
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-home"></i>
+                    <p class="txt">홈</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-user"></i>
+                    <p class="txt">계정관리</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-bell"></i>
+                    <p class="txt">
+                      <span>알림</span>
+                      <span class="red-txt">(10)</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-wordbook"></i>
+                    <p class="txt">내가 만든 단어장</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-like"></i>
+                    <p class="txt">즐겨찾기</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-mail"></i>
+                    <p class="txt">문의하기</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-logout"></i>
+                    <p class="txt">로그아웃</p>
+                  </a>
+                </li>
+              </ul>
+              <ul class="sns-list-grp">
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">페이스북</span>
+                    <i class="ico ico-facebook"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">핀터레스트</span>
+                    <i class="ico ico-pinterest"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">트위터</span>
+                    <i class="ico ico-twitter"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">공유하기</span>
+                    <i class="ico ico-share"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- END 모바일 전용 햄버거 네비게이션 페이지 -->
         </div>
       </div>
 
@@ -184,7 +308,15 @@
           <div class="page">
 
             <!-- TODO: MOBILE 버전 헤더 -->
-            <div></div>
+            <div class="mobile-top-tabs">
+              <div class="tabs">
+                <button type="button" class="tab active">엔터프라이즈 문의</button>
+                <button type="button" class="tab">과목별 랭킹</button>
+                <button type="button" class="tab">전체상품</button>
+                <button type="button" class="tab">관리자 페이지</button>
+                <button type="button" class="tab">내 채널</button>
+              </div>
+            </div>
 
             <!-- END MOBILE 버전 헤더 -->
             <section class="section">
@@ -394,7 +526,7 @@
                                                 <span class="txt color-txt bold-txt">3회</span>
                                               </div>
                                               <div class="d-iflex-row type-gap10">
-                                                <button type="button" class="btn">
+                                                <button type="button" class="btn" onclick="openModal('popup-1');">
                                                   <span class="txt-hidden">페이퍼</span>
                                                   <i class="ico ico-paper"></i>
                                                 </button>
@@ -462,7 +594,7 @@
                                                 <span class="txt color-txt bold-txt">3회</span>
                                               </div>
                                               <div class="d-iflex-row type-gap10">
-                                                <button type="button" class="btn">
+                                                <button type="button" class="btn" onclick="openModal('popup-1');">
                                                   <span class="txt-hidden">페이퍼</span>
                                                   <i class="ico ico-paper"></i>
                                                 </button>
@@ -530,7 +662,7 @@
                                                 <span class="txt color-txt bold-txt">3회</span>
                                               </div>
                                               <div class="d-iflex-row type-gap10">
-                                                <button type="button" class="btn">
+                                                <button type="button" class="btn" onclick="openModal('popup-1');">
                                                   <span class="txt-hidden">페이퍼</span>
                                                   <i class="ico ico-paper"></i>
                                                 </button>
@@ -649,7 +781,7 @@
                                                 <span class="txt color-txt bold-txt">3회</span>
                                               </div>
                                               <div class="d-iflex-row type-gap10">
-                                                <button type="button" class="btn">
+                                                <button type="button" class="btn" onclick="openModal('popup-1');">
                                                   <span class="txt-hidden">페이퍼</span>
                                                   <i class="ico ico-paper"></i>
                                                 </button>
@@ -768,7 +900,7 @@
                                                 <span class="txt color-txt bold-txt">3회</span>
                                               </div>
                                               <div class="d-iflex-row type-gap10">
-                                                <button type="button" class="btn">
+                                                <button type="button" class="btn" onclick="openModal('popup-1');">
                                                   <span class="txt-hidden">페이퍼</span>
                                                   <i class="ico ico-paper"></i>
                                                 </button>
@@ -836,7 +968,7 @@
                                                 <span class="txt color-txt bold-txt">3회</span>
                                               </div>
                                               <div class="d-iflex-row type-gap10">
-                                                <button type="button" class="btn">
+                                                <button type="button" class="btn" onclick="openModal('popup-1');">
                                                   <span class="txt-hidden">페이퍼</span>
                                                   <i class="ico ico-paper"></i>
                                                 </button>
@@ -904,7 +1036,7 @@
                                                 <span class="txt color-txt bold-txt">3회</span>
                                               </div>
                                               <div class="d-iflex-row type-gap10">
-                                                <button type="button" class="btn">
+                                                <button type="button" class="btn" onclick="openModal('popup-1');">
                                                   <span class="txt-hidden">페이퍼</span>
                                                   <i class="ico ico-paper"></i>
                                                 </button>
@@ -972,7 +1104,7 @@
                                                 <span class="txt color-txt bold-txt">3회</span>
                                               </div>
                                               <div class="d-iflex-row type-gap10">
-                                                <button type="button" class="btn">
+                                                <button type="button" class="btn" onclick="openModal('popup-1');">
                                                   <span class="txt-hidden">페이퍼</span>
                                                   <i class="ico ico-paper"></i>
                                                 </button>
@@ -1040,7 +1172,7 @@
                                                 <span class="txt color-txt bold-txt">3회</span>
                                               </div>
                                               <div class="d-iflex-row type-gap10">
-                                                <button type="button" class="btn">
+                                                <button type="button" class="btn" onclick="openModal('popup-1');">
                                                   <span class="txt-hidden">페이퍼</span>
                                                   <i class="ico ico-paper"></i>
                                                 </button>
@@ -1108,7 +1240,7 @@
                                                 <span class="txt color-txt bold-txt">3회</span>
                                               </div>
                                               <div class="d-iflex-row type-gap10">
-                                                <button type="button" class="btn">
+                                                <button type="button" class="btn" onclick="openModal('popup-1');">
                                                   <span class="txt-hidden">페이퍼</span>
                                                   <i class="ico ico-paper"></i>
                                                 </button>
@@ -1158,6 +1290,159 @@
 
           <!-- END 페이지 : 구독자 관리 -->
         </div>
+
+        <!-- 팝업 : 학생 리포트 -->
+        <div id="popup-1" class="popup-wrapper">
+          <div class="popup-overlay"></div>
+          <div class="custom-popup popup student-report-popup">
+
+            <!-- 팝업 제목 -->
+            <div class="popup-ttl-wrapper">
+              <div class="popup-ttl-wrap">
+                <div class="d-iflex-row type-gap11">
+                  <div class="popup-ttl-item">
+                    <h3 class="popup-ttl">학생 리포트</h3>
+                  </div>
+                </div>
+                <button type="button" class="popup-close-btn">
+                  <span class="txt-hidden">팝업 닫기</span>
+                  <i class="ico ico-x"></i>
+                </button>
+              </div>
+              <p class="desc">[회원OT 1차] 외래어 표기법 10분 끝내기</p>
+            </div>
+
+            <!-- END 팝업 제목 -->
+
+            <!-- 팝업 내용 -->
+            <div class="popup-contents">
+              <div class="content">
+                <div class="list-card-item type-03">
+                  <div class="list-card-left">
+                    <figure class="thumbnail circle">
+                      <img src="assets/images/sample/img-sample-profilethumbnail2.png" alt="" class="thumbnail-img">
+                    </figure>
+                    <ul class="card-information">
+                      <li>
+                        <div class="d-iflex-row type-gap15">
+                          <h4 class="card-name">김민수</h4>
+                          <span class="badge">진행중</span>
+                        </div>
+                      </li>
+                      <li>
+                        <div class="d-iflex-row type-gap15">
+                          <span class="card-desc">abc@benly.kr</span>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="list-card-right">
+
+                    <!-- 챕터 진행률 -->
+                    <div class="ico-txt-item">
+                      <i class="ico ico-chapter"></i>
+                      <span class="txt">챕터 진행률</span>
+                      <span class="txt color-txt bold-txt">1/7</span>
+                    </div>
+
+                    <!-- 잔존 기억률 -->
+                    <div class="ico-txt-item">
+                      <i class="ico ico-cube"></i>
+                      <span class="txt">잔존 기억률</span>
+                      <span class="txt color-txt bold-txt">39%</span>
+                    </div>
+
+                    <!-- 복습 횟수 -->
+                    <div class="ico-txt-item">
+                      <i class="ico ico-pencil"></i>
+                      <span class="txt">복습 횟수</span>
+                      <span class="txt color-txt bold-txt">3회</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="default-tbl">
+                  <div class="default-tbl-head">
+                    <span class="cell">챕터명</span>
+                    <span class="cell">처음 플레이 일시</span>
+                    <span class="cell">최근 플레이 일시</span>
+                    <span class="cell">총 클리어 횟수</span>
+                    <span class="cell">챕터 기억률</span>
+                    <span class="cell">알림전송</span>
+                  </div>
+                  <div class="default-tbl-body">
+                    <div class="list">
+                      <span class="cell">챕터1. 쉬운버전</span>
+                      <span class="cell">2023.03.03. 24:59</span>
+                      <span class="cell">2023.03.03. 24:59</span>
+                      <span class="cell">3회</span>
+                      <span class="cell">94%</span>
+                      <span class="cell">
+                  <button type="button" class="btn btn-type-01 gray-bd-btn" onclick="openModal('popup-2');">알림전송</button>
+                </span>
+                    </div>
+                    <div class="list">
+                      <span class="cell">챕터1. 쉬운버전</span>
+                      <span class="cell">2023.03.03. 24:59</span>
+                      <span class="cell">2023.03.03. 24:59</span>
+                      <span class="cell">3회</span>
+                      <span class="cell">94%</span>
+                      <span class="cell">
+                  <button type="button" class="btn btn-type-01 gray-bd-btn">알림전송</button>
+                </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="content-btn-wrap">
+                <button type="button" class="btn btn-type-07 gray-solid-btn">닫기</button>
+              </div>
+            </div>
+
+            <!-- END 팝업 내용 -->
+          </div>
+        </div>
+
+        <!-- END 팝업 : 학생 리포트 -->
+
+        <!-- 팝업 : 알림 전송 -->
+        <div id="popup-2" class="popup-wrapper">
+          <div class="popup-overlay"></div>
+          <div class="custom-popup popup alarm-send-popup">
+
+            <!-- 팝업 제목 -->
+            <div class="popup-ttl-wrap">
+              <div class="d-iflex-row type-gap13">
+                <div class="popup-ttl-item">
+                  <h3 class="popup-ttl">알림 전송</h3>
+                </div>
+              </div>
+              <div class="mg-left">
+                <div class="checkbox-item">
+                  <input id="popup-option1" type="checkbox" class="custom-checkbox-inp none">
+                  <label for="popup-option1" class="custom-checkbox"></label>
+                  <label for="popup-option1" class="txt">알림 메시지 저장</label>
+                </div>
+              </div>
+            </div>
+
+            <!-- END 팝업 제목 -->
+
+            <!-- 팝업 내용 -->
+            <div class="popup-content">
+              <div class="content">
+                <textarea class="inp" placeholder="전달할 알림 문구를 작성해주세요.&#13;&#10;&#13;&#10;예시 문구 : &#13;&#10;&#13;&#10;시험 하루 전입니다. &#13;&#10;이 챕터 복습해서 100% 만들어주세요:) "></textarea>
+              </div>
+              <div class="content-btn-wrap">
+                <button type="button" class="btn btn-type-07 gray-solid-btn">취소</button>
+                <button type="button" class="btn btn-type-07 blue-solid-btn">보내기</button>
+              </div>
+            </div>
+
+            <!-- END 팝업 내용 -->
+          </div>
+        </div>
+
+        <!-- END 팝업 : 알림 전송 -->
       </div>
 
       <!-- END 페이지 -->
@@ -1216,8 +1501,7 @@
 
       <!-- END 푸터 -->
     </div>
-
-    <!-- <script src="assets/js/ui.js"></script> -->
+    <script src="assets/js/ui.js"></script>
     <script>
       // 임시 구현
       $('.acdion-card-top').on('click', function(e) {

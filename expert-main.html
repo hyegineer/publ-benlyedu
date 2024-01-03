@@ -107,11 +107,15 @@
           <!-- 우측 버튼들 -->
           <div class="header-btn-wrap">
             <ul class="btn-list-grp">
-              <li class="list">
-                <button type="button" onclick="location.href='result-search.html';" class="header-btn">
-                  <span class="txt-hidden">검색하기</span>
+              <li class="list mb-none">
+                <div class="header-search-inp">
                   <i class="ico ico-40 ico-search"></i>
-                </button>
+                  <input type="text" placeholder="검색" class="inp">
+                  <button type="button" class="btn del-btn">
+                    <span class="txt-hidden">검색어 지우기</span>
+                    <i class="ico ico-18 ico-search-x"></i>
+                  </button>
+                </div>
               </li>
               <li class="list mb-none">
                 <button type="button" class="header-btn">
@@ -119,7 +123,7 @@
                   <i class="ico ico-40 ico-alarm"></i>
                 </button>
               </li>
-              <li class="list mb-none">
+              <li class="list mb-none list-sub-nav">
                 <button type="button" class="header-btn myinfo-btn">
                   <span class="txt-hidden">내 정보</span>
                   <figure class="thumbnail circle">
@@ -127,8 +131,6 @@
                   </figure>
                   <i class="ico ico-arrow-down ico-dark"></i>
                 </button>
-
-                <!-- FIXME: 서브네비 구현 -->
                 <div class="sub-nav-list-wrap">
                   <ul class="sub-nav-list-grp">
                     <li class="sub-nav-list">
@@ -162,7 +164,15 @@
                 <button type="button" class="btn btn-type-02 blue-solid-btn">암기박스 신청</button>
               </li>
               <li class="list mb-show">
-                <button type="button" class="header-btn">
+                <button type="button" class="header-btn" onclick="openMobileSearch();">
+                  <span class="txt-hidden">모바일 검색하기</span>
+                  <i class="ico ico-40 ico-search"></i>
+                </button>
+              </li>
+              <li class="list mb-show">
+
+                <!-- TODO: 만약 알림이 있을 시 active 클래스가 추가되고, 빨간 뱃지가 보입니다 -->
+                <button type="button" class="header-btn badge-header-btn active" onclick="openMobileNav();">
                   <span class="txt-hidden">모바일 메뉴</span>
                   <i class="ico ico-40 ico-navlist"></i>
                 </button>
@@ -171,6 +181,120 @@
           </div>
 
           <!-- END 우측 버튼들 -->
+
+          <!-- 모바일 전용 검색영역 -->
+          <div class="mobile-header-search-wrap">
+            <button type="button" class="btn back-btn" onclick="closeMobileSearch();">
+              <span class="txt-hidden">뒤로 가기</span>
+              <i class="ico ico-arrow-left"></i>
+            </button>
+            <div class="mobile-header-search-inp">
+              <i class="ico ico-18 ico-search-mobile"></i>
+              <input type="text" class="inp" placeholder="검색어를 입력하세요.">
+              <button type="button" class="btn del-btn">
+                <span class="txt-hidden">검색어 지우기</span>
+                <i class="ico ico-18 ico-search-x"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- END 모바일 전용 검색영역 -->
+
+          <!-- 모바일 전용 햄버거 네비게이션 페이지 -->
+          <div class="mobile-header-nav-container">
+            <div class="top-wrap">
+
+              <!-- 로고 -->
+              <h1 class="logo">
+                <a href="index.html">
+                  <img src="assets/images/logo/logo-color.png" alt="">
+                </a>
+              </h1>
+
+              <!-- END 로고 -->
+              <button type="button" class="btn close-btn" onclick="closeMobileNav();">
+                <span class="txt-hidden">닫기</span>
+                <i class="ico ico-x"></i>
+              </button>
+            </div>
+            <div class="middle-wrap">
+              <ul class="nav-list-grp">
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-home"></i>
+                    <p class="txt">홈</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-user"></i>
+                    <p class="txt">계정관리</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-bell"></i>
+                    <p class="txt">
+                      <span>알림</span>
+                      <span class="red-txt">(10)</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-wordbook"></i>
+                    <p class="txt">내가 만든 단어장</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-like"></i>
+                    <p class="txt">즐겨찾기</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-mail"></i>
+                    <p class="txt">문의하기</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-logout"></i>
+                    <p class="txt">로그아웃</p>
+                  </a>
+                </li>
+              </ul>
+              <ul class="sns-list-grp">
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">페이스북</span>
+                    <i class="ico ico-facebook"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">핀터레스트</span>
+                    <i class="ico ico-pinterest"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">트위터</span>
+                    <i class="ico ico-twitter"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">공유하기</span>
+                    <i class="ico ico-share"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- END 모바일 전용 햄버거 네비게이션 페이지 -->
         </div>
       </div>
 
@@ -184,7 +308,15 @@
           <div class="expert-main-page page">
 
             <!-- TODO: MOBILE 버전 헤더 -->
-            <div></div>
+            <div class="mobile-top-tabs">
+              <div class="tabs">
+                <button type="button" class="tab active">엔터프라이즈 문의</button>
+                <button type="button" class="tab">과목별 랭킹</button>
+                <button type="button" class="tab">전체상품</button>
+                <button type="button" class="tab">관리자 페이지</button>
+                <button type="button" class="tab">내 채널</button>
+              </div>
+            </div>
 
             <!-- END MOBILE 버전 헤더 -->
             <section class="em-top-section section">
@@ -796,17 +928,17 @@
 
           <!-- END 페이지 : 전문가 영역 -->
 
-          <!-- 페이지 팝업 : 콘텐츠 순서 변경 -->
-          <div class="popup-wrapper">
+          <!-- 팝업 : 콘텐츠 순서 변경 -->
+          <div id="popup-1" class="popup-wrapper">
             <div class="popup-overlay"></div>
-            <div class="popup corder-edit-popup">
+            <div class="custom-popup popup corder-edit-popup">
 
               <!-- 팝업 제목 -->
               <div class="popup-ttl-wrap">
-                <div class="d-iflex-row type-gap13">
+                <div class="d-iflex-row type-gap11">
                   <div class="popup-ttl-item">
-                    <h3 class="popup-ttl">카테고리 편집</h3>
-                    <i class="ico ico-bang"></i>
+                    <h3 class="popup-ttl">콘텐츠 순서 변경</h3>
+                    <i class="ico ico-16 ico-bang"></i>
                   </div>
                   <p class="sub-ttl light-blue-solid-btn">드래그로 순서를 옮길 수 있습니다.</p>
                 </div>
@@ -825,15 +957,13 @@
 
                     <!-- 리스트 -->
                     <div class="list">
-                      <div class="cate-edit-item">
-                        <div class="btn-inp-wrap">
-                          <button type="button" class="btn">
-                            <span class="txt-hidden">리스트 버튼</span>
-                            <i class="ico ico-list"></i>
-                          </button>
-                          <input type="text" value="3학년 2학기 기말고사" placeholder="카테고리 편집명 입력" class="edit-inp">
-                        </div>
-                        <div class="mg-left d-iflex-row type-gap5">
+                      <div class="edit-item">
+                        <button type="button" class="btn drag-btn">
+                          <span class="txt-hidden">리스트 버튼</span>
+                          <i class="ico ico-list"></i>
+                        </button>
+                        <input type="text" value="3학년 2학기 기말고사" placeholder="카테고리 편집명 입력" class="edit-inp">
+                        <div class="mg-left edit-btn-wrap">
                           <button type="button" class="btn btn-type-09 gray-bd-btn">수정</button>
                           <button type="button" class="btn btn-type-09 gray-bd-btn">삭제</button>
                         </div>
@@ -844,15 +974,13 @@
 
                     <!-- 리스트 -->
                     <div class="list">
-                      <div class="cate-edit-item">
-                        <div class="btn-inp-wrap">
-                          <button type="button" class="btn">
-                            <span class="txt-hidden">리스트 버튼</span>
-                            <i class="ico ico-list"></i>
-                          </button>
-                          <input type="text" value="3학년 2학기 기말고사" placeholder="카테고리 편집명 입력" class="edit-inp">
-                        </div>
-                        <div class="mg-left d-iflex-row type-gap5">
+                      <div class="edit-item">
+                        <button type="button" class="btn drag-btn">
+                          <span class="txt-hidden">리스트 버튼</span>
+                          <i class="ico ico-list"></i>
+                        </button>
+                        <input type="text" value="3학년 2학기 기말고사" placeholder="카테고리 편집명 입력" class="edit-inp">
+                        <div class="mg-left edit-btn-wrap">
                           <button type="button" class="btn btn-type-09 gray-bd-btn">수정</button>
                           <button type="button" class="btn btn-type-09 gray-bd-btn">삭제</button>
                         </div>
@@ -872,7 +1000,299 @@
             </div>
           </div>
 
-          <!-- END 페이지 팝업 : 콘텐츠 순서 변경 -->
+          <!-- END 팝업 : 콘텐츠 순서 변경 -->
+
+          <!-- 팝업 : 채널 편집 -->
+          <div id="popup-2" class="popup-wrapper">
+            <div class="popup-overlay"></div>
+            <div class="custom-popup popup channel-edit-popup">
+
+              <!-- 팝업 제목 -->
+              <div class="popup-ttl-wrap">
+                <div class="d-iflex-row type-gap11">
+                  <div class="popup-ttl-item">
+                    <h3 class="popup-ttl">채널 편집</h3>
+                  </div>
+                </div>
+                <button type="button" class="popup-close-btn">
+                  <span class="txt-hidden">팝업 닫기</span>
+                  <i class="ico ico-x"></i>
+                </button>
+              </div>
+
+              <!-- END 팝업 제목 -->
+
+              <!-- 팝업 내용 -->
+              <div class="popup-content">
+                <div class="content">
+                  <div class="form-item-grp">
+                    <div class="form-item">
+                      <label class="form-label">결제 설정</label>
+                      <div class="form-inp-wrap">
+                        <div class="pay-setting-inp-wrap">
+                          <div class="checkbox-item">
+                            <input id="option01" type="radio" class="custom-checkbox-inp none">
+                            <label for="option01" class="custom-checkbox type-circle"></label>
+                            <label for="option01" class="txt">무료</label>
+                          </div>
+                          <div class="checkbox-item">
+                            <input id="option02" type="checkbox" class="custom-checkbox-inp none">
+                            <label for="option02" class="custom-checkbox type-circle"></label>
+                            <label for="option02" class="txt">월 구독료</label>
+                            <div class="inp-txt-item">
+                              <input type="text" class="inp">
+                              <span class="txt">원</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-item">
+                      <label class="form-label">채널명</label>
+                      <div class="form-inp-wrap">
+                        <input type="text" class="inp" placeholder="이름을 입력해 주세요." />
+                      </div>
+                    </div>
+                    <div class="form-item">
+                      <label class="form-label">채널 설명</label>
+                      <div class="form-inp-wrap">
+                        <textarea class="inp" placeholder="채널을 설명하는 문구를 작성해주세요."></textarea>
+                      </div>
+                    </div>
+                    <div class="form-item">
+                      <label class="form-label">채널 공개</label>
+                      <div class="form-inp-wrap">
+                        <div class="pay-setting-inp-wrap">
+                          <div class="checkbox-item">
+                            <input id="private-no" type="radio" name="private" class="custom-checkbox-inp none">
+                            <label for="private-no" class="custom-checkbox type-circle"></label>
+                            <label for="private-no" class="txt">공개</label>
+                          </div>
+                          <div class="checkbox-item">
+                            <input id="private-yes" type="radio" name="private" class="custom-checkbox-inp none">
+                            <label for="private-yes" class="custom-checkbox type-circle"></label>
+                            <label for="private-yes" class="txt">비공개</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-item">
+                      <label class="form-label">이미지 등록</label>
+                      <div class="form-inp-wrap">
+                        <div class="file-upload-inp-wrap">
+                          <input type="file" id="file01" class="none">
+
+                          <!-- TODO: PC 때 보이는 버튼 -->
+                          <label for="file01" class="file-upload-label type-pc">
+                            <div class="before-upload">
+                              <img src="assets/images/ico/ico-photo-upload.png" alt="" class="img-ico">
+                              <span class="txt">
+                          652 x 488px <br>(4:3 비율)
+                        </span>
+                            </div>
+                          </label>
+
+                          <!-- TODO: 모바일 때 보이는 버튼 -->
+                          <label for="file01" class="file-upload-label type-mobile">
+                            <i class="ico ico-upload-image"></i>
+                            <span class="txt">
+                        652 x 488px <br>(4:3 비율)
+                      </span>
+                          </label>
+                          <div class="desc-box">
+                            <ul>
+                              <li>이미지 권장 사이즈: 652 x 488px (4:3 비율)</li>
+                              <li>
+                                <b>사용 제한 이미지</b><br>
+                                저작권 침해 (무단복제, 도용) 이미지 <br>
+                                프로필 사진과 동일한 이미지 <br>
+                                가격, 연락처, 서비스와 관련 없는 홍보성 문구 <br>
+                                임의로 제작된 인증 마크, 라벨, 할인표기 <br>
+                                검증 불가 내용 (최초, 유일, 무제한, 1위, 누적의뢰 수/금액 표기 등)
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-item">
+                      <label class="form-label">동영상 등록</label>
+                      <div class="form-inp-wrap">
+                        <div class="file-upload-inp-wrap">
+                          <input type="file" id="file02" class="none">
+
+                          <!-- TODO: PC 때 보이는 버튼 -->
+                          <label for="file02" class="file-upload-label type-video type-pc">
+                            <div class="before-upload">
+                              <img src="assets/images/ico/ico-video-upload.png" alt="" class="img-ico">
+                              <span class="txt">
+                          비디오 업로드
+                        </span>
+                            </div>
+                          </label>
+
+                          <!-- TODO: 모바일 때 보이는 버튼 -->
+                          <label for="file02" class="file-upload-label type-mobile">
+                            <i class="ico ico-upload-image"></i>
+                            <span class="txt">
+                        비디오 업로드
+                      </span>
+                          </label>
+                          <div class="desc-box">
+                            <ul>
+                              <li>합계 500mb 이하의 mp4 파일을 등록하실 수 있습니다.</li>
+                              <li>개인 연락처 혹은 홍보 동영상은 등록하실 수 없습니다.</li>
+                              <li>상업적인 이용 및 허가에 대한 부분을 확인하시어 등록해주시기 바랍니다.</li>
+                              <li>무단/부정한 이용으로 제3자의 권리를 침해하는 동영상은 등록할 수 없습니다.</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-btn-wrap">
+                  <button type="button" class="btn btn-type-07 gray-solid-btn">취소</button>
+                  <button type="button" class="btn btn-type-07 blue-solid-btn">보내기</button>
+                </div>
+              </div>
+
+              <!-- END 팝업 내용 -->
+            </div>
+          </div>
+
+          <!-- END 팝업 : 채널 편집 -->
+
+          <!-- 모달 : 정말 삭제하시겠습니까? -->
+          <div id="modal-1" class="modal-wrapper">
+            <div class="modal-overlay"></div>
+            <div class="custom-modal system-modal">
+              <div class="smodal-contt-container">
+                <h3 class="smodal-ttl">정말 삭제하시겠습니까?</h3>
+
+                <!-- <div class="smodal-contt">
+            <p class="smodal-desc">
+              선택한 주소를 삭제하시겠습니까?
+            </p>
+          </div> -->
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn">취소</button>
+                <button type="button" class="btn red-btn">삭제</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 정말 삭제하시겠습니까? -->
+
+          <!-- 모달 : 저장되었습니다. -->
+          <div id="modal-2" class="modal-wrapper">
+            <div class="modal-overlay"></div>
+            <div class="custom-modal system-modal">
+              <div class="smodal-contt-container">
+                <h3 class="smodal-ttl">저장되었습니다.</h3>
+
+                <!-- <div class="smodal-contt">
+            <p class="smodal-desc">
+              선택한 주소를 삭제하시겠습니까?
+            </p>
+          </div> -->
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn">확인</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 정말 삭제하시겠습니까? -->
+
+          <!-- 모달 : 이미지 사이즈가 초과되었습니다. -->
+          <div id="modal-3" class="modal-wrapper">
+            <div class="modal-overlay"></div>
+            <div class="custom-modal system-modal">
+              <div class="smodal-contt-container">
+                <i class="ico ico-38 ico-warning"></i>
+                <h3 class="smodal-ttl">이미지 사이즈가 초과되었습니다.</h3>
+
+                <!-- <div class="smodal-contt">
+            <p class="smodal-desc">
+              선택한 주소를 삭제하시겠습니까?
+            </p>
+          </div> -->
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn">확인</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 이미지 사이즈가 초과되었습니다. -->
+
+          <!-- 모달 : 동영상 용량이 초과되었습니다. -->
+          <div id="modal-4" class="modal-wrapper">
+            <div class="modal-overlay"></div>
+            <div class="custom-modal system-modal">
+              <div class="smodal-contt-container">
+                <i class="ico ico-38 ico-warning"></i>
+                <h3 class="smodal-ttl">동영상 용량이 초과되었습니다.</h3>
+
+                <!-- <div class="smodal-contt">
+            <p class="smodal-desc">
+              선택한 주소를 삭제하시겠습니까?
+            </p>
+          </div> -->
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn">확인</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 동영상 용량이 초과되었습니다. -->
+
+          <!-- 모달 : 이미지 업로드에 성공했습니다. -->
+          <div id="modal-5" class="modal-wrapper">
+            <div class="modal-overlay"></div>
+            <div class="custom-modal system-modal">
+              <div class="smodal-contt-container">
+                <i class="ico ico-38 ico-success"></i>
+                <h3 class="smodal-ttl">이미지 업로드에 성공했습니다.</h3>
+
+                <!-- <div class="smodal-contt">
+            <p class="smodal-desc">
+              선택한 주소를 삭제하시겠습니까?
+            </p>
+          </div> -->
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn">확인</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 이미지 업로드에 성공했습니다. -->
+
+          <!-- 모달 : 동영상 업로드에 성공했습니다. -->
+          <div id="modal-6" class="modal-wrapper">
+            <div class="modal-overlay"></div>
+            <div class="custom-modal system-modal">
+              <div class="smodal-contt-container">
+                <i class="ico ico-38 ico-success"></i>
+                <h3 class="smodal-ttl">동영상 업로드에 성공했습니다.</h3>
+
+                <!-- <div class="smodal-contt">
+            <p class="smodal-desc">
+              선택한 주소를 삭제하시겠습니까?
+            </p>
+          </div> -->
+              </div>
+              <div class="smodal-btn-wrap">
+                <button type="button" class="btn">확인</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 동영상 업로드에 성공했습니다. -->
         </div>
       </div>
 
@@ -932,7 +1352,6 @@
 
       <!-- END 푸터 -->
     </div>
-
-    <!-- <script src="assets/js/ui.js"></script> -->
+    <script src="assets/js/ui.js"></script>
   </body>
 </html>
