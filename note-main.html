@@ -362,7 +362,7 @@
                 <!-- 가운데 안내문구 -->
 
                 <!-- TODO: 답을 입력하지 않았을 때 나오는 안내문구입니다. -->
-                <div class="blue-alert-box" style="display: none;">
+                <div class="blue-alert-box">
                   <i class="ico ico-info ico-white"></i>
                   <span class="txt">빈칸의 답을 입력하세요.</span>
                 </div>
@@ -386,9 +386,14 @@
 
               <!-- TODO: MOBILE버전 상단입니다. -->
               <div class="note-header type-mobile">
+                <div class="blue-alert-box">
+                  <i class="ico ico-info ico-white"></i>
+                  <span class="txt">빈칸의 답을 입력하세요.</span>
+                </div>
                 <div class="note-header-top">
-                  <button type="button">
+                  <button type="button" class="btn back-btn">
                     <span class="txt-hidden">뒤로가기</span>
+                    <i class="ico ico-arrow-left"></i>
                   </button>
                   <div class="progress-time">
                     <i class="ico ico-timer ico-pink"></i>
@@ -518,6 +523,26 @@
                         <div class="quiz-txt">전부유보설</div>
                       </div>
                     </div>
+                    <div class="quiz-box type-white" style="margin-bottom: 10px;">
+                      <div class="front">
+                        <div class="quiz-num">
+                          <span class="txt">Q.09</span>
+                        </div>
+                      </div>
+                      <div class="back">
+                        <div class="quiz-txt">전부유보설</div>
+                      </div>
+                    </div>
+                    <div class="quiz-box type-white active" style="margin-bottom: 10px;">
+                      <div class="front">
+                        <div class="quiz-num">
+                          <span class="txt">Q.09</span>
+                        </div>
+                      </div>
+                      <div class="back">
+                        <div class="quiz-txt">전부유보설</div>
+                      </div>
+                    </div>
 
                     <!-- END 타겟에 퀴즈요소 -->
                   </div>
@@ -537,11 +562,11 @@
                           <i class="ico ico-arrow-submit"></i>
                         </button>
                         <div class="btns">
-                          <button type="button" class="btn pn-btn">
+                          <button type="button" class="btn pn-btn" onclick="toast();">
                             <span class="txt-hidden">이전 문제</span>
                             <i class="ico ico-prev-quiz"></i>
                           </button>
-                          <button type="button" class="btn pn-btn">
+                          <button type="button" class="btn pn-btn" onclick="openModal('modal-1');">
                             <span class="txt-hidden">다음 문제</span>
                             <i class="ico ico-next-quiz"></i>
                           </button>
@@ -627,7 +652,7 @@
             </div>
             <div class="modal-btn-wrap">
               <button type="button" class="btn btn-type-07 blue-solid-btn">60초 다시 외우기 시작</button>
-              <button type="button" class="btn btn-type-07 blue-bd-btn">나가기</button>
+              <button type="button" onclick="closeModal('modal-1');" class="btn btn-type-07 blue-bd-btn">나가기</button>
             </div>
           </div>
         </div>
@@ -652,10 +677,41 @@
     </div>
     <script src="assets/js/ui.js"></script>
     <script>
-      openModal('modal-1');
+      setTimeout(function() {
+        openModal('modal-2');
+      }, 500)
+      setTimeout(function() {
+        closeModal('modal-2');
+      }, 2000)
       $('#note-left-fold-btn').on('click', function() {
         $('.note-left-container').toggleClass('hide');
       })
+      if ($(window).width() <= 768) {
+        if ($('.page-wrapper').hasClass('note-page')) {
+          $('.header').hide();
+        }
+      } else {
+        if ($('.page-wrapper').hasClass('note-page')) {
+          $('.header').show();
+        }
+      }
+      $(window).on('resize', function() {
+        if ($(this).width() <= 768) {
+          if ($('.page-wrapper').hasClass('note-page')) {
+            $('.header').hide();
+          }
+        } else {
+          if ($('.page-wrapper').hasClass('note-page')) {
+            $('.header').show();
+          }
+        }
+      })
+      function toast() {
+        $('.blue-alert-box').addClass('active');
+        setTimeout(function() {
+          $('.blue-alert-box').removeClass('active');
+        }, 1000)
+      }
     </script>
   </body>
 </html>

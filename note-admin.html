@@ -302,7 +302,7 @@
       <!-- END PC 버전 헤더 -->
 
       <!-- 페이지 -->
-      <div class="note-page page-wrapper">
+      <div class="note-page note-admin-page page-wrapper">
         <div class="page-container">
 
           <!-- 페이지 : 빵꾸노트 : 문제풀기 -->
@@ -371,19 +371,11 @@
               <!-- TODO: MOBILE버전 상단입니다. -->
               <div class="note-header type-mobile">
                 <div class="note-header-top">
-                  <button type="button">
+                  <button type="button" class="btn back-btn">
                     <span class="txt-hidden">뒤로가기</span>
+                    <i class="ico ico-arrow-left"></i>
                   </button>
-                  <div class="progress-time">
-                    <i class="ico ico-timer ico-pink"></i>
-                    <span class="txt">0:00</span>
-                  </div>
-                </div>
-                <div class="note-header-bottom">
-                  <div class="progress-bar type-pink">
-                    <span width="50%"></span>
-                  </div>
-                  <p class="progress-txt"><span>3</span>/10</p>
+                  <h3 class="ttl">빵꾸노트 관리자</h3>
                 </div>
               </div>
             </div>
@@ -465,7 +457,7 @@
               <div class="note-layout-center">
                 <div class="note-center-container">
                   <img src="assets/images/sample/sample-screenshot.png" alt="" class="note-center-img">
-                  <div style="padding: 20px; z-index: 1; position: relative; display: flex; flex-wrap: wrap; gap: 5px;">
+                  <div style="padding: 20px; z-index: 1; position: relative; display: flex; flex-wrap: wrap; gap: 5px; height: 100%; overflow: auto;">
 
                     <!-- 타겟에 퀴즈요소 -->
                     <div class="quiz-box" style="margin-bottom: 10px;">
@@ -637,7 +629,7 @@
                     <div class="top-txt-wrap">
                       <h3 class="left-txt">답안 입력</h3>
                       <div class="right-txt">
-                        <span class="txt"><b class="txt-lg">2</b>/8</span>
+                        <span class="txt total-txt"><b class="txt-lg">2</b>/8</span>
                         <span class="txt">완료</span>
                       </div>
                     </div>
@@ -761,6 +753,26 @@
       })
       $('#note-right-fold-btn').on('click', function() {
         $('.note-right-container').toggleClass('hide');
+      })
+      if ($(window).width() <= 768) {
+        if ($('.page-wrapper').hasClass('note-page')) {
+          $('.header').hide();
+        }
+      } else {
+        if ($('.page-wrapper').hasClass('note-page')) {
+          $('.header').show();
+        }
+      }
+      $(window).on('resize', function() {
+        if ($(this).width() <= 768) {
+          if ($('.page-wrapper').hasClass('note-page')) {
+            $('.header').hide();
+          }
+        } else {
+          if ($('.page-wrapper').hasClass('note-page')) {
+            $('.header').show();
+          }
+        }
       })
     </script>
   </body>

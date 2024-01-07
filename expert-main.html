@@ -336,7 +336,7 @@
                       <div class="card-name-wrap">
                         <h2 class="card-name">김선우's 학습 박스</h2>
                         <div class="d-iflex-row type-gap14">
-                          <button type="button" class="btn btn-type-03 gray-bd-btn">
+                          <button type="button" onclick="openModal('popup-2');" class="btn btn-type-03 gray-bd-btn">
                             <i class="ico ico-20 ico-edit"></i>
                             <span class="txt">채널편집</span>
                           </button>
@@ -403,7 +403,7 @@
 
                   <!-- 상단 설정 -->
                   <div class="option-container d-flex-row type-gap6">
-                    <button type="button" class="btn btn-type-05 blue-bd-btn">콘텐츠 순서 변경</button>
+                    <button type="button" onclick="openModal('popup-1');" class="btn btn-type-05 blue-bd-btn">콘텐츠 순서 변경</button>
                     <button type="button" class="btn btn-type-05 blue-bd-btn">+ 벤리에서 불러오기</button>
                   </div>
 
@@ -471,7 +471,13 @@
                             <div class="box-card-item">
                               <div class="box-card-top">
                                 <figure class="thumbnail">
-                                  <img src="assets/images/sample/img-sample-boxthumbnail1.png" alt="" class="thumbnail-img">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-pdf.png" alt="" class="thumbnail-img"> -->
                                 </figure>
                                 <ul class="card-information">
                                   <li>
@@ -566,7 +572,13 @@
                             <div class="box-card-item">
                               <div class="box-card-top">
                                 <figure class="thumbnail">
-                                  <img src="assets/images/sample/img-sample-boxthumbnail1.png" alt="" class="thumbnail-img">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-pdf.png" alt="" class="thumbnail-img"> -->
                                 </figure>
                                 <ul class="card-information">
                                   <li>
@@ -728,7 +740,13 @@
                             <div class="box-card-item">
                               <div class="box-card-top">
                                 <figure class="thumbnail">
-                                  <img src="assets/images/sample/img-sample-boxthumbnail1.png" alt="" class="thumbnail-img">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-pdf.png" alt="" class="thumbnail-img"> -->
                                 </figure>
                                 <ul class="card-information">
                                   <li>
@@ -823,7 +841,13 @@
                             <div class="box-card-item">
                               <div class="box-card-top">
                                 <figure class="thumbnail">
-                                  <img src="assets/images/sample/img-sample-boxthumbnail1.png" alt="" class="thumbnail-img">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-pdf.png" alt="" class="thumbnail-img"> -->
                                 </figure>
                                 <ul class="card-information">
                                   <li>
@@ -931,7 +955,7 @@
 
           <!-- 팝업 : 콘텐츠 순서 변경 -->
           <div id="popup-1" class="popup-wrapper">
-            <div class="popup-overlay"></div>
+            <div class="popup-overlay" onclick="closeModal('popup-1');"></div>
             <div class="custom-popup popup corder-edit-popup">
 
               <!-- 팝업 제목 -->
@@ -943,7 +967,7 @@
                   </div>
                   <p class="sub-ttl light-blue-solid-btn">드래그로 순서를 옮길 수 있습니다.</p>
                 </div>
-                <button type="button" class="popup-close-btn">
+                <button type="button" onclick="closeModal('popup-1');" class="popup-close-btn">
                   <span class="txt-hidden">팝업 닫기</span>
                   <i class="ico ico-x"></i>
                 </button>
@@ -958,13 +982,15 @@
 
                     <!-- 리스트 -->
                     <div class="list">
-                      <div class="edit-item">
+                      <div class="edit-item active">
                         <button type="button" class="btn drag-btn">
                           <span class="txt-hidden">리스트 버튼</span>
                           <i class="ico ico-list"></i>
                         </button>
                         <input type="text" value="3학년 2학기 기말고사" placeholder="카테고리 편집명 입력" class="edit-inp">
                         <div class="mg-left edit-btn-wrap">
+
+                          <!-- TODO: 수정 버튼을 누르면 edit-item에 active클래스가 생기면서, input에 테두리가 생기게 해야합니다. -->
                           <button type="button" class="btn btn-type-09 gray-bd-btn">수정</button>
                           <button type="button" class="btn btn-type-09 gray-bd-btn">삭제</button>
                         </div>
@@ -982,6 +1008,8 @@
                         </button>
                         <input type="text" value="3학년 2학기 기말고사" placeholder="카테고리 편집명 입력" class="edit-inp">
                         <div class="mg-left edit-btn-wrap">
+
+                          <!-- TODO: 수정 버튼을 누르면 edit-item에 active클래스가 생기면서, input에 테두리가 생기게 해야합니다. -->
                           <button type="button" class="btn btn-type-09 gray-bd-btn">수정</button>
                           <button type="button" class="btn btn-type-09 gray-bd-btn">삭제</button>
                         </div>
@@ -992,7 +1020,7 @@
                   </div>
                 </div>
                 <div class="content-btn-wrap">
-                  <button type="button" class="btn btn-type-07 gray-solid-btn">취소</button>
+                  <button type="button" onclick="closeModal('popup-1');" class="btn btn-type-07 gray-solid-btn">취소</button>
                   <button type="button" class="btn btn-type-07 blue-solid-btn">저장</button>
                 </div>
               </div>
@@ -1005,7 +1033,7 @@
 
           <!-- 팝업 : 채널 편집 -->
           <div id="popup-2" class="popup-wrapper">
-            <div class="popup-overlay"></div>
+            <div class="popup-overlay" onclick="closeModal('popup-2');"></div>
             <div class="custom-popup popup channel-edit-popup">
 
               <!-- 팝업 제목 -->
@@ -1015,7 +1043,7 @@
                     <h3 class="popup-ttl">채널 편집</h3>
                   </div>
                 </div>
-                <button type="button" class="popup-close-btn">
+                <button type="button" onclick="closeModal('popup-2');" class="popup-close-btn">
                   <span class="txt-hidden">팝업 닫기</span>
                   <i class="ico ico-x"></i>
                 </button>
@@ -1133,8 +1161,8 @@
                           </label>
 
                           <!-- TODO: 모바일 때 보이는 버튼 -->
-                          <label for="file02" class="file-upload-label type-mobile">
-                            <i class="ico ico-upload-image"></i>
+                          <label for="file02" class="file-upload-label type-video type-mobile">
+                            <i class="ico ico-20 ico-upload-video"></i>
                             <span class="txt">
                         비디오 업로드
                       </span>
@@ -1153,8 +1181,8 @@
                   </div>
                 </div>
                 <div class="content-btn-wrap">
-                  <button type="button" class="btn btn-type-07 gray-solid-btn">취소</button>
-                  <button type="button" class="btn btn-type-07 blue-solid-btn">보내기</button>
+                  <button type="button" onclick="closeModal('popup-2');" class="btn btn-type-07 gray-solid-btn">취소</button>
+                  <button type="button" onclick="openModal('modal-3');" class="btn btn-type-07 blue-solid-btn">보내기</button>
                 </div>
               </div>
 
@@ -1166,7 +1194,7 @@
 
           <!-- 모달 : 정말 삭제하시겠습니까? -->
           <div id="modal-1" class="modal-wrapper">
-            <div class="modal-overlay"></div>
+            <div class="modal-overlay" onclick="closeModal('modal-1');"></div>
             <div class="custom-modal system-modal">
               <div class="smodal-contt-container">
                 <h3 class="smodal-ttl">정말 삭제하시겠습니까?</h3>
@@ -1178,8 +1206,8 @@
           </div> -->
               </div>
               <div class="smodal-btn-wrap">
-                <button type="button" class="btn">취소</button>
-                <button type="button" class="btn red-btn">삭제</button>
+                <button type="button" onclick="closeModal('modal-1');" class="btn">취소</button>
+                <button type="button" onclick="alert('삭제되었습니다.');closeModal('modal-1');" class="btn red-btn">삭제</button>
               </div>
             </div>
           </div>
@@ -1188,7 +1216,7 @@
 
           <!-- 모달 : 저장되었습니다. -->
           <div id="modal-2" class="modal-wrapper">
-            <div class="modal-overlay"></div>
+            <div class="modal-overlay" onclick="closeModal('modal-2');"></div>
             <div class="custom-modal system-modal">
               <div class="smodal-contt-container">
                 <h3 class="smodal-ttl">저장되었습니다.</h3>
@@ -1200,16 +1228,16 @@
           </div> -->
               </div>
               <div class="smodal-btn-wrap">
-                <button type="button" class="btn">확인</button>
+                <button type="button" onclick="closeModal('modal-2');" class="btn">확인</button>
               </div>
             </div>
           </div>
 
-          <!-- END 모달 : 정말 삭제하시겠습니까? -->
+          <!-- END 모달 : 저장되었습니다. -->
 
           <!-- 모달 : 이미지 사이즈가 초과되었습니다. -->
           <div id="modal-3" class="modal-wrapper">
-            <div class="modal-overlay"></div>
+            <div class="modal-overlay" onclick="closeModal('modal-3');"></div>
             <div class="custom-modal system-modal">
               <div class="smodal-contt-container">
                 <i class="ico ico-38 ico-warning"></i>
@@ -1222,7 +1250,7 @@
           </div> -->
               </div>
               <div class="smodal-btn-wrap">
-                <button type="button" class="btn">확인</button>
+                <button type="button" onclick="closeModal('modal-3');" class="btn">확인</button>
               </div>
             </div>
           </div>
@@ -1231,7 +1259,7 @@
 
           <!-- 모달 : 동영상 용량이 초과되었습니다. -->
           <div id="modal-4" class="modal-wrapper">
-            <div class="modal-overlay"></div>
+            <div class="modal-overlay" onclick="closeModal('modal-4');"></div>
             <div class="custom-modal system-modal">
               <div class="smodal-contt-container">
                 <i class="ico ico-38 ico-warning"></i>
@@ -1244,7 +1272,7 @@
           </div> -->
               </div>
               <div class="smodal-btn-wrap">
-                <button type="button" class="btn">확인</button>
+                <button type="button" onclick="closeModal('modal-4');" class="btn">확인</button>
               </div>
             </div>
           </div>
@@ -1253,7 +1281,7 @@
 
           <!-- 모달 : 이미지 업로드에 성공했습니다. -->
           <div id="modal-5" class="modal-wrapper">
-            <div class="modal-overlay"></div>
+            <div class="modal-overlay" onclick="closeModal('modal-5');"></div>
             <div class="custom-modal system-modal">
               <div class="smodal-contt-container">
                 <i class="ico ico-38 ico-success"></i>
@@ -1266,7 +1294,7 @@
           </div> -->
               </div>
               <div class="smodal-btn-wrap">
-                <button type="button" class="btn">확인</button>
+                <button type="button" onclick="closeModal('modal-5');" class="btn">확인</button>
               </div>
             </div>
           </div>
@@ -1275,7 +1303,7 @@
 
           <!-- 모달 : 동영상 업로드에 성공했습니다. -->
           <div id="modal-6" class="modal-wrapper">
-            <div class="modal-overlay"></div>
+            <div class="modal-overlay" onclick="closeModal('modal-6');"></div>
             <div class="custom-modal system-modal">
               <div class="smodal-contt-container">
                 <i class="ico ico-38 ico-success"></i>
@@ -1288,7 +1316,7 @@
           </div> -->
               </div>
               <div class="smodal-btn-wrap">
-                <button type="button" class="btn">확인</button>
+                <button type="button" onclick="closeModal('modal-6');" class="btn">확인</button>
               </div>
             </div>
           </div>

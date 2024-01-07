@@ -359,16 +359,6 @@
 
                 <!-- END 가운데 컨트롤 -->
 
-                <!-- 가운데 안내문구 -->
-
-                <!-- TODO: 답을 입력하지 않았을 때 나오는 안내문구입니다. -->
-                <div class="blue-alert-box" style="display: none;">
-                  <i class="ico ico-info ico-white"></i>
-                  <span class="txt">빈칸의 답을 입력하세요.</span>
-                </div>
-
-                <!-- END 가운데 안내문구 -->
-
                 <!-- 오른쪽 진행률 -->
                 <div class="progress-bar-wrap">
                   <div class="progress-time">
@@ -387,19 +377,20 @@
               <!-- TODO: MOBILE버전 상단입니다. -->
               <div class="note-header type-mobile">
                 <div class="note-header-top">
-                  <button type="button">
+                  <button type="button" class="btn back-btn">
                     <span class="txt-hidden">뒤로가기</span>
+                    <i class="ico ico-arrow-left"></i>
                   </button>
                   <div class="progress-time">
                     <i class="ico ico-timer ico-pink"></i>
-                    <span class="txt">0:00</span>
+                    <span class="txt">60초 후 자동 넘어감</span>
                   </div>
                 </div>
-                <div class="note-header-bottom">
-                  <div class="progress-bar type-pink">
-                    <span width="50%"></span>
+                <div class="note-header-bottom type-replay">
+                  <div class="replay-ttl-wrap">
+                    <h3 class="ttl">다시외우기</h3>
+                    <button type="button" class="btn btn-type-03 gray-bd-btn">다시외우기</button>
                   </div>
-                  <p class="progress-txt"><span>3</span>/10</p>
                 </div>
               </div>
             </div>
@@ -518,6 +509,26 @@
                         <div class="quiz-txt">전부유보설</div>
                       </div>
                     </div>
+                    <div class="quiz-box type-white" style="margin-bottom: 10px;">
+                      <div class="front">
+                        <div class="quiz-num">
+                          <span class="txt">Q.09</span>
+                        </div>
+                      </div>
+                      <div class="back">
+                        <div class="quiz-txt">전부유보설</div>
+                      </div>
+                    </div>
+                    <div class="quiz-box type-white active" style="margin-bottom: 10px;">
+                      <div class="front">
+                        <div class="quiz-num">
+                          <span class="txt">Q.09</span>
+                        </div>
+                      </div>
+                      <div class="back">
+                        <div class="quiz-txt">전부유보설</div>
+                      </div>
+                    </div>
 
                     <!-- END 타겟에 퀴즈요소 -->
                   </div>
@@ -540,6 +551,26 @@
     <script>
       $('#note-left-fold-btn').on('click', function() {
         $('.note-left-container').toggleClass('hide');
+      })
+      if ($(window).width() <= 768) {
+        if ($('.page-wrapper').hasClass('note-page')) {
+          $('.header').hide();
+        }
+      } else {
+        if ($('.page-wrapper').hasClass('note-page')) {
+          $('.header').show();
+        }
+      }
+      $(window).on('resize', function() {
+        if ($(this).width() <= 768) {
+          if ($('.page-wrapper').hasClass('note-page')) {
+            $('.header').hide();
+          }
+        } else {
+          if ($('.page-wrapper').hasClass('note-page')) {
+            $('.header').show();
+          }
+        }
       })
     </script>
   </body>

@@ -1294,7 +1294,7 @@
 
         <!-- 팝업 : 학생 리포트 -->
         <div id="popup-1" class="popup-wrapper">
-          <div class="popup-overlay"></div>
+          <div class="popup-overlay" onclick="closeModal('popup-1');"></div>
           <div class="custom-popup popup student-report-popup">
 
             <!-- 팝업 제목 -->
@@ -1305,7 +1305,7 @@
                     <h3 class="popup-ttl">학생 리포트</h3>
                   </div>
                 </div>
-                <button type="button" class="popup-close-btn">
+                <button type="button" onclick="closeModal('popup-1');" class="popup-close-btn">
                   <span class="txt-hidden">팝업 닫기</span>
                   <i class="ico ico-x"></i>
                 </button>
@@ -1395,7 +1395,7 @@
                 </div>
               </div>
               <div class="content-btn-wrap">
-                <button type="button" class="btn btn-type-07 gray-solid-btn">닫기</button>
+                <button type="button" onclick="closeModal('popup-1');" class="btn btn-type-07 gray-solid-btn">닫기</button>
               </div>
             </div>
 
@@ -1407,7 +1407,7 @@
 
         <!-- 팝업 : 알림 전송 -->
         <div id="popup-2" class="popup-wrapper">
-          <div class="popup-overlay"></div>
+          <div class="popup-overlay" onclick="closeModal('popup-2');"></div>
           <div class="custom-popup popup alarm-send-popup">
 
             <!-- 팝업 제목 -->
@@ -1434,7 +1434,7 @@
                 <textarea class="inp" placeholder="전달할 알림 문구를 작성해주세요.&#13;&#10;&#13;&#10;예시 문구 : &#13;&#10;&#13;&#10;시험 하루 전입니다. &#13;&#10;이 챕터 복습해서 100% 만들어주세요:) "></textarea>
               </div>
               <div class="content-btn-wrap">
-                <button type="button" class="btn btn-type-07 gray-solid-btn">취소</button>
+                <button type="button" onclick="closeModal('popup-2');" class="btn btn-type-07 gray-solid-btn">취소</button>
                 <button type="button" class="btn btn-type-07 blue-solid-btn">보내기</button>
               </div>
             </div>
