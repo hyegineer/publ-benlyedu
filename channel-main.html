@@ -46,6 +46,7 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
@@ -325,10 +326,10 @@
                     </li>
                     <li>
                       <div class="gray-dot-txt-grp">
-                        <div>
-                          <i class="ico ico-star"></i>
-                          <span>4.0</span>
-                          <span>(4건)</span>
+                        <div class="gray-dot-txt star-txt-wrap">
+                          <i class="ico ico-16 ico-star"></i>
+                          <span class="bold-txt">4.0</span>
+                          <span class="link-txt">(4건)</span>
                         </div>
                         <span class="gray-dot-txt">#hanyoung</span>
                         <span class="gray-dot-txt">구독자 30명</span>
@@ -370,22 +371,22 @@
 
                 <!-- 탭 -->
                 <div class="tabs">
-                  <button type="button" class="tab active">기억 학습 콘텐츠</button>
-                  <button type="button" class="tab">채널 설명</button>
-                  <button type="button" class="tab">첨부 파일</button>
-                  <button type="button" class="tab">채널 리뷰</button>
+                  <button type="button" data-move-tab data-move-content="tab01" class="tab active">기억 학습 콘텐츠</button>
+                  <button type="button" data-move-tab data-move-content="tab02" class="tab">채널 설명</button>
+                  <button type="button" data-move-tab data-move-content="tab03" class="tab">첨부 파일</button>
+                  <button type="button" data-move-tab data-move-content="tab04" class="tab">채널 리뷰</button>
                 </div>
 
                 <!-- END 탭 -->
 
                 <!-- 탭: 기억 학습 콘텐츠 -->
-                <div class="section-content tab01-section-content">
+                <div id="tab01" class="section-content tab01-section-content">
                   <div class="content-row">
 
                     <!-- 섹션 제목 -->
                     <div class="ttl-wrap">
                       <div class="ttl-item">
-                        <h3 class="ttl">빠르게 외우려면, [EASY] 플레이!</h3>
+                        <h3 class="ttl">빠르게 외우려면, [EASY] 플레이! (6개일 때)</h3>
                       </div>
                     </div>
 
@@ -393,14 +394,22 @@
 
                     <!-- 섹션 내용 -->
                     <article class="content">
-                      <div id="swiper-01" class="swiper main-swiper">
+                      <div id="swiper-01" class="swiper channel-main-swiper">
                         <div class="swiper-wrapper">
                           <div class="swiper-slide">
 
                             <!-- 카드 -->
                             <div class="card-item type-01">
                               <figure class="thumbnail">
-                                <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
+                                <div class="thumbnail-img-box">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img"> -->
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
+                                </div>
                               </figure>
                               <ul class="card-information">
                                 <li>
@@ -408,8 +417,12 @@
                                   <!-- 진행률 -->
 
                                   <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
-                                  <div class="progress-bar" style="--progress-width: 28%">
-                                    <span class="txt">28% 기억 중</span>
+
+                                  <!-- TODO: 진행 중일 때 type-ing을 붙혀주세요 -->
+
+                                  <!-- TODO: 진행 중일 때 progress-width를 11%로 설정해주세요 -->
+                                  <div class="progress-bar type-ing" style="--progress-width: 11%">
+                                    <span class="txt">진행 중...</span>
                                   </div>
 
                                   <!-- END 진행률 -->
@@ -428,8 +441,8 @@
                                     <span class="btn btn-type-01 gray-solid-btn">강의 맛보기</span>
                                   </div>
                                 </li>
-                                <li>
-                                  <div class="d-iflex-row type-gap6">
+                                <li style="display: none;">
+                                  <div class="ing-txt-wrap">
                                     <i class="ico ico-bar3"></i>
                                     <span>[챕터 1의 레벨 3] 진행중...</span>
                                   </div>
@@ -444,7 +457,15 @@
                             <!-- 카드 -->
                             <div class="card-item type-01">
                               <figure class="thumbnail">
-                                <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
+                                <div class="thumbnail-img-box">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                                </div>
                               </figure>
                               <ul class="card-information">
                                 <li>
@@ -467,13 +488,325 @@
                                     <span class="gray-dot-txt">2023</span>
                                   </div>
                                 </li>
-                                <li>
+                                <li style="display: none;">
                                   <div class="d-iflex-row type-gap10 d-flex-wrap">
                                     <span class="btn btn-type-01 gray-solid-btn">강의 맛보기</span>
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap6">
+                                  <div class="ing-txt-wrap">
+                                    <i class="ico ico-bar3"></i>
+                                    <span>[챕터 1의 레벨 3] 진행중...</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <!-- 카드 -->
+                          </div>
+                          <div class="swiper-slide">
+
+                            <!-- 카드 -->
+                            <div class="card-item type-01">
+                              <figure class="thumbnail">
+                                <div class="thumbnail-img-box">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                                </div>
+                              </figure>
+                              <ul class="card-information">
+                                <li>
+
+                                  <!-- 진행률 -->
+
+                                  <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                  <div class="progress-bar" style="--progress-width: 28%">
+                                    <span class="txt">28% 기억 중</span>
+                                  </div>
+
+                                  <!-- END 진행률 -->
+                                </li>
+                                <li>
+                                  <h4 class="card-name">회의 요청 필수 표현</h4>
+                                </li>
+                                <li>
+                                  <div class="gray-dot-txt-grp">
+                                    <span class="gray-dot-txt">벤리 공인중개사</span>
+                                    <span class="gray-dot-txt">2023</span>
+                                  </div>
+                                </li>
+                                <li style="display: none;">
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                    <span class="btn btn-type-01 gray-solid-btn">강의 맛보기</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="ing-txt-wrap">
+                                    <i class="ico ico-bar3"></i>
+                                    <span>[챕터 1의 레벨 3] 진행중...</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <!-- 카드 -->
+                          </div>
+                          <div class="swiper-slide">
+
+                            <!-- 카드 -->
+                            <div class="card-item type-01">
+                              <figure class="thumbnail">
+                                <div class="thumbnail-img-box">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                                </div>
+                              </figure>
+                              <ul class="card-information">
+                                <li>
+
+                                  <!-- 진행률 -->
+
+                                  <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                  <div class="progress-bar" style="--progress-width: 28%">
+                                    <span class="txt">28% 기억 중</span>
+                                  </div>
+
+                                  <!-- END 진행률 -->
+                                </li>
+                                <li>
+                                  <h4 class="card-name">회의 요청 필수 표현</h4>
+                                </li>
+                                <li>
+                                  <div class="gray-dot-txt-grp">
+                                    <span class="gray-dot-txt">벤리 공인중개사</span>
+                                    <span class="gray-dot-txt">2023</span>
+                                  </div>
+                                </li>
+                                <li style="display: none;">
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                    <span class="btn btn-type-01 gray-solid-btn">강의 맛보기</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="ing-txt-wrap">
+                                    <i class="ico ico-bar3"></i>
+                                    <span>[챕터 1의 레벨 3] 진행중...</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <!-- 카드 -->
+                          </div>
+                          <div class="swiper-slide">
+
+                            <!-- 카드 -->
+                            <div class="card-item type-01">
+                              <figure class="thumbnail">
+                                <div class="thumbnail-img-box">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                                </div>
+                              </figure>
+                              <ul class="card-information">
+                                <li>
+
+                                  <!-- 진행률 -->
+
+                                  <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                  <div class="progress-bar" style="--progress-width: 28%">
+                                    <span class="txt">28% 기억 중</span>
+                                  </div>
+
+                                  <!-- END 진행률 -->
+                                </li>
+                                <li>
+                                  <h4 class="card-name">회의 요청 필수 표현</h4>
+                                </li>
+                                <li>
+                                  <div class="gray-dot-txt-grp">
+                                    <span class="gray-dot-txt">벤리 공인중개사</span>
+                                    <span class="gray-dot-txt">2023</span>
+                                  </div>
+                                </li>
+                                <li style="display: none;">
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                    <span class="btn btn-type-01 gray-solid-btn">강의 맛보기</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="ing-txt-wrap">
+                                    <i class="ico ico-bar3"></i>
+                                    <span>[챕터 1의 레벨 3] 진행중...</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <!-- 카드 -->
+                          </div>
+                          <div class="swiper-slide">
+
+                            <!-- 카드 -->
+                            <div class="card-item type-01">
+                              <figure class="thumbnail">
+                                <div class="thumbnail-img-box">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                                </div>
+                              </figure>
+                              <ul class="card-information">
+                                <li>
+
+                                  <!-- 진행률 -->
+
+                                  <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                  <div class="progress-bar" style="--progress-width: 28%">
+                                    <span class="txt">28% 기억 중</span>
+                                  </div>
+
+                                  <!-- END 진행률 -->
+                                </li>
+                                <li>
+                                  <h4 class="card-name">회의 요청 필수 표현</h4>
+                                </li>
+                                <li>
+                                  <div class="gray-dot-txt-grp">
+                                    <span class="gray-dot-txt">벤리 공인중개사</span>
+                                    <span class="gray-dot-txt">2023</span>
+                                  </div>
+                                </li>
+                                <li style="display: none;">
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                    <span class="btn btn-type-01 gray-solid-btn">강의 맛보기</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="ing-txt-wrap">
+                                    <i class="ico ico-bar3"></i>
+                                    <span>[챕터 1의 레벨 3] 진행중...</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <!-- 카드 -->
+                          </div>
+                          <div class="swiper-slide">
+
+                            <!-- 카드 -->
+                            <div class="card-item type-01">
+                              <figure class="thumbnail">
+                                <div class="thumbnail-img-box">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                                </div>
+                              </figure>
+                              <ul class="card-information">
+                                <li>
+
+                                  <!-- 진행률 -->
+
+                                  <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                  <div class="progress-bar" style="--progress-width: 28%">
+                                    <span class="txt">28% 기억 중</span>
+                                  </div>
+
+                                  <!-- END 진행률 -->
+                                </li>
+                                <li>
+                                  <h4 class="card-name">회의 요청 필수 표현</h4>
+                                </li>
+                                <li>
+                                  <div class="gray-dot-txt-grp">
+                                    <span class="gray-dot-txt">벤리 공인중개사</span>
+                                    <span class="gray-dot-txt">2023</span>
+                                  </div>
+                                </li>
+                                <li style="display: none;">
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                    <span class="btn btn-type-01 gray-solid-btn">강의 맛보기</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="ing-txt-wrap">
+                                    <i class="ico ico-bar3"></i>
+                                    <span>[챕터 1의 레벨 3] 진행중...</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <!-- 카드 -->
+                          </div>
+                          <div class="swiper-slide">
+
+                            <!-- 카드 -->
+                            <div class="card-item type-01">
+                              <figure class="thumbnail">
+                                <div class="thumbnail-img-box">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                                </div>
+                              </figure>
+                              <ul class="card-information">
+                                <li>
+
+                                  <!-- 진행률 -->
+
+                                  <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                  <div class="progress-bar" style="--progress-width: 28%">
+                                    <span class="txt">28% 기억 중</span>
+                                  </div>
+
+                                  <!-- END 진행률 -->
+                                </li>
+                                <li>
+                                  <h4 class="card-name">회의 요청 필수 표현</h4>
+                                </li>
+                                <li>
+                                  <div class="gray-dot-txt-grp">
+                                    <span class="gray-dot-txt">벤리 공인중개사</span>
+                                    <span class="gray-dot-txt">2023</span>
+                                  </div>
+                                </li>
+                                <li style="display: none;">
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                    <span class="btn btn-type-01 gray-solid-btn">강의 맛보기</span>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="ing-txt-wrap">
                                     <i class="ico ico-bar3"></i>
                                     <span>[챕터 1의 레벨 3] 진행중...</span>
                                   </div>
@@ -496,7 +829,7 @@
                     <!-- 섹션 제목 -->
                     <div class="ttl-wrap">
                       <div class="ttl-item">
-                        <h3 class="ttl">빠르게 외우려면, [EASY] 플레이!</h3>
+                        <h3 class="ttl">빠르게 외우려면, [EASY] 플레이! (5개일 때)</h3>
                       </div>
                     </div>
 
@@ -504,88 +837,240 @@
 
                     <!-- 섹션 내용 -->
                     <article class="content">
-                      <div id="swiper-01" class="swiper main-swiper">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
 
-                            <!-- 카드 -->
-                            <div class="card-item type-01">
-                              <figure class="thumbnail">
-                                <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
-                              </figure>
-                              <ul class="card-information">
-                                <li>
+                      <!-- TODO: 1개나 2개만 있을 때 type-left 클래스를 붙힙니다. -->
+                      <div class="card-item-list-grp">
+                        <div class="card-item-list">
 
-                                  <!-- 진행률 -->
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
 
-                                  <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
-                                  <div class="progress-bar" style="--progress-width: 28%">
-                                    <span class="txt">28% 기억 중</span>
-                                  </div>
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
 
-                                  <!-- END 진행률 -->
-                                </li>
-                                <li>
-                                  <h4 class="card-name">회의 요청 필수 표현</h4>
-                                </li>
-                                <li>
-                                  <div class="gray-dot-txt-grp">
-                                    <span class="gray-dot-txt">벤리 공인중개사</span>
-                                    <span class="gray-dot-txt">2023</span>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
-                                    <span class="btn btn-type-01 gray-solid-btn">객관식</span>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
 
-                            <!-- 카드 -->
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar" style="--progress-width: 28%">
+                                  <span class="txt">28% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
                           </div>
-                          <div class="swiper-slide">
 
-                            <!-- 카드 -->
-                            <div class="card-item type-01">
-                              <figure class="thumbnail">
-                                <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
-                              </figure>
-                              <ul class="card-information">
-                                <li>
+                          <!-- 카드 -->
+                        </div>
+                        <div class="card-item-list">
 
-                                  <!-- 진행률 -->
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
 
-                                  <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
-                                  <div class="progress-bar" style="--progress-width: 28%">
-                                    <span class="txt">28% 기억 중</span>
-                                  </div>
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
 
-                                  <!-- END 진행률 -->
-                                </li>
-                                <li>
-                                  <h4 class="card-name">회의 요청 필수 표현</h4>
-                                </li>
-                                <li>
-                                  <div class="gray-dot-txt-grp">
-                                    <span class="gray-dot-txt">벤리 공인중개사</span>
-                                    <span class="gray-dot-txt">2023</span>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
-                                    <span class="btn btn-type-01 gray-solid-btn">객관식</span>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
 
-                            <!-- 카드 -->
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar" style="--progress-width: 28%">
+                                  <span class="txt">28% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
                           </div>
+
+                          <!-- 카드 -->
+                        </div>
+                        <div class="card-item-list">
+
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
+
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar" style="--progress-width: 28%">
+                                  <span class="txt">28% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- 카드 -->
+                        </div>
+                        <div class="card-item-list">
+
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
+
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar" style="--progress-width: 28%">
+                                  <span class="txt">28% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- 카드 -->
+                        </div>
+                        <div class="card-item-list">
+
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
+
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar" style="--progress-width: 28%">
+                                  <span class="txt">28% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- 카드 -->
                         </div>
                       </div>
-                      <div class="swiper-button-next ms-button-next swiper-01-next"></div>
-                      <div class="swiper-button-prev ms-button-prev swiper-01-prev"></div>
                     </article>
 
                     <!-- END 섹션 내용 -->
@@ -595,7 +1080,7 @@
                     <!-- 섹션 제목 -->
                     <div class="ttl-wrap">
                       <div class="ttl-item">
-                        <h3 class="ttl">빠르게 외우려면, [EASY] 플레이!</h3>
+                        <h3 class="ttl">빠르게 외우려면, [EASY] 플레이! (4개일 때)</h3>
                       </div>
                     </div>
 
@@ -603,88 +1088,579 @@
 
                     <!-- 섹션 내용 -->
                     <article class="content">
-                      <div id="swiper-01" class="swiper main-swiper">
-                        <div class="swiper-wrapper">
-                          <div class="swiper-slide">
 
-                            <!-- 카드 -->
-                            <div class="card-item type-01">
-                              <figure class="thumbnail">
-                                <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
-                              </figure>
-                              <ul class="card-information">
-                                <li>
+                      <!-- TODO: 1개나 2개만 있을 때 type-left 클래스를 붙힙니다. -->
+                      <div class="card-item-list-grp">
+                        <div class="card-item-list">
 
-                                  <!-- 진행률 -->
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
 
-                                  <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
-                                  <div class="progress-bar" style="--progress-width: 28%">
-                                    <span class="txt">28% 기억 중</span>
-                                  </div>
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
 
-                                  <!-- END 진행률 -->
-                                </li>
-                                <li>
-                                  <h4 class="card-name">회의 요청 필수 표현</h4>
-                                </li>
-                                <li>
-                                  <div class="gray-dot-txt-grp">
-                                    <span class="gray-dot-txt">벤리 공인중개사</span>
-                                    <span class="gray-dot-txt">2023</span>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
-                                    <span class="btn btn-type-01 gray-solid-btn">객관식</span>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
 
-                            <!-- 카드 -->
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar" style="--progress-width: 28%">
+                                  <span class="txt">28% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
                           </div>
-                          <div class="swiper-slide">
 
-                            <!-- 카드 -->
-                            <div class="card-item type-01">
-                              <figure class="thumbnail">
-                                <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
-                              </figure>
-                              <ul class="card-information">
-                                <li>
+                          <!-- 카드 -->
+                        </div>
+                        <div class="card-item-list">
 
-                                  <!-- 진행률 -->
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
 
-                                  <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
-                                  <div class="progress-bar" style="--progress-width: 28%">
-                                    <span class="txt">28% 기억 중</span>
-                                  </div>
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
 
-                                  <!-- END 진행률 -->
-                                </li>
-                                <li>
-                                  <h4 class="card-name">회의 요청 필수 표현</h4>
-                                </li>
-                                <li>
-                                  <div class="gray-dot-txt-grp">
-                                    <span class="gray-dot-txt">벤리 공인중개사</span>
-                                    <span class="gray-dot-txt">2023</span>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
-                                    <span class="btn btn-type-01 gray-solid-btn">객관식</span>
-                                  </div>
-                                </li>
-                              </ul>
-                            </div>
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
 
-                            <!-- 카드 -->
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar" style="--progress-width: 28%">
+                                  <span class="txt">28% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
                           </div>
+
+                          <!-- 카드 -->
+                        </div>
+                        <div class="card-item-list">
+
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
+
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar" style="--progress-width: 28%">
+                                  <span class="txt">28% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- 카드 -->
+                        </div>
+                        <div class="card-item-list">
+
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
+
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar" style="--progress-width: 28%">
+                                  <span class="txt">28% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- 카드 -->
                         </div>
                       </div>
-                      <div class="swiper-button-next ms-button-next swiper-01-next"></div>
-                      <div class="swiper-button-prev ms-button-prev swiper-01-prev"></div>
+                    </article>
+
+                    <!-- END 섹션 내용 -->
+                  </div>
+                  <div class="content-row">
+
+                    <!-- 섹션 제목 -->
+                    <div class="ttl-wrap">
+                      <div class="ttl-item">
+                        <h3 class="ttl">빠르게 외우려면, [EASY] 플레이! (3개일 때)</h3>
+                      </div>
+                    </div>
+
+                    <!-- END 섹션 제목 -->
+
+                    <!-- 섹션 내용 -->
+                    <article class="content">
+
+                      <!-- TODO: 1개나 2개만 있을 때 type-left 클래스를 붙힙니다. -->
+                      <div class="card-item-list-grp">
+                        <div class="card-item-list">
+
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
+
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar" style="--progress-width: 28%">
+                                  <span class="txt">28% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- 카드 -->
+                        </div>
+                        <div class="card-item-list">
+
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
+
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar" style="--progress-width: 28%">
+                                  <span class="txt">28% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- 카드 -->
+                        </div>
+                        <div class="card-item-list">
+
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
+
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar" style="--progress-width: 28%">
+                                  <span class="txt">28% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- 카드 -->
+                        </div>
+                      </div>
+                    </article>
+
+                    <!-- END 섹션 내용 -->
+                  </div>
+                  <div class="content-row">
+
+                    <!-- 섹션 제목 -->
+                    <div class="ttl-wrap">
+                      <div class="ttl-item">
+                        <h3 class="ttl">빠르게 외우려면, [EASY] 플레이! (2개만 있을때)</h3>
+                      </div>
+                    </div>
+
+                    <!-- END 섹션 제목 -->
+
+                    <!-- 섹션 내용 -->
+                    <article class="content">
+
+                      <!-- TODO: 1개나 2개만 있을 때 type-left 클래스를 붙힙니다. -->
+                      <div class="card-item-list-grp type-left">
+                        <div class="card-item-list">
+
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
+
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar" style="--progress-width: 28%">
+                                  <span class="txt">28% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- 카드 -->
+                        </div>
+                        <div class="card-item-list">
+
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
+
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar" style="--progress-width: 28%">
+                                  <span class="txt">28% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- 카드 -->
+                        </div>
+                        <div class="card-item-list">
+
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
+
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar" style="--progress-width: 28%">
+                                  <span class="txt">28% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- 카드 -->
+                        </div>
+                      </div>
+                    </article>
+
+                    <!-- END 섹션 내용 -->
+                  </div>
+                  <div class="content-row">
+
+                    <!-- 섹션 제목 -->
+                    <div class="ttl-wrap">
+                      <div class="ttl-item">
+                        <h3 class="ttl">빠르게 외우려면, [EASY] 플레이! (1개만 있을때)</h3>
+                      </div>
+                    </div>
+
+                    <!-- END 섹션 제목 -->
+
+                    <!-- 섹션 내용 -->
+                    <article class="content">
+
+                      <!-- TODO: 1개나 2개만 있을 때 type-left 클래스를 붙힙니다. -->
+                      <div class="card-item-list-grp type-left">
+                        <div class="card-item-list">
+
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
+
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar" style="--progress-width: 28%">
+                                  <span class="txt">28% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- 카드 -->
+                        </div>
+                      </div>
                     </article>
 
                     <!-- END 섹션 내용 -->
@@ -694,10 +1670,10 @@
                 <!-- END 탭: 기억 학습 콘텐츠 -->
 
                 <!-- 탭: 채널 설명 -->
-                <div class="section-content tab02-section-content">
+                <div id="tab02" class="section-content tab02-section-content">
 
                   <!-- 섹션 제목 -->
-                  <div class="ttl-wrap">
+                  <div class="ttl-wrap type-bd">
                     <div class="ttl-item">
                       <h3 class="ttl">채널 설명</h3>
                     </div>
@@ -705,16 +1681,46 @@
 
                   <!-- END 섹션 제목 -->
                   <article class="content">
-                    <div>
-                      <div>
-                        <div class="txt-wrapper">
-                          에디터 영역
+                    <div class="more-content-wrapper">
+                      <div class="more-content">
+                        <div class="txt-wrapper" style="font-size: 24px;">
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          <br>
                         </div>
                       </div>
-                      <button type="button">
-                        <span class="txt">더보기</span>
-                        <i class="ico ico-arrow-down ico-blue"></i>
-                      </button>
+                      <div class="content-btn-wrap">
+                        <button type="button" class="more-btn btn btn-type-11 blue-bd-btn btn-w100">
+                          <span class="txt">더보기</span>
+                          <i class="ico ico-arrow-down ico-blue"></i>
+                        </button>
+                      </div>
                     </div>
                   </article>
                 </div>
@@ -722,7 +1728,7 @@
                 <!-- END 탭: 채널 설명 -->
 
                 <!-- 탭: 첨부 파일 -->
-                <div class="section-content tab03-section-content">
+                <div id="tab03" class="section-content tab03-section-content">
 
                   <!-- 섹션 제목 -->
                   <div class="ttl-wrap">
@@ -733,11 +1739,11 @@
 
                   <!-- END 섹션 제목 -->
                   <article class="content">
-                    <div>
-                      <div>
-                        <div>
-                          <h4>콘텐츠 설명</h4>
-                          <p>
+                    <div class="more-content-wrapper">
+                      <div class="more-content active">
+                        <div class="white-box desc-white-box">
+                          <h4 class="ttl">콘텐츠 설명</h4>
+                          <p class="desc">
                             지난 10년간 수능에서 나왔던 모든 단어들을 선별하여 많이 나왔던 순서로 정리해두었습니다. <br>
                             작년 수능 때에도 이 단어장을 외웠던 학생들의 87%가 1등급을 받았습니다. <br>
                             문장 구조를 분석하는 것도 중요하지만, 단어를 제대로 외우는 것이 더욱 중요합니다. <br>
@@ -745,28 +1751,84 @@
                             첫 달 가입 시, 모든 단어장 다운로드가 가능합니다.
                           </p>
                         </div>
-                        <ul>
-                          <li>
-                            <div>
-                              <div>
-                                <figure>
-                                  <img src="" alt="">
+                        <ul class="grid-list-grp">
+                          <li class="list">
+                            <div class="download-card-item">
+                              <div class="card-item-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img type-sm"> -->
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-sample-pdf.png" alt="" class="thumbnail-img">
                                 </figure>
-                                <h5>김티처의 수능 필수 영어 1000단어 3개...</h5>
+                                <h5 class="card-name">김티처의 수능 필수 영어 1000단어 3개...</h5>
                               </div>
-                              <button type="button">다운로드</button>
+                              <button type="button" class="btn btn-w100 blue-solid-btn btn-type-11">다운로드</button>
+                            </div>
+                          </li>
+                          <li class="list">
+                            <div class="download-card-item">
+                              <div class="card-item-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img type-sm">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample//img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                                <h5 class="card-name">김티처의 수능 필수 영어 1000단어 3개...</h5>
+                              </div>
+                              <button type="button" class="btn btn-w100 blue-solid-btn btn-type-11">다운로드</button>
+                            </div>
+                          </li>
+                          <li class="list">
+                            <div class="download-card-item">
+                              <div class="card-item-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img type-sm">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample//img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                                <h5 class="card-name">김티처의 수능 필수 영어 1000단어 3개...</h5>
+                              </div>
+                              <button type="button" class="btn btn-w100 blue-solid-btn btn-type-11">다운로드</button>
+                            </div>
+                          </li>
+                          <li class="list">
+                            <div class="download-card-item">
+                              <div class="card-item-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img type-sm">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample//img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                                <h5 class="card-name">김티처의 수능 필수 영어 1000단어 3개...</h5>
+                              </div>
+                              <button type="button" class="btn btn-w100 blue-solid-btn btn-type-11">다운로드</button>
                             </div>
                           </li>
                         </ul>
                       </div>
-                      <div>
-                        <button type="button">
+                      <div class="content-btn-wrap">
+                        <button type="button" class="more-btn btn btn-type-11 blue-bd-btn btn-w100">
                           <span class="txt">더보기</span>
                           <i class="ico ico-arrow-down ico-blue"></i>
                         </button>
-                        <button type="button">
-                          <span class="txt">더보기</span>
-                          <i class="ico ico-arrow-down ico-blue"></i>
+                        <button type="button" class="btn btn-type-11 blue-solid-btn btn-w100">
+                          <span class="txt">회원 가입 후 전체 다운로드</span>
                         </button>
                       </div>
                     </div>
@@ -776,7 +1838,7 @@
                 <!-- END 탭: 첨부 파일 -->
 
                 <!-- 탭: 채널 리뷰 -->
-                <div class="section-content tab04-section-content">
+                <div id="tab04" class="section-content tab04-section-content">
 
                   <!-- 리뷰 평점/리뷰수/평점비율 -->
                   <div class="content-row">
@@ -790,17 +1852,17 @@
 
                     <!-- END 섹션 제목 -->
                     <article class="content">
-                      <div>
+                      <div class="white-box rvtop-list-box">
 
                         <!-- 평점 -->
-                        <div>
-                          <h6>사용자 총 평점</h6>
-                          <div>
-                            <div>
-                              <i class="ico ico-stars"></i>
+                        <div class="rvtop-list">
+                          <h6 class="ttl">사용자 총 평점</h6>
+                          <div class="inner-content">
+                            <div class="figure-box">
+                              <i class="ico ico-stars ico-stars-05"></i>
                             </div>
-                            <p>
-                              <span>4.9</span>/5
+                            <p class="txt-wrap">
+                              <span class="bold-txt">4.9</span>/5
                             </p>
                           </div>
                         </div>
@@ -808,14 +1870,14 @@
                         <!-- END 평점 -->
 
                         <!-- 전체 리뷰수 -->
-                        <div>
-                          <h6>사용자 총 평점</h6>
-                          <div>
-                            <div>
-                              <i class="ico ico-reviews"></i>
+                        <div class="rvtop-list">
+                          <h6 class="ttl">사용자 총 평점</h6>
+                          <div class="inner-content">
+                            <div class="figure-box">
+                              <i class="ico ico-44 ico-review-count"></i>
                             </div>
-                            <p>
-                              <span>2,588</span>
+                            <p class="txt-wrap">
+                              <span class="bold-txt">2,588</span>
                             </p>
                           </div>
                         </div>
@@ -823,39 +1885,39 @@
                         <!-- END 전체 리뷰수 -->
 
                         <!-- 평점 비율 -->
-                        <div>
-                          <h6>평점 빙ㄹ</h6>
-                          <div>
-                            <ul>
-                              <li>
-                                <div>
-                                  <span></span>
+                        <div class="rvtop-list">
+                          <h6 class="ttl">평점 비율</h6>
+                          <div class="inner-content">
+                            <ul class="bar-list-grp">
+                              <li class="bar-list">
+                                <div class="bar-wrap">
+                                  <span class="bar" style="height: 95%"></span>
                                 </div>
-                                <span>5점</span>
+                                <span class="bar-txt">5점</span>
                               </li>
-                              <li>
-                                <div>
-                                  <span></span>
+                              <li class="bar-list">
+                                <div class="bar-wrap">
+                                  <span class="bar" style="height: 80%"></span>
                                 </div>
-                                <span>4점</span>
+                                <span class="bar-txt">4점</span>
                               </li>
-                              <li>
-                                <div>
-                                  <span></span>
+                              <li class="bar-list">
+                                <div class="bar-wrap">
+                                  <span class="bar" style="height: 14%"></span>
                                 </div>
-                                <span>3점</span>
+                                <span class="bar-txt">3점</span>
                               </li>
-                              <li>
-                                <div>
-                                  <span></span>
+                              <li class="bar-list">
+                                <div class="bar-wrap">
+                                  <span class="bar" style="height: 20%"></span>
                                 </div>
-                                <span>2점</span>
+                                <span class="bar-txt">2점</span>
                               </li>
-                              <li>
-                                <div>
-                                  <span></span>
+                              <li class="bar-list">
+                                <div class="bar-wrap">
+                                  <span class="bar" style="height: 10%"></span>
                                 </div>
-                                <span>1점</span>
+                                <span class="bar-txt">1점</span>
                               </li>
                             </ul>
                           </div>
@@ -881,25 +1943,195 @@
 
                     <!-- END 섹션 제목 -->
                     <article class="content">
-                      <div class="swiper-">
-                        <div class="swiper-">
-                          <div class="swiper-slide-">
-                            <figure>
-                              <img src="" alt="">
+                      <div id="swiper-02" class="swiper review-swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <figure class="photo-review-thumbnail">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+
+                              <!-- <div class="thumbnail-img">
+                          <img src="assets/images/sample/img-thumbnail-default.svg" alt=""
+                            class="thumbnail-default-img">
+                        </div> -->
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+                              <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
                             </figure>
                           </div>
-                          <div class="swiper-slide-">
-                            <figure>
-                              <img src="" alt="">
+                          <div class="swiper-slide">
+                            <figure class="photo-review-thumbnail">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <div class="thumbnail-img">
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+                              </div>
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
                             </figure>
                           </div>
-                          <div class="swiper-slide-">
-                            <figure>
-                              <img src="" alt="">
+                          <div class="swiper-slide">
+                            <figure class="photo-review-thumbnail">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <div class="thumbnail-img">
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+                              </div>
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </figure>
+                          </div>
+                          <div class="swiper-slide">
+                            <figure class="photo-review-thumbnail">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <div class="thumbnail-img">
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+                              </div>
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </figure>
+                          </div>
+                          <div class="swiper-slide">
+                            <figure class="photo-review-thumbnail">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <div class="thumbnail-img">
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+                              </div>
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </figure>
+                          </div>
+                          <div class="swiper-slide">
+                            <figure class="photo-review-thumbnail">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <div class="thumbnail-img">
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+                              </div>
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </figure>
+                          </div>
+                          <div class="swiper-slide">
+                            <figure class="photo-review-thumbnail">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <div class="thumbnail-img">
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+                              </div>
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </figure>
+                          </div>
+                          <div class="swiper-slide">
+                            <figure class="photo-review-thumbnail">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <div class="thumbnail-img">
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+                              </div>
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </figure>
+                          </div>
+                          <div class="swiper-slide">
+                            <figure class="photo-review-thumbnail">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <div class="thumbnail-img">
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+                              </div>
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </figure>
+                          </div>
+                          <div class="swiper-slide">
+                            <figure class="photo-review-thumbnail">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <div class="thumbnail-img">
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+                              </div>
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </figure>
+                          </div>
+                          <div class="swiper-slide">
+                            <figure class="photo-review-thumbnail">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <div class="thumbnail-img">
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+                              </div>
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </figure>
+                          </div>
+                          <div class="swiper-slide">
+                            <figure class="photo-review-thumbnail">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <div class="thumbnail-img">
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+                              </div>
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </figure>
+                          </div>
+                          <div class="swiper-slide">
+                            <figure class="photo-review-thumbnail">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <div class="thumbnail-img">
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+                              </div>
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </figure>
+                          </div>
+                          <div class="swiper-slide">
+                            <figure class="photo-review-thumbnail">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <div class="thumbnail-img">
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+                              </div>
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
                             </figure>
                           </div>
                         </div>
                       </div>
+                      <div class="swiper-button-next ms-button-next swiper-02-next"></div>
+                      <div class="swiper-button-prev ms-button-prev swiper-02-prev"></div>
                     </article>
                   </div>
 
@@ -917,34 +2149,85 @@
 
                     <!-- END 섹션 제목 -->
                     <article class="content">
-                      <div>
-                        <div>
-                          <span>채널 리뷰</span>
-                          <h4>채널 별점을 선택해주세요.</h4>
-                          <div></div>
+                      <div class="white-box rvcreate-box">
+                        <div class="ttl-wrap">
+                          <span class="sub-ttl">채널 리뷰</span>
+                          <h4 class="ttl">채널 별점을 선택해주세요.</h4>
+                          <div class="star-rating-item">
+                            <div class="rating-group">
+                              <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+                              <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                              <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
+                              <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                              <input class="rating__input" name="rating3" id="rating3-2" value="2" type="radio">
+                              <label aria-label="3 stars" class="rating__label" for="rating3-3"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                              <input class="rating__input" name="rating3" id="rating3-3" value="3" type="radio">
+                              <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                              <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
+                              <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
+                              <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+                            </div>
+                          </div>
                         </div>
-                        <div>
-                          <input type="text" placeholder="리뷰를 작성해 주세요." readonly>
-                          <button type="button">등록</button>
+
+                        <!-- TODO: rvcreate-before-area 를 누르면 rvcreate-after-area가 나옵니다 -->
+                        <div id="rvcreate-before-btn" class="rvcreate-before-area">
+                          <input type="text" class="inp" placeholder="리뷰를 작성해 주세요." readonly>
+                          <button type="button" class="btn btn-type-11 blue-solid-btn">등록</button>
                         </div>
-                        <div>
-                          <div>
-                            <div>
-                              <label>리뷰 작성</label>
-                              <div>
-                                <textarea name="" id="" cols="30" rows="10"></textarea>
-                                <p>(<span>0</span>/1,000)</p>
+                        <div class="rvcreate-after-area">
+                          <div class="form-item-grp">
+                            <div class="form-item">
+                              <label class="form-label">리뷰 작성</label>
+                              <div class="form-inp-wrap txt-count-textarea-wrap">
+                                <textarea class="inp" placeholder="채널과 관련된 리뷰를 남겨주세요. 최대 1,000자까지 입력 가능합니다."></textarea>
+                                <p class="txt-count">(<span>0</span>/1,000)</p>
                               </div>
                             </div>
-                            <div>
-                              <label>이미지 등록</label>
-                              <div>
+                            <div class="form-item">
+                              <label class="form-label">이미지 등록</label>
+                              <div class="form-inp-wrap">
+                                <div class="file-upload-inp-wrap">
+                                  <input type="file" id="file01" class="none">
 
-                                <!-- FIXME: 갖고오기 -->
+                                  <!-- TODO: PC 때 보이는 버튼 -->
+                                  <label for="file01" class="file-upload-label type-pc">
+                                    <div class="before-upload">
+                                      <img src="assets/images/ico/ico-photo-upload.png" alt="" class="img-ico">
+                                      <span class="txt">
+                                  652 x 488px <br>(4:3 비율)
+                                </span>
+                                    </div>
+                                  </label>
+
+                                  <!-- TODO: 모바일 때 보이는 버튼 -->
+                                  <label for="file01" class="file-upload-label type-mobile">
+                                    <i class="ico ico-upload-image"></i>
+                                    <span class="txt">
+                                652 x 488px <br>(4:3 비율)
+                              </span>
+                                  </label>
+                                  <div class="desc-box">
+                                    <ul>
+                                      <li>이미지 권장 사이즈: 652 x 488px (4:3 비율)</li>
+                                      <li>
+                                        <b>사용 제한 이미지</b><br>
+                                        저작권 침해 (무단복제, 도용) 이미지 <br>
+                                        프로필 사진과 동일한 이미지 <br>
+                                        가격, 연락처, 서비스와 관련 없는 홍보성 문구 <br>
+                                        임의로 제작된 인증 마크, 라벨, 할인표기 <br>
+                                        검증 불가 내용 (최초, 유일, 무제한, 1위, 누적의뢰 수/금액 표기 등)
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </div>
                               </div>
                             </div>
                           </div>
-                          <button type="button">등록하기</button>
+                          <div class="content-btn-wrap">
+                            <button type="button" class="btn btn-type-11 btn-w100 blue-solid-btn">등록하기</button>
+                            <button id="rvcreate-cancel-btn" type="button" class="btn btn-type-11 btn-w100 gray-solid-btn">취소하기</button>
+                          </div>
                         </div>
                       </div>
                     </article>
@@ -956,69 +2239,74 @@
                   <div class="content-row">
 
                     <!-- 섹션 제목 -->
-                    <div class="ttl-wrap">
+                    <div class="ttl-wrap type-bd">
                       <div class="ttl-item">
                         <h3 class="ttl">전체 리뷰</h3>
                         <span class="gray-txt">(2,588건)</span>
                       </div>
-                      <div>
-                        <button type="button">최신순</button>
-                        <button type="button">평점 높은순</button>
-                        <button type="button">별점 낮은순</button>
+                      <div class="mg-left sort-btn-grp">
+
+                        <!-- TODO: 클릭시 active 클래스가 추가됩니다. -->
+                        <button type="button" class="sort-btn active">최신순</button>
+                        <button type="button" class="sort-btn">평점 높은순</button>
+                        <button type="button" class="sort-btn">별점 낮은순</button>
                       </div>
                     </div>
 
                     <!-- END 섹션 제목 -->
                     <article class="content">
-                      <div>
+                      <div class="review-item-grp">
 
                         <!-- 후기 하나 -->
-                        <div>
-                          <div>
-                            <ul>
+                        <div class="review-item">
+                          <div class="review-item-content">
+                            <ul class="information">
                               <li>
-                                <div>
-                                  <i></i>
-                                  <span></span>
+                                <div class="star-txt-wrap">
+
+                                  <!-- TODO: 별점에 따라 ico-stars-05 ~ ico-stars-01 까지 분리됩니다 -->
+                                  <i class="ico ico-stars ico-stars-03"></i>
+                                  <span class="txt">3</span>
                                 </div>
                               </li>
                               <li>
-                                <div>
-                                  <span>나의 댓글</span>
-                                  <span>id****</span>
-                                  <span>2023.09.23</span>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">id****</span>
+                                  <span class="gray-dot-txt">2023.09.23</span>
                                 </div>
                               </li>
                               <li>
-                                <span>BEST 리뷰</span>
+                                <span class="red-bd-badge">BEST 리뷰</span>
                               </li>
                               <li>
-                                <p>시안1받고 사용하다가 시안2도 너무마음에 들어서 추가구매하였습니다^^ 정말 고급스럽고 생각했 던로고가 2개나있어서 행복합니다~~! 예쁜로고보고 고객분들이 주문
+                                <p class="review-desc">시안1받고 사용하다가 시안2도 너무마음에 들어서 추가구매하였습니다^^ 정말 고급스럽고 생각했 던로고가 2개나있어서
+                                  행복합니다~~! 예쁜로고보고 고객분들이 주문
                                   많이해주셨음좋겠습니다 감사합니다요!</p>
                               </li>
                               <li>
-                                <div>
-                                  <span>클리어: 3회</span>
-                                  <span>구독 회차: 3개월 차</span>
+                                <div class="info-txt-grp">
+                                  <span class="txt">클리어: 3회</span>
+                                  <span class="txt">구독 회차: 3개월 차</span>
                                 </div>
                               </li>
                             </ul>
-                            <div>
-                              <button type="button">수정</button>
-                              <button type="button">삭제</button>
+                            <div class="under-btn-wrap">
+                              <button type="button" class="btn btn-type-11 blue-bd-btn">수정</button>
+                              <button type="button" class="btn btn-type-11 blue-bd-btn">삭제</button>
+                              <button type="button" class="btn btn-type-11 blue-bd-btn">댓글작성</button>
                             </div>
 
                             <!-- 리뷰 답댓글 작성칸 -->
-                            <div>
-                              <div>
-                                <span>김선우's 학습박스</span>
-                                <span>2023.09.23</span>
+                            <div class="review-reply-item">
+                              <div class="gray-dot-txt-grp">
+                                <span class="gray-dot-txt bold-txt">김선우's 학습박스</span>
+                                <span class="gray-dot-txt ">2023.09.23</span>
                               </div>
-                              <div>
-                                <textarea placeholder="리뷰 답을 달아주세요."></textarea>
-                                <div>
-                                  <button type="button">취소</button>
-                                  <button type="button">저장</button>
+                              <div class="form-inp-wrap">
+                                <textarea placeholder="리뷰 답을 달아주세요." class="inp"></textarea>
+                                <div class="btn-wrap">
+                                  <button type="button" class="btn btn-type-11 gray-solid-btn">취소</button>
+                                  <button type="button" class="btn btn-type-11 blue-solid-btn">저장</button>
                                 </div>
                               </div>
                             </div>
@@ -1026,13 +2314,13 @@
                             <!-- END 리뷰 답댓글 작성칸 -->
 
                             <!-- 리뷰 답댓글 -->
-                            <div>
-                              <div>
-                                <span>김선우's 학습박스</span>
-                                <span>2023.09.23</span>
+                            <div class="review-reply-item">
+                              <div class="gray-dot-txt-grp">
+                                <span class="gray-dot-txt bold-txt">김선우's 학습박스</span>
+                                <span class="gray-dot-txt ">2023.09.23</span>
                               </div>
-                              <div>
-                                <p>
+                              <div class="form-inp-wrap">
+                                <p class="desc">
                                   좋게 봐주셔서 감사드립니다. <br>
                                   더욱 노력하라는 말씀으로 이해하고 전진하겠습니다. <br>
                                   저희는 3가지 원칙을 준수합니다. <br>
@@ -1040,27 +2328,54 @@
                                   2.크몽 입점 3년차, 2,000개의 후기가 실력을 증명합니다. <br>
                                   3.하루 선착순 3명 의뢰로 퀄리티를 유지합니다.
                                 </p>
-                                <button type="button">편집</button>
+                                <div class="btn-wrap">
+                                  <button type="button" class="btn btn-type-11 blue-bd-btn">저장</button>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- END 리뷰 답댓글 -->
+
+                            <!-- 리뷰 답댓글 -->
+                            <div class="review-reply-item">
+                              <div class="gray-dot-txt-grp">
+                                <span class="gray-dot-txt blue-txt">나의 댓글</span>
+                                <span class="gray-dot-txt ">2023.09.23</span>
+                              </div>
+                              <div class="form-inp-wrap">
+                                <textarea placeholder="리뷰 답을 달아주세요." class="inp"></textarea>
                               </div>
                             </div>
 
                             <!-- END 리뷰 답댓글 -->
                           </div>
-                          <figure>
-                            <img src="" alt="">
-                          </figure>
-                          <button type="button">
-                            <i></i>
-                            <span>10</span>
-                          </button>
+                          <div class="thumbnail-like-wrap">
+                            <figure class="thumbnail">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </figure>
+
+                            <!-- TODO: 누를 시 active 클래스가 달립니다 -->
+                            <button type="button" class="like-btn">
+                              <i class="ico ico-13 ico-thumbsup"></i>
+                              <span class="txt">10</span>
+                            </button>
+                          </div>
                         </div>
 
                         <!-- END 후기 하나 -->
                       </div>
-                      <button type="button">
-                        <span>더보기</span>
-                        <i class="ico ico-arrow-down ico-blue"></i>
-                      </button>
+                      <div class="content-btn-wrap">
+                        <button type="button" class="btn btn-type-11 btn-w100 blue-bd-btn">
+                          <span class="txt">더보기</span>
+                          <i class="ico ico-arrow-down ico-blue"></i>
+                        </button>
+                      </div>
                     </article>
                   </div>
 
@@ -1084,14 +2399,22 @@
 
                 <!-- 섹션 내용 -->
                 <article class="content">
-                  <div id="swiper-01" class="swiper main-swiper">
+                  <div id="swiper-03" class="swiper channel-main-swiper">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
 
                         <!-- 카드 -->
                         <div class="card-item type-01">
                           <figure class="thumbnail">
-                            <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
+                            <div class="thumbnail-img-box">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </div>
                           </figure>
                           <ul class="card-information">
                             <li>
@@ -1129,7 +2452,199 @@
                         <!-- 카드 -->
                         <div class="card-item type-01">
                           <figure class="thumbnail">
-                            <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
+                            <div class="thumbnail-img-box">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </div>
+                          </figure>
+                          <ul class="card-information">
+                            <li>
+
+                              <!-- 진행률 -->
+
+                              <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                              <div class="progress-bar" style="--progress-width: 28%">
+                                <span class="txt">28% 기억 중</span>
+                              </div>
+
+                              <!-- END 진행률 -->
+                            </li>
+                            <li>
+                              <h4 class="card-name">회의 요청 필수 표현</h4>
+                            </li>
+                            <li>
+                              <div class="gray-dot-txt-grp">
+                                <span class="gray-dot-txt">벤리 공인중개사</span>
+                                <span class="gray-dot-txt">2023</span>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <!-- 카드 -->
+                      </div>
+                      <div class="swiper-slide">
+
+                        <!-- 카드 -->
+                        <div class="card-item type-01">
+                          <figure class="thumbnail">
+                            <div class="thumbnail-img-box">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </div>
+                          </figure>
+                          <ul class="card-information">
+                            <li>
+
+                              <!-- 진행률 -->
+
+                              <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                              <div class="progress-bar" style="--progress-width: 28%">
+                                <span class="txt">28% 기억 중</span>
+                              </div>
+
+                              <!-- END 진행률 -->
+                            </li>
+                            <li>
+                              <h4 class="card-name">회의 요청 필수 표현</h4>
+                            </li>
+                            <li>
+                              <div class="gray-dot-txt-grp">
+                                <span class="gray-dot-txt">벤리 공인중개사</span>
+                                <span class="gray-dot-txt">2023</span>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <!-- 카드 -->
+                      </div>
+                      <div class="swiper-slide">
+
+                        <!-- 카드 -->
+                        <div class="card-item type-01">
+                          <figure class="thumbnail">
+                            <div class="thumbnail-img-box">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </div>
+                          </figure>
+                          <ul class="card-information">
+                            <li>
+
+                              <!-- 진행률 -->
+
+                              <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                              <div class="progress-bar" style="--progress-width: 28%">
+                                <span class="txt">28% 기억 중</span>
+                              </div>
+
+                              <!-- END 진행률 -->
+                            </li>
+                            <li>
+                              <h4 class="card-name">회의 요청 필수 표현</h4>
+                            </li>
+                            <li>
+                              <div class="gray-dot-txt-grp">
+                                <span class="gray-dot-txt">벤리 공인중개사</span>
+                                <span class="gray-dot-txt">2023</span>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <!-- 카드 -->
+                      </div>
+                      <div class="swiper-slide">
+
+                        <!-- 카드 -->
+                        <div class="card-item type-01">
+                          <figure class="thumbnail">
+                            <div class="thumbnail-img-box">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </div>
+                          </figure>
+                          <ul class="card-information">
+                            <li>
+
+                              <!-- 진행률 -->
+
+                              <!-- TODO: 진행률 50% 이상일 때 type-left를 붙혀주세요 -->
+                              <div class="progress-bar" style="--progress-width: 28%">
+                                <span class="txt">28% 기억 중</span>
+                              </div>
+
+                              <!-- END 진행률 -->
+                            </li>
+                            <li>
+                              <h4 class="card-name">회의 요청 필수 표현</h4>
+                            </li>
+                            <li>
+                              <div class="gray-dot-txt-grp">
+                                <span class="gray-dot-txt">벤리 공인중개사</span>
+                                <span class="gray-dot-txt">2023</span>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <!-- 카드 -->
+                      </div>
+                      <div class="swiper-slide">
+
+                        <!-- 카드 -->
+                        <div class="card-item type-01">
+                          <figure class="thumbnail">
+                            <div class="thumbnail-img-box">
+
+                              <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                              <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                              <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                              <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                            </div>
                           </figure>
                           <ul class="card-information">
                             <li>
@@ -1164,8 +2679,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="swiper-button-next ms-button-next swiper-01-next"></div>
-                  <div class="swiper-button-prev ms-button-prev swiper-01-prev"></div>
+                  <div class="swiper-button-next ms-button-next swiper-03-next"></div>
+                  <div class="swiper-button-prev ms-button-prev swiper-03-prev"></div>
                 </article>
 
                 <!-- END 섹션 내용 -->
@@ -1234,5 +2749,89 @@
       <!-- END 푸터 -->
     </div>
     <script src="assets/js/ui.js"></script>
+    <script>
+      const swiperDefaultBreakPoints = {
+        450: {
+          slidesPerView: 2.8,
+          spaceBetween: 15,
+        },
+        650: {
+          slidesPerView: 3.5,
+          spaceBetween: 15,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 20,
+        },
+        1080: {
+          slidesPerView: 5,
+          spaceBetween: 20,
+        },
+        1200: {
+          slidesPerView: 5,
+          spaceBetween: 25,
+        },
+        1500: {
+          slidesPerView: 6,
+          spaceBetween: 43,
+        }
+      }
+      const swiper01 = new Swiper("#swiper-01", {
+        slidesPerView: 1.6,
+        spaceBetween: 15,
+        breakpoints: swiperDefaultBreakPoints,
+        navigation: {
+          nextEl: ".swiper-01-next",
+          prevEl: ".swiper-01-prev"
+        }
+      });
+      const swiper02 = new Swiper("#swiper-02", {
+        slidesPerView: 8,
+        spaceBetween: 21,
+        navigation: {
+          nextEl: ".swiper-02-next",
+          prevEl: ".swiper-02-prev"
+        }
+      });
+      const swiper03 = new Swiper("#swiper-03", {
+        slidesPerView: 1.6,
+        spaceBetween: 15,
+        breakpoints: swiperDefaultBreakPoints,
+        navigation: {
+          nextEl: ".swiper-03-next",
+          prevEl: ".swiper-03-prev"
+        }
+      });
+      $('.more-btn').on('click', function() {
+        $(this).parent('.more-content-btn-wrap').siblings('.more-content').addClass('active');
+      })
+      $('#rvcreate-before-btn').on('click', function() {
+        $('.rvcreate-before-area').addClass('invisible');
+        $('.rvcreate-after-area').show();
+      })
+      $('#rvcreate-cancel-btn').on('click', function() {
+        $('.rvcreate-after-area').hide();
+        $('.rvcreate-before-area').removeClass('invisible');
+      })
+      $('[data-move-tab]').on('click', function() {
+        var content = $(this).attr('data-move-content');
+        $('[data-move-tab]').removeClass('active');
+        $(this).addClass('active');
+        $('html, body').animate({
+          scrollTop: $('#' + content).offset().top - 140
+        }, 500);
+      })
+      $(window).on('scroll', function() {
+        var scrolltop = $(window).scrollTop();
+        $('.section-content').each(function(index) {
+          var idx = index;
+          var targetTop = $(this).offset().top - 150;
+          if (targetTop < scrolltop) {
+            $('[data-move-tab]').removeClass('active');
+            $('[data-move-tab]').eq(idx).addClass('active');
+          }
+        })
+      })
+    </script>
   </body>
 </html>

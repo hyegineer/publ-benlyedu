@@ -46,6 +46,7 @@
 
     <!-- Fonts -->
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
@@ -306,45 +307,49 @@
 
           <!-- 페이지 : 빵꾸노트 : 다시외우기 -->
           <div class="page">
+
+            <!-- 빵꾸노트 상단 -->
             <div class="note-layout-top">
-              <div>
+
+              <!-- TODO: PC버전 상단입니다. -->
+              <div class="note-header type-pc">
 
                 <!-- 제목 -->
-                <h2>한국사 요약 노트한국사 요약 노트한국사 요약 노트...</h2>
+                <h2 class="ttl">다시외우기</h2>
 
                 <!-- END 제목 -->
 
                 <!-- 가운데 컨트롤 -->
-                <ul>
-                  <li>
-                    <div>
-                      <span rolebox="textbox" contenteditable="">1</span>/16
+                <ul class="ctrl-list-grp">
+                  <li class="ctrl-list">
+                    <div class="page-ctrl">
+                      <span rolebox="textbox" contenteditable="" class="inp">1</span>/16
                     </div>
                   </li>
-                  <li>
-                    <div>
-                      <button type="button">
+                  <li class="ctrl-list">
+                    <div class="zoom-ctrl">
+                      <button type="button" class="btn">
                         <span class="txt-hidden">줌아웃</span>
-                        <i class="ico ico-zoomout"></i>
+                        <i class="ico ico-21 ico-zoomout"></i>
                       </button>
-                      <input type="text" readonly value="100%">
-                      <button type="button">
+                      <input type="text" readonly class="inp" value="100%">
+                      <button type="button" class="btn">
                         <span class="txt-hidden">줌인</span>
-                        <i class="ico ico-zoomin"></i>
+                        <i class="ico ico-21 ico-zoomin"></i>
                       </button>
                     </div>
                   </li>
-                  <li>
-                    <div>
-                      <button type="button">
+                  <li class="ctrl-list">
+                    <div class="etc-ctrl">
+                      <button type="button" class="btn">
                         <span class="txt-hidden">이동하기</span>
                         <i class="ico ico-move-hand"></i>
                       </button>
-                      <button type="button">
+                      <button type="button" class="btn">
                         <span class="txt-hidden">새창띄우기</span>
                         <i class="ico ico-new-window"></i>
                       </button>
-                      <button type="button">
+                      <button type="button" class="btn">
                         <span class="txt-hidden">실행취소</span>
                         <i class="ico ico-undo"></i>
                       </button>
@@ -354,39 +359,95 @@
 
                 <!-- END 가운데 컨트롤 -->
 
+                <!-- 가운데 안내문구 -->
+
+                <!-- TODO: 답을 입력하지 않았을 때 나오는 안내문구입니다. -->
+                <div class="blue-alert-box" style="display: none;">
+                  <i class="ico ico-info ico-white"></i>
+                  <span class="txt">빈칸의 답을 입력하세요.</span>
+                </div>
+
+                <!-- END 가운데 안내문구 -->
+
                 <!-- 오른쪽 진행률 -->
-                <div>
-                  <div>
-                    <i></i>
-                    <span>0:00</span>
+                <div class="progress-bar-wrap">
+                  <div class="progress-time">
+                    <i class="ico ico-timer ico-pink"></i>
+                    <span class="txt">0:00</span>
                   </div>
-                  <div class="progress-bar">
-                    <span class="width: 50%"></span>
-                  </div>
-                  <div>
-                    <span>3/10</span>
+                  <div class="progress-bar type-pink" style="--progress-width: 50%"></div>
+                  <div class="progress-txt">
+                    <p class="txt"><span>3</span>/10</p>
                   </div>
                 </div>
 
                 <!-- END 오른쪽 진행률 -->
               </div>
-            </div>
-            <div class="note-layout-container">
-              <div class="note-layout-left">
-                <div>
+
+              <!-- TODO: MOBILE버전 상단입니다. -->
+              <div class="note-header type-mobile">
+                <div class="note-header-top">
                   <button type="button">
+                    <span class="txt-hidden">뒤로가기</span>
+                  </button>
+                  <div class="progress-time">
+                    <i class="ico ico-timer ico-pink"></i>
+                    <span class="txt">0:00</span>
+                  </div>
+                </div>
+                <div class="note-header-bottom">
+                  <div class="progress-bar type-pink">
+                    <span width="50%"></span>
+                  </div>
+                  <p class="progress-txt"><span>3</span>/10</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- END 빵꾸노트 상단 -->
+
+            <!-- 빵꾸노트 컨텐츠 -->
+            <div class="note-layout-container">
+
+              <!-- 빵꾸노트 좌측 -->
+              <div class="note-layout-left">
+                <div class="note-left-container type-blue">
+                  <button id="note-left-fold-btn" type="button" class="btn fold-btn">
                     <span class="txt-hidden">접기</span>
                     <i class="ico ico-db-fold-left"></i>
                   </button>
-                  <div>
-                    <ul>
-                      <li>
-                        <div>
-                          <figure>
-                            <img src="" alt="">
+                  <div class="note-list-wrap">
+                    <ul class="note-list-grp">
+                      <li class="note-list">
+                        <div class="note-card-item active">
+                          <figure class="thumbnail">
+                            <img src="assets/images/sample/sample-note-img.png" alt="" class="thumbnail-img">
                           </figure>
                           <div class="btn-set">
-                            <button type="button" class="btn bsbtn">1</button>
+                            <button type="button" class="btn bsbtn count-txt">1</button>
+                            <div class="btn-set-wrap">
+                              <ul class="btn-set-list-grp">
+                                <li class="btn-set-list">
+                                  <button type="button" class="btn">삭제하기</button>
+                                </li>
+                                <li class="btn-set-list">
+                                  <button type="button" class="btn">비활성화</button>
+                                </li>
+                                <li class="btn-set-list">
+                                  <button type="button" class="btn">아래 페이지 추가</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="note-list">
+                        <div class="note-card-item">
+                          <figure class="thumbnail">
+                            <img src="assets/images/sample/sample-note-img.png" alt="" class="thumbnail-img">
+                          </figure>
+                          <div class="btn-set">
+                            <button type="button" class="btn bsbtn count-txt">2</button>
                             <div class="btn-set-wrap">
                               <ul class="btn-set-list-grp">
                                 <li class="btn-set-list">
@@ -405,242 +466,68 @@
                       </li>
                     </ul>
                   </div>
-                  <div>
-                    <button type="button">
-                      <i class="ico ico-circle-plus ico-pink"></i>
-                      <span>png, jpg, pdf</span>
-                    </button>
-                  </div>
                 </div>
               </div>
+
+              <!-- END 빵꾸노트 좌측 -->
+
+              <!-- 빵꾸노트 센터 (사진) -->
               <div class="note-layout-center">
-                <div>
+                <div class="note-center-container">
+                  <img src="assets/images/sample/sample-screenshot.png" alt="" class="note-center-img">
+                  <div style="padding: 20px; z-index: 1; position: relative; display: flex; flex-wrap: wrap; gap: 5px;">
 
-                  <!-- 타겟에 퀴즈요소 -->
-                  <div>
-                    <span>Q.09</span>
-                  </div>
-
-                  <!-- END 타겟에 퀴즈요소 -->
-
-                  <!-- 관리자의 타겟 / 퀴즈요소 (기본/마우스호버/클릭) -->
-                  <div>
-                    <button type="button">1</button>
-                    <div>
-                      <div>
-                        <div>
-                          <button type="button">
-                            <span class="txt-hidden">이전</span>
-                            <i class="ico ico-arrow-left ico-white"></i>
-                          </button>
-                          <button type="button">
-                            <span class="txt-hidden">다음</span>
-                            <i class="ico ico-arrow-right ico-white"></i>
-                          </button>
-                        </div>
-                        <div>
-                          <button type="button">
-                            <span class="txt-hidden">수정</span>
-                            <i class="ico ico-pen ico-white"></i>
-                          </button>
-                          <button type="button">
-                            <span class="txt-hidden">삭제</span>
-                            <i class="ico ico-trash ico-white"></i>
-                          </button>
-                          <button type="button">
-                            <span class="txt-hidden">닫기</span>
-                            <i class="ico ico-x ico-white"></i>
-                          </button>
+                    <!-- 타겟에 퀴즈요소 -->
+                    <div class="quiz-box" style="margin-bottom: 10px;">
+                      <div class="front">
+                        <div class="quiz-num">
+                          <span class="txt">Q.09</span>
                         </div>
                       </div>
-                      <input type="text" value="비파형 동검" readonly>
+                      <div class="back">
+                        <div class="quiz-txt">전부유보설</div>
+                      </div>
                     </div>
-                  </div>
-
-                  <!-- END 1. 관리자의 타겟 / 퀴즈요소 (기본/마우스호버/클릭) -->
-
-                  <!-- 관리자의 드래그 -->
-                  <div>
-                    <div></div>
-                    <button type="button">1</button>
-                  </div>
-
-                  <!-- END 관리자의 드래그 -->
-                </div>
-
-                <!-- TODO: 주관식일 때 나타나는 하단의 답안작성칸입니다. -->
-                <div class="note-layout-bottom">
-                  <div>
-                    <div>
-
-                      <!-- 답안 작성칸 -->
-                      <div>
-                        <span>Q.09</span>
-                        <input type="text" placeholder="빈칸의 답을 입력해주세요.">
-                        <button type="button">
-                          <span class="txt-hidden">답안 제출</span>
-                          <i class="ico ico-arrow-submit"></i>
-                        </button>
-                        <div>
-                          <button type="button">
-                            <span class="txt-hidden">이전 문제</span>
-                            <i class="ico ico-prev-quiz"></i>
-                          </button>
-                          <button type="button">
-                            <span class="txt-hidden">다음 문제</span>
-                            <i class="ico ico-next-quiz"></i>
-                          </button>
+                    <div class="quiz-box active" style="margin-bottom: 10px;">
+                      <div class="front">
+                        <div class="quiz-num">
+                          <span class="txt">Q.09</span>
                         </div>
                       </div>
-
-                      <!-- END 답안 작성칸 -->
+                      <div class="back">
+                        <div class="quiz-txt">전부유보설</div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-
-                <!-- TODO: 객관식일 때 나타나는 하단의 답안작성칸입니다. -->
-                <div class="note-layout-bottom">
-                  <div>
-                    <div>
-
-                      <!-- 답안 작성칸 -->
-                      <div>
-                        <span>Q.09</span>
-                        <input type="text" placeholder="빈칸의 답을 입력해주세요.">
-                        <button type="button">
-                          <span class="txt-hidden">답안 제출</span>
-                          <i class="ico ico-arrow-submit"></i>
-                        </button>
-                        <div>
-                          <button type="button">
-                            <span class="txt-hidden">이전 문제</span>
-                            <i class="ico ico-prev-quiz"></i>
-                          </button>
-                          <button type="button">
-                            <span class="txt-hidden">다음 문제</span>
-                            <i class="ico ico-next-quiz"></i>
-                          </button>
+                    <div class="quiz-box type-black" style="margin-bottom: 10px;">
+                      <div class="front">
+                        <div class="quiz-num">
+                          <span class="txt">Q.09</span>
                         </div>
                       </div>
-
-                      <!-- END 답안 작성칸 -->
-                    </div>
-                    <div>
-                      <div>
-                        <button type="button">
-                          1. 비파형 황검
-                        </button>
-
-                        <!-- TODO: 클릭시 active 클래스가 추가됩니다. -->
-                        <button type="button">
-                          2. 비파형 동검
-                        </button>
-                        <button type="button">
-                          3. 비파형 은검
-                        </button>
-                        <button type="button">
-                          4. 비파형 장검
-                        </button>
-                        <button type="button">
-                          5. 비파형 단검
-                        </button>
+                      <div class="back">
+                        <div class="quiz-txt">전부유보설</div>
                       </div>
                     </div>
+                    <div class="quiz-box type-black active" style="margin-bottom: 10px;">
+                      <div class="front">
+                        <div class="quiz-num">
+                          <span class="txt">Q.09</span>
+                        </div>
+                      </div>
+                      <div class="back">
+                        <div class="quiz-txt">전부유보설</div>
+                      </div>
+                    </div>
+
+                    <!-- END 타겟에 퀴즈요소 -->
                   </div>
                 </div>
               </div>
-              <div class="note-layout-right">
-                <div>
-                  <button type="button">
-                    <span class="txt-hidden">접기</span>
-                    <i class="ico ico-db-fold-left"></i>
-                  </button>
 
-                  <!-- 진행상황 및 숫자 버튼 -->
-                  <div>
-                    <div>
-                      <h3>답안 입력</h3>
-                      <div>
-                        <span><b>2</b>/8</span>
-                        <span>완료</span>
-                      </div>
-                    </div>
-                    <div>
-                      <div>
-                        <button type="button">&lt;</button>
-                        <button type="button">1</button>
-                        <button type="button">2</button>
-                        <button type="button">3</button>
-                        <button type="button">4</button>
-                        <button type="button">5</button>
-                        <button type="button">&gt;</button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- END 진행상황 및 숫자 버튼 -->
-                  <ul>
-                    <li>
-
-                      <!-- TODO: 주관식 문제일 때입니다. -->
-                      <div>
-                        <div>
-                          <div>
-                            <span>1</span>
-                            <img src="" alt="">
-                          </div>
-                          <button type="button">
-                            <span class="txt-hidden">삭제하기</span>
-                            <i class="ico ico-trash"></i>
-                          </button>
-                        </div>
-                        <input type="text" placeholder="빈칸의 답을 입력해주세요.">
-                      </div>
-                    </li>
-                    <li>
-
-                      <!-- TODO: 객관식 문제일 때입니다. -->
-                      <div>
-                        <div>
-                          <div>
-                            <span>2</span>
-                            <img src="" alt="">
-                          </div>
-                          <button type="button">
-                            <span class="txt-hidden">삭제하기</span>
-                            <i class="ico ico-trash"></i>
-                          </button>
-                        </div>
-                        <div>
-                          <div>
-                            <span>1.</span>
-                            <input type="text" placeholder="선택지를 입력해주세요.">
-                            <button type="button">
-                              <span class="txt-hidden">삭제하기</span>
-                              <i class="ico ico-trash"></i>
-                            </button>
-                          </div>
-                          <div>
-                            <span>2.</span>
-                            <input type="text" placeholder="선택지를 입력해주세요.">
-                            <button type="button">
-                              <span class="txt-hidden">삭제하기</span>
-                              <i class="ico ico-trash"></i>
-                            </button>
-                          </div>
-                          <div>
-                            <button type="button">
-                              <i class="ico ico-circle-plus"></i>
-                              <span>추가하기</span>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <!-- END 빵꾸노트 센터 (사진) -->
             </div>
+
+            <!-- END 빵꾸노트 컨텐츠 -->
           </div>
 
           <!-- END 페이지 : 빵꾸노트 : 다시외우기 -->
@@ -648,61 +535,12 @@
       </div>
 
       <!-- END 페이지 -->
-
-      <!-- 푸터 -->
-      <div class="footer-wrap">
-
-        <!-- 푸터 가이드 -->
-        <div class="footer-txt-container">
-          <p class="txt-sm">어떤 암기박스가 필요하신가요?</p>
-          <h3 class="txt-lg">원하는 암기박스가 없다면, <br>
-            벤리에게 신청하세요!</h3>
-          <button type="button" class="blue-txt-btn">암기박스 신청하기</button>
-        </div>
-
-        <!-- END 푸터 가이드 -->
-
-        <!-- 푸터 -->
-        <footer class="footer">
-          <div class="footer-inner">
-            <h6 class="logo">
-              <a href="#">
-                <img src="assets/images/logo/logo-white.svg" alt="">
-              </a>
-            </h6>
-            <div class="footer-info-wrap">
-              <ul class="info-list-grp">
-                <li class="list">업체명 : 벤리</li>
-                <li class="list">사업자등록번호 : 368-25-01378</li>
-                <li class="list">통신판매업신고번호 : 제 2022-서울송파-00240호</li>
-                <li class="list">대표이사 : 이정윤</li>
-                <li class="list">문의: help@office.benly.kr</li>
-              </ul>
-            </div>
-            <div class="footer-btn-wrap">
-              <ul class="btn-list-grp">
-                <li class="list">
-                  <a href="#" class="link">이용 약관</a>
-                </li>
-                <li class="list">
-                  <a href="#" class="link">개인정보 취급방침</a>
-                </li>
-                <li class="list">
-                  <a href="#" class="link">유료 이용약관</a>
-                </li>
-                <li class="list">
-                  <a href="#" class="link">청소년 보호정책</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </footer>
-
-        <!-- END 푸터 -->
-      </div>
-
-      <!-- END 푸터 -->
     </div>
     <script src="assets/js/ui.js"></script>
+    <script>
+      $('#note-left-fold-btn').on('click', function() {
+        $('.note-left-container').toggleClass('hide');
+      })
+    </script>
   </body>
 </html>
