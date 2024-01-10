@@ -1910,25 +1910,55 @@ textarea.inp {
 /* 시스템 모달 (confirm, alert) */
 .system-modal {
   width: 90%;
-  max-width: 343px;
+  padding: 47px 40px 44px 40px;
+  max-width: 480px;
   background-color: white;
   position: relative;
   z-index: 1;
   box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
-  padding: 11px;
+}
+@media all and (max-width: 768px) {
+  .system-modal {
+    max-width: 343px;
+    padding: 32px 11px 11px;
+  }
 }
 
 .smodal-contt-container {
   text-align: center;
-  padding: 30px 0;
+  margin-bottom: 45px;
+}
+@media all and (max-width: 768px) {
+  .smodal-contt-container {
+    margin-bottom: 30px;
+  }
 }
 .smodal-contt-container .ico-38 {
   margin-bottom: 5px;
+  width: 76px;
+  height: 76px;
+}
+@media all and (max-width: 768px) {
+  .smodal-contt-container .ico-38 {
+    width: 38px;
+    height: 38px;
+  }
+}
+
+.smodal-contt-container.type-wide {
+  margin-bottom: 73px;
+  padding-top: 60px;
+}
+@media all and (max-width: 768px) {
+  .smodal-contt-container.type-wide {
+    margin-bottom: 35px;
+    padding-top: 15px;
+  }
 }
 
 .smodal-ttl {
-  font-size: 20rem;
+  font-size: 20px;
   font-weight: 600;
   letter-spacing: -0.5px;
   line-height: 1.3;
@@ -1966,16 +1996,152 @@ textarea.inp {
   background: var(--sub-gray3, #EFEFEF);
   border-radius: 5px;
 }
+.smodal-btn-wrap .blue-btn {
+  background-color: var(--main, #017AFB);
+  color: white;
+}
+.smodal-btn-wrap .blue-bd-btn {
+  border: 1px solid var(--main, #017AFB);
+  color: var(--main, #017AFB);
+  background-color: white;
+}
 .smodal-btn-wrap .red-btn {
   color: white;
   background-color: var(--red, #f75e83);
 }
 
-@media all and (max-width: 1500px) {
+@media all and (max-width: 991px) {
   .smodal-ttl {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
+/* 기타 컨텐츠 모달 */
+.content-modal {
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 480px;
+}
+@media all and (max-width: 768px) {
+  .content-modal {
+    padding: 30px 20px 20px;
+  }
+}
+.content-modal .modal-contt-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.content-modal .modal-ttl {
+  color: #343434;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: max(18rem, 16px);
+}
+.content-modal .modal-desc {
+  color: #343534;
+  font-size: max(16rem, 14px);
+  font-weight: 400;
+  line-height: 140%;
+}
+.content-modal .modal-btn-wrap {
+  margin-bottom: 12px;
+}
+.content-modal .modal-btn-wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+}
+.content-modal .modal-btn-wrap .btn {
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+  height: 44px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.04);
+  padding: 0 10px;
+  background: var(--sub-gray3, #EFEFEF);
+  border-radius: 5px;
+  width: 100%;
+}
+.content-modal .modal-btn-wrap .btn.btn-mw {
+  width: max-content;
+  min-width: 194px;
+}
+.content-modal .modal-btn-wrap .txt-btn {
+  background-color: transparent;
+  box-shadow: none;
+  padding: 0;
+  height: auto;
+  font-size: 12px;
+  font-weight: 400;
+  color: #424242;
+  text-decoration: underline;
+}
+.content-modal .modal-btn-wrap .blue-btn {
+  background-color: var(--main, #017AFB);
+  color: white;
+}
+.content-modal .modal-btn-wrap .blue-bd-btn {
+  border: 1px solid var(--main, #017AFB);
+  color: var(--main, #017AFB);
+  background-color: white;
+}
+.content-modal .modal-btn-wrap .red-btn {
+  color: white;
+  background-color: var(--red, #f75e83);
+}
+.content-modal .modal-btn-wrap:last-child {
+  margin-bottom: 0;
+}
+
+@media all and (max-width: 768px) {
+  .hd-ttl-modal {
+    padding: 15px 20px 20px;
+  }
+}
+.hd-ttl-modal .modal-hd {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 30px;
+  min-height: 25px;
+}
+.hd-ttl-modal .modal-hd .close-btn {
+  position: absolute;
+  top: 9;
+  right: 0;
+}
+.hd-ttl-modal .modal-hd .modal-hd-ttl {
+  font-size: 18px;
+  color: #343434;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.hd-ttl-modal .modal-contt-container {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.hd-ttl-modal .modal-desc {
+  color: #000;
+}
+
 /* 콘텐츠 순서 변경 모달 */
 .corder-edit-popup .content {
   margin: 17rem 0 30rem;
