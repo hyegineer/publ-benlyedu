@@ -322,6 +322,20 @@
                     <li>
                       <div class="card-name-wrap">
                         <h2 class="card-name">홍길동's 학습 박스</h2>
+
+                        <!-- FIXME: 0117 추가 -->
+                        <div class="d-iflex-row type-gap14">
+                          <button type="button" onclick="openModal('popup-2');" class="btn btn-type-03 gray-bd-btn">
+                            <i class="ico ico-20 ico-edit"></i>
+                            <span class="txt">채널편집</span>
+                          </button>
+                          <button type="button" class="btn btn-type-03 gray-bd-btn">
+                            <i class="ico ico-20 ico-setting"></i>
+                            <span class="txt">채널관리</span>
+                          </button>
+                        </div>
+
+                        <!-- END 0117 추가 -->
                       </div>
                     </li>
                     <li>
@@ -329,7 +343,11 @@
                         <div class="gray-dot-txt star-txt-wrap">
                           <i class="ico ico-16 ico-star"></i>
                           <span class="bold-txt">4.0</span>
-                          <span class="link-txt">(4건)</span>
+
+                          <!-- FIXME: 0117 수정 -->
+                          <span onclick="goReview();" class="link-txt">(4건)</span>
+
+                          <!-- END 0117 수정 -->
                         </div>
                         <span class="gray-dot-txt">#hanyoung</span>
                         <span class="gray-dot-txt">구독자 30명</span>
@@ -347,11 +365,15 @@
                     </li>
                     <li>
                       <div class="url-copy-item">
-                        <span class="txt">benlyedu.com/store/group/12</span>
-                        <button type="button" class="btn">
+
+                        <!-- FIXME: 0117 수정 -->
+                        <span id="url-txt" class="txt">benlyedu.com/store/group/12</span>
+                        <button type="button" onclick="copyUrl('url-txt');" class="btn">
                           <span class="txt-hidden">복사하기</span>
                           <i class="ico ico-copy ico-blue"></i>
                         </button>
+
+                        <!-- END 0117 수정 -->
                       </div>
                     </li>
                     <li>
@@ -374,7 +396,7 @@
                   <button type="button" data-move-tab data-move-content="tab01" class="tab active">기억 학습 콘텐츠</button>
                   <button type="button" data-move-tab data-move-content="tab02" class="tab">채널 설명</button>
                   <button type="button" data-move-tab data-move-content="tab03" class="tab">첨부 파일</button>
-                  <button type="button" data-move-tab data-move-content="tab04" class="tab">채널 리뷰</button>
+                  <button type="button" data-move-tab data-move-content="tab04" class="tab">가입자 리뷰</button>
                 </div>
 
                 <!-- END 탭 -->
@@ -386,7 +408,7 @@
                     <!-- 섹션 제목 -->
                     <div class="ttl-wrap">
                       <div class="ttl-item">
-                        <h3 class="ttl">빠르게 외우려면, [EASY] 플레이! (6개일 때)</h3>
+                        <h3 class="ttl">빠르게 외우려면, [EASY] 플레이! (5개일 때)</h3>
                       </div>
                     </div>
 
@@ -525,9 +547,15 @@
                                   <!-- 진행률 -->
 
                                   <!-- TODO: 진행률 51% ~ 100% 일 때 type-left를 붙혀주세요 -->
-                                  <div class="progress-bar" style="--progress-width: 28%">
-                                    <span class="txt">28% 기억 중</span>
+
+                                  <!-- TODO: 시작 전일 때 type-before를 붙혀주세요 -->
+
+                                  <!-- FIXME: 0117 시작 전 상태 추가 -->
+                                  <div class="progress-bar type-before" style="--progress-width: 28%">
+                                    <span class="txt">시작 전</span>
                                   </div>
+
+                                  <!-- END 0117 시작 전 상태 추가 -->
 
                                   <!-- END 진행률 -->
                                 </li>
@@ -1666,14 +1694,131 @@
                           https://kmong.com/events/kmong-awards/2023
                           <br><br><br>
                           공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
+                          2023 어워즈 수상 <br>
+                          아래 링크에서 선착순 100분 <br>
+                          10% 할인 쿠폰 발행합니다.
+                          <br><br><br>
+                          https://kmong.com/events/kmong-awards/2023
+                          <br><br><br>
+                          공식적으로 엄선한
                           <br>
                         </div>
                       </div>
                       <div class="content-btn-wrap">
-                        <button type="button" class="more-btn btn btn-type-11 blue-bd-btn btn-w100">
-                          <span class="txt">더보기</span>
+
+                        <!-- FIXME: 0117 수정 -->
+                        <button type="button" class="more-fold-btn btn btn-type-11 blue-bd-btn btn-w100">
+                          <span class="txt txt-on">더보기</span>
+                          <span class="txt txt-off">접기</span>
                           <i class="ico ico-arrow-down ico-blue"></i>
                         </button>
+
+                        <!-- END 0117 수정 -->
                       </div>
                     </div>
                   </article>
@@ -1692,21 +1837,82 @@
                   </div>
 
                   <!-- END 섹션 제목 -->
-                  <article class="content">
-                    <div class="more-content-wrapper">
-                      <div class="more-content">
-                        <div class="white-box desc-white-box">
-                          <h4 class="ttl">콘텐츠 설명</h4>
-                          <p class="desc">
-                            지난 10년간 수능에서 나왔던 모든 단어들을 선별하여 많이 나왔던 순서로 정리해두었습니다. <br>
-                            작년 수능 때에도 이 단어장을 외웠던 학생들의 87%가 1등급을 받았습니다. <br>
-                            문장 구조를 분석하는 것도 중요하지만, 단어를 제대로 외우는 것이 더욱 중요합니다. <br>
-                            20년동안의 전문성을 통해서 만든 단어장으로 저희 서비스를 구독하세요. <br>
-                            첫 달 가입 시, 모든 단어장 다운로드가 가능합니다.
-                          </p>
-                        </div>
 
-                        <!-- TODO: 3개 이하면 type-center 클래스를 달아서 중앙정렬 만들어주세요 -->
+                  <!-- FIXME: 0117 전체적으로 추가 및 수정 -->
+                  <article class="content">
+
+                    <!-- FIXME: 0117 추가 -->
+                    <div class="white-box ebook-white-box">
+                      <figure class="thumbnail">
+                        <img src="assets/images/sample/img-sample-ebook.png" alt="" class="thumbnail-img type-contain">
+                      </figure>
+                      <div class="ebook-white-box-content">
+                        <ul class="card-information">
+                          <li>
+                            <h3 class="card-name">김티처의 수능 필수 영어 1000단어 3개 (EBOOK)</h3>
+                          </li>
+                          <li>
+                            <p class="card-txt-wrap">
+                              <span class="gray-txt">by</span>
+                              <span class="blue-txt">드림소어에듀</span>
+                            </p>
+                          </li>
+                          <li>
+                            <p class="card-desc">채널 프리미엄 회원 전용 패키지</p>
+                          </li>
+                          <li>
+                            <div class="info-dl-wrap">
+                              <dl class="info-dl">
+                                <dt class="dt">전자책 정가</dt>
+                                <dd class="dd">
+                                  <b class="bold-txt">12,000원</b>
+                                </dd>
+                              </dl>
+                              <dl class="info-dl">
+                                <dt class="dt">채널 회원가</dt>
+                                <dd class="dd">
+                                  <span class="blue-txt">
+                              100%↓ <b class="bold-txt">0원</b>
+                            </span>
+                                </dd>
+                              </dl>
+                            </div>
+                          </li>
+                        </ul>
+                        <div class="info-dl-wrap">
+                          <dl class="info-dl type-col">
+                            <dt class="dt">포맷:</dt>
+                            <dd class="dd">
+                              <span class="gray-badge">PDF</span>
+                              <span class="gray-badge">ZIP</span>
+                            </dd>
+                          </dl>
+                          <dl class="info-dl type-col">
+                            <dt class="dt">언어:</dt>
+                            <dd class="dd">
+                              <span class="gray-badge">한글</span>
+                              <span class="gray-badge">English</span>
+                            </dd>
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- END 0117 추가 -->
+                    <div class="white-box desc-white-box">
+                      <h4 class="ttl">콘텐츠 설명</h4>
+                      <p class="desc">
+                        지난 10년간 수능에서 나왔던 모든 단어들을 선별하여 많이 나왔던 순서로 정리해두었습니다. <br>
+                        작년 수능 때에도 이 단어장을 외웠던 학생들의 87%가 1등급을 받았습니다. <br>
+                        문장 구조를 분석하는 것도 중요하지만, 단어를 제대로 외우는 것이 더욱 중요합니다. <br>
+                        20년동안의 전문성을 통해서 만든 단어장으로 저희 서비스를 구독하세요. <br>
+                        첫 달 가입 시, 모든 단어장 다운로드가 가능합니다.
+                      </p>
+                    </div>
+                    <div class="more-content-wrapper">
+
+                      <!-- TODO: 3개 이하면 type-center 클래스를 달아서 중앙정렬 만들어주세요 -->
+                      <div class="more-content">
                         <ul class="grid-list-grp">
                           <li class="list">
                             <div class="download-card-item">
@@ -1776,19 +1982,157 @@
                               <button type="button" class="btn btn-w100 blue-solid-btn btn-type-11">다운로드</button>
                             </div>
                           </li>
+                          <li class="list">
+                            <div class="download-card-item">
+                              <div class="card-item-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img type-sm"> -->
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-sample-pdf.png" alt="" class="thumbnail-img">
+                                </figure>
+                                <h5 class="card-name">김티처의 수능 필수 영어 1000단어 3개...</h5>
+                              </div>
+                              <button type="button" class="btn btn-w100 blue-solid-btn btn-type-11">다운로드</button>
+                            </div>
+                          </li>
+                          <li class="list">
+                            <div class="download-card-item">
+                              <div class="card-item-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img type-sm">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample//img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                                <h5 class="card-name">김티처의 수능 필수 영어 1000단어 3개...</h5>
+                              </div>
+                              <button type="button" class="btn btn-w100 blue-solid-btn btn-type-11">다운로드</button>
+                            </div>
+                          </li>
+                          <li class="list">
+                            <div class="download-card-item">
+                              <div class="card-item-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img type-sm">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample//img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                                <h5 class="card-name">김티처의 수능 필수 영어 1000단어 3개...</h5>
+                              </div>
+                              <button type="button" class="btn btn-w100 blue-solid-btn btn-type-11">다운로드</button>
+                            </div>
+                          </li>
+                          <li class="list">
+                            <div class="download-card-item">
+                              <div class="card-item-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img type-sm">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample//img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                                <h5 class="card-name">김티처의 수능 필수 영어 1000단어 3개...</h5>
+                              </div>
+                              <button type="button" class="btn btn-w100 blue-solid-btn btn-type-11">다운로드</button>
+                            </div>
+                          </li>
+                          <li class="list">
+                            <div class="download-card-item">
+                              <div class="card-item-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img type-sm"> -->
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-sample-pdf.png" alt="" class="thumbnail-img">
+                                </figure>
+                                <h5 class="card-name">김티처의 수능 필수 영어 1000단어 3개...</h5>
+                              </div>
+                              <button type="button" class="btn btn-w100 blue-solid-btn btn-type-11">다운로드</button>
+                            </div>
+                          </li>
+                          <li class="list">
+                            <div class="download-card-item">
+                              <div class="card-item-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img type-sm">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample//img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                                <h5 class="card-name">김티처의 수능 필수 영어 1000단어 3개...</h5>
+                              </div>
+                              <button type="button" class="btn btn-w100 blue-solid-btn btn-type-11">다운로드</button>
+                            </div>
+                          </li>
+                          <li class="list">
+                            <div class="download-card-item">
+                              <div class="card-item-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img type-sm">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample//img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                                <h5 class="card-name">김티처의 수능 필수 영어 1000단어 3개...</h5>
+                              </div>
+                              <button type="button" class="btn btn-w100 blue-solid-btn btn-type-11">다운로드</button>
+                            </div>
+                          </li>
+                          <li class="list">
+                            <div class="download-card-item">
+                              <div class="card-item-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img type-sm">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample//img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                                <h5 class="card-name">김티처의 수능 필수 영어 1000단어 3개...</h5>
+                              </div>
+                              <button type="button" class="btn btn-w100 blue-solid-btn btn-type-11">다운로드</button>
+                            </div>
+                          </li>
                         </ul>
-                      </div>
-                      <div class="content-btn-wrap">
-                        <button type="button" class="more-btn btn btn-type-11 blue-bd-btn btn-w100">
-                          <span class="txt">더보기</span>
-                          <i class="ico ico-arrow-down ico-blue"></i>
-                        </button>
-                        <button type="button" class="btn btn-type-11 blue-solid-btn btn-w100">
-                          <span class="txt">회원 가입 후 전체 다운로드</span>
-                        </button>
+
+                        <!-- FIXME: 0117 위치 이동 -->
+                        <div class="content-btn-wrap">
+                          <button type="button" class="btn btn-type-11 blue-solid-btn btn-w100">
+                            <span class="txt">채널 프리미엄 가입하고 혜택받기</span>
+                          </button>
+                        </div>
+
+                        <!-- END 0117 위치 이동 -->
                       </div>
                     </div>
                   </article>
+
+                  <!-- END 0117 전체적으로 추가 및 수정 -->
                 </div>
 
                 <!-- END 탭: 첨부 파일 -->
@@ -2110,8 +2454,10 @@
                           <span class="sub-ttl">채널 리뷰</span>
                           <h4 class="ttl">채널 별점을 선택해주세요.</h4>
                           <div class="star-rating-item">
+
+                            <!-- FIXME: 0117 기본값 5로 설정 -->
                             <div class="rating-group">
-                              <input disabled checked class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
+                              <input disabled class="rating__input rating__input--none" name="rating3" id="rating3-none" value="0" type="radio">
                               <label aria-label="1 star" class="rating__label" for="rating3-1"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
                               <input class="rating__input" name="rating3" id="rating3-1" value="1" type="radio">
                               <label aria-label="2 stars" class="rating__label" for="rating3-2"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
@@ -2121,8 +2467,15 @@
                               <label aria-label="4 stars" class="rating__label" for="rating3-4"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
                               <input class="rating__input" name="rating3" id="rating3-4" value="4" type="radio">
                               <label aria-label="5 stars" class="rating__label" for="rating3-5"><i class="rating__icon rating__icon--star fa fa-star"></i></label>
-                              <input class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
+                              <input checked class="rating__input" name="rating3" id="rating3-5" value="5" type="radio">
                             </div>
+
+                            <!-- END 0117 기본값 5로 설정 -->
+
+                            <!-- FIXME: 0117 기본값 5로 설정 후 숫자 바뀌게 구현 -->
+                            <span class="rating-num">5</span>
+
+                            <!-- END 0117 기본값 5로 설정 후 숫자 바뀌게 구현 -->
                           </div>
                         </div>
 
@@ -2228,12 +2581,15 @@
                                 </li>
                                 <li>
                                   <div class="gray-dot-txt-grp">
+                                    <span class="gray-dot-txt blue-txt">나의 댓글</span>
                                     <span class="gray-dot-txt">id****</span>
                                     <span class="gray-dot-txt">2023.09.23</span>
                                   </div>
                                 </li>
                                 <li>
-                                  <span class="red-bd-badge">BEST 리뷰</span>
+
+                                  <!-- TODO: 기본값은 inactive가 달려있고, 베스트 리뷰 지정시에는 inactive 클래스가 사라집니다. -->
+                                  <span class="red-bd-badge inactive">BEST 리뷰</span>
                                 </li>
                                 <li>
                                   <p class="review-desc">시안1받고 사용하다가 시안2도 너무마음에 들어서 추가구매하였습니다^^ 정말 고급스럽고 생각했 던로고가 2개나있어서
@@ -2265,10 +2621,15 @@
                               </figure>
 
                               <!-- TODO: 누를 시 active 클래스가 달립니다 -->
-                              <button type="button" class="like-btn">
-                                <i class="ico ico-13 ico-thumbsup"></i>
+
+                              <!-- FIXME: 0117 active 클래스 없을 때 비활성화 css 추가 -->
+                              <button type="button" class="like-btn ">
+                                <i class="ico ico-13 ico-thumbsup ico-on"></i>
+                                <i class="ico ico-13 ico-thumbsup-off ico-off"></i>
                                 <span class="txt">10</span>
                               </button>
+
+                              <!-- END 0117 active 클래스 없을 때 비활성화 css 추가 -->
                             </div>
                           </div>
 
@@ -2648,6 +3009,15 @@
 
           <!-- END 페이지 : 채널 -->
         </div>
+
+        <!-- FIXME: 0117 주소 복사 알림 추가 -->
+        <div class="floating-wrapper">
+          <div class="floating-txt">
+            <b>채널 주소</b>가 복사되었습니다.
+          </div>
+        </div>
+
+        <!-- END 0117 주소 복사 알림 추가 -->
       </div>
 
       <!-- END 페이지 -->
@@ -2730,7 +3100,7 @@
           spaceBetween: 25,
         },
         1500: {
-          slidesPerView: 6,
+          slidesPerView: 5, // FIXME: 0117 수정
           spaceBetween: 43,
         }
       }
@@ -2782,8 +3152,10 @@
           prevEl: ".swiper-03-prev"
         }
       });
-      $('.more-btn').on('click', function() {
-        $(this).parent('.content-btn-wrap').siblings('.more-content').addClass('active');
+      // FIXME: 0117 더보기/접기 버튼 구현
+      $('.more-fold-btn').on('click', function() {
+        $(this).toggleClass('active');
+        $(this).parent('.content-btn-wrap').siblings('.more-content').toggleClass('active');
       })
       $('#rvcreate-before-btn').on('click', function() {
         $('.rvcreate-before-area').addClass('invisible');
@@ -2801,6 +3173,12 @@
           scrollTop: $('#' + content).offset().top - 140
         }, 500);
       })
+      // FIXME: 0117 리뷰로 가는 동작
+      function goReview() {
+        $('html, body').animate({
+          scrollTop: $('#tab04').offset().top - 140
+        }, 500);
+      }
       $(window).on('scroll', function() {
         var scrolltop = $(window).scrollTop();
         $('.section-content').each(function(index) {
@@ -2812,6 +3190,23 @@
           }
         })
       })
+      // FIXME: 0117 별점 클릭 시 숫자 구현
+      $('[name="rating3"]').on('change', function() {
+        $(this).parent('.rating-group').siblings('.rating-num').html($(this).val());
+      })
+      // FIXME: 0117 복사 버튼 누를 시 주소복사 구현
+      function copyUrl(id) {
+        var r = document.createRange();
+        r.selectNode(document.getElementById(id));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        $('.floating-wrapper').addClass('active');
+        setTimeout(function() {
+          $('.floating-wrapper').removeClass('active');
+        }, 1000)
+      }
     </script>
   </body>
 </html>

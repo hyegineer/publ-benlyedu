@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>벤리에듀</title>
+
+    <!-- Open Graph -->
+    <meta name="title" content="Benly Edu">
+    <meta name="author" content="벤리에듀">
+    <meta name="description" content="벤리에듀 - AI 기억력 강화 e러닝 솔루션">
+    <meta name="keywords" content="benlyedu, Benlyedu, 벤리에듀, AI, 기억력, 강화, e러닝, 솔루션">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+
+    <!-- TODO: web url 설정해야합니다 -->
+
+    <!-- <meta property="og:url" content="해당 웹 url"> -->
+    <meta property="og:title" content="벤리에듀 (Benly Edu)">
+    <meta property="og:description" content="AI 기억력 강화 e러닝 솔루션">
+
+    <!-- TODO: meta thumbnail 설정 -->
+    <meta property="og:image" content="assets/images/og/og-thumbnail.png">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-36x36.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-72x72.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-256x256.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#017afb">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- JS -->
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+  </head>
+  <body ontouchstart>
+    <div id="app">
+
+      <!-- TODO: PC 버전 헤더 -->
+      <div class="header">
+        <div class="header-inner">
+
+          <!-- 로고 -->
+          <h1 class="logo">
+            <a href="index.html">
+              <img src="assets/images/logo/logo-color.png" alt="">
+            </a>
+          </h1>
+
+          <!-- END 로고 -->
+
+          <!-- 네비 -->
+          <div class="header-nav-wrap">
+            <button type="button" class="header-gnb-btn">
+              <span class="txt">메뉴</span>
+              <i class="ico ico-arrow-down ico-dark"></i>
+            </button>
+            <div class="header-gnb-wrap">
+              <ul class="nav-list-grp">
+                <li class="list active">
+                  <a href="#" class="link">홈</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">엔터프라이즈 문의</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">과목별 랭킹</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">전체상품</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">관리자 페이지</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">내 채널</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- END 네비 -->
+
+          <!-- 우측 버튼들 -->
+          <div class="header-btn-wrap">
+            <ul class="btn-list-grp">
+              <li class="list mb-none">
+                <div class="header-search-inp">
+                  <i class="ico ico-40 ico-search"></i>
+                  <input type="text" placeholder="검색" class="inp">
+                  <button type="button" class="btn del-btn">
+                    <span class="txt-hidden">검색어 지우기</span>
+                    <i class="ico ico-18 ico-search-x"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="list mb-none">
+                <button type="button" class="header-btn">
+                  <span class="txt-hidden">알림</span>
+                  <i class="ico ico-40 ico-alarm"></i>
+                </button>
+              </li>
+              <li class="list mb-none list-sub-nav">
+                <button type="button" class="header-btn myinfo-btn">
+                  <span class="txt-hidden">내 정보</span>
+                  <figure class="thumbnail circle">
+                    <img src="assets/images/sample/img-sample-hdprofile.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <i class="ico ico-arrow-down ico-dark"></i>
+                </button>
+                <div class="sub-nav-list-wrap">
+                  <ul class="sub-nav-list-grp">
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-user"></i>
+                        <span class="txt">계정 관리</span>
+                      </a>
+                    </li>
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-wordbook"></i>
+                        <span class="txt">내가 만든 단어장</span>
+                      </a>
+                    </li>
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-like"></i>
+                        <span class="txt">찜목록</span>
+                      </a>
+                    </li>
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-logout"></i>
+                        <span class="txt">로그아웃</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="list mb-none">
+                <button type="button" class="btn btn-type-02 blue-solid-btn">암기박스 신청</button>
+              </li>
+              <li class="list mb-show">
+                <button type="button" class="header-btn" onclick="openMobileSearch();">
+                  <span class="txt-hidden">모바일 검색하기</span>
+                  <i class="ico ico-40 ico-search"></i>
+                </button>
+              </li>
+              <li class="list mb-show">
+
+                <!-- TODO: 만약 알림이 있을 시 active 클래스가 추가되고, 빨간 뱃지가 보입니다 -->
+                <button type="button" class="header-btn badge-header-btn active" onclick="openMobileNav();">
+                  <span class="txt-hidden">모바일 메뉴</span>
+                  <i class="ico ico-40 ico-navlist"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- END 우측 버튼들 -->
+
+          <!-- 모바일 전용 검색영역 -->
+          <div class="mobile-header-search-wrap">
+            <button type="button" class="btn back-btn" onclick="closeMobileSearch();">
+              <span class="txt-hidden">뒤로 가기</span>
+              <i class="ico ico-arrow-left"></i>
+            </button>
+            <div class="mobile-header-search-inp">
+              <i class="ico ico-18 ico-search-mobile"></i>
+              <input type="text" class="inp" placeholder="검색어를 입력하세요.">
+              <button type="button" class="btn del-btn">
+                <span class="txt-hidden">검색어 지우기</span>
+                <i class="ico ico-18 ico-search-x"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- END 모바일 전용 검색영역 -->
+
+          <!-- 모바일 전용 햄버거 네비게이션 페이지 -->
+          <div class="mobile-header-nav-container">
+            <div class="top-wrap">
+
+              <!-- 로고 -->
+              <h1 class="logo">
+                <a href="index.html">
+                  <img src="assets/images/logo/logo-color.png" alt="">
+                </a>
+              </h1>
+
+              <!-- END 로고 -->
+              <button type="button" class="btn close-btn" onclick="closeMobileNav();">
+                <span class="txt-hidden">닫기</span>
+                <i class="ico ico-x"></i>
+              </button>
+            </div>
+            <div class="middle-wrap">
+              <ul class="nav-list-grp">
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-home"></i>
+                    <p class="txt">홈</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-user"></i>
+                    <p class="txt">계정관리</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-bell"></i>
+                    <p class="txt">
+                      <span>알림</span>
+                      <span class="red-txt">(10)</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-wordbook"></i>
+                    <p class="txt">내가 만든 단어장</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-like"></i>
+                    <p class="txt">즐겨찾기</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-mail"></i>
+                    <p class="txt">문의하기</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-logout"></i>
+                    <p class="txt">로그아웃</p>
+                  </a>
+                </li>
+              </ul>
+              <ul class="sns-list-grp">
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">페이스북</span>
+                    <i class="ico ico-facebook"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">핀터레스트</span>
+                    <i class="ico ico-pinterest"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">트위터</span>
+                    <i class="ico ico-twitter"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">공유하기</span>
+                    <i class="ico ico-share"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- END 모바일 전용 햄버거 네비게이션 페이지 -->
+        </div>
+      </div>
+
+      <!-- END PC 버전 헤더 -->
+
+      <!-- 페이지 -->
+      <div class="quiz-page page-wrapper">
+        <div class="page-container">
+
+          <!-- 페이지 : 퀴즈 -->
+          <div class="page">
+
+            <!-- 순간 학습 -->
+            <div class="game-card-box">
+              <div class="card-box-top">
+                <button type="button" class="txt-btn">Skip</button>
+                <h3 class="game-card-box-ttl">순간 학습</h3>
+                <div class="game-card-box-status">
+                  <i class="ico ico-count-watch"></i>
+                  <span class="txt">9초 자동 넘어감</span>
+                </div>
+                <button type="button" class="btn square-list-btn">
+                  <span class="txt-hidden">버튼</span>
+                  <i class="ico ico-square-list"></i>
+                </button>
+              </div>
+
+              <!-- 게임 카드 컨텐츠 -->
+              <div class="card-box-bottom">
+                <div class="moment-game-content">
+                  <div class="moment-game-card-box">
+                    <div class="moment-game-card type-front">
+                      <div class="moment-game-card-top">
+                        <div class="d-iflex-row type-gap4">
+                          <button type="button" class="btn ico-btn">
+                            <span class="txt-hidden">듣기</span>
+                            <i class="ico ico-16 ico-blue-sound"></i>
+                          </button>
+                          <button type="button" class="btn ico-btn toggle-btn">
+                            <span class="txt-hidden">즐겨찾기</span>
+                            <i class="ico ico-16 ico-blue-star-on ico-on"></i>
+                            <i class="ico ico-16 ico-blue-star-off ico-off"></i>
+                          </button>
+                        </div>
+                        <button type="button" class="btn btn-type-13 theme-solid-btn">힌트 보기</button>
+                      </div>
+                      <div class="moment-game-card-middle">
+                        <div class="word-wrap">
+                          <p class="word">대략, 관해서, 거의</p>
+                        </div>
+                      </div>
+                      <div class="moment-game-card-bottom">
+                        <button type="button" onclick="filpCard(this);" class="btn bottom-btn btn-w100 theme-solid-btn">클릭하여
+                          카드를 뒤집으세요</button>
+                      </div>
+                    </div>
+                    <div class="moment-game-card type-back">
+                      <div class="moment-game-card-top">
+                        <div class="d-iflex-row type-gap4">
+                          <button type="button" class="btn ico-btn">
+                            <span class="txt-hidden">듣기</span>
+                            <i class="ico ico-16 ico-blue-sound"></i>
+                          </button>
+                          <button type="button" class="btn ico-btn toggle-btn">
+                            <span class="txt-hidden">즐겨찾기</span>
+                            <i class="ico ico-16 ico-blue-star-on ico-on"></i>
+                            <i class="ico ico-16 ico-blue-star-off ico-off"></i>
+                          </button>
+                        </div>
+                        <button type="button" class="btn btn-type-13 theme-solid-btn">힌트 보기</button>
+                      </div>
+                      <div class="moment-game-card-middle">
+                        <div class="word-wrap">
+                          <p class="word">about</p>
+                        </div>
+                      </div>
+                      <div class="moment-game-card-bottom">
+                        <button type="button" onclick="filpCard(this);" class="btn bottom-btn btn-w100 theme-solid-btn">클릭하여
+                          카드를 뒤집으세요</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="moment-game-ctrl-btns">
+                    <button type="button" class="btn">
+                      <span class="txt-hidden">이전 문제</span>
+                      <i class="ico ico-skip-prev"></i>
+                    </button>
+                    <p class="num-txt">1/6</p>
+                    <button type="button" class="btn">
+                      <span class="txt-hidden">다음 문제</span>
+                      <i class="ico ico-skip-next"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- END 컨텐츠 -->
+            </div>
+
+            <!-- END 순간 학습 -->
+
+            <!-- 1분 외우기 -->
+            <div class="game-card-box">
+              <div class="card-box-top">
+                <button type="button" class="txt-btn">Skip</button>
+                <h3 class="game-card-box-ttl">1분 외우기</h3>
+                <div class="game-card-box-status">
+                  <i class="ico ico-count-watch"></i>
+                  <span class="txt">9초 자동 넘어감</span>
+                </div>
+                <button type="button" class="btn square-list-btn">
+                  <span class="txt-hidden">버튼</span>
+                  <i class="ico ico-square-list"></i>
+                </button>
+              </div>
+
+              <!-- 게임 카드 컨텐츠 -->
+              <div class="card-box-bottom">
+                <div class="memorize-game-content">
+                  <div class="memorize-game-row">
+                    <div class="row-cell row-ttl">
+                      고전기 인도의 굽타 제국을 황금
+                      기로 이끈 왕으로, 문학과 예술
+                      의 후원자로 유명한 인물
+                    </div>
+                    <div class="row-cell row-desc">
+                      찬드라굽타2세
+                    </div>
+                  </div>
+                  <div class="memorize-game-row">
+                    <div class="row-cell row-ttl">
+                      고전기 인도의 굽타 제국을 황금
+                      기로 이끈 왕으로, 문학과 예술
+                      의 후원자로 유명한 인물
+                    </div>
+                    <div class="row-cell row-desc">
+                      찬드라굽타2세
+                    </div>
+                  </div>
+                  <div class="memorize-game-row">
+                    <div class="row-cell row-ttl">
+                      고전기 인도의 굽타 제국을 황금
+                      기로 이끈 왕으로, 문학과 예술
+                      의 후원자로 유명한 인물
+                    </div>
+                    <div class="row-cell row-desc">
+                      찬드라굽타2세
+                    </div>
+                  </div>
+                  <div class="memorize-game-row">
+                    <div class="row-cell row-ttl">
+                      고전기 인도의 굽타 제국을 황금
+                      기로 이끈 왕으로, 문학과 예술
+                      의 후원자로 유명한 인물
+                    </div>
+                    <div class="row-cell row-desc">
+                      찬드라굽타2세
+                    </div>
+                  </div>
+                  <div class="memorize-game-row">
+                    <div class="row-cell row-ttl">
+                      고전기 인도의 굽타 제국을 황금
+                      기로 이끈 왕으로, 문학과 예술
+                      의 후원자로 유명한 인물
+                    </div>
+                    <div class="row-cell row-desc">
+                      찬드라굽타2세
+                    </div>
+                  </div>
+                  <div class="memorize-game-row">
+                    <div class="row-cell row-ttl">
+                      고전기 인도의 굽타 제국을 황금
+                      기로 이끈 왕으로, 문학과 예술
+                      의 후원자로 유명한 인물
+                    </div>
+                    <div class="row-cell row-desc">
+                      찬드라굽타2세
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- END 컨텐츠 -->
+            </div>
+
+            <!-- END 1분 외우기 -->
+          </div>
+
+          <!-- END 페이지 : 퀴즈 -->
+        </div>
+      </div>
+
+      <!-- END 페이지 -->
+    </div>
+    <script src="assets/js/ui.js"></script>
+    <script>
+      function filpCard(element) {
+        $(element).parents('.moment-game-card-box').toggleClass('active');
+      }
+    </script>
+  </body>
+</html>
