@@ -371,6 +371,11 @@ img {
     gap: 12px;
   }
 }
+@media all and (max-width: 768px) {
+  .ttl-wrap .ttl-item {
+    gap: 6px;
+  }
+}
 .ttl-wrap .ttl-item .ico-box {
   width: 40rem;
   height: 40rem;
@@ -1432,7 +1437,8 @@ textarea.inp {
 .mobile-header-search-wrap .cancel-btn {
   flex-shrink: 0;
 }
-.mobile-header-search-wrap .cancel-btn .txt {
+.mobile-header-search-wrap .cancel-btn {
+  font-size: 14px;
   color: #343434;
 }
 
@@ -1450,7 +1456,7 @@ textarea.inp {
   align-items: center;
   justify-content: flex-start;
   padding: 0 11px;
-  margin-left: 8px;
+  margin-right: 16px;
 }
 .mobile-header-search-inp .inp {
   width: 100%;
@@ -3218,9 +3224,9 @@ textarea.inp {
   -webkit-box-orient: vertical;
   word-wrap: break-word;
   -webkit-line-clamp: 2;
-  line-height: 24rem;
+  line-height: 25rem;
   height: auto;
-  max-height: 46rem;
+  max-height: 50rem;
   font-size: 20rem;
   font-weight: 500;
   letter-spacing: -0.5px;
@@ -3232,9 +3238,9 @@ textarea.inp {
     display: -webkit-box;
     -webkit-box-orient: vertical;
     word-wrap: break-word;
-    -webkit-line-clamp: 1;
-    line-height: 15px;
-    height: 15px;
+    -webkit-line-clamp: 2;
+    line-height: 19px;
+    max-height: 36px;
     font-size: 15px;
   }
 }
@@ -3264,6 +3270,7 @@ textarea.inp {
 }
 .card-item.type-01 .card-information {
   padding: 0 10px 10px;
+  gap: 5px;
 }
 .card-item.type-01 .btn-type-01 {
   min-width: 80rem;
@@ -3276,6 +3283,10 @@ textarea.inp {
   align-items: center;
   justify-content: flex-start;
   gap: 6px;
+  margin-top: 6px;
+}
+.card-item.type-01 .card-btn-grp {
+  margin-top: 5rem;
 }
 
 /* 카드 아이템 타입 2. */
@@ -3295,6 +3306,9 @@ textarea.inp {
 .card-item.type-02 .thumbnail {
   border-radius: 20px;
   margin-bottom: 20px;
+  --smooth-corners: 3.8;
+  mask-image: paint(smooth-corners);
+  -webkit-mask-image: paint(smooth-corners);
 }
 .card-item.type-02 .card-name {
   font-size: 18rem;
@@ -4875,6 +4889,11 @@ textarea.inp {
   font-weight: 700;
   color: #000;
   letter-spacing: -0.8px;
+}
+@media all and (max-width: 1500px) {
+  .star-rating-item .rating-num {
+    font-size: 21px;
+  }
 }
 
 /* =========== 페이지 : 목차 =========== */
@@ -8442,14 +8461,17 @@ textarea.inp {
 }
 
 .moment-game-card-box {
+  width: 100%;
   display: flex;
   align-items: stretch;
-  min-height: 308px;
   position: relative;
   perspective: 1000px;
+  height: 310px;
+  justify-content: flex-start;
 }
 
 .moment-game-card {
+  width: 100%;
   position: absolute;
   top: 0;
   left: 0;
@@ -8464,7 +8486,6 @@ textarea.inp {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  flex: 1;
 }
 .moment-game-card .moment-game-card-top {
   width: 100%;
@@ -8472,9 +8493,6 @@ textarea.inp {
   align-items: center;
   justify-content: space-between;
   padding: 8px 4px;
-  position: absolute;
-  top: 0;
-  left: 0;
   padding-right: 8px;
   gap: 10px;
 }
@@ -8489,6 +8507,7 @@ textarea.inp {
 .moment-game-card-box .moment-game-card.type-front {
   animation: flipIn 0.25s ease-in-out 1;
   animation-fill-mode: forwards;
+  position: relative;
 }
 .moment-game-card-box .moment-game-card.type-back {
   animation: flipOut 0.25s ease-in-out 1;
@@ -8521,27 +8540,25 @@ textarea.inp {
   }
 }
 .moment-game-card-middle {
-  min-height: 256px;
-  padding: 8px;
   flex: 1;
+  overflow: auto;
   width: 100%;
 }
-.moment-game-card-middle .word-wrap:before {
-  content: "";
+.moment-game-card-middle .moment-game-inner-content-wrap {
+  position: relative;
   height: 100%;
-  display: inline-block;
-  vertical-align: middle;
-  text-align: center;
 }
-.moment-game-card-middle .word-wrap {
-  padding: 50px 0;
-  width: 99%;
-  display: inline-block;
-  vertical-align: middle;
-  height: 100%;
-  text-align: center;
+.moment-game-card-middle .moment-game-inner-content {
+  padding-bottom: 45px;
 }
-.moment-game-card-middle .word-wrap .word {
+.moment-game-card-middle .moment-game-inner-content .img-wrap {
+  max-width: 220px;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.moment-game-card-middle .moment-game-inner-content .word {
   font-size: 30px;
   font-weight: 400;
   color: #000;
@@ -8549,6 +8566,7 @@ textarea.inp {
   width: 95%;
   vertical-align: middle;
   display: inline-block;
+  word-break: break-all;
 }
 
 .moment-game-card-bottom {

@@ -56,6 +56,14 @@
     <!-- JS -->
     <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
     <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+
+    <!-- FIXME: 0118 수정 -->
+    <script src="assets/js/vendor/paint.js"></script>
+
+    <!-- FIXME: 0118 수정 -->
+    <script>
+      if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('assets/js/vendor/paint.js');
+    </script>
   </head>
   <body ontouchstart>
     <div id="app">
@@ -184,11 +192,9 @@
           <!-- END 우측 버튼들 -->
 
           <!-- 모바일 전용 검색영역 -->
+
+          <!-- FIXME: 0118 수정 -->
           <div class="mobile-header-search-wrap">
-            <button type="button" class="btn back-btn" onclick="closeMobileSearch();">
-              <span class="txt-hidden">뒤로 가기</span>
-              <i class="ico ico-arrow-left"></i>
-            </button>
             <div class="mobile-header-search-inp">
               <i class="ico ico-18 ico-search-mobile"></i>
               <input type="text" class="inp" placeholder="검색어를 입력하세요.">
@@ -197,7 +203,10 @@
                 <i class="ico ico-18 ico-search-x"></i>
               </button>
             </div>
+            <button type="button" class="btn cancel-btn">취소</button>
           </div>
+
+          <!-- END 0118 수정 -->
 
           <!-- END 모바일 전용 검색영역 -->
 
@@ -502,7 +511,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -546,7 +557,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
 
                                     <!-- <span class="btn btn-type-01 light-blue-solid-btn">구독중</span> -->
                                     <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button>
@@ -590,7 +603,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -634,7 +649,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -678,7 +695,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
 
                                     <!-- <span class="btn btn-type-01 light-blue-solid-btn">구독중</span> -->
                                     <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button>
@@ -722,7 +741,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -766,7 +787,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -810,7 +833,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
 
                                     <!-- <span class="btn btn-type-01 light-blue-solid-btn">구독중</span> -->
                                     <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button>
@@ -854,7 +879,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -898,7 +925,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -942,7 +971,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
 
                                     <!-- <span class="btn btn-type-01 light-blue-solid-btn">구독중</span> -->
                                     <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button>
@@ -986,7 +1017,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -1057,7 +1090,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -1101,7 +1136,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
 
                                     <!-- <span class="btn btn-type-01 light-blue-solid-btn">구독중</span> -->
                                     <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button>
@@ -1145,7 +1182,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -1189,7 +1228,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -1233,7 +1274,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
 
                                     <!-- <span class="btn btn-type-01 light-blue-solid-btn">구독중</span> -->
                                     <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button>
@@ -1277,7 +1320,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -1321,7 +1366,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -1365,7 +1412,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
 
                                     <!-- <span class="btn btn-type-01 light-blue-solid-btn">구독중</span> -->
                                     <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button>
@@ -1409,7 +1458,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -1453,7 +1504,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -1497,7 +1550,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
 
                                     <!-- <span class="btn btn-type-01 light-blue-solid-btn">구독중</span> -->
                                     <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button>
@@ -1541,7 +1596,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -1656,7 +1713,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -1702,7 +1761,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -1737,7 +1798,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -1772,53 +1835,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
-                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
 
-                          <!-- 카드 -->
-                        </div>
-                        <div class="swiper-slide">
-
-                          <!-- 카드 -->
-                          <div class="card-item type-01">
-                            <figure class="thumbnail">
-                              <div class="thumbnail-img-box">
-
-                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
-                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
-
-                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
-
-                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
-                              </div>
-                            </figure>
-                            <ul class="card-information">
-                              <li>
-
-                                <!-- 진행률 -->
-
-                                <!-- TODO: 진행률 51% ~ 100% 일 때 type-left를 붙혀주세요 -->
-                                <div class="progress-bar type-left" style="--progress-width: 50%">
-                                  <span class="txt">50% 기억 중</span>
-                                </div>
-
-                                <!-- END 진행률 -->
-                              </li>
-                              <li>
-                                <h4 class="card-name">회의 요청 필수 표현</h4>
-                              </li>
-                              <li>
-                                <div class="gray-dot-txt-grp">
-                                  <span class="gray-dot-txt">벤리 공인중개사</span>
-                                  <span class="gray-dot-txt">2023</span>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -1864,7 +1883,57 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- 카드 -->
+                        </div>
+                        <div class="swiper-slide">
+
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
+
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 51% ~ 100% 일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar type-left" style="--progress-width: 50%">
+                                  <span class="txt">50% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -1910,7 +1979,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -1956,7 +2027,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -2002,7 +2075,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -2048,7 +2123,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -2094,7 +2171,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -2140,7 +2219,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -2221,7 +2302,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -2267,7 +2350,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -2302,7 +2387,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -2337,53 +2424,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
-                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
 
-                          <!-- 카드 -->
-                        </div>
-                        <div class="swiper-slide">
-
-                          <!-- 카드 -->
-                          <div class="card-item type-01">
-                            <figure class="thumbnail">
-                              <div class="thumbnail-img-box">
-
-                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
-                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
-
-                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
-
-                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
-                              </div>
-                            </figure>
-                            <ul class="card-information">
-                              <li>
-
-                                <!-- 진행률 -->
-
-                                <!-- TODO: 진행률 51% ~ 100% 일 때 type-left를 붙혀주세요 -->
-                                <div class="progress-bar type-left" style="--progress-width: 50%">
-                                  <span class="txt">50% 기억 중</span>
-                                </div>
-
-                                <!-- END 진행률 -->
-                              </li>
-                              <li>
-                                <h4 class="card-name">회의 요청 필수 표현</h4>
-                              </li>
-                              <li>
-                                <div class="gray-dot-txt-grp">
-                                  <span class="gray-dot-txt">벤리 공인중개사</span>
-                                  <span class="gray-dot-txt">2023</span>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -2429,7 +2472,57 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- 카드 -->
+                        </div>
+                        <div class="swiper-slide">
+
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
+
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 51% ~ 100% 일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar type-left" style="--progress-width: 50%">
+                                  <span class="txt">50% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -2475,7 +2568,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -2521,7 +2616,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -2567,7 +2664,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -2613,7 +2712,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -2659,7 +2760,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -2705,7 +2808,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -3050,7 +3155,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -3096,7 +3203,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -3131,7 +3240,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -3166,53 +3277,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
-                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
-                                </div>
-                              </li>
-                            </ul>
-                          </div>
 
-                          <!-- 카드 -->
-                        </div>
-                        <div class="swiper-slide">
-
-                          <!-- 카드 -->
-                          <div class="card-item type-01">
-                            <figure class="thumbnail">
-                              <div class="thumbnail-img-box">
-
-                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
-                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
-
-                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
-
-                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
-                              </div>
-                            </figure>
-                            <ul class="card-information">
-                              <li>
-
-                                <!-- 진행률 -->
-
-                                <!-- TODO: 진행률 51% ~ 100% 일 때 type-left를 붙혀주세요 -->
-                                <div class="progress-bar type-left" style="--progress-width: 50%">
-                                  <span class="txt">50% 기억 중</span>
-                                </div>
-
-                                <!-- END 진행률 -->
-                              </li>
-                              <li>
-                                <h4 class="card-name">회의 요청 필수 표현</h4>
-                              </li>
-                              <li>
-                                <div class="gray-dot-txt-grp">
-                                  <span class="gray-dot-txt">벤리 공인중개사</span>
-                                  <span class="gray-dot-txt">2023</span>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -3258,7 +3325,57 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
+                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+
+                          <!-- 카드 -->
+                        </div>
+                        <div class="swiper-slide">
+
+                          <!-- 카드 -->
+                          <div class="card-item type-01">
+                            <figure class="thumbnail">
+                              <div class="thumbnail-img-box">
+
+                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img">
+
+                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                <!-- <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img"> -->
+                              </div>
+                            </figure>
+                            <ul class="card-information">
+                              <li>
+
+                                <!-- 진행률 -->
+
+                                <!-- TODO: 진행률 51% ~ 100% 일 때 type-left를 붙혀주세요 -->
+                                <div class="progress-bar type-left" style="--progress-width: 50%">
+                                  <span class="txt">50% 기억 중</span>
+                                </div>
+
+                                <!-- END 진행률 -->
+                              </li>
+                              <li>
+                                <h4 class="card-name">회의 요청 필수 표현</h4>
+                              </li>
+                              <li>
+                                <div class="gray-dot-txt-grp">
+                                  <span class="gray-dot-txt">벤리 공인중개사</span>
+                                  <span class="gray-dot-txt">2023</span>
+                                </div>
+                              </li>
+                              <li>
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -3304,7 +3421,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -3350,7 +3469,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -3396,7 +3517,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -3442,7 +3565,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -3488,7 +3613,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -3534,7 +3661,9 @@
                                 </div>
                               </li>
                               <li>
-                                <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                <!-- FIXME: 0118 수정 -->
+                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                   <span class="btn btn-type-01 gray-solid-btn">객관식</span>
                                 </div>
                               </li>
@@ -3619,7 +3748,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -3663,7 +3794,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
 
                                     <!-- <span class="btn btn-type-01 light-blue-solid-btn">구독중</span> -->
                                     <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button>
@@ -3707,7 +3840,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -3751,7 +3886,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -3795,7 +3932,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
 
                                     <!-- <span class="btn btn-type-01 light-blue-solid-btn">구독중</span> -->
                                     <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button>
@@ -3839,7 +3978,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -3883,7 +4024,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -3927,7 +4070,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
 
                                     <!-- <span class="btn btn-type-01 light-blue-solid-btn">구독중</span> -->
                                     <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button>
@@ -3971,7 +4116,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -4015,7 +4162,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -4059,7 +4208,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
 
                                     <!-- <span class="btn btn-type-01 light-blue-solid-btn">구독중</span> -->
                                     <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button>
@@ -4103,7 +4254,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -4174,7 +4327,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -4218,7 +4373,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
 
                                     <!-- <span class="btn btn-type-01 light-blue-solid-btn">구독중</span> -->
                                     <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button>
@@ -4262,7 +4419,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -4306,7 +4465,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -4350,7 +4511,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
 
                                     <!-- <span class="btn btn-type-01 light-blue-solid-btn">구독중</span> -->
                                     <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button>
@@ -4394,7 +4557,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -4438,7 +4603,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -4482,7 +4649,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
 
                                     <!-- <span class="btn btn-type-01 light-blue-solid-btn">구독중</span> -->
                                     <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button>
@@ -4526,7 +4695,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -4570,7 +4741,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->
@@ -4614,7 +4787,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
 
                                     <!-- <span class="btn btn-type-01 light-blue-solid-btn">구독중</span> -->
                                     <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button>
@@ -4658,7 +4833,9 @@
                                   </div>
                                 </li>
                                 <li>
-                                  <div class="d-iflex-row type-gap10 d-flex-wrap">
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
                                     <span class="btn btn-type-01 light-blue-solid-btn">구독중</span>
 
                                     <!-- <button type="button" class="btn btn-type-01 blue-bd-btn">구독하기</button> -->

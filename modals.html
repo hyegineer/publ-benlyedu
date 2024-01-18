@@ -56,6 +56,14 @@
     <!-- JS -->
     <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
     <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+
+    <!-- FIXME: 0118 수정 -->
+    <script src="assets/js/vendor/paint.js"></script>
+
+    <!-- FIXME: 0118 수정 -->
+    <script>
+      if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('assets/js/vendor/paint.js');
+    </script>
   </head>
   <body ontouchstart>
     <div id="app">
