@@ -4917,9 +4917,10 @@ textarea.inp {
   margin: 0 -10px;
 }
 .main-page .subject-item-list-grp {
-  gap: 35rem;
+  gap: 34px;
   justify-content: center;
   margin-bottom: 90rem;
+  flex-wrap: wrap;
 }
 .main-page .subject-item-list-grp .list.active .img-box:before {
   display: inline-flex;
@@ -5045,10 +5046,6 @@ textarea.inp {
 }
 
 @media all and (max-width: 1500px) {
-  .main-page .subject-item-list-grp {
-    gap: 15px;
-    flex-wrap: wrap;
-  }
   .main-page .subject-item .txt {
     font-size: 14px;
   }
@@ -5056,6 +5053,12 @@ textarea.inp {
 @media all and (max-width: 1280px) {
   .main-page .content {
     margin-bottom: 18px;
+  }
+  .main-page .subject-item-list-grp {
+    gap: 28rem;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-bottom: 60px;
   }
   .main-page .subject-item .img-box {
     width: 82px;
