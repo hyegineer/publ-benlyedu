@@ -1302,6 +1302,7 @@ textarea.inp {
   align-items: center;
   justify-content: flex-start;
   gap: 10px;
+  cursor: pointer;
 }
 .header .sub-nav-link .ico {
   width: 24rem;
