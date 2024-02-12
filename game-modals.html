@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>벤리에듀</title>
+
+    <!-- Open Graph -->
+    <meta name="title" content="Benly Edu">
+    <meta name="author" content="벤리에듀">
+    <meta name="description" content="벤리에듀 - AI 기억력 강화 e러닝 솔루션">
+    <meta name="keywords" content="benlyedu, Benlyedu, 벤리에듀, AI, 기억력, 강화, e러닝, 솔루션">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+
+    <!-- TODO: web url 설정해야합니다 -->
+
+    <!-- <meta property="og:url" content="해당 웹 url"> -->
+    <meta property="og:title" content="벤리에듀 (Benly Edu)">
+    <meta property="og:description" content="AI 기억력 강화 e러닝 솔루션">
+
+    <!-- TODO: meta thumbnail 설정 -->
+    <meta property="og:image" content="assets/images/og/og-thumbnail.png">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-36x36.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-72x72.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-256x256.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#017afb">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/odometer.css">
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- JS -->
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/vendor/odometer.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script>
+      if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('https://unpkg.com/smooth-corners');
+    </script>
+  </head>
+  <body ontouchstart>
+    <div id="app">
+
+      <!-- 페이지 -->
+      <div class="index-page page-wrapper">
+        <div class="page-container">
+
+          <!-- 페이지 : 게임 -->
+          <div class="page">
+            <div class="inner">
+              <h1 class="ttl">1. 게임 관련 스플래시 모음</h1>
+              <div class="white-box type-pd20" style="margin-bottom: 50px;">
+                <table class="tbl">
+                  <thead>
+                    <tr>
+                      <th>스플래시내용</th>
+                      <th>버튼</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1. 스플래시 : 게임 진입시 스플래시 화면</td>
+                      <td>
+                        <button type="button" onclick="splash('type-game-intro');" class="btn btn-type-01 blue-bd-btn">
+                          스플래시 보기
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2. 스플래시 : 게임 시작시 레벨 화면</td>
+                      <td>
+                        <button type="button" onclick="splash('type-game-level');" class="btn btn-type-01 blue-bd-btn">
+                          스플래시 보기
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3. 스플래시 : 게임 시작시 현재 기억률</td>
+                      <td>
+                        <button type="button" onclick="splash('type-game-progress');" class="btn btn-type-01 blue-bd-btn">
+                          스플래시 보기
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4. 스플래시 : 게임 시작</td>
+                      <td>
+                        <button type="button" onclick="splash('type-game-start');" class="btn btn-type-01 blue-bd-btn">
+                          스플래시 보기
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5. 스플래시 : 게임 종료</td>
+                      <td>
+                        <button type="button" onclick="splashExit();" class="btn btn-type-01 blue-bd-btn">
+                          스플래시 보기
+                        </button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>6. 스플래시 : 정답</td>
+                      <td>
+                        <button type="button" onclick="splash('type-game-status');" class="btn btn-type-01 blue-bd-btn">
+                          스플래시 보기
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h1 class="ttl">2. 게임 관련 모달 모음</h1>
+              <div class="white-box type-pd20" style="margin-bottom: 50px;">
+                <table class="tbl">
+                  <thead>
+                    <tr>
+                      <th>모달내용</th>
+                      <th>버튼</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1. 게임 입장</td>
+                      <td>
+                        <button type="button" onclick="openGameModal('game-modal-01');" class="btn btn-type-01 blue-bd-btn">모달
+                          보기</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2. 아는 것 구분하기</td>
+                      <td>
+                        <button type="button" onclick="openGameModal('game-modal-02');" class="btn btn-type-01 blue-bd-btn">모달
+                          보기</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3. 30초 외우기</td>
+                      <td>
+                        <button type="button" onclick="openGameModal('game-modal-03');" class="btn btn-type-01 blue-bd-btn">모달
+                          보기</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>4. 아는 것 구분하기 확인</td>
+                      <td>
+                        <button type="button" onclick="openGameModal('game-modal-04');" class="btn btn-type-01 blue-bd-btn">모달
+                          보기</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>5. 긍정적인 경험을 했나요?</td>
+                      <td>
+                        <button type="button" onclick="openGameModal('game-modal-05');" class="btn btn-type-01 blue-bd-btn">모달
+                          보기</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>6. 어떤 이슈가 있나요?</td>
+                      <td>
+                        <button type="button" onclick="openGameModal('game-modal-06');" class="btn btn-type-01 blue-bd-btn">모달
+                          보기</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h1 class="ttl">3. 클리어 팝업</h1>
+              <div class="white-box type-pd20" style="margin-bottom: 50px;">
+                <table class="tbl">
+                  <thead>
+                    <tr>
+                      <th>모달내용</th>
+                      <th>버튼</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1. 레벨 + 별점 부여</td>
+                      <td>
+                        <button type="button" onclick="openGameClearModal('game-modal-07', 3);" class="btn btn-type-01 blue-bd-btn">모달
+                          보기</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2. 기억률 계산 중</td>
+                      <td>
+                        <button type="button" onclick="openGameProgressModal('game-modal-08');" class="btn btn-type-01 blue-bd-btn">모달
+                          보기</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>3. 기억률 100% 달성!</td>
+                      <td>
+                        <button type="button" onclick="openGameModal('game-modal-09');" class="btn btn-type-01 blue-bd-btn">모달
+                          보기</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 페이지 : 게임 -->
+
+          <!-- 스플래시 : 게임 진입시 스플래시 화면 -->
+          <div class="splash-game type-game-intro">
+            <h1 class="center-logo">
+              <img src="assets/images/logo/logo-white.svg" alt="벤리 로고" class="logo-img">
+              <span class="logo-shadow"></span>
+            </h1>
+          </div>
+
+          <!-- END 스플래시 : 게임 진입시 스플래시 화면 -->
+
+          <!-- 스플래시 : 게임 시작시 레벨 화면 -->
+          <div class="splash-game type-game-level">
+            <span class="bg"></span>
+            <div class="txt-wrap">
+              <img src="assets/images/img-splash-level-bg.svg" alt="" class="bg-img">
+              <p class="sub-txt">1번째 시도</p>
+              <h1 class="txt">레벨 1</h1>
+            </div>
+          </div>
+
+          <!-- END 스플래시 : 게임 시작시 레벨 화면 -->
+
+          <!-- 스플래시 : 게임 시작시 현재 기억률 -->
+          <div class="splash-game type-game-progress">
+            <span class="bg"></span>
+            <div class="txt-wrap">
+              <h1 class="txt">현재 기억률 <br>0%</h1>
+            </div>
+          </div>
+
+          <!-- END 스플래시 : 게임 시작시 현재 기억률 -->
+
+          <!-- 스플래시 : 게임 시작 -->
+          <div class="splash-game type-game-start">
+            <span class="bg"></span>
+            <span class="circle"></span>
+            <div class="txt-wrap">
+              <h1 class="txt">시작!</h1>
+            </div>
+          </div>
+
+          <!-- END 스플래시 : 게임 시작 -->
+
+          <!-- 스플래시 : 게임 종료 -->
+          <div class="splash-game type-game-exit">
+            <div class="bg-box"></div>
+            <div class="txt-wrap">
+              <h1 class="txt">종료!</h1>
+            </div>
+          </div>
+
+          <!-- END 스플래시 : 게임 종료 -->
+
+          <!-- 스플래시 : 게임 정답 -->
+          <div class="splash-game type-game-status">
+            <div class="bg"></div>
+            <h1 class="center-txt">정답!</h1>
+          </div>
+
+          <!-- END 스플래시 : 게임 정답 -->
+
+          <!-- 모달 : 게임 입장 -->
+          <div id="game-modal-01" class="game-modal-wrapper">
+            <div class="modal-overlay type-transparent" onclick="closeGameModal('game-modal-01', 1800);"></div>
+            <div class="game-modal type-01">
+              <div class="gmodal-contt-container">
+                <h3 class="gmodal-ttl">장쌤의 코딩 교실</h3>
+                <div class="gmodal-contt">
+                  <p class="gmodal-desc">챕터 1</p>
+                </div>
+              </div>
+              <div class="gmodal-btn-wrap">
+                <button type="button" onclick="closeGameModal('game-modal-01', 1800);" class="gmodal-btn gmodal-btn02">입장</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 게임 입장 -->
+
+          <!-- 모달 : 아는 것 구분하기 -->
+          <div id="game-modal-02" class="game-modal-wrapper">
+            <div class="modal-overlay" onclick="closeGameModal('game-modal-02', 1800);"></div>
+            <div class="game-modal type-02">
+              <div class="gmodal-contt-container">
+                <h3 class="gmodal-ttl">아는 것 구분하기</h3>
+                <div class="gmodal-contt">
+                  <div class="game-welcome-card">
+                    <div class="card-top">
+                      <div class="class-list-item">
+                        <figure class="thumbnail type-circle">
+                          <img src="assets/images/sample/img-sample-class-list.png" alt="프로필 사진" class="thumbnail-img">
+                        </figure>
+                        <span class="txt">장쌤의 코딩 교실</span>
+                      </div>
+                    </div>
+                    <div class="card-bottom">
+                      <p class="card-desc">먼저 아는 것만 구분해볼게요. <br>
+                        알면 답 입력, 모르면 Skip 버튼 클릭!
+                      </p>
+                      <p class="card-date">오후 4:20</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gmodal-btn-wrap">
+                <button type="button" onclick="closeGameModal('game-modal-02', 1800);" class="gmodal-btn gmodal-btn01">계속하려면
+                  탭</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 아는 것 구분하기 -->
+
+          <!-- 모달 : 30초 외우기 -->
+          <div id="game-modal-03" class="game-modal-wrapper">
+            <div class="modal-overlay" onclick="closeGameModal('game-modal-03', 1800);"></div>
+            <div class="game-modal type-02">
+              <div class="gmodal-contt-container">
+                <h3 class="gmodal-ttl">30초 외우기</h3>
+                <div class="gmodal-contt">
+                  <div class="game-welcome-card">
+                    <div class="card-top">
+                      <div class="class-list-item">
+                        <figure class="thumbnail type-circle">
+                          <img src="assets/images/sample/img-sample-class-list.png" alt="프로필 사진" class="thumbnail-img">
+                        </figure>
+                        <span class="txt">장쌤의 코딩 교실</span>
+                      </div>
+                    </div>
+                    <div class="card-bottom">
+                      <p class="card-desc">
+                        1번, 3번, 4번 카드만 다시 외워볼까요? <br>
+                        다 맞추고 다음 레벨로 향해 고고!
+                      </p>
+                      <p class="card-date">오후 4:20</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gmodal-btn-wrap">
+                <button type="button" onclick="closeGameModal('game-modal-03', 1800);" class="gmodal-btn gmodal-btn02">외우기
+                  시작</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 30초 외우기 -->
+
+          <!-- 모달 : 아는 것 구분하기 확인 -->
+          <div id="game-modal-04" class="game-modal-wrapper">
+            <div class="modal-overlay" onclick="closeGameModal('game-modal-04', 1700);"></div>
+            <div class="game-modal type-02">
+              <div class="gmodal-contt-container">
+                <h3 class="gmodal-ttl">아는 것 구분하기</h3>
+                <div class="gmodal-contt">
+                  <div class="game-welcome-card">
+                    <div class="card-top">
+                      <div class="class-list-item">
+                        <figure class="thumbnail type-circle">
+                          <img src="assets/images/sample/img-sample-class-list.png" alt="프로필 사진" class="thumbnail-img">
+                        </figure>
+                        <span class="txt">장쌤의 코딩 교실</span>
+                      </div>
+                    </div>
+                    <div class="card-bottom">
+                      <p class="card-desc">
+                        아는 것을 모두 구분했어요. <br>
+                        이제 기억 학습을 진행할 수 있어요.
+                      </p>
+                      <p class="card-date">오후 4:20</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gmodal-btn-wrap">
+                <button type="button" class="gmodal-btn gmodal-btn02" onclick="closeGameModal('game-modal-04', 1700);">학습
+                  시작</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 아는 것 구분하기 확인 -->
+
+          <!-- 모달 : 긍정적인 경험을 했나요? -->
+          <div id="game-modal-05" class="game-modal-wrapper">
+            <div class="modal-overlay type-gray" onclick="closeGameModal('game-modal-05');"></div>
+            <div class="game-modal type-03">
+              <div class="gmodal-contt-container">
+                <div class="gmodal-ttl-wrap">
+                  <div class="gmodal-ttl-item">
+                    <img src="assets/images/ico/ico-positive.svg" alt="아이콘" class="ico ico-16">
+                    <h3 class="gmodal-ttl">긍정적인 경험을 했나요?</h3>
+                  </div>
+                  <button type="button" class="btn" onclick="closeGameModal('game-modal-05');">
+                    <span class="txt-hidden">모달 닫기</span>
+                    <img src="assets/images/ico/ico-gray-x.svg" alt="닫기 아이콘" class="ico">
+                  </button>
+                </div>
+                <div class="gmodal-contt">
+                  <textarea placeholder="긍정적인 피드백을 남겨주세요. 큰 힘이 됩니다. :)" class="txtarea"></textarea>
+                </div>
+              </div>
+              <div class="gmodal-btn-wrap">
+                <button type="button" class="gmodal-btn gmodal-btn02">보내기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 긍정적인 경험을 했나요? -->
+
+          <!-- 모달 : 어떤 이슈가 있나요? -->
+          <div id="game-modal-06" class="game-modal-wrapper">
+            <div class="modal-overlay type-gray" onclick="closeGameModal('game-modal-06');"></div>
+            <div class="game-modal type-03">
+              <div class="gmodal-contt-container">
+                <div class="gmodal-ttl-wrap">
+                  <div class="gmodal-ttl-item">
+                    <img src="assets/images/ico/ico-negative.svg" alt="아이콘" class="ico ico-20">
+                    <h3 class="gmodal-ttl">어떤 이슈가 있나요?</h3>
+                  </div>
+                  <button type="button" class="btn" onclick="closeGameModal('game-modal-06');">
+                    <span class="txt-hidden">모달 닫기</span>
+                    <img src="assets/images/ico/ico-gray-x.svg" alt="닫기 아이콘" class="ico">
+                  </button>
+                </div>
+                <div class="gmodal-contt">
+                  <textarea placeholder="이슈를 남겨주세요." class="txtarea"></textarea>
+                </div>
+              </div>
+              <div class="gmodal-btn-wrap">
+                <button type="button" class="gmodal-btn gmodal-btn02">보내기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 어떤 이슈가 있나요? -->
+
+          <!-- 모달 : 레벨 + 별점 부여 -->
+          <div id="game-modal-07" class="game-modal-wrapper">
+            <div class="modal-overlay type-transparent" onclick="closeGameClearModal('game-modal-07', 1500);"></div>
+            <div class="game-modal type-04">
+              <div class="gmodal-contt-container">
+                <h3 class="gmodal-ttl">레벨 1</h3>
+                <div class="gmodal-contt">
+                  <img src="assets/images/img-level-clear.png" alt="클리어 관련 이미지" class="gmodal-img">
+                  <div class="star-effect-box">
+                    <form class="effect-rating">
+                      <div class="rating__stars">
+                        <input id="rating-1" readonly class="rating__input rating__input-1" type="radio" name="rating" value="1">
+                        <input id="rating-2" readonly class="rating__input rating__input-2" type="radio" name="rating" value="2">
+                        <input id="rating-3" readonly class="rating__input rating__input-3" type="radio" name="rating" value="3">
+                        <label class="rating__label" for="rating-1">
+                          <svg class="rating__star" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                            <g transform="translate(16,16)">
+                              <circle class="rating__star-ring" fill="none" stroke="#000" stroke-width="16" r="8" transform="scale(0)" />
+                            </g>
+                            <g stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <g transform="translate(16,16) rotate(180)">
+                                <polygon class="rating__star-stroke" points="0,15 4.41,6.07 14.27,4.64 7.13,-2.32 8.82,-12.14 0,-7.5 -8.82,-12.14 -7.13,-2.32 -14.27,4.64 -4.41,6.07" fill="none" />
+                                <polygon class="rating__star-fill" points="0,15 4.41,6.07 14.27,4.64 7.13,-2.32 8.82,-12.14 0,-7.5 -8.82,-12.14 -7.13,-2.32 -14.27,4.64 -4.41,6.07" fill="#000" />
+                              </g>
+                              <g transform="translate(16,16)" stroke-dasharray="12 12" stroke-dashoffset="12">
+                                <polyline class="rating__star-line" transform="rotate(0)" points="0 4,0 16" />
+                                <polyline class="rating__star-line" transform="rotate(72)" points="0 4,0 16" />
+                                <polyline class="rating__star-line" transform="rotate(144)" points="0 4,0 16" />
+                                <polyline class="rating__star-line" transform="rotate(216)" points="0 4,0 16" />
+                                <polyline class="rating__star-line" transform="rotate(288)" points="0 4,0 16" />
+                              </g>
+                            </g>
+                          </svg>
+                          <span class="rating__sr">1 star—Terrible</span>
+                        </label>
+                        <label class="rating__label" for="rating-2">
+                          <svg class="rating__star" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                            <g transform="translate(16,16)">
+                              <circle class="rating__star-ring" fill="none" stroke="#000" stroke-width="16" r="8" transform="scale(0)" />
+                            </g>
+                            <g stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <g transform="translate(16,16) rotate(180)">
+                                <polygon class="rating__star-stroke" points="0,15 4.41,6.07 14.27,4.64 7.13,-2.32 8.82,-12.14 0,-7.5 -8.82,-12.14 -7.13,-2.32 -14.27,4.64 -4.41,6.07" fill="none" />
+                                <polygon class="rating__star-fill" points="0,15 4.41,6.07 14.27,4.64 7.13,-2.32 8.82,-12.14 0,-7.5 -8.82,-12.14 -7.13,-2.32 -14.27,4.64 -4.41,6.07" fill="#000" />
+                              </g>
+                              <g transform="translate(16,16)" stroke-dasharray="12 12" stroke-dashoffset="12">
+                                <polyline class="rating__star-line" transform="rotate(0)" points="0 4,0 16" />
+                                <polyline class="rating__star-line" transform="rotate(72)" points="0 4,0 16" />
+                                <polyline class="rating__star-line" transform="rotate(144)" points="0 4,0 16" />
+                                <polyline class="rating__star-line" transform="rotate(216)" points="0 4,0 16" />
+                                <polyline class="rating__star-line" transform="rotate(288)" points="0 4,0 16" />
+                              </g>
+                            </g>
+                          </svg>
+                          <span class="rating__sr">2 stars—Bad</span>
+                        </label>
+                        <label class="rating__label" for="rating-3">
+                          <svg class="rating__star" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                            <g transform="translate(16,16)">
+                              <circle class="rating__star-ring" fill="none" stroke="#000" stroke-width="16" r="8" transform="scale(0)" />
+                            </g>
+                            <g stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                              <g transform="translate(16,16) rotate(180)">
+                                <polygon class="rating__star-stroke" points="0,15 4.41,6.07 14.27,4.64 7.13,-2.32 8.82,-12.14 0,-7.5 -8.82,-12.14 -7.13,-2.32 -14.27,4.64 -4.41,6.07" fill="none" />
+                                <polygon class="rating__star-fill" points="0,15 4.41,6.07 14.27,4.64 7.13,-2.32 8.82,-12.14 0,-7.5 -8.82,-12.14 -7.13,-2.32 -14.27,4.64 -4.41,6.07" fill="#000" />
+                              </g>
+                              <g transform="translate(16,16)" stroke-dasharray="12 12" stroke-dashoffset="12">
+                                <polyline class="rating__star-line" transform="rotate(0)" points="0 4,0 16" />
+                                <polyline class="rating__star-line" transform="rotate(72)" points="0 4,0 16" />
+                                <polyline class="rating__star-line" transform="rotate(144)" points="0 4,0 16" />
+                                <polyline class="rating__star-line" transform="rotate(216)" points="0 4,0 16" />
+                                <polyline class="rating__star-line" transform="rotate(288)" points="0 4,0 16" />
+                              </g>
+                            </g>
+                          </svg>
+                          <span class="rating__sr">3 stars—OK</span>
+                        </label>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="score-box">
+                    <img src="assets/images/img-score-mp.png" alt="MP" class="left-mp">
+                    <div class="txt-wrap">
+                      <span class="txt">총점</span>
+                      <span id="odometer01" class="value">251830</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gmodal-btn-wrap">
+                <button type="button" onclick="closeGameClearModal('game-modal-07', 1500);" class="gmodal-btn gmodal-btn02">다음</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 레벨 + 별점 부여 -->
+
+          <!-- 모달 : 기억률 계산 중 -->
+          <div id="game-modal-08" class="game-modal-wrapper">
+            <div class="modal-overlay type-transparent" onclick="closeGameModal('game-modal-08');"></div>
+            <div class="game-modal type-05">
+              <div class="gmodal-contt-container">
+                <h3 class="gmodal-ttl">레벨 1</h3>
+                <div class="gmodal-contt">
+                  <p id="memo-value-ing" class="gmodal-desc">기억률 계산 중</p>
+                  <div class="calc-progress-wrap">
+                    <img src="assets/images/ico/ico-brain.svg" alt="두뇌 아이콘" class="brain-ico">
+                    <div class="calc-progress-bar">
+                      <div class="bar">
+                        <span class="ing-bar" style="--ing-left: 78%"></span>
+                      </div>
+                      <div class="value" style="--bar-value: 78;">
+                        <span id="progress-value">0</span>%
+                      </div>
+                    </div>
+                  </div>
+                  <div class="memo-card-wrap">
+                    <p class="ttl">기억중인 카드</p>
+                    <div class="memo-cards">
+                      <div class="memo-card-item type-first">
+                        <div class="txt">0개</div>
+                      </div>
+                      <img src="assets/images/ico/ico-card-arrow.svg" alt="화살표" class="ico ico-arrow">
+                      <div class="memo-card-item type-red">
+                        <div class="txt">5개</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gmodal-btn-wrap">
+                <button type="button" class="gmodal-btn gmodal-btn02" onclick="closeGameModal('game-modal-08');">다음</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 기억률 계산 중 -->
+
+          <!-- 모달 : 기억률 100% 달성! -->
+          <div id="game-modal-09" class="game-modal-wrapper">
+            <div class="modal-overlay type-black" onclick="closeGameModal('game-modal-09');"></div>
+            <div class="game-modal type-06">
+              <div class="gmodal-contt-container">
+                <h3 class="gmodal-ttl">기억률 100% 달성!</h3>
+                <div class="gmodal-img-wrap">
+                  <img src="assets/images/img-clear-star.png" alt="달성 이미지" class="star-img">
+                  <img src="assets/images/img-clear-txt.png" alt="clear" class="clear-img">
+                </div>
+              </div>
+              <div class="gmodal-btn-wrap">
+                <button type="button" class="gmodal-btn gmodal-btn03" onclick="closeGameModal('game-modal-09');">계속하려면
+                  탭하세요</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 기억률 100% 달성! -->
+        </div>
+      </div>
+
+      <!-- END 페이지 -->
+    </div>
+    <script src="assets/js/ui.js"></script>
+    <script src="assets/js/pages/gameEffect.js"></script>
+  </body>
+</html>

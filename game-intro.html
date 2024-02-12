@@ -308,276 +308,310 @@
       <!-- END PC 버전 헤더 -->
 
       <!-- 페이지 -->
-      <div class="note-page page-wrapper">
+      <div class="game-page page-wrapper">
         <div class="page-container">
 
-          <!-- 페이지 : 빵꾸노트 : 다시외우기 -->
-          <div class="page">
-
-            <!-- 빵꾸노트 상단 -->
-            <div class="note-layout-top">
-
-              <!-- TODO: PC버전 상단입니다. -->
-              <div class="note-header type-pc">
-
-                <!-- 제목 -->
-                <h2 class="ttl">다시외우기</h2>
-
-                <!-- END 제목 -->
-
-                <!-- 가운데 컨트롤 -->
-                <ul class="ctrl-list-grp">
-                  <li class="ctrl-list">
-                    <div class="page-ctrl">
-                      <span rolebox="textbox" contenteditable="" class="inp">1</span>/16
-                    </div>
-                  </li>
-                  <li class="ctrl-list">
-                    <div class="zoom-ctrl">
-                      <button type="button" class="btn">
-                        <span class="txt-hidden">줌아웃</span>
-                        <i class="ico ico-21 ico-zoomout"></i>
-                      </button>
-                      <input type="text" readonly class="inp" value="100%">
-                      <button type="button" class="btn">
-                        <span class="txt-hidden">줌인</span>
-                        <i class="ico ico-21 ico-zoomin"></i>
-                      </button>
-                    </div>
-                  </li>
-                  <li class="ctrl-list">
-                    <div class="etc-ctrl">
-                      <button type="button" class="btn">
-                        <span class="txt-hidden">이동하기</span>
-                        <i class="ico ico-move-hand"></i>
-                      </button>
-                      <button type="button" class="btn">
-                        <span class="txt-hidden">새창띄우기</span>
-                        <i class="ico ico-new-window"></i>
-                      </button>
-                      <button type="button" class="btn">
-                        <span class="txt-hidden">실행취소</span>
-                        <i class="ico ico-undo"></i>
-                      </button>
-                    </div>
-                  </li>
-                </ul>
-
-                <!-- END 가운데 컨트롤 -->
-
-                <!-- 오른쪽 진행률 -->
-                <div class="progress-bar-wrap">
-                  <div class="progress-time">
-                    <i class="ico ico-timer ico-pink"></i>
-                    <span class="txt">0:00</span>
-                  </div>
-                  <div class="progress-bar type-pink" style="--progress-width: 50%"></div>
-                  <div class="progress-txt">
-                    <p class="txt"><span>3</span>/10</p>
-                  </div>
-                </div>
-
-                <!-- END 오른쪽 진행률 -->
-              </div>
-
-              <!-- TODO: MOBILE버전 상단입니다. -->
-              <div class="note-header type-mobile">
-                <div class="note-header-top">
-                  <button type="button" class="btn back-btn">
-                    <span class="txt-hidden">뒤로가기</span>
-                    <i class="ico ico-arrow-left"></i>
-                  </button>
-                  <div class="progress-time">
-                    <i class="ico ico-timer ico-pink"></i>
-                    <span class="txt">60초 후 자동 넘어감</span>
-                  </div>
-                </div>
-                <div class="note-header-bottom type-replay">
-                  <div class="replay-ttl-wrap">
-                    <h3 class="ttl">다시외우기</h3>
-                    <button type="button" class="btn btn-type-03 gray-bd-btn">다시외우기</button>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- END 빵꾸노트 상단 -->
-
-            <!-- 빵꾸노트 컨텐츠 -->
-            <div class="note-layout-container">
-
-              <!-- 빵꾸노트 좌측 -->
-              <div class="note-layout-left">
-                <div class="note-left-container type-blue">
-                  <button id="note-left-fold-btn" type="button" class="btn fold-btn">
-                    <span class="txt-hidden">접기</span>
-                    <i class="ico ico-db-fold-left"></i>
-                  </button>
-                  <div class="note-list-wrap">
-                    <ul class="note-list-grp">
-                      <li class="note-list">
-                        <div class="note-card-item active">
-                          <figure class="thumbnail">
-                            <img src="assets/images/sample/sample-note-img.png" alt="" class="thumbnail-img">
-                          </figure>
-                          <div class="btn-set">
-                            <button type="button" class="btn bsbtn count-txt">1</button>
-                            <div class="btn-set-wrap">
-                              <ul class="btn-set-list-grp">
-                                <li class="btn-set-list">
-                                  <button type="button" class="btn">삭제하기</button>
-                                </li>
-                                <li class="btn-set-list">
-                                  <button type="button" class="btn">비활성화</button>
-                                </li>
-                                <li class="btn-set-list">
-                                  <button type="button" class="btn">아래 페이지 추가</button>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                      <li class="note-list">
-                        <div class="note-card-item">
-                          <figure class="thumbnail">
-                            <img src="assets/images/sample/sample-note-img.png" alt="" class="thumbnail-img">
-                          </figure>
-                          <div class="btn-set">
-                            <button type="button" class="btn bsbtn count-txt">2</button>
-                            <div class="btn-set-wrap">
-                              <ul class="btn-set-list-grp">
-                                <li class="btn-set-list">
-                                  <button type="button" class="btn">삭제하기</button>
-                                </li>
-                                <li class="btn-set-list">
-                                  <button type="button" class="btn">비활성화</button>
-                                </li>
-                                <li class="btn-set-list">
-                                  <button type="button" class="btn">아래 페이지 추가</button>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              <!-- END 빵꾸노트 좌측 -->
-
-              <!-- 빵꾸노트 센터 (사진) -->
-              <div class="note-layout-center">
-                <div class="note-center-container">
-                  <img src="assets/images/sample/sample-screenshot.png" alt="" class="note-center-img">
-                  <div style="padding: 20px; z-index: 1; position: relative; display: flex; flex-wrap: wrap; gap: 5px;">
-
-                    <!-- 타겟에 퀴즈요소 -->
-                    <div class="quiz-box" style="margin-bottom: 10px;">
-                      <div class="front">
-                        <div class="quiz-num">
-                          <span class="txt">Q.09</span>
-                        </div>
-                      </div>
-                      <div class="back">
-                        <div class="quiz-txt">전부유보설</div>
-                      </div>
-                    </div>
-                    <div class="quiz-box active" style="margin-bottom: 10px;">
-                      <div class="front">
-                        <div class="quiz-num">
-                          <span class="txt">Q.09</span>
-                        </div>
-                      </div>
-                      <div class="back">
-                        <div class="quiz-txt">전부유보설</div>
-                      </div>
-                    </div>
-                    <div class="quiz-box type-black" style="margin-bottom: 10px;">
-                      <div class="front">
-                        <div class="quiz-num">
-                          <span class="txt">Q.09</span>
-                        </div>
-                      </div>
-                      <div class="back">
-                        <div class="quiz-txt">전부유보설</div>
-                      </div>
-                    </div>
-                    <div class="quiz-box type-black active" style="margin-bottom: 10px;">
-                      <div class="front">
-                        <div class="quiz-num">
-                          <span class="txt">Q.09</span>
-                        </div>
-                      </div>
-                      <div class="back">
-                        <div class="quiz-txt">전부유보설</div>
-                      </div>
-                    </div>
-                    <div class="quiz-box type-white" style="margin-bottom: 10px;">
-                      <div class="front">
-                        <div class="quiz-num">
-                          <span class="txt">Q.09</span>
-                        </div>
-                      </div>
-                      <div class="back">
-                        <div class="quiz-txt">전부유보설</div>
-                      </div>
-                    </div>
-                    <div class="quiz-box type-white active" style="margin-bottom: 10px;">
-                      <div class="front">
-                        <div class="quiz-num">
-                          <span class="txt">Q.09</span>
-                        </div>
-                      </div>
-                      <div class="back">
-                        <div class="quiz-txt">전부유보설</div>
-                      </div>
-                    </div>
-
-                    <!-- END 타겟에 퀴즈요소 -->
-                  </div>
-                </div>
-              </div>
-
-              <!-- END 빵꾸노트 센터 (사진) -->
-            </div>
-
-            <!-- END 빵꾸노트 컨텐츠 -->
+          <!-- 스플래시 : 게임 진입시 로고 등장 -->
+          <div class="splash-game type-game-intro">
+            <h1 class="center-logo">
+              <img src="assets/images/logo/logo-white.svg" alt="벤리 로고" class="logo-img">
+              <span class="logo-shadow"></span>
+            </h1>
           </div>
 
-          <!-- END 페이지 : 빵꾸노트 : 다시외우기 -->
+          <!-- END 스플래시 : 게임 진입시 로고 등장 -->
+
+          <!-- 페이지 : 게임 -->
+          <div class="page">
+
+            <!-- 게임 왼쪽 영역 -->
+            <div class="game-layout-left">
+
+              <!-- 왼쪽 사이드바 -->
+              <div class="game-left-sidebar">
+                <div class="sidebar-top">
+                  <div class="logo-wrap">
+                    <h1 class="logo">
+                      <a href="#">
+                        <img src="assets/images/logo/logo-white.svg" alt="벤리" class="logo-img">
+                      </a>
+                    </h1>
+                    <div class="status-wrap">
+                      <span class="txt">현재 기억률</span>
+                      <b class="value">78%</b>
+                    </div>
+                  </div>
+                  <div class="ment-wrap">
+                    <p class="txt">100% 외워도 시간이 지나면서 <br>잊어버린 만큼 기억률이 떨어집니다. </p>
+                  </div>
+                </div>
+                <div class="sidebar-mid">
+                  <div class="class-list-item">
+                    <figure class="thumbnail type-circle">
+                      <img src="assets/images/sample/img-sample-class-list.png" alt="프로필 사진" class="thumbnail-img">
+                    </figure>
+                    <span class="txt">장쌤의 코딩 교실</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- END 왼쪽 사이드바 -->
+            </div>
+
+            <!-- 게임 왼쪽 영역 -->
+
+            <!-- 게임 오른쪽 영역 -->
+            <div class="game-layout-right">
+
+              <!-- 게임 컨텐츠 상단 영역 -->
+              <div class="game-layout-content-top">
+
+                <!-- 게임 컨텐츠 상단 헤더 -->
+                <div class="game-top-header">
+
+                  <!-- TODO: PC일 때만 보입니다. -->
+                  <div class="left-wrap">
+                    <div class="game-count-card">1번째 기억카드</div>
+                  </div>
+
+                  <!-- END TODO: PC일 때만 보입니다. -->
+
+                  <!-- TODO: MOBILE일 때만 보입니다. -->
+                  <div class="mb-left-wrap">
+                    <h1 class="logo">
+                      <a href="#">
+                        <img src="assets/images/logo/logo-white.svg" alt="로고이미지" class="logo-img">
+                      </a>
+                    </h1>
+                  </div>
+
+                  <!-- END PC일 때만 보입니다. -->
+                  <div class="right-wrap">
+                    <div class="mb-show">
+                      <div class="game-count-card">1번째 기억카드</div>
+                    </div>
+                    <div class="progress-time">
+                      <i class="ico ico-timer ico-pink"></i>
+                      <span class="txt">0:00</span>
+                    </div>
+                    <button type="button" class="game-btn game-btn01">연장</button>
+                  </div>
+                </div>
+
+                <!-- END 게임 컨텐츠 상단 헤더 -->
+              </div>
+
+              <!-- END 게임 컨텐츠 상단 영역 -->
+
+              <!-- 게임 컨텐츠 하단 영역 -->
+              <div class="game-layout-content-bottom">
+
+                <!-- 게임 컨텐츠 하단의 내용 영역 -->
+                <div class="layout-top">
+                  <div class="inner">
+
+                    <!-- 카드 -->
+                    <div class="game-welcome-card">
+                      <div class="card-top">
+                        <div class="class-list-item">
+                          <figure class="thumbnail type-circle">
+                            <img src="assets/images/sample/img-sample-class-list.png" alt="프로필 사진" class="thumbnail-img">
+                          </figure>
+                          <span class="txt">장쌤의 코딩 교실</span>
+                        </div>
+                        <div class="btn-wrap">
+                          <button type="button" class="btn" onclick="openGameModal('game-modal-05');">
+                            <span class="txt-hidden">좋아요 버튼</span>
+                            <img src="assets/images/ico/ico-gray-like.svg" alt="좋아요 버튼 아이콘" class="ico ico-20">
+                          </button>
+                          <button type="button" class="btn" onclick="openGameModal('game-modal-06');">
+                            <span class="txt-hidden">느낌표 버튼</span>
+                            <img src="assets/images/ico/ico-gray-bang.svg" alt="느낌표 버튼 아이콘" class="ico ico-20">
+                          </button>
+                        </div>
+                      </div>
+                      <div class="card-bottom">
+                        <p class="card-desc active">
+                          장쌤의 코딩교실에 오신 것을 환영합니다. <br>
+                          이번 수업을 통해 파이썬에서 꼭 필요한 것들을 학습할거에요. <br>
+                          자 그럼 시작해볼까요?
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- END 카드 -->
+                  </div>
+                </div>
+
+                <!-- END 게임 컨텐츠 하단의 내용 영역 -->
+                <div>
+                  <div class="inner">
+
+                    <!-- 게임 컨텐츠 입력 영역 -->
+
+                    <!-- END 게임 컨텐츠 입력 영역 -->
+                  </div>
+                </div>
+              </div>
+
+              <!-- END 게임 컨텐츠 하단 영역 -->
+            </div>
+
+            <!-- END 게임 오른쪽 영역 -->
+          </div>
+
+          <!-- END 페이지 : 게임 -->
+
+          <!-- 모달 : 게임 입장 -->
+          <div id="game-modal-01" class="game-modal-wrapper">
+            <div class="modal-overlay type-transparent" onclick="closeGameModal('game-modal-01', 1800);"></div>
+            <div class="game-modal type-01">
+              <div class="gmodal-contt-container">
+                <h3 class="gmodal-ttl">장쌤의 코딩 교실</h3>
+                <div class="gmodal-contt">
+                  <p class="gmodal-desc">챕터 1</p>
+                </div>
+              </div>
+              <div class="gmodal-btn-wrap">
+                <button type="button" onclick="closeGameModal('game-modal-01', 1800);" class="gmodal-btn gmodal-btn02">입장</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 게임 입장 -->
+
+          <!-- 모달 : 아는 것 구분하기 -->
+          <div id="game-modal-02" class="game-modal-wrapper">
+            <div class="modal-overlay" onclick="closeGameModal('game-modal-02', 1800);"></div>
+            <div class="game-modal type-02">
+              <div class="gmodal-contt-container">
+                <h3 class="gmodal-ttl">아는 것 구분하기</h3>
+                <div class="gmodal-contt">
+                  <div class="game-welcome-card">
+                    <div class="card-top">
+                      <div class="class-list-item">
+                        <figure class="thumbnail type-circle">
+                          <img src="assets/images/sample/img-sample-class-list.png" alt="프로필 사진" class="thumbnail-img">
+                        </figure>
+                        <span class="txt">장쌤의 코딩 교실</span>
+                      </div>
+                    </div>
+                    <div class="card-bottom">
+                      <p class="card-desc">먼저 아는 것만 구분해볼게요. <br>
+                        알면 답 입력, 모르면 Skip 버튼 클릭!
+                      </p>
+                      <p class="card-date">오후 4:20</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gmodal-btn-wrap">
+                <button type="button" onclick="closeGameModal('game-modal-02', 1800);" class="gmodal-btn gmodal-btn01">계속하려면
+                  탭</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 아는 것 구분하기 -->
+
+          <!-- 모달 : 30초 외우기 -->
+          <div id="game-modal-03" class="game-modal-wrapper">
+            <div class="modal-overlay" onclick="closeGameModal('game-modal-03', 1800);"></div>
+            <div class="game-modal type-02">
+              <div class="gmodal-contt-container">
+                <h3 class="gmodal-ttl">30초 외우기</h3>
+                <div class="gmodal-contt">
+                  <div class="game-welcome-card">
+                    <div class="card-top">
+                      <div class="class-list-item">
+                        <figure class="thumbnail type-circle">
+                          <img src="assets/images/sample/img-sample-class-list.png" alt="프로필 사진" class="thumbnail-img">
+                        </figure>
+                        <span class="txt">장쌤의 코딩 교실</span>
+                      </div>
+                    </div>
+                    <div class="card-bottom">
+                      <p class="card-desc">
+                        1번, 3번, 4번 카드만 다시 외워볼까요? <br>
+                        다 맞추고 다음 레벨로 향해 고고!
+                      </p>
+                      <p class="card-date">오후 4:20</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="gmodal-btn-wrap">
+                <button type="button" onclick="closeGameModal('game-modal-03', 1800);" class="gmodal-btn gmodal-btn02">외우기
+                  시작</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 30초 외우기 -->
+
+          <!-- 모달 : 긍정적인 경험을 했나요? -->
+          <div id="game-modal-05" class="game-modal-wrapper">
+            <div class="modal-overlay type-gray" onclick="closeGameModal('game-modal-05');"></div>
+            <div class="game-modal type-03">
+              <div class="gmodal-contt-container">
+                <div class="gmodal-ttl-wrap">
+                  <div class="gmodal-ttl-item">
+                    <img src="assets/images/ico/ico-positive.svg" alt="아이콘" class="ico ico-16">
+                    <h3 class="gmodal-ttl">긍정적인 경험을 했나요?</h3>
+                  </div>
+                  <button type="button" class="btn" onclick="closeGameModal('game-modal-05');">
+                    <span class="txt-hidden">모달 닫기</span>
+                    <img src="assets/images/ico/ico-gray-x.svg" alt="닫기 아이콘" class="ico">
+                  </button>
+                </div>
+                <div class="gmodal-contt">
+                  <textarea placeholder="긍정적인 피드백을 남겨주세요. 큰 힘이 됩니다. :)" class="txtarea"></textarea>
+                </div>
+              </div>
+              <div class="gmodal-btn-wrap">
+                <button type="button" class="gmodal-btn gmodal-btn02">보내기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 긍정적인 경험을 했나요? -->
+
+          <!-- 모달 : 어떤 이슈가 있나요? -->
+          <div id="game-modal-06" class="game-modal-wrapper">
+            <div class="modal-overlay type-gray" onclick="closeGameModal('game-modal-06');"></div>
+            <div class="game-modal type-03">
+              <div class="gmodal-contt-container">
+                <div class="gmodal-ttl-wrap">
+                  <div class="gmodal-ttl-item">
+                    <img src="assets/images/ico/ico-negative.svg" alt="아이콘" class="ico ico-20">
+                    <h3 class="gmodal-ttl">어떤 이슈가 있나요?</h3>
+                  </div>
+                  <button type="button" class="btn" onclick="closeGameModal('game-modal-06');">
+                    <span class="txt-hidden">모달 닫기</span>
+                    <img src="assets/images/ico/ico-gray-x.svg" alt="닫기 아이콘" class="ico">
+                  </button>
+                </div>
+                <div class="gmodal-contt">
+                  <textarea placeholder="이슈를 남겨주세요." class="txtarea"></textarea>
+                </div>
+              </div>
+              <div class="gmodal-btn-wrap">
+                <button type="button" class="gmodal-btn gmodal-btn02">보내기</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 모달 : 어떤 이슈가 있나요? -->
         </div>
       </div>
 
       <!-- END 페이지 -->
     </div>
     <script src="assets/js/ui.js"></script>
+    <script src="assets/js/pages/game.js"></script>
+    <script src="assets/js/pages/gameEffect.js"></script>
     <script>
-      $('#note-left-fold-btn').on('click', function() {
-        $('.note-left-container').toggleClass('hide');
-      })
-      if ($(window).width() <= 768) {
-        if ($('.page-wrapper').hasClass('note-page')) {
-          $('.header').hide();
-        }
-      } else {
-        if ($('.page-wrapper').hasClass('note-page')) {
-          $('.header').show();
-        }
-      }
-      $(window).on('resize', function() {
-        if ($(this).width() <= 768) {
-          if ($('.page-wrapper').hasClass('note-page')) {
-            $('.header').hide();
-          }
-        } else {
-          if ($('.page-wrapper').hasClass('note-page')) {
-            $('.header').show();
-          }
-        }
-      })
+      splashIntro();
     </script>
   </body>
 </html>
