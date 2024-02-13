@@ -400,8 +400,12 @@
                       <i class="ico ico-timer ico-pink"></i>
                       <span class="txt">9초후 시작</span>
                     </div>
-                    <button type="button" class="game-btn game-btn01">바로시작</button>
+
+                    <!-- FIXME: 0213 자리바꿈 -->
                     <button type="button" class="game-btn game-btn01">연장</button>
+
+                    <!-- FIXME: 0213 자리바꿈 -->
+                    <button type="button" class="game-btn game-btn01">바로시작</button>
                   </div>
                 </div>
 
@@ -425,8 +429,9 @@
                         <div class="mobile-gfcard-top">
                           <div class="game-count-card type-white">3번째 기억 카드</div>
                           <div class="btn-wrap">
-                            <button type="button" class="gfflip-btn01">힌트보기</button>
-                            <button type="button" class="gfflip-btn02">전체확인</button>
+
+                            <!-- FIXME: 0213 기능추가 -->
+                            <button id="hint-part-btn02" type="button" onclick="event.stopPropagation();showPartHint03('#flip-card01');" class="gfflip-btn01">힌트보기</button>
                           </div>
                         </div>
 
@@ -450,7 +455,9 @@
                             <div class="blank"></div>
                           </div>
                         </div>
-                        <div class="gfcard-guide-ment">
+
+                        <!-- FIXME: 0213 수정 -->
+                        <div class="gfcard-guide-ment mb-none">
                           <p class="txt">클릭하여 카드를 뒤집으세요</p>
                         </div>
                       </div>
@@ -460,8 +467,9 @@
                         <div class="mobile-gfcard-top">
                           <div class="game-count-card type-white">3번째 기억 카드</div>
                           <div class="btn-wrap">
-                            <button type="button" class="gfflip-btn01">힌트보기</button>
-                            <button type="button" class="gfflip-btn02">전체확인</button>
+
+                            <!-- FIXME: 0213 기능 추가 -->
+                            <button type="button" id="hint-all-btn02" onclick="event.stopPropagation();showAllHint04();" class="gfflip-btn02">전체확인</button>
                           </div>
                         </div>
 
@@ -489,10 +497,17 @@
                           </button>
                           <img src="assets/images/sample/img-sample-screenshot-code.png" alt="코드 이미지" class="content-img">
                         </div>
-                        <div class="gfcard-guide-ment">
+
+                        <!-- FIXME: 0213 수정 -->
+                        <div class="gfcard-guide-ment mb-none">
                           <p class="txt">클릭하여 카드를 뒤집으세요</p>
                         </div>
                       </div>
+                    </div>
+
+                    <!-- FIXME: 0213 수정 -->
+                    <div class="gfcard-guide-ment mb-show">
+                      <p class="txt">클릭하여 카드를 뒤집으세요</p>
                     </div>
                   </div>
 

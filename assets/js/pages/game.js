@@ -21,6 +21,23 @@ function showAllHint() {
   $('#hint-all-area').addClass('active');
 }
 
+function showPartHint03(element) {
+  if ($(element).hasClass('active')) {
+    alert('이미 힌트를 보셨습니다.');
+
+    return false;
+  } else {
+    $('#hint-part-btn02').hide();
+    $('#hint-all-btn02').show();
+    $(element).addClass('active');
+  }
+}
+
+function showAllHint04() {
+  $('#hint-part-area').removeClass('active');
+  $('#hint-all-area').addClass('active');
+}
+
 // 0213 카드 뒤집어지는 효과
 function flipCard(element) {
   $(element).toggleClass('active');
@@ -45,3 +62,12 @@ function lockBtnShow() {
   $('#hint-count-btn').removeClass('active');
   $('#hint-lock-btn').addClass('active');
 }
+
+$('#game-answer-inp').on('keydown', function (e) {
+  if ($(this).val() == '오답' && e.code == 'Enter') {
+    $('.game-answer-container').removeClass('shaking');
+    setTimeout(function () {
+      $('.game-answer-container').addClass('shaking');
+    }, 200)
+  }
+})
