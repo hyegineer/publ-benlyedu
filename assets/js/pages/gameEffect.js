@@ -51,10 +51,6 @@ function openGameProgressModal(id) {
   }
 
   openModal(id);
-  animateValue(document.getElementById("progress-value"), 0, 78, 2700);
-  setTimeout(function () {
-    document.querySelector('#memo-value-ing').innerHTML = '챕터 기억률 상승!'
-  }, 1600)
 }
 
 // 모달 : 레벨 + 별점 부여 효과

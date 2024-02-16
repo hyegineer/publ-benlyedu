@@ -2760,6 +2760,7 @@ textarea.inp {
   color: #fff;
 }
 .game-modal .gmodal-btn-wrap {
+  position: relative;
   margin-top: 30px;
 }
 .game-modal .gmodal-btn {
@@ -3298,16 +3299,19 @@ textarea.inp {
     stroke-dashoffset: -13;
   }
 }
-.game-modal.type-05 {
+.game-modal.type-05,
+.gmodal-progress-contt {
   max-width: 400px;
   padding: 32px 12px 12px;
   opacity: 0;
   transform: translateY(60px);
 }
-.game-modal.type-05 .gmodal-ttl {
+.game-modal.type-05 .gmodal-ttl,
+.gmodal-progress-contt .gmodal-ttl {
   margin-bottom: 20px;
 }
-.game-modal.type-05 .gmodal-desc {
+.game-modal.type-05 .gmodal-desc,
+.gmodal-progress-contt .gmodal-desc {
   font-size: 24px;
   font-weight: 700;
   letter-spacing: -0.6px;
@@ -3316,10 +3320,12 @@ textarea.inp {
   transform: translateY(30px);
   transition: all 0.4s;
 }
-.game-modal.type-05 .memo-card-wrap {
+.game-modal.type-05 .memo-card-wrap,
+.gmodal-progress-contt .memo-card-wrap {
   margin-top: 60px;
 }
-.game-modal.type-05 .memo-card-wrap .ttl {
+.game-modal.type-05 .memo-card-wrap .ttl,
+.gmodal-progress-contt .memo-card-wrap .ttl {
   font-size: 14px;
   color: #C0C0C0;
   font-weight: 400;
@@ -3328,18 +3334,21 @@ textarea.inp {
   transform: translateY(10px);
   transition: all 0.4s;
 }
-.game-modal.type-05 .memo-cards {
+.game-modal.type-05 .memo-cards,
+.gmodal-progress-contt .memo-cards {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 12px;
 }
-.game-modal.type-05 .memo-cards .ico-arrow {
+.game-modal.type-05 .memo-cards .ico-arrow,
+.gmodal-progress-contt .memo-cards .ico-arrow {
   opacity: 0;
   transform: translateX(30px);
   transition: all 0.4s;
 }
-.game-modal.type-05 .memo-card-item {
+.game-modal.type-05 .memo-card-item,
+.gmodal-progress-contt .memo-card-item {
   width: 50px;
   height: 59px;
   display: flex;
@@ -3351,7 +3360,9 @@ textarea.inp {
   transform: translateY(15px);
   transition: all 0.6s;
 }
-.game-modal.type-05 .memo-card-item:before, .game-modal.type-05 .memo-card-item:after {
+.game-modal.type-05 .memo-card-item:before, .game-modal.type-05 .memo-card-item:after,
+.gmodal-progress-contt .memo-card-item:before,
+.gmodal-progress-contt .memo-card-item:after {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -3361,17 +3372,20 @@ textarea.inp {
   border-radius: 10px;
   box-shadow: 0px 0px 7px 5px rgba(135, 135, 135, 0.4);
 }
-.game-modal.type-05 .memo-card-item:before {
+.game-modal.type-05 .memo-card-item:before,
+.gmodal-progress-contt .memo-card-item:before {
   z-index: 1;
   top: 0;
   left: 0;
 }
-.game-modal.type-05 .memo-card-item:after {
+.game-modal.type-05 .memo-card-item:after,
+.gmodal-progress-contt .memo-card-item:after {
   top: 5px;
   left: 5px;
   z-index: 0;
 }
-.game-modal.type-05 .memo-card-item .txt {
+.game-modal.type-05 .memo-card-item .txt,
+.gmodal-progress-contt .memo-card-item .txt {
   font-size: 20px;
   font-weight: 500;
   color: #000;
@@ -3379,13 +3393,17 @@ textarea.inp {
   position: relative;
   z-index: 1;
 }
-.game-modal.type-05 .memo-card-item.type-red:before, .game-modal.type-05 .memo-card-item.type-red:after {
+.game-modal.type-05 .memo-card-item.type-red:before, .game-modal.type-05 .memo-card-item.type-red:after,
+.gmodal-progress-contt .memo-card-item.type-red:before,
+.gmodal-progress-contt .memo-card-item.type-red:after {
   box-shadow: 0px 0px 7px 5px rgba(247, 94, 131, 0.4);
 }
-.game-modal.type-05 .memo-card-item.type-red .txt {
+.game-modal.type-05 .memo-card-item.type-red .txt,
+.gmodal-progress-contt .memo-card-item.type-red .txt {
   color: #F75E83;
 }
-.game-modal.type-05 .gmodal-btn-wrap {
+.game-modal.type-05 .gmodal-btn-wrap,
+.gmodal-progress-contt .gmodal-btn-wrap {
   margin-top: 40px;
   opacity: 0;
   transform: translateY(30px);
@@ -3574,6 +3592,80 @@ textarea.inp {
     max-width: calc(100% - 30px) !important;
   }
 }
+/* ===== */
+.game-modal-sequence .gmodal-progress-contt {
+  display: none;
+}
+
+@keyframes gms01ConttShow {
+  0% {
+    height: 0;
+    overflow: hidden;
+  }
+  100% {
+    height: 340px;
+    overflow: auto;
+  }
+}
+@keyframes gms01progressConttShow01 {
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.game-modal-sequence.type-level-progress {
+  max-width: 376px;
+  width: 95%;
+  position: relative;
+  text-align: center;
+}
+.game-modal-sequence.type-level-progress .game-modal.type-04 {
+  width: 100%;
+}
+.game-modal-sequence.type-level-progress .gmodal-progress-contt {
+  animation: gms01progressConttShow01 0.3s 1 forwards;
+}
+.game-modal-sequence.type-level-progress .gmodal-progress-contt .gmodal-desc {
+  animation: gms01progressConttShow01 0.4s 0.3s 1 forwards;
+}
+.game-modal-sequence.type-level-progress .gmodal-progress-contt .calc-progress-wrap {
+  animation: gms01progressConttShow01 0.5s 0.6s 1 forwards;
+}
+.game-modal-sequence.type-level-progress .gmodal-progress-contt .calc-progress-bar .ing-bar {
+  animation: barIngMove 3s 1s 1 forwards;
+}
+.game-modal-sequence.type-level-progress .gmodal-progress-contt .calc-progress-bar .value {
+  animation: barValueMove 3s 1s 1 forwards;
+}
+.game-modal-sequence.type-level-progress .gmodal-progress-contt .memo-card-wrap .ttl {
+  animation: gms01progressConttShow01 0.4s 2s 1 forwards;
+}
+.game-modal-sequence.type-level-progress .gmodal-progress-contt .memo-card-item.type-first {
+  animation: gms01progressConttShow01 0.6s 2s 1 forwards;
+}
+.game-modal-sequence.type-level-progress .gmodal-progress-contt .memo-card-item.type-red {
+  animation: gms01progressConttShow01 0.6s 3.2s 1 forwards;
+}
+.game-modal-sequence.type-level-progress .gmodal-progress-contt .memo-cards .ico-arrow {
+  animation: gms01progressConttShow01 0.5s 2.6s 1 forwards;
+}
+.game-modal-sequence.type-level-progress .js-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+.game-modal-sequence.type-level-progress .js-btn.active {
+  position: relative;
+  pointer-events: visible;
+  opacity: 1;
+}
+
+.game-modal-wrapper.active .game-modal-sequence.type-level-progress .game-modal.type-04 .gmodal-contt {
+  animation: gms01ConttShow 0.6s 0.7s 1 forwards;
+}
+
 /* =========== 구성요소 =========== */
 .tabs {
   width: 100%;
@@ -9876,15 +9968,6 @@ textarea.inp {
   }
 }
 /* =========== 페이지 : 게임 =========== */
-.splash-game {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  opacity: 0;
-}
-
 .game-page {
   height: 100vh;
   min-height: 700px;
@@ -10825,6 +10908,173 @@ textarea.inp {
   display: none;
 }
 
+.border-gradient-card {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.border-gradient-card .center-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  margin: 10px;
+  top: 0px;
+  cursor: pointer;
+}
+.border-gradient-card .center-circle .circle-pulse {
+  display: none;
+}
+.border-gradient-card .center-circle.active .circle-play {
+  display: none;
+}
+.border-gradient-card .center-circle.active .circle-pulse {
+  display: block;
+}
+
+@property --bgrotate {
+  initial-value: 120deg;
+  inherits: false;
+  syntax: "<angle>";
+}
+@property --bgrotate2 {
+  initial-value: 255deg;
+  inherits: false;
+  syntax: "<angle>";
+}
+@property --text {
+  initial-value: 220deg;
+  inherits: false;
+  syntax: "<angle>";
+}
+:root {
+  --canvas: 220;
+  --bg: hsl(var(--canvas), 15%, 22%);
+  --fg: hsl(var(--canvas), 39%, 95%);
+  --link: hsl(var(--canvas), 90%, 80%);
+  --linkh: hsl(150, 95%, 70%);
+  --wgt: 200;
+  --ar: 0.718;
+  --br: 4.55% / 3.5%;
+  --hl: 0;
+  --bg: hsl(var(--canvas), 15%, 12%);
+  --t: all .66s linear(0,
+      0.007,
+      0.028 2.1%,
+      0.112 4.6%,
+      0.224 6.9%,
+      0.604 14.2%,
+      0.713,
+      0.803,
+      0.879,
+      0.939,
+      0.985 26.2%,
+      1.019 28.9%,
+      1.034 30.7%,
+      1.045,
+      1.051 34.8%,
+      1.053 37.2%,
+      1.046 41.6%,
+      1.012 54.7%,
+      1.001 62.8%,
+      0.997 73%,
+      1) ;
+}
+
+.border-gradient-card {
+  aspect-ratio: var(--ar);
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+  position: relative;
+  background-size: 100% 100%;
+  background-position: 0px 0px, 0px 0px, 0px 0px, 50% 50%, 0px 0px, 0px 0px;
+  background-image: radial-gradient(farthest-side circle at var(--pointer-x, 50%) var(--pointer-y, 50%), hsla(222, 100%, 94%, var(--hl)) 8%, hsla(222, 100%, 80%, var(--hl)) 22%, hsla(222, 100%, 70%, 0) 66%), radial-gradient(40% 51% at 7% 32%, #57d6ff 0%, rgba(7, 58, 255, 0) 100%), radial-gradient(40% 52% at 85% 67%, rgba(0, 255, 195, 0.768627451) 0%, rgba(7, 58, 255, 0) 100%), radial-gradient(80% 80% at 50% 50%, #00c1ff 27%, rgba(7, 58, 255, 0) 58%), conic-gradient(from var(--bgrotate) at 50% 50%, #a94cff 5%, rgba(7, 198, 255, 0) 17%, rgba(7, 198, 255, 0) 40%, #00ffc3 48%, #00ffc3 51%, rgba(7, 198, 255, 0) 59%, rgba(7, 198, 255, 0) 83%, #a94cff 95%), conic-gradient(from var(--bgrotate2) at 50% 50%, #5afff3 0%, #be78ff 34%, #be78ff 64%, #5afff3 100%);
+  background-blend-mode: color-dodge, normal, normal, normal, normal;
+  animation: glow-bg 44s linear infinite;
+  transform: translate3d(0, 0, 0.1px);
+  z-index: 1;
+}
+
+.border-gradient-card:hover {
+  --hl: 1;
+}
+
+.border-gradient-card::before,
+.border-gradient-card::after,
+.border-gradient-card .inside {
+  border-radius: inherit;
+  content: "";
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  inset: 1px;
+  position: absolute;
+}
+
+.border-gradient-card .inside {
+  display: flex;
+  align-items: center;
+  border-radius: inherit;
+  overflow: hidden;
+  justify-content: center;
+  background: hsl(var(--canvas), 15%, 16%);
+  z-index: 2;
+}
+
+.border-gradient-card .inside::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(farthest-corner circle at var(--pointer-x) var(--pointer-y), hsl(248, 25%, 80%) 12%, hsla(207, 40%, 30%, 0.2) 90%);
+  mix-blend-mode: overlay;
+  filter: brightness(1) contrast(1.2);
+  opacity: var(--hl);
+  transition: var(--t);
+}
+
+.border-gradient-card::after {
+  background: inherit;
+  inset: -10px;
+  scale: 0.8;
+  filter: blur(36px) brightness(1) contrast(0.85) saturate(1.4);
+  z-index: 0;
+  transition: var(--t);
+}
+
+.border-gradient-card:hover::after {
+  scale: 0.9;
+  filter: blur(36px) brightness(1) contrast(1) saturate(1);
+}
+
+.border-gradient-card::before {
+  content: "";
+  inset: 0;
+  box-shadow: rgba(0, 0, 0, 0.9) 0px 10px 20px -5px;
+  z-index: 1;
+}
+
+@keyframes glow-bg {
+  0% {
+    --bgrotate: 0deg;
+    --bgrotate2: 0deg;
+    --text: 90deg;
+  }
+  25% {
+    --bgrotate2: 360deg;
+    --text: 260deg;
+  }
+  50% {
+    --bgrotate2: 720deg;
+  }
+  100% {
+    --bgrotate: 720deg;
+    --bgrotate2: 0deg;
+    --text: 90deg;
+  }
+}
 @media all and (max-width: 1500px) {
   .game-layout-left {
     width: 260px;
@@ -11097,6 +11347,7 @@ textarea.inp {
   }
 }
 .splash-game {
+  position: fixed;
   width: 100%;
   height: 100%;
   z-index: 100;
@@ -11106,6 +11357,8 @@ textarea.inp {
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s;
+  top: 0;
+  left: 0;
 }
 .splash-game .txt-wrap {
   color: white;
@@ -11454,6 +11707,209 @@ textarea.inp {
     font-size: 18px;
   }
   .splash-game.type-game-level .txt-wrap .txt {
+    font-size: 30px;
+  }
+  .splash-game.type-game-progress .txt-wrap {
+    font-size: 26px;
+  }
+  .splash-game.type-game-start .txt-wrap,
+  .splash-game.type-game-exit .txt-wrap,
+  .splash-game.type-game-status .center-txt {
+    font-size: 45px;
+  }
+}
+/* =========== sequence =========== */
+.splash-sequence-grp {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+  top: 0;
+  left: 0;
+}
+
+.splash-sequence-grp.active {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.splash-sequence-grp.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.splash-sequence {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.splash-sequence .bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.game-progress-txt-wrap {
+  font-size: 48px;
+  text-align: center;
+  line-height: 1.5;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  color: white;
+  opacity: 0;
+}
+
+.game-level-txt-wrap {
+  padding-left: 15px;
+  font-size: 36px;
+  width: 430px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.44;
+  z-index: 1;
+  color: white;
+  opacity: 0;
+}
+.game-level-txt-wrap .bg-img {
+  position: absolute;
+  bottom: -22px;
+  z-index: 0;
+  left: 120px;
+  z-index: 0;
+}
+.game-level-txt-wrap .sub-txt {
+  position: relative;
+  z-index: 2;
+}
+.game-level-txt-wrap .txt {
+  position: relative;
+  z-index: 2;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.game-start-txt-wrap {
+  font-size: 80px;
+  font-weight: 500;
+  color: white;
+  z-index: 1;
+  position: relative;
+}
+.game-start-txt-wrap .txt {
+  transform: scale(0.3);
+}
+
+.splash-sequence-grp.type-game-progress-level-start .splash-sequence02 {
+  opacity: 0;
+  pointer-events: none;
+}
+.splash-sequence-grp.type-game-progress-level-start .splash-sequence02 .circle {
+  display: inline-block;
+  width: 1000px;
+  height: 1000px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  transform: translate(-50%, -50%) scale(0);
+}
+.splash-sequence-grp.type-game-progress-level-start .splash-sequence02 .bg {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@keyframes ssProgressShow01-01 {
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+@keyframes ssProgressShow01-02 {
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -20%);
+  }
+}
+@keyframes ss01-01Hide {
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes ss01-02Show {
+  100% {
+    opacity: 1;
+  }
+}
+.splash-sequence-grp.type-game-progress-level-start.active .splash-sequence01 {
+  animation: ss01-01Hide 0.4s 2.5s 1 forwards;
+}
+.splash-sequence-grp.type-game-progress-level-start.active .splash-sequence01 .game-progress-txt-wrap {
+  animation: ssProgressShow01-01 0.4s 0.3s 1 forwards, ssProgressShow01-02 0.4s 1s 1 forwards;
+}
+.splash-sequence-grp.type-game-progress-level-start.active .splash-sequence01 .game-level-txt-wrap {
+  animation: splashLevelShow01-01 0.4s 1.5s 1 forwards;
+}
+.splash-sequence-grp.type-game-progress-level-start.active .splash-sequence01 .game-level-txt-wrap .bg-img {
+  animation: splashLevelShow02-01 0.4s 1.5s 1 forwards;
+}
+.splash-sequence-grp.type-game-progress-level-start.active .splash-sequence02 {
+  animation: ss01-02Show 0.4s 2.8s 1 forwards;
+}
+.splash-sequence-grp.type-game-progress-level-start.active .splash-sequence02 .circle {
+  animation: splashStatusShow02-01 0s 3.2s 1 forwards, splashStatusShow02-02 1.6s 3.4s 1 forwards;
+}
+.splash-sequence-grp.type-game-progress-level-start.active .splash-sequence02 .txt {
+  animation: splashStatusShow01-01 0.3s 3s 1 forwards, splashStatusShow01-02 1.3s 3.25s 1 forwards;
+}
+
+@media all and (max-width: 1500px) {
+  .game-level-txt-wrap {
+    font-size: 21px;
+    width: 340px;
+  }
+  .game-level-txt-wrap .txt {
+    font-size: 39px;
+  }
+  .game-progress-txt-wrap {
+    font-size: 34px;
+  }
+  .game-start-txt-wrap {
+    font-size: 60px;
+  }
+}
+@media all and (max-width: 600px) {
+  .game-level-txt-wrap {
+    width: 250px;
+    font-size: 18px;
+  }
+  .game-level-txt-wrap .bg-img {
+    bottom: -15px;
+  }
+  .game-level-txt-wrap .txt {
     font-size: 30px;
   }
   .splash-game.type-game-progress .txt-wrap {

@@ -199,23 +199,38 @@
                   </thead>
                   <tbody>
                     <tr>
-                      <td>1. 레벨 + 별점 부여</td>
-                      <td>
-                        <button type="button" onclick="openGameClearModal('game-modal-07', 3);" class="btn btn-type-01 blue-bd-btn">모달
-                          보기</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>2. 기억률 계산 중</td>
-                      <td>
-                        <button type="button" onclick="openGameProgressModal('game-modal-08');" class="btn btn-type-01 blue-bd-btn">모달
-                          보기</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>3. 기억률 100% 달성!</td>
+                      <td>1. 기억률 100% 달성!</td>
                       <td>
                         <button type="button" onclick="openGameModal('game-modal-09');" class="btn btn-type-01 blue-bd-btn">모달
+                          보기</button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <h1 class="ttl">4. 팝업 수정</h1>
+              <div class="white-box type-pd20" style="margin-bottom: 50px;">
+                <table class="tbl">
+                  <thead>
+                    <tr>
+                      <th>모달내용</th>
+                      <th>버튼</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1. 현재 기억률 0% -> 레벨 -> 시작</td>
+                      <td>
+                        <button type="button" onclick="sequence('type-game-progress-level-start', 4300);" class="btn btn-type-01 blue-bd-btn">모달
+                          보기</button>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>2. 레벨+별점 -> 기억률 계산 중</td>
+                      <td>
+
+                        <!-- TODO: 3을 2로 바꾸면 체크되는 별 갯수가 바뀝니다. -->
+                        <button type="button" onclick="openGameClearModal('game-modal-07', 3);" class="btn btn-type-01 blue-bd-btn">모달
                           보기</button>
                       </td>
                     </tr>
@@ -258,6 +273,30 @@
           </div>
 
           <!-- END 스플래시 : 게임 시작시 현재 기억률 -->
+
+          <!-- 스플래시 시퀀스 : 현재 기억률 0% -> 레벨 -> 시작 -->
+          <div class="splash-sequence-grp type-game-progress-level-start">
+            <div class="splash-sequence splash-sequence01">
+              <span class="bg"></span>
+              <div class="game-progress-txt-wrap">
+                <h1 class="txt">현재 기억률 <br>0%</h1>
+              </div>
+              <div class="game-level-txt-wrap">
+                <img src="assets/images/img-splash-level-bg.svg" alt="" class="bg-img">
+                <p class="sub-txt">1번째 시도</p>
+                <h1 class="txt">레벨 1</h1>
+              </div>
+            </div>
+            <div class="splash-sequence splash-sequence02">
+              <span class="bg"></span>
+              <span class="circle"></span>
+              <div class="game-start-txt-wrap">
+                <h1 class="txt">시작!</h1>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 스플래시 시퀀스 : 현재 기억률 0% -> 레벨 -> 시작 -->
 
           <!-- 스플래시 : 게임 시작 -->
           <div class="splash-game type-game-start">
@@ -465,7 +504,7 @@
           <!-- END 모달 : 어떤 이슈가 있나요? -->
 
           <!-- 모달 : 레벨 + 별점 부여 -->
-          <div id="game-modal-07" class="game-modal-wrapper">
+          <div class="game-modal-wrapper">
             <div class="modal-overlay type-transparent" onclick="closeGameClearModal('game-modal-07', 1500);"></div>
             <div class="game-modal type-04">
               <div class="gmodal-contt-container">
@@ -475,10 +514,10 @@
                   <div class="star-effect-box">
                     <form class="effect-rating">
                       <div class="rating__stars">
-                        <input id="rating-1" readonly class="rating__input rating__input-1" type="radio" name="rating" value="1">
-                        <input id="rating-2" readonly class="rating__input rating__input-2" type="radio" name="rating" value="2">
-                        <input id="rating-3" readonly class="rating__input rating__input-3" type="radio" name="rating" value="3">
-                        <label class="rating__label" for="rating-1">
+                        <input readonly class="rating__input rating__input-1" type="radio" name="rating" value="1">
+                        <input readonly class="rating__input rating__input-2" type="radio" name="rating" value="2">
+                        <input readonly class="rating__input rating__input-3" type="radio" name="rating" value="3">
+                        <label class="rating__label" for="">
                           <svg class="rating__star" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
                             <g transform="translate(16,16)">
                               <circle class="rating__star-ring" fill="none" stroke="#000" stroke-width="16" r="8" transform="scale(0)" />
@@ -499,7 +538,7 @@
                           </svg>
                           <span class="rating__sr">1 star—Terrible</span>
                         </label>
-                        <label class="rating__label" for="rating-2">
+                        <label class="rating__label" for="">
                           <svg class="rating__star" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
                             <g transform="translate(16,16)">
                               <circle class="rating__star-ring" fill="none" stroke="#000" stroke-width="16" r="8" transform="scale(0)" />
@@ -520,7 +559,7 @@
                           </svg>
                           <span class="rating__sr">2 stars—Bad</span>
                         </label>
-                        <label class="rating__label" for="rating-3">
+                        <label class="rating__label" for="">
                           <svg class="rating__star" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
                             <g transform="translate(16,16)">
                               <circle class="rating__star-ring" fill="none" stroke="#000" stroke-width="16" r="8" transform="scale(0)" />
@@ -548,7 +587,7 @@
                     <img src="assets/images/img-score-mp.png" alt="MP" class="left-mp">
                     <div class="txt-wrap">
                       <span class="txt">총점</span>
-                      <span id="odometer01" class="value">251830</span>
+                      <span class="value">251830</span>
                     </div>
                   </div>
                 </div>
@@ -560,6 +599,130 @@
           </div>
 
           <!-- END 모달 : 레벨 + 별점 부여 -->
+          <div id="game-modal-07" class="game-modal-wrapper">
+            <div class="modal-overlay type-transparent" onclick="closeGameLevelProgressModal('game-modal-07');"></div>
+            <div class="game-modal-sequence type-level-progress">
+              <div class="game-modal type-04">
+                <div class="gmodal-contt-container">
+                  <h3 class="gmodal-ttl">레벨 1</h3>
+                  <div class="gmodal-contt">
+                    <div id="js-gmodal-contt01" class="gmodal-star-contt">
+                      <img src="assets/images/img-level-clear.png" alt="클리어 관련 이미지" class="gmodal-img">
+                      <div class="star-effect-box">
+                        <form class="effect-rating">
+                          <div class="rating__stars">
+                            <input id="rating-1" readonly class="rating__input rating__input-1" type="radio" name="rating" value="1">
+                            <input id="rating-2" readonly class="rating__input rating__input-2" type="radio" name="rating" value="2">
+                            <input id="rating-3" readonly class="rating__input rating__input-3" type="radio" name="rating" value="3">
+                            <label class="rating__label" for="rating-1">
+                              <svg class="rating__star" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                <g transform="translate(16,16)">
+                                  <circle class="rating__star-ring" fill="none" stroke="#000" stroke-width="16" r="8" transform="scale(0)" />
+                                </g>
+                                <g stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <g transform="translate(16,16) rotate(180)">
+                                    <polygon class="rating__star-stroke" points="0,15 4.41,6.07 14.27,4.64 7.13,-2.32 8.82,-12.14 0,-7.5 -8.82,-12.14 -7.13,-2.32 -14.27,4.64 -4.41,6.07" fill="none" />
+                                    <polygon class="rating__star-fill" points="0,15 4.41,6.07 14.27,4.64 7.13,-2.32 8.82,-12.14 0,-7.5 -8.82,-12.14 -7.13,-2.32 -14.27,4.64 -4.41,6.07" fill="#000" />
+                                  </g>
+                                  <g transform="translate(16,16)" stroke-dasharray="12 12" stroke-dashoffset="12">
+                                    <polyline class="rating__star-line" transform="rotate(0)" points="0 4,0 16" />
+                                    <polyline class="rating__star-line" transform="rotate(72)" points="0 4,0 16" />
+                                    <polyline class="rating__star-line" transform="rotate(144)" points="0 4,0 16" />
+                                    <polyline class="rating__star-line" transform="rotate(216)" points="0 4,0 16" />
+                                    <polyline class="rating__star-line" transform="rotate(288)" points="0 4,0 16" />
+                                  </g>
+                                </g>
+                              </svg>
+                              <span class="rating__sr">1 star—Terrible</span>
+                            </label>
+                            <label class="rating__label" for="rating-2">
+                              <svg class="rating__star" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                <g transform="translate(16,16)">
+                                  <circle class="rating__star-ring" fill="none" stroke="#000" stroke-width="16" r="8" transform="scale(0)" />
+                                </g>
+                                <g stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <g transform="translate(16,16) rotate(180)">
+                                    <polygon class="rating__star-stroke" points="0,15 4.41,6.07 14.27,4.64 7.13,-2.32 8.82,-12.14 0,-7.5 -8.82,-12.14 -7.13,-2.32 -14.27,4.64 -4.41,6.07" fill="none" />
+                                    <polygon class="rating__star-fill" points="0,15 4.41,6.07 14.27,4.64 7.13,-2.32 8.82,-12.14 0,-7.5 -8.82,-12.14 -7.13,-2.32 -14.27,4.64 -4.41,6.07" fill="#000" />
+                                  </g>
+                                  <g transform="translate(16,16)" stroke-dasharray="12 12" stroke-dashoffset="12">
+                                    <polyline class="rating__star-line" transform="rotate(0)" points="0 4,0 16" />
+                                    <polyline class="rating__star-line" transform="rotate(72)" points="0 4,0 16" />
+                                    <polyline class="rating__star-line" transform="rotate(144)" points="0 4,0 16" />
+                                    <polyline class="rating__star-line" transform="rotate(216)" points="0 4,0 16" />
+                                    <polyline class="rating__star-line" transform="rotate(288)" points="0 4,0 16" />
+                                  </g>
+                                </g>
+                              </svg>
+                              <span class="rating__sr">2 stars—Bad</span>
+                            </label>
+                            <label class="rating__label" for="rating-3">
+                              <svg class="rating__star" width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+                                <g transform="translate(16,16)">
+                                  <circle class="rating__star-ring" fill="none" stroke="#000" stroke-width="16" r="8" transform="scale(0)" />
+                                </g>
+                                <g stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                  <g transform="translate(16,16) rotate(180)">
+                                    <polygon class="rating__star-stroke" points="0,15 4.41,6.07 14.27,4.64 7.13,-2.32 8.82,-12.14 0,-7.5 -8.82,-12.14 -7.13,-2.32 -14.27,4.64 -4.41,6.07" fill="none" />
+                                    <polygon class="rating__star-fill" points="0,15 4.41,6.07 14.27,4.64 7.13,-2.32 8.82,-12.14 0,-7.5 -8.82,-12.14 -7.13,-2.32 -14.27,4.64 -4.41,6.07" fill="#000" />
+                                  </g>
+                                  <g transform="translate(16,16)" stroke-dasharray="12 12" stroke-dashoffset="12">
+                                    <polyline class="rating__star-line" transform="rotate(0)" points="0 4,0 16" />
+                                    <polyline class="rating__star-line" transform="rotate(72)" points="0 4,0 16" />
+                                    <polyline class="rating__star-line" transform="rotate(144)" points="0 4,0 16" />
+                                    <polyline class="rating__star-line" transform="rotate(216)" points="0 4,0 16" />
+                                    <polyline class="rating__star-line" transform="rotate(288)" points="0 4,0 16" />
+                                  </g>
+                                </g>
+                              </svg>
+                              <span class="rating__sr">3 stars—OK</span>
+                            </label>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="score-box">
+                        <img src="assets/images/img-score-mp.png" alt="MP" class="left-mp">
+                        <div class="txt-wrap">
+                          <span class="txt">총점</span>
+                          <span id="odometer01" class="value">251830</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="js-gmodal-contt02" class="gmodal-progress-contt">
+                      <p id="memo-value-ing" class="gmodal-desc">기억률 계산 중</p>
+                      <div class="calc-progress-wrap">
+                        <img src="assets/images/ico/ico-brain.svg" alt="두뇌 아이콘" class="brain-ico">
+                        <div class="calc-progress-bar">
+                          <div class="bar">
+                            <span class="ing-bar" style="--ing-left: 78%"></span>
+                          </div>
+                          <div class="value" style="--bar-value: 78;">
+                            <span id="progress-value">0</span>%
+                          </div>
+                        </div>
+                      </div>
+                      <div class="memo-card-wrap">
+                        <p class="ttl">기억중인 카드</p>
+                        <div class="memo-cards">
+                          <div class="memo-card-item type-first">
+                            <div class="txt">0개</div>
+                          </div>
+                          <img src="assets/images/ico/ico-card-arrow.svg" alt="화살표" class="ico ico-arrow">
+                          <div class="memo-card-item type-red">
+                            <div class="txt">5개</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="gmodal-btn-wrap">
+                  <button type="button" onclick="nextShow();" class="gmodal-btn gmodal-btn02 js-btn js-first-btn active">다음</button>
+                  <button type="button" onclick="closeGameLevelProgressModal('game-modal-07');" class="gmodal-btn gmodal-btn02 js-btn js-second-btn">다음</button>
+                </div>
+              </div>
+            </div>
+          </div>
 
           <!-- 모달 : 기억률 계산 중 -->
           <div id="game-modal-08" class="game-modal-wrapper">
@@ -568,7 +731,7 @@
               <div class="gmodal-contt-container">
                 <h3 class="gmodal-ttl">레벨 1</h3>
                 <div class="gmodal-contt">
-                  <p id="memo-value-ing" class="gmodal-desc">기억률 계산 중</p>
+                  <p class="gmodal-desc">기억률 계산 중</p>
                   <div class="calc-progress-wrap">
                     <img src="assets/images/ico/ico-brain.svg" alt="두뇌 아이콘" class="brain-ico">
                     <div class="calc-progress-bar">
@@ -576,7 +739,7 @@
                         <span class="ing-bar" style="--ing-left: 78%"></span>
                       </div>
                       <div class="value" style="--bar-value: 78;">
-                        <span id="progress-value">0</span>%
+                        <span>0</span>%
                       </div>
                     </div>
                   </div>
@@ -628,5 +791,42 @@
     </div>
     <script src="assets/js/ui.js"></script>
     <script src="assets/js/pages/gameEffect.js"></script>
+    <script>
+      // FIXME: 0217 추가
+      function sequence(type, time) {
+        if ($(`.splash-sequence-grp.${type}`).hasClass('hide')) {
+          $(`.splash-sequence-grp.${type}`).removeClass('hide');
+        }
+        $(`.splash-sequence-grp.${type}`).addClass('active');
+        setTimeout(function() {
+          $(`.splash-sequence-grp.${type}`).addClass('hide');
+          setTimeout(function() {
+            $(`.splash-sequence-grp.${type}`).removeClass('active');
+          }, 300)
+        }, time)
+      }
+      // FIXME: 0217 추가
+      function nextShow() {
+        $('#js-gmodal-contt01').hide();
+        $('#js-gmodal-contt02').show();
+        $('.js-first-btn').removeClass('active');
+        $('.js-second-btn').addClass('active');
+        animateValue(document.getElementById("progress-value"), 0, 78, 2700);
+        setTimeout(function() {
+          document.querySelector('#memo-value-ing').innerHTML = '챕터 기억률 상승!'
+        }, 1600)
+      }
+      // FIXME: 0217 추가
+      function closeGameLevelProgressModal(id) {
+        closeGameModal(id);
+        setTimeout(function() {
+          $('#js-gmodal-contt01').show();
+          $('#js-gmodal-contt02').hide();
+          $('.js-first-btn').addClass('active');
+          $('.js-second-btn').removeClass('active');
+          document.querySelector('#memo-value-ing').innerHTML = '기억률 계산 중'
+        }, 1000)
+      }
+    </script>
   </body>
 </html>
