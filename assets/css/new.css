@@ -1,0 +1,358 @@
+@charset "UTF-8";
+/* =========== 0310 추가된 스타일들 =========== */
+/* 1. 애니메이션 효과 버튼 */
+.anima-btn-wrap {
+  width: 94px;
+  height: 44px;
+  position: relative;
+}
+
+.anima-subs-btn {
+  background: #017AFB;
+  height: 44px;
+  width: 94px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+  /* margin: 0 auto; */
+  cursor: pointer;
+  border-radius: 200px;
+  position: relative;
+  top: 0;
+  transform: none;
+  z-index: 1;
+}
+
+.anima-subs-btn-text {
+  font-size: 12px;
+  color: #FFFFFF;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-52%);
+  left: 0;
+  right: 0;
+}
+
+.anima-progress-bar {
+  position: absolute;
+  height: 10px;
+  width: 0;
+  right: 0;
+  top: 50%;
+  left: 50%;
+  border-radius: 200px;
+  transform: translateY(-50%) translateX(-50%);
+  background: #505357;
+}
+
+.anima-subs-btn svg {
+  width: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  left: 50%;
+  right: 0;
+}
+
+.anima-subs-btn .check {
+  fill: none;
+  stroke: #FFFFFF;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.anima-after-subs-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.anima-after-subs-btn .subs-btn {
+  width: 94px;
+  height: 44px;
+  background-color: #EFEFEF;
+  border: 1px solid #ededed;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.12px;
+  border-radius: 100px;
+  cursor: pointer;
+  z-index: 2;
+  font-weight: 700;
+  position: relative;
+  transition: all 0.3s;
+}
+
+.anima-after-subs-btn .subs-btn:hover {
+  background-color: #C0C0C0;
+}
+
+.anima-subs-btn-wrap {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.subs-sub-btn-wrap {
+  width: 100%;
+  padding-top: 48px;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+
+.subs-sub-btn-grp {
+  border-radius: 10px;
+  background-color: white;
+  border: 2px solid #017AFB;
+  padding: 11px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  box-shadow: 3px 3px 5px -2px rgba(0, 0, 0, 0.1);
+}
+
+.subs-sub-btn {
+  font-size: 12px;
+  letter-spacing: -0.12px;
+  color: #000;
+  background-color: #C0C0C0;
+  line-height: 1.3;
+  padding: 5.2px 0;
+  background-color: white;
+  transition: all 0.3s;
+}
+
+.subs-sub-btn:hover {
+  background-color: #c0c0c0;
+}
+
+.anima-after-subs-btn:hover .subs-sub-btn-wrap {
+  opacity: 1;
+  top: 0;
+  pointer-events: visible;
+}
+
+.anima-after-subs-btn:hover .subs-btn {
+  background-color: #C0C0C0;
+}
+
+.ico-btn-arrow {
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%23343434' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.ico-subs-alarm-on {
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='17' viewBox='0 0 16 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 5.83325C12 4.77239 11.5786 3.75497 10.8284 3.00482C10.0783 2.25468 9.06087 1.83325 8 1.83325C6.93913 1.83325 5.92172 2.25468 5.17157 3.00482C4.42143 3.75497 4 4.77239 4 5.83325C4 10.4999 2 11.8333 2 11.8333H14C14 11.8333 12 10.4999 12 5.83325Z' fill='%23F75E83'/%3E%3Cpath d='M9.15333 14.4999C9.03613 14.702 8.8679 14.8697 8.66548 14.9863C8.46307 15.1029 8.23359 15.1642 8 15.1642C7.76641 15.1642 7.53693 15.1029 7.33452 14.9863C7.1321 14.8697 6.96387 14.702 6.84667 14.4999' fill='%23F75E83'/%3E%3Cpath d='M9.15333 14.4999C9.03613 14.702 8.8679 14.8697 8.66548 14.9863C8.46307 15.1029 8.23359 15.1642 8 15.1642C7.76641 15.1642 7.53693 15.1029 7.33452 14.9863C7.13211 14.8697 6.96387 14.702 6.84667 14.4999M12 5.83325C12 4.77239 11.5786 3.75497 10.8284 3.00482C10.0783 2.25468 9.06087 1.83325 8 1.83325C6.93913 1.83325 5.92172 2.25468 5.17157 3.00482C4.42143 3.75497 4 4.77239 4 5.83325C4 10.4999 2 11.8333 2 11.8333H14C14 11.8333 12 10.4999 12 5.83325Z' stroke='%23F75E83' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.ico-subs-alarm-off {
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='17' viewBox='0 0 18 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2582 15.0455C10.1303 15.2659 9.94679 15.4488 9.72598 15.576C9.50517 15.7032 9.25482 15.7702 9 15.7702C8.74518 15.7702 8.49483 15.7032 8.27402 15.576C8.05321 15.4488 7.86968 15.2659 7.74182 15.0455M13.8218 9.22727C13.4983 8.04284 13.344 6.81858 13.3636 5.59091C13.3648 4.80041 13.1512 4.02444 12.7457 3.34588C12.3402 2.66733 11.7579 2.11168 11.0612 1.73828C10.3644 1.36489 9.57933 1.18778 8.78975 1.22587C8.00016 1.26396 7.23576 1.51582 6.57818 1.95455M4.82545 4.32545C4.6991 4.73535 4.63535 5.16198 4.63636 5.59091C4.63636 10.6818 2.45455 12.1364 2.45455 12.1364H12.6364M1 0.5L17 16.5' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+/* END 1. 애니메이션 효과 버튼 */
+/* 2. 채널 프리미엄 결제 관련 */
+.btn-type-14 {
+  border-radius: 100px;
+  height: 44px;
+  font-size: 16px;
+  color: white;
+  font-weight: 500;
+}
+
+.pay-premium-popup {
+  max-width: 507px;
+  padding: 24px 30px;
+}
+.pay-premium-popup .content {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 17px 0 30px;
+}
+.pay-premium-popup .inner-section.type-right {
+  max-width: 230px;
+  flex-shrink: 0;
+}
+.pay-premium-popup .inner-section.type-left {
+  min-width: 130px;
+  padding-right: 20px;
+}
+.pay-premium-popup .channel-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.pay-premium-popup .channel-item .item-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 6px;
+}
+.pay-premium-popup .channel-item .sub-ttl {
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: -0.16px;
+  color: #343434;
+}
+.pay-premium-popup .channel-item .ttl {
+  font-size: 30px;
+  font-weight: 500;
+  color: #017AFB;
+  letter-spacing: -0.3px;
+  line-height: 1.4;
+}
+.pay-premium-popup .channel-item .thumbnail {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+}
+.pay-premium-popup .inner-section-content {
+  width: 100%;
+  border-bottom: 1px solid #C0C0C0;
+  padding: 17px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.pay-premium-popup .inner-section-content:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.pay-premium-popup .inner-section-content:first-child {
+  padding-top: 0;
+}
+.pay-premium-popup .ico-lg-txt-grp {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 5px;
+}
+.pay-premium-popup .ico-lg-txt-grp:last-child {
+  margin-bottom: 0;
+}
+.pay-premium-popup .ico-lg-txt {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 5px;
+}
+.pay-premium-popup .lg-txt {
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: -0.16px;
+}
+.pay-premium-popup .gray-txt {
+  font-size: 12px;
+  color: #818181;
+  font-weight: 400;
+  line-height: 1.35;
+}
+.pay-premium-popup .md-txt {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+  letter-spacing: -0.16px;
+}
+.pay-premium-popup .channel-badge {
+  padding: 15px 23.8px;
+  font-weight: 600;
+  color: #000;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EFEFEF;
+  border-radius: 100px;
+}
+
+.ico-premium-gift {
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1447_7837)'%3E%3Cpath d='M15 9V16.5H3V9M9 16.5V5.25M9 5.25H5.625C5.12772 5.25 4.65081 5.05246 4.29917 4.70082C3.94754 4.34919 3.75 3.87228 3.75 3.375C3.75 2.87772 3.94754 2.40081 4.29917 2.04917C4.65081 1.69754 5.12772 1.5 5.625 1.5C8.25 1.5 9 5.25 9 5.25ZM9 5.25H12.375C12.8723 5.25 13.3492 5.05246 13.7008 4.70082C14.0525 4.34919 14.25 3.87228 14.25 3.375C14.25 2.87772 14.0525 2.40081 13.7008 2.04917C13.3492 1.69754 12.8723 1.5 12.375 1.5C9.75 1.5 9 5.25 9 5.25ZM1.5 5.25H16.5V9H1.5V5.25Z' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1447_7837'%3E%3Crect width='18' height='18' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}
+
+.ico-premium-paper {
+  width: 18px;
+  height: 18px;
+  background-image: url("data:image/svg+xml,%3Csvg width='18' height='18' viewBox='0 0 18 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.5 3.75H15.125C15.3571 3.75 15.5796 3.84219 15.7437 4.00628C15.9078 4.17038 16 4.39294 16 4.625V14.25C16 14.7141 15.8156 15.1592 15.4874 15.4874C15.1592 15.8156 14.7141 16 14.25 16M14.25 16C13.7859 16 13.3408 15.8156 13.0126 15.4874C12.6844 15.1592 12.5 14.7141 12.5 14.25V2.875C12.5 2.64294 12.4078 2.42038 12.2437 2.25628C12.0796 2.09219 11.8571 2 11.625 2H2.875C2.64294 2 2.42038 2.09219 2.25628 2.25628C2.09219 2.42038 2 2.64294 2 2.875V13.375C2 14.0712 2.27656 14.7389 2.76884 15.2312C3.26113 15.7234 3.92881 16 4.625 16H14.25ZM5.5 5.5H9M5.5 9H9M5.5 12.5H9' stroke='black' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+@media all and (max-width: 768px) {
+  .pay-premium-popup {
+    max-height: 90vh;
+    padding: 26px 16px;
+  }
+  .pay-premium-popup .popup-ttl {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .pay-premium-popup .content {
+    padding: 0;
+    flex-direction: column;
+    padding-bottom: 19px;
+  }
+  .pay-premium-popup .channel-item {
+    flex-direction: row-reverse;
+    gap: 10px;
+    width: 100%;
+    padding: 17px 0;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    gap: 30px;
+  }
+  .pay-premium-popup .channel-item .ttl {
+    font-size: 24px;
+  }
+  .pay-premium-popup .channel-item .thumbnail {
+    margin-top: 0;
+  }
+  .pay-premium-popup .inner-section.type-left {
+    width: 100%;
+    padding-right: 0;
+    border-bottom: 1px solid #C0C0C0;
+  }
+  .pay-premium-popup .inner-section.type-right {
+    max-width: 100%;
+    flex-shrink: 1;
+  }
+  .pay-premium-popup .inner-section-content:first-child {
+    padding-top: 17px;
+  }
+  .pay-premium-popup .btn-type-14 {
+    border-radius: 10px;
+  }
+}
+/* END 2. 채널 프리미엄 결제 관련 */

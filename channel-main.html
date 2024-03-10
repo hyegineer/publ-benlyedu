@@ -53,6 +53,7 @@
     <link rel="stylesheet" href="assets/css/vendor/odometer.css">
     <link rel="stylesheet" href="assets/css/vendor/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/new.css">
 
     <!-- JS -->
     <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
@@ -384,8 +385,43 @@
                     </li>
                     <li>
                       <div class="card-btn-wrap">
-                        <span class="btn btn-type-04 blue-solid-btn">바로 결제</span>
-                        <span class="btn btn-type-04">가입</span>
+                        <div class="anima-btn-wrap">
+                          <div class="anima-subs-btn-wrap">
+                            <div class="anima-subs-btn type-inactive">
+                              <div class="text anima-subs-btn-text">구독</div>
+
+                              <!-- Add this line for the new text element -->
+
+                              <!-- <div class="subscribed-text" style="display: none;">구독중</div> -->
+                              <div class="anima-progress-bar"></div>
+                              <svg x="0px" y="0px" viewBox="0 0 25 30" style="enable-background:new 0 0 25 30;">
+                                <path class="check" class="st0" d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2" />
+                              </svg>
+                            </div>
+                            <div class="anima-after-subs-btn">
+                              <button type="button" class="btn subs-btn">
+                                <span class="txt">구독중</span>
+                                <i class="ico ico-btn-arrow"></i>
+                              </button>
+                              <div class="subs-sub-btn-wrap">
+                                <div class="subs-sub-btn-grp">
+                                  <button type="button" class="btn subs-sub-btn">
+                                    <span class="txt">복습알림</span>
+                                    <i class="ico ico-subs-alarm-off"></i>
+                                  </button>
+                                  <button type="button" class="btn subs-sub-btn">
+                                    <span class="txt">알림없음</span>
+                                    <i class="ico ico-subs-alarm-on"></i>
+                                  </button>
+                                  <button type="button" onclick="cancelSubs();" class="btn subs-sub-btn">
+                                    <span class="txt">구독 취소</span>
+                                  </button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button type="button" onclick="openModal('popup-01');" class="btn btn-type-04">가입</button>
                       </div>
                     </li>
                   </ul>
@@ -3086,6 +3122,67 @@
 
       <!-- END 페이지 -->
 
+      <!-- 팝업: 채널 프리미엄 결제 -->
+      <div id="popup-01" class="popup-wrapper">
+        <div class="popup-overlay" onclick="closeModal('popup-01');"></div>
+        <div class="custom-popup popup pay-premium-popup">
+          <div class="popup-ttl-wrapper">
+            <div class="popup-ttl-wrap">
+              <div class="d-iflex-row type-gap11">
+                <div class="popup-ttl-item">
+                  <h3 class="popup-ttl">채널 프리미엄 결제</h3>
+                </div>
+              </div>
+              <button type="button" onclick="closeModal('popup-01');" class="popup-close-btn">
+                <span class="txt-hidden">팝업 닫기</span>
+                <i class="ico ico-x"></i>
+              </button>
+            </div>
+          </div>
+          <div class="popup-contents">
+            <div class="content">
+              <div class="inner-section type-left">
+                <div class="channel-item">
+                  <div class="item-content">
+                    <span class="sub-ttl">홀공토익</span>
+                    <h3 class="ttl">프리미엄 <br class="mb-none">혜택 이용</h3>
+                  </div>
+                  <figure class="thumbnail circle">
+                    <img src="assets/images/img-ex-pay-premium-01.png" alt="썸네일 이미지" class="thumbnail-img">
+                  </figure>
+                </div>
+              </div>
+              <div class="inner-section type-right">
+                <div class="inner-section-content">
+                  <div class="ico-lg-txt-grp">
+                    <div class="ico-lg-txt">
+                      <i class="ico ico-premium-gift"></i>
+                      <p class="lg-txt">프리미엄 전용 콘텐츠 이용</p>
+                    </div>
+                    <div class="ico-lg-txt">
+                      <i class="ico ico-premium-paper"></i>
+                      <p class="lg-txt">신규 업데이트 콘텐츠 포함</p>
+                    </div>
+                  </div>
+                  <p class="gray-txt">채널 이름(Jungyoon Lee)과 회원 가입 상태가 공개적으로 표시되고 혜택 제공을 위해 채널에서 제3자와 공유할 수 있습니다. </p>
+                  <p class="lg-txt">채널 프리미엄 뱃지 제공</p>
+                  <span class="channel-badge">Premium</span>
+                </div>
+                <div class="inner-section-content">
+                  <p class="md-txt">₩4,990 / 월</p>
+                  <p class="gray-txt">매달 반복 결제되며, 언제든 구독 해지가 가능합니다. 제작자에 의해 혜택이 업그레이드 될 수 있습니다. </p>
+                </div>
+              </div>
+            </div>
+            <div class="content-btn-wrap">
+              <button type="button" class="btn btn-w100 btn-type-14 blue-solid-btn">닫기</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- END 팝업: 채널 프리미엄 결제 -->
+
       <!-- 푸터 -->
       <div class="footer-wrap">
 
@@ -3141,6 +3238,7 @@
       <!-- END 푸터 -->
     </div>
     <script src="assets/js/ui.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.js'></script>
     <script>
       const swiperDefaultBreakPoints = {
         450: {
@@ -3272,5 +3370,146 @@
         }, 1000)
       }
     </script>
+
+    <!-- 0310 애니메이션 효과 버튼 스크립트 -->
+    <script>
+      var basicTimeline = anime.timeline({
+        autoplay: false,
+      });
+      var pathEls = $(".check");
+      for (var i = 0; i < pathEls.length; i++) {
+        var pathEl = pathEls[i];
+        var offset = anime.setDashoffset(pathEl);
+        pathEl.setAttribute("stroke-dashoffset", offset);
+      }
+      basicTimeline
+        .add({
+          targets: ".anima-subs-btn-text",
+          duration: 1,
+          opacity: "0"
+        })
+        .add({
+          targets: ".anima-subs-btn",
+          duration: 1300,
+          height: 10,
+          width: 300,
+          backgroundColor: "#2B2D2F",
+          border: "0",
+          borderRadius: 100,
+        })
+        .add({
+          targets: ".anima-progress-bar",
+          duration: 2000,
+          width: 300,
+          easing: "linear"
+        })
+        .add({
+          targets: ".anima-subs-btn",
+          width: 0,
+          duration: 1
+        })
+        .add({
+          targets: ".anima-progress-bar",
+          width: 80,
+          height: 80,
+          delay: 500,
+          duration: 750,
+          borderRadius: 80,
+          backgroundColor: "#71DFBE"
+        })
+        .add({
+          targets: pathEl,
+          strokeDashoffset: [offset, 0],
+          duration: 200,
+          easing: "easeInOutSine"
+        })
+        .add({
+          targets: [pathEl, '.anima-progress-bar'],
+          opacity: 0,
+          duration: 1000,
+          delay: 500,
+          easing: "linear",
+          complete: function(anim) {
+            if (anim.completed) {
+              pathEl.style.display = 'none';
+              document.querySelector('.anima-subs-btn').style.pointerEvents = 'none';
+              document.querySelector('.anima-progress-bar').style.display = 'none';
+            }
+          }
+        })
+        .add({
+          targets: '.anima-subs-btn',
+          width: '94px',
+          height: '44px',
+          backgroundColor: '#EFEFEF',
+          borderRadius: '200px',
+          // opacity: 0,
+          duration: 2000
+        })
+        .add({
+          begin: function() {
+            document.querySelector('.anima-after-subs-btn').style.display = 'block'; // Show the text before animation starts
+            document.querySelector('.anima-after-subs-btn').style.pointerEvents = 'visible';
+          },
+          targets: '.anima-after-subs-btn',
+          opacity: 1,
+          duration: 500,
+          easing: 'linear',
+          offset: '-=500' // Starts at the same time as the button color change
+        })
+        .add({
+          begin: function() {
+            // document.querySelector('.dropdown-arrow').style.display = 'block'; // Show the arrow before animation starts
+          },
+          targets: '.dropdown-arrow',
+          opacity: 1,
+          duration: 500,
+          easing: 'linear',
+          offset: '-=500' // Starts at the same time as the subscribed text
+        })
+      // Remove previous click handlers to prevent multiple triggerings
+      $(".anima-subs-btn.type-inactive").off('click').on('click', function() {
+        basicTimeline.play();
+      });
+      $(".anima-subs-btn-text").off('click').on('click', function() {
+        basicTimeline.play();
+      });
+      function cancelSubs() {
+        $('.anima-subs-btn').removeClass('type-inactive');
+        $('.anima-subs-btn').addClass('type-active');
+        $('.anima-after-subs-btn').css({
+          opacity: 0,
+          pointerEvents: 'none'
+        })
+        // basicTimeline.restart();
+        $('.anima-subs-btn').css({
+          backgroundColor: '#017AFB',
+          opacity: 1,
+          pointerEvents: 'visible'
+        })
+        $('.anima-subs-btn-text').css({
+          opacity: 1,
+        })
+        $('.anima-progress-bar').css({
+          width: 0,
+          height: '10px',
+          borderRadius: '200px',
+          backgroundXolor: 'rgb(80, 83, 87)',
+          opacity: 1,
+          display: 'block'
+        })
+        $('.anima-subs-btn .check').css({
+          strokeDashoffset: '40.841px',
+          strokeDasharray: '40.841px',
+          display: 'block',
+          opacity: 1,
+        })
+      }
+      $(document).on('click', ".anima-subs-btn.type-active", function() {
+        basicTimeline.restart();
+      });
+    </script>
+
+    <!-- END 0310 애니메이션 효과 버튼 스크립트 -->
   </body>
 </html>
