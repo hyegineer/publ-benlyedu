@@ -399,21 +399,24 @@
                               </svg>
                             </div>
                             <div class="anima-after-subs-btn">
+
+                              <!-- TODO: 복습알림을 누를 경우, subs-btn에 active 클래스 추가하시면 분홍색 글씨가 됩니다. -->
                               <button type="button" class="btn subs-btn">
+                                <i class="ico ico-subs-alarm-on ico-on"></i>
                                 <span class="txt">구독중</span>
                                 <i class="ico ico-btn-arrow"></i>
                               </button>
                               <div class="subs-sub-btn-wrap">
                                 <div class="subs-sub-btn-grp">
-                                  <button type="button" class="btn subs-sub-btn">
+                                  <button type="button" onclick="showToast('floating-04');" class="btn subs-sub-btn">
                                     <span class="txt">복습알림</span>
                                     <i class="ico ico-subs-alarm-on"></i>
                                   </button>
-                                  <button type="button" class="btn subs-sub-btn">
+                                  <button type="button" onclick="showToast('floating-05');" class="btn subs-sub-btn">
                                     <span class="txt">알림없음</span>
                                     <i class="ico ico-subs-alarm-off"></i>
                                   </button>
-                                  <button type="button" onclick="cancelSubs();" class="btn subs-sub-btn">
+                                  <button type="button" onclick="cancelSubs();showToast('floating-03');" class="btn subs-sub-btn">
                                     <span class="txt">구독 취소</span>
                                   </button>
                                 </div>
@@ -422,6 +425,7 @@
                           </div>
                         </div>
                         <button type="button" onclick="openModal('popup-01');" class="btn btn-type-04">가입</button>
+                        <span class="btn btn-type-04-01">Premium</span>
                       </div>
                     </li>
                   </ul>
@@ -925,246 +929,248 @@
                     <article class="content">
 
                       <!-- TODO: 1개나 2개만 있을 때 type-left 클래스를 붙힙니다. -->
-                      <div class="card-item-list-grp">
-                        <div class="card-item-list">
+                      <div id="swiper-count-05" class="swiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
 
-                          <!-- 카드 -->
-                          <div class="card-item type-01">
-                            <figure class="thumbnail">
-                              <div class="thumbnail-img-box">
+                            <!-- 카드 -->
+                            <div class="card-item type-01">
+                              <figure class="thumbnail">
+                                <div class="thumbnail-img-box">
 
-                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
 
-                                <!-- <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img"> -->
+                                  <!-- <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img"> -->
 
-                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
-                                <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
-                              </div>
-                            </figure>
-                            <ul class="card-information">
-                              <li>
-
-                                <!-- 진행률 -->
-
-                                <!-- TODO: 진행률 51% ~ 100% 일 때 type-left를 붙혀주세요 -->
-                                <div class="progress-bar" style="--progress-width: 28%">
-                                  <span class="txt">28% 기억 중</span>
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
                                 </div>
+                              </figure>
+                              <ul class="card-information">
+                                <li>
 
-                                <!-- END 진행률 -->
-                              </li>
-                              <li>
-                                <h4 class="card-name">회의 요청 필수 표현</h4>
-                              </li>
-                              <li>
-                                <div class="gray-dot-txt-grp">
-                                  <span class="gray-dot-txt">벤리 공인중개사</span>
-                                  <span class="gray-dot-txt">2023</span>
-                                </div>
-                              </li>
-                              <li>
+                                  <!-- 진행률 -->
 
-                                <!-- FIXME: 0118 수정 -->
-                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
-                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
-                                </div>
-                              </li>
-                            </ul>
+                                  <!-- TODO: 진행률 51% ~ 100% 일 때 type-left를 붙혀주세요 -->
+                                  <div class="progress-bar" style="--progress-width: 28%">
+                                    <span class="txt">28% 기억 중</span>
+                                  </div>
+
+                                  <!-- END 진행률 -->
+                                </li>
+                                <li>
+                                  <h4 class="card-name">회의 요청 필수 표현</h4>
+                                </li>
+                                <li>
+                                  <div class="gray-dot-txt-grp">
+                                    <span class="gray-dot-txt">벤리 공인중개사</span>
+                                    <span class="gray-dot-txt">2023</span>
+                                  </div>
+                                </li>
+                                <li>
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
+                                    <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <!-- 카드 -->
                           </div>
+                          <div class="swiper-slide">
 
-                          <!-- 카드 -->
-                        </div>
-                        <div class="card-item-list">
+                            <!-- 카드 -->
+                            <div class="card-item type-01">
+                              <figure class="thumbnail">
+                                <div class="thumbnail-img-box">
 
-                          <!-- 카드 -->
-                          <div class="card-item type-01">
-                            <figure class="thumbnail">
-                              <div class="thumbnail-img-box">
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
 
-                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <!-- <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img"> -->
 
-                                <!-- <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img"> -->
-
-                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
-                                <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
-                              </div>
-                            </figure>
-                            <ul class="card-information">
-                              <li>
-
-                                <!-- 진행률 -->
-
-                                <!-- TODO: 진행률 51% ~ 100% 일 때 type-left를 붙혀주세요 -->
-                                <div class="progress-bar" style="--progress-width: 28%">
-                                  <span class="txt">28% 기억 중</span>
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
                                 </div>
+                              </figure>
+                              <ul class="card-information">
+                                <li>
 
-                                <!-- END 진행률 -->
-                              </li>
-                              <li>
-                                <h4 class="card-name">회의 요청 필수 표현</h4>
-                              </li>
-                              <li>
-                                <div class="gray-dot-txt-grp">
-                                  <span class="gray-dot-txt">벤리 공인중개사</span>
-                                  <span class="gray-dot-txt">2023</span>
-                                </div>
-                              </li>
-                              <li>
+                                  <!-- 진행률 -->
 
-                                <!-- FIXME: 0118 수정 -->
-                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
-                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
-                                </div>
-                              </li>
-                            </ul>
+                                  <!-- TODO: 진행률 51% ~ 100% 일 때 type-left를 붙혀주세요 -->
+                                  <div class="progress-bar" style="--progress-width: 28%">
+                                    <span class="txt">28% 기억 중</span>
+                                  </div>
+
+                                  <!-- END 진행률 -->
+                                </li>
+                                <li>
+                                  <h4 class="card-name">회의 요청 필수 표현</h4>
+                                </li>
+                                <li>
+                                  <div class="gray-dot-txt-grp">
+                                    <span class="gray-dot-txt">벤리 공인중개사</span>
+                                    <span class="gray-dot-txt">2023</span>
+                                  </div>
+                                </li>
+                                <li>
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
+                                    <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <!-- 카드 -->
                           </div>
+                          <div class="swiper-slide">
 
-                          <!-- 카드 -->
-                        </div>
-                        <div class="card-item-list">
+                            <!-- 카드 -->
+                            <div class="card-item type-01">
+                              <figure class="thumbnail">
+                                <div class="thumbnail-img-box">
 
-                          <!-- 카드 -->
-                          <div class="card-item type-01">
-                            <figure class="thumbnail">
-                              <div class="thumbnail-img-box">
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
 
-                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <!-- <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img"> -->
 
-                                <!-- <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img"> -->
-
-                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
-                                <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
-                              </div>
-                            </figure>
-                            <ul class="card-information">
-                              <li>
-
-                                <!-- 진행률 -->
-
-                                <!-- TODO: 진행률 51% ~ 100% 일 때 type-left를 붙혀주세요 -->
-                                <div class="progress-bar" style="--progress-width: 28%">
-                                  <span class="txt">28% 기억 중</span>
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
                                 </div>
+                              </figure>
+                              <ul class="card-information">
+                                <li>
 
-                                <!-- END 진행률 -->
-                              </li>
-                              <li>
-                                <h4 class="card-name">회의 요청 필수 표현</h4>
-                              </li>
-                              <li>
-                                <div class="gray-dot-txt-grp">
-                                  <span class="gray-dot-txt">벤리 공인중개사</span>
-                                  <span class="gray-dot-txt">2023</span>
-                                </div>
-                              </li>
-                              <li>
+                                  <!-- 진행률 -->
 
-                                <!-- FIXME: 0118 수정 -->
-                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
-                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
-                                </div>
-                              </li>
-                            </ul>
+                                  <!-- TODO: 진행률 51% ~ 100% 일 때 type-left를 붙혀주세요 -->
+                                  <div class="progress-bar" style="--progress-width: 28%">
+                                    <span class="txt">28% 기억 중</span>
+                                  </div>
+
+                                  <!-- END 진행률 -->
+                                </li>
+                                <li>
+                                  <h4 class="card-name">회의 요청 필수 표현</h4>
+                                </li>
+                                <li>
+                                  <div class="gray-dot-txt-grp">
+                                    <span class="gray-dot-txt">벤리 공인중개사</span>
+                                    <span class="gray-dot-txt">2023</span>
+                                  </div>
+                                </li>
+                                <li>
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
+                                    <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <!-- 카드 -->
                           </div>
+                          <div class="swiper-slide">
 
-                          <!-- 카드 -->
-                        </div>
-                        <div class="card-item-list">
+                            <!-- 카드 -->
+                            <div class="card-item type-01">
+                              <figure class="thumbnail">
+                                <div class="thumbnail-img-box">
 
-                          <!-- 카드 -->
-                          <div class="card-item type-01">
-                            <figure class="thumbnail">
-                              <div class="thumbnail-img-box">
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
 
-                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <!-- <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img"> -->
 
-                                <!-- <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img"> -->
-
-                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
-                                <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
-                              </div>
-                            </figure>
-                            <ul class="card-information">
-                              <li>
-
-                                <!-- 진행률 -->
-
-                                <!-- TODO: 진행률 51% ~ 100% 일 때 type-left를 붙혀주세요 -->
-                                <div class="progress-bar" style="--progress-width: 28%">
-                                  <span class="txt">28% 기억 중</span>
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
                                 </div>
+                              </figure>
+                              <ul class="card-information">
+                                <li>
 
-                                <!-- END 진행률 -->
-                              </li>
-                              <li>
-                                <h4 class="card-name">회의 요청 필수 표현</h4>
-                              </li>
-                              <li>
-                                <div class="gray-dot-txt-grp">
-                                  <span class="gray-dot-txt">벤리 공인중개사</span>
-                                  <span class="gray-dot-txt">2023</span>
-                                </div>
-                              </li>
-                              <li>
+                                  <!-- 진행률 -->
 
-                                <!-- FIXME: 0118 수정 -->
-                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
-                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
-                                </div>
-                              </li>
-                            </ul>
+                                  <!-- TODO: 진행률 51% ~ 100% 일 때 type-left를 붙혀주세요 -->
+                                  <div class="progress-bar" style="--progress-width: 28%">
+                                    <span class="txt">28% 기억 중</span>
+                                  </div>
+
+                                  <!-- END 진행률 -->
+                                </li>
+                                <li>
+                                  <h4 class="card-name">회의 요청 필수 표현</h4>
+                                </li>
+                                <li>
+                                  <div class="gray-dot-txt-grp">
+                                    <span class="gray-dot-txt">벤리 공인중개사</span>
+                                    <span class="gray-dot-txt">2023</span>
+                                  </div>
+                                </li>
+                                <li>
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
+                                    <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <!-- 카드 -->
                           </div>
+                          <div class="swiper-slide">
 
-                          <!-- 카드 -->
-                        </div>
-                        <div class="card-item-list">
+                            <!-- 카드 -->
+                            <div class="card-item type-01">
+                              <figure class="thumbnail">
+                                <div class="thumbnail-img-box">
 
-                          <!-- 카드 -->
-                          <div class="card-item type-01">
-                            <figure class="thumbnail">
-                              <div class="thumbnail-img-box">
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
 
-                                <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <!-- <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img"> -->
 
-                                <!-- <img src="assets/images/sample/img-thumbnail-default.svg" alt="" class="thumbnail-default-img"> -->
-
-                                <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
-                                <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
-                              </div>
-                            </figure>
-                            <ul class="card-information">
-                              <li>
-
-                                <!-- 진행률 -->
-
-                                <!-- TODO: 진행률 51% ~ 100% 일 때 type-left를 붙혀주세요 -->
-                                <div class="progress-bar" style="--progress-width: 28%">
-                                  <span class="txt">28% 기억 중</span>
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-sample-thumbnail1.png" alt="" class="thumbnail-img">
                                 </div>
+                              </figure>
+                              <ul class="card-information">
+                                <li>
 
-                                <!-- END 진행률 -->
-                              </li>
-                              <li>
-                                <h4 class="card-name">회의 요청 필수 표현</h4>
-                              </li>
-                              <li>
-                                <div class="gray-dot-txt-grp">
-                                  <span class="gray-dot-txt">벤리 공인중개사</span>
-                                  <span class="gray-dot-txt">2023</span>
-                                </div>
-                              </li>
-                              <li>
+                                  <!-- 진행률 -->
 
-                                <!-- FIXME: 0118 수정 -->
-                                <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
-                                  <span class="btn btn-type-01 gray-solid-btn">객관식</span>
-                                </div>
-                              </li>
-                            </ul>
+                                  <!-- TODO: 진행률 51% ~ 100% 일 때 type-left를 붙혀주세요 -->
+                                  <div class="progress-bar" style="--progress-width: 28%">
+                                    <span class="txt">28% 기억 중</span>
+                                  </div>
+
+                                  <!-- END 진행률 -->
+                                </li>
+                                <li>
+                                  <h4 class="card-name">회의 요청 필수 표현</h4>
+                                </li>
+                                <li>
+                                  <div class="gray-dot-txt-grp">
+                                    <span class="gray-dot-txt">벤리 공인중개사</span>
+                                    <span class="gray-dot-txt">2023</span>
+                                  </div>
+                                </li>
+                                <li>
+
+                                  <!-- FIXME: 0118 수정 -->
+                                  <div class="d-iflex-row type-gap10 d-flex-wrap card-btn-grp">
+                                    <span class="btn btn-type-01 gray-solid-btn">객관식</span>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+
+                            <!-- 카드 -->
                           </div>
-
-                          <!-- 카드 -->
                         </div>
                       </div>
                     </article>
@@ -3111,13 +3117,49 @@
         </div>
 
         <!-- FIXME: 0117 주소 복사 알림 추가 -->
-        <div class="floating-wrapper">
+        <div id="floating-01" class="floating-wrapper">
           <div class="floating-txt">
             <b>채널 주소</b>가 복사되었습니다.
           </div>
         </div>
 
         <!-- END 0117 주소 복사 알림 추가 -->
+
+        <!-- TODO: 0310 구독 채널 추가 토스트팝업  -->
+        <div id="floating-02" class="floating-wrapper">
+          <div class="floating-txt">
+            <b>구독 채널</b>이 <b>추가</b>되었습니다.
+          </div>
+        </div>
+
+        <!-- END 0310 구독 채널 추가 토스트팝업 -->
+
+        <!-- TODO: 0310 구독 취소 토스트팝업  -->
+        <div id="floating-03" class="floating-wrapper">
+          <div class="floating-txt">
+            <b>구독</b>이 <b>취소</b>되었습니다.
+          </div>
+        </div>
+
+        <!-- END 0310 구독 취소 토스트팝업 -->
+
+        <!-- TODO: 0310 복습알림 설정 토스트팝업  -->
+        <div id="floating-04" class="floating-wrapper">
+          <div class="floating-txt">
+            <b>복습알림</b>이 <b>설정</b>되었습니다.
+          </div>
+        </div>
+
+        <!-- END 0310 복습알림 설정 토스트팝업 -->
+
+        <!-- TODO: 0310 알림없음 설정 토스트팝업  -->
+        <div id="floating-05" class="floating-wrapper">
+          <div class="floating-txt">
+            <b>알림없음</b>이 <b>설정</b>되었습니다.
+          </div>
+        </div>
+
+        <!-- END 0310 알림없음 설정 토스트팝업 -->
       </div>
 
       <!-- END 페이지 -->
@@ -3175,7 +3217,7 @@
               </div>
             </div>
             <div class="content-btn-wrap">
-              <button type="button" class="btn btn-w100 btn-type-14 blue-solid-btn">닫기</button>
+              <button type="button" class="btn btn-w100 btn-type-14 blue-solid-btn">가입</button>
             </div>
           </div>
         </div>
@@ -3314,6 +3356,37 @@
           prevEl: ".swiper-03-prev"
         }
       });
+      // FIXME: 0314 수정
+      const swiperCount05 = new Swiper("#swiper-count-05", {
+        slidesPerView: 1.6,
+        spaceBetween: 15,
+        breakpoints: {
+          450: {
+            slidesPerView: 2.8,
+            spaceBetween: 15,
+          },
+          650: {
+            slidesPerView: 3.5,
+            spaceBetween: 15,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 20,
+          },
+          1080: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+          },
+          1200: {
+            slidesPerView: 5,
+            spaceBetween: 25,
+          },
+          1500: {
+            slidesPerView: 5,
+            spaceBetween: 43,
+          }
+        },
+      });
       // FIXME: 0117 더보기/접기 버튼 구현
       $('.more-fold-btn').on('click', function() {
         $(this).toggleClass('active');
@@ -3364,14 +3437,16 @@
         window.getSelection().addRange(r);
         document.execCommand('copy');
         window.getSelection().removeAllRanges();
-        $('.floating-wrapper').addClass('active');
+        // TODO: 0310 수정 (선택자 클래스 -> 아이디로)
+        $('#floating-01').addClass('active');
         setTimeout(function() {
-          $('.floating-wrapper').removeClass('active');
+          // TODO: 0310 수정 (선택자 클래스 -> 아이디로)
+          $('#floating-01').removeClass('active');
         }, 1000)
       }
     </script>
 
-    <!-- 0310 애니메이션 효과 버튼 스크립트 -->
+    <!-- TODO: 0310 애니메이션 효과 버튼 스크립트 -->
     <script>
       var basicTimeline = anime.timeline({
         autoplay: false,
@@ -3392,7 +3467,7 @@
           targets: ".anima-subs-btn",
           duration: 1300,
           height: 10,
-          width: 300,
+          width: 94,
           backgroundColor: "#2B2D2F",
           border: "0",
           borderRadius: 100,
@@ -3400,7 +3475,7 @@
         .add({
           targets: ".anima-progress-bar",
           duration: 2000,
-          width: 300,
+          width: 94,
           easing: "linear"
         })
         .add({
@@ -3410,8 +3485,8 @@
         })
         .add({
           targets: ".anima-progress-bar",
-          width: 80,
-          height: 80,
+          width: 44,
+          height: 44,
           delay: 500,
           duration: 750,
           borderRadius: 80,
@@ -3443,13 +3518,15 @@
           height: '44px',
           backgroundColor: '#EFEFEF',
           borderRadius: '200px',
-          // opacity: 0,
           duration: 2000
         })
         .add({
           begin: function() {
             document.querySelector('.anima-after-subs-btn').style.display = 'block'; // Show the text before animation starts
             document.querySelector('.anima-after-subs-btn').style.pointerEvents = 'visible';
+            setTimeout(function() {
+              showToast('floating-02');
+            }, 1000)
           },
           targets: '.anima-after-subs-btn',
           opacity: 1,
@@ -3511,5 +3588,17 @@
     </script>
 
     <!-- END 0310 애니메이션 효과 버튼 스크립트 -->
+
+    <!-- TODO: 0310 토스트 팝업 효과 -->
+    <script>
+      function showToast(id) {
+        $('#' + id).addClass('active');
+        setTimeout(function() {
+          $('#' + id).removeClass('active');
+        }, 1000)
+      }
+    </script>
+
+    <!-- END 0310 토스트 팝업 효과 -->
   </body>
 </html>

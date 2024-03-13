@@ -7,6 +7,10 @@
   position: relative;
 }
 
+.anima-btn-wrap.pointer-none .subs-sub-btn-wrap {
+  pointer-events: none;
+}
+
 .anima-subs-btn {
   background: #017AFB;
   height: 44px;
@@ -49,7 +53,7 @@
 }
 
 .anima-subs-btn svg {
-  width: 30px;
+  width: 16px;
   position: absolute;
   top: 50%;
   transform: translateY(-50%) translateX(-50%);
@@ -92,6 +96,22 @@
   font-weight: 700;
   position: relative;
   transition: all 0.3s;
+}
+
+.anima-after-subs-btn .subs-btn .ico-on {
+  display: none;
+}
+
+.anima-after-subs-btn .subs-btn.active {
+  color: #F75E83;
+}
+
+.anima-after-subs-btn .subs-btn.active .ico-on {
+  display: inline-flex;
+}
+
+.anima-after-subs-btn .subs-btn.active .ico-btn-arrow {
+  background-image: url("data:image/svg+xml,%3Csvg width='17' height='16' viewBox='0 0 17 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4.5 6L8.5 10L12.5 6' stroke='%23F75E83' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 }
 
 .anima-after-subs-btn .subs-btn:hover {
@@ -171,6 +191,19 @@
   width: 16px;
   height: 16px;
   background-image: url("data:image/svg+xml,%3Csvg width='18' height='17' viewBox='0 0 18 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10.2582 15.0455C10.1303 15.2659 9.94679 15.4488 9.72598 15.576C9.50517 15.7032 9.25482 15.7702 9 15.7702C8.74518 15.7702 8.49483 15.7032 8.27402 15.576C8.05321 15.4488 7.86968 15.2659 7.74182 15.0455M13.8218 9.22727C13.4983 8.04284 13.344 6.81858 13.3636 5.59091C13.3648 4.80041 13.1512 4.02444 12.7457 3.34588C12.3402 2.66733 11.7579 2.11168 11.0612 1.73828C10.3644 1.36489 9.57933 1.18778 8.78975 1.22587C8.00016 1.26396 7.23576 1.51582 6.57818 1.95455M4.82545 4.32545C4.6991 4.73535 4.63535 5.16198 4.63636 5.59091C4.63636 10.6818 2.45455 12.1364 2.45455 12.1364H12.6364M1 0.5L17 16.5' stroke='black' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+
+.btn-type-04-01 {
+  color: #000;
+  height: 44px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  background-color: #EFEFEF;
+  border: 1px solid #ededed;
+  padding: 0 10px;
+  border-radius: 50px;
+  min-width: 94px;
 }
 
 /* END 1. 애니메이션 효과 버튼 */
@@ -356,3 +389,92 @@
   }
 }
 /* END 2. 채널 프리미엄 결제 관련 */
+/* 3. 메인 수정 */
+.main-page .subject-item .img-box .img {
+  width: 111rem;
+}
+
+@media all and (max-width: 900px) {
+  .main-page .subject-item .img-box .img {
+    width: 60px;
+  }
+}
+@media all and (max-width: 768px) {
+  .main-page .subject-item .img-box .img {
+    width: 50px;
+  }
+}
+.main-page .subject-item .img-box {
+  width: auto;
+}
+
+.subject-item-list-grp.type-other .subject-item .img-box {
+  height: auto;
+}
+
+.subject-main-page .subject-item .img-box .img {
+  width: 100px;
+}
+
+@media all and (max-width: 1500px) {
+  .subject-item-list-grp.type-other .swiper-slide {
+    width: 100px;
+  }
+  .subject-main-page .subject-item .img-box .img {
+    width: 80px;
+  }
+}
+@media all and (max-width: 768px) {
+  .subject-item-list-grp.type-other .swiper-slide {
+    width: 90px;
+  }
+}
+/* END 3. 메인 수정 */
+/* 4. 카드 스타일 수정 */
+.game-flip-card-wrap.hide-ment .gfcard-guide-ment {
+  display: none;
+}
+
+.game-flip-card-wrap.type-01 .game-flip-card {
+  height: 500px;
+  overflow: auto;
+}
+
+.gfcard-guide-ment {
+  position: sticky;
+}
+
+/* END 4. 카드 스타일 수정 */
+/* 5. 게임 화면 수정 */
+.game-layout-content-bottom .content-wrap.type-img {
+  display: inline-flex;
+  width: fit-content;
+}
+
+.game-layout-content-bottom .txt-inp {
+  width: 100%;
+  font-size: 16px;
+  color: #c0c0c0;
+  font-weight: 400;
+  line-height: 1.6;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  outline: none;
+  border: 1px solid transparent;
+  border-radius: 100px;
+  padding: 10px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.game-layout-content-bottom .txt-inp:focus {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+@media all and (max-width: 600px) {
+  .game-layout-content-bottom .txt-inp {
+    font-size: 13px;
+    padding: 8px 12px;
+  }
+}
+/* END 4. 게임 화면 수정 */

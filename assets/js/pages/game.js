@@ -40,6 +40,7 @@ function showAllHint04() {
 
 // 0213 카드 뒤집어지는 효과
 function flipCard(element) {
+  $(element).addClass('hide-ment');
   $(element).toggleClass('active');
 }
 

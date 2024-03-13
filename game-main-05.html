@@ -451,7 +451,7 @@
                 <!-- 게임 컨텐츠 하단의 내용 영역 -->
                 <div class="layout-top">
 
-                  <!-- 3. 음악 재생 -->
+                  <!-- 1. 이미지 -->
                   <div class="inner">
 
                     <!-- 카드 -->
@@ -461,7 +461,7 @@
                           <figure class="thumbnail type-circle">
                             <img src="assets/images/sample/img-sample-class-list.png" alt="프로필 사진" class="thumbnail-img">
                           </figure>
-                          <span class="txt">장쌤의 코딩 교실</span>
+                          <span class="txt">장쌤 실용음악 아카데미</span>
                         </div>
                         <div class="btn-wrap">
                           <button type="button" class="btn" onclick="openGameModal('game-modal-05');">
@@ -476,39 +476,33 @@
                       </div>
                       <div class="card-bottom">
                         <p id="hint-before-area" class="card-desc active">
-                          다음 음악을 듣고, 코드 진행을 적어주세요. <br>
-                          (I, II, III, IV, V, VI, VII 을 대문자로 적어주세요) <br>
-                          예시 답: I - IV - V - VI - I
+                          Q2. #1개를 가진 조표의 "장조"는?
                         </p>
-                        <p id="hint-part-area" class="card-desc">
-                          첫 코드: <span class="color-txt">I...</span>
-                        </p>
-                        <p id="hint-all-area" class="card-desc">
-                          <span class="color-txt">답: I - IV - V - VI - I</span>
-                        </p>
+
+                        <!-- 
+                  <p id="hint-part-area" class="card-desc">
+                    첫글자 <span class="color-txt">i..</span>
+                  </p>
+                  <p id="hint-all-area" class="card-desc">
+                    <span class="color-txt">import</span>
+                  </p> -->
                       </div>
                     </div>
 
                     <!-- END 카드 -->
+                    <div class="content-wrap type-img">
+                      <button type="button" onclick="event.stopPropagation();openModal('view-modal');" class="gfflip-view-btn">
+                        <span class="txt-hidden">돋보기</span>
+                        <img src="assets/images/ico/ico-gray-view.svg" alt="돋보기 아이콘" class="ico">
+                      </button>
+                      <img src="assets/images/sample/img-sample-screenshot-melody.png" alt="코드 이미지" class="content-img">
+                    </div>
                     <div class="content-wrap">
-
-                      <!-- FIXME: 0314 수정 -->
-                      <div class="pulsing-circle-wrap">
-                        <div class="pulsing-circle">
-                          <div class="center-circle" onclick="$('.pulsing-circle').toggleClass('active');">
-                            <img src="assets/images/ico/ico-circle-play.svg" alt="재생" class="circle-play">
-                            <img src="assets/images/ico/ico-circle-pulse.svg" alt="재생" class="circle-pulse">
-                          </div>
-                          <div class="circle delay1"></div>
-                          <div class="circle delay2"></div>
-                          <div class="circle delay3"></div>
-                          <div class="circle delay4"></div>
-                        </div>
-                      </div>
+                      <input type="text" class="txt-inp">
                     </div>
                   </div>
 
-                  <!-- END 3. 음악 재생 -->
+                  <!-- END 1. 이미지 -->
                 </div>
 
                 <!-- END 게임 컨텐츠 하단의 내용 영역 -->
@@ -535,11 +529,11 @@
                             <img src="assets/images/ico/ico-lock.svg" alt="자물쇠 아이콘" class="ico ico-12">
                           </button>
                         </div>
-                        <div class="circle-btn circle-next-btn">
+                        <div class="circle-btn circle-next-btn" onclick="location.href='game-main-02.html';">
                           <div class="guide-bubble-wrap">
                             <div class="bubble-top">
                               <span class="name">Benly AI</span>
-                              <button type="button" class="btn close-btn" onclick="$('.guide-bubble-wrap').hide();">
+                              <button type="button" class="btn close-btn" onclick="event.stopPropagation();$('.guide-bubble-wrap').hide();">
                                 <span class="txt-hidden">닫기</span>
                                 <img src="assets/images/ico/ico-gray-x.svg" alt="닫기 아이콘" class="ico ico-18">
                               </button>
@@ -584,7 +578,7 @@
                         <figure class="thumbnail type-circle">
                           <img src="assets/images/sample/img-sample-class-list.png" alt="프로필 사진" class="thumbnail-img">
                         </figure>
-                        <span class="txt">장쌤의 코딩 교실</span>
+                        <span class="txt">장쌤 실용음악 아카데미</span>
                       </div>
                     </div>
                     <div class="card-bottom">
@@ -659,6 +653,16 @@
           </div>
 
           <!-- END 모달 : 어떤 이슈가 있나요? -->
+          <div id="view-modal" class="modal-wrapper view-modal-wrapper">
+            <div class="modal-overlay type-black" onclick="closeModal('view-modal');"></div>
+            <button type="button" class="btn close-btn" onclick="closeModal('view-modal');">
+              <span class="txt-hidden">모달 닫기</span>
+              <img src="assets/images/ico/ico-gray-x.svg" alt="닫기 아이콘" class="ico">
+            </button>
+            <div class="view-modal">
+              <img src="assets/images/sample/img-sample-screenshot-code.png" alt="코드 이미지" class="view-img">
+            </div>
+          </div>
         </div>
       </div>
 
