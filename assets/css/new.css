@@ -435,11 +435,45 @@
   display: none;
 }
 
+.game-flip-card-wrap .gfcard-bottom .blank {
+  width: 90%;
+}
+
 .game-flip-card-wrap.type-01 .game-flip-card {
   height: 500px;
   overflow: auto;
 }
 
+.game-flip-card-wrap.type-02 {
+  height: auto;
+}
+.game-flip-card-wrap.type-02 .game-flip-card {
+  height: 500px;
+  overflow: auto;
+}
+.game-flip-card-wrap.type-02 .gfcard-top {
+  overflow: visible;
+}
+
+@media all and (max-width: 1500px) {
+  .game-flip-card-wrap.type-01 .game-flip-card {
+    height: 330px;
+  }
+  .game-flip-card-wrap.type-02 .game-flip-card {
+    height: 330px;
+  }
+  .game-flip-card-wrap.type-02 .gfcard-top-content {
+    padding: 30px 0;
+  }
+}
+@media all and (max-width: 600px) {
+  .game-flip-card-wrap.type-01 .game-flip-card {
+    height: 272px;
+  }
+  .game-flip-card-wrap.type-02 .game-flip-card {
+    height: 272px;
+  }
+}
 .gfcard-guide-ment {
   position: sticky;
 }
@@ -471,10 +505,24 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+.game-layout-content-bottom .content-wrap .content-txt {
+  width: 100%;
+  font-size: 16px;
+  color: #c0c0c0;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
 @media all and (max-width: 600px) {
   .game-layout-content-bottom .txt-inp {
     font-size: 13px;
     padding: 8px 12px;
+  }
+  .game-layout-content-bottom .content-wrap .content-txt {
+    font-size: 14px;
+  }
+  .game-layout-content-bottom .content-wrap.type-pdleft {
+    padding-left: 50px;
   }
 }
 /* END 4. 게임 화면 수정 */

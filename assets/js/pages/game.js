@@ -42,6 +42,7 @@ function showAllHint04() {
 function flipCard(element) {
   $(element).addClass('hide-ment');
   $(element).toggleClass('active');
+  $(element).siblings('.gfcard-guide-ment.mb-show').hide();
 }
 
 // 외우기 게임 말고 다른 게임들 효과
