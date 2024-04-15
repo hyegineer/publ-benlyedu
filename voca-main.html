@@ -1,0 +1,1637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>벤리에듀</title>
+
+    <!-- Open Graph -->
+    <meta name="title" content="Benly Edu">
+    <meta name="author" content="벤리에듀">
+    <meta name="description" content="벤리에듀 - AI 기억력 강화 e러닝 솔루션">
+    <meta name="keywords" content="benlyedu, Benlyedu, 벤리에듀, AI, 기억력, 강화, e러닝, 솔루션">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+
+    <!-- TODO: web url 설정해야합니다 -->
+
+    <!-- <meta property="og:url" content="해당 웹 url"> -->
+    <meta property="og:title" content="벤리에듀 (Benly Edu)">
+    <meta property="og:description" content="AI 기억력 강화 e러닝 솔루션">
+
+    <!-- TODO: meta thumbnail 설정 -->
+    <meta property="og:image" content="assets/images/og/og-thumbnail.png">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-36x36.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-72x72.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-256x256.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#017afb">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/odometer.css">
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/new.css">
+
+    <!-- JS -->
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/vendor/odometer.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('https://unpkg.com/smooth-corners');
+    </script>
+  </head>
+  <body ontouchstart>
+    <div id="app">
+
+      <!-- TODO: PC 버전 헤더 -->
+      <div class="header">
+        <div class="header-inner">
+
+          <!-- 로고 -->
+          <h1 class="logo">
+            <a href="index.html">
+              <img src="assets/images/logo/logo-color.png" alt="">
+            </a>
+          </h1>
+
+          <!-- END 로고 -->
+
+          <!-- 네비 -->
+          <div class="header-nav-wrap">
+            <button type="button" class="header-gnb-btn">
+              <span class="txt">메뉴</span>
+              <i class="ico ico-arrow-down ico-dark"></i>
+            </button>
+            <div class="header-gnb-wrap">
+              <ul class="nav-list-grp">
+                <li class="list active">
+                  <a href="#" class="link">홈</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">엔터프라이즈 문의</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">과목별 랭킹</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">전체상품</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">관리자 페이지</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">내 채널</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- END 네비 -->
+
+          <!-- 우측 버튼들 -->
+          <div class="header-btn-wrap">
+            <ul class="btn-list-grp">
+              <li class="list mb-none">
+                <div class="header-search-inp">
+                  <i class="ico ico-40 ico-search"></i>
+                  <input type="text" placeholder="검색" class="inp">
+                  <button type="button" class="btn del-btn">
+                    <span class="txt-hidden">검색어 지우기</span>
+                    <i class="ico ico-18 ico-search-x"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="list mb-none">
+                <button type="button" class="header-btn">
+                  <span class="txt-hidden">알림</span>
+                  <i class="ico ico-40 ico-alarm"></i>
+                </button>
+              </li>
+              <li class="list mb-none list-sub-nav">
+                <button type="button" class="header-btn myinfo-btn">
+                  <span class="txt-hidden">내 정보</span>
+                  <figure class="thumbnail circle">
+                    <img src="assets/images/sample/img-sample-hdprofile.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <i class="ico ico-arrow-down ico-dark"></i>
+                </button>
+                <div class="sub-nav-list-wrap">
+                  <ul class="sub-nav-list-grp">
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-user"></i>
+                        <span class="txt">계정 관리</span>
+                      </a>
+                    </li>
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-wordbook"></i>
+                        <span class="txt">내가 만든 단어장</span>
+                      </a>
+                    </li>
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-like"></i>
+                        <span class="txt">찜목록</span>
+                      </a>
+                    </li>
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-logout"></i>
+                        <span class="txt">로그아웃</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="list mb-none">
+                <button type="button" class="btn btn-type-02 blue-solid-btn">암기박스 신청</button>
+              </li>
+              <li class="list mb-show">
+                <button type="button" class="header-btn" onclick="openMobileSearch();">
+                  <span class="txt-hidden">모바일 검색하기</span>
+                  <i class="ico ico-40 ico-search"></i>
+                </button>
+              </li>
+              <li class="list mb-show">
+
+                <!-- TODO: 만약 알림이 있을 시 active 클래스가 추가되고, 빨간 뱃지가 보입니다 -->
+                <button type="button" class="header-btn badge-header-btn active" onclick="openMobileNav();">
+                  <span class="txt-hidden">모바일 메뉴</span>
+                  <i class="ico ico-40 ico-navlist"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- END 우측 버튼들 -->
+
+          <!-- 모바일 전용 검색영역 -->
+
+          <!-- FIXME: 0118 수정 -->
+          <div class="mobile-header-search-wrap">
+            <div class="mobile-header-search-inp">
+              <i class="ico ico-18 ico-search-mobile"></i>
+              <input type="text" class="inp" placeholder="검색어를 입력하세요.">
+              <button type="button" class="btn del-btn">
+                <span class="txt-hidden">검색어 지우기</span>
+                <i class="ico ico-18 ico-search-x"></i>
+              </button>
+            </div>
+            <button type="button" class="btn cancel-btn">취소</button>
+          </div>
+
+          <!-- END 0118 수정 -->
+
+          <!-- END 모바일 전용 검색영역 -->
+
+          <!-- 모바일 전용 햄버거 네비게이션 페이지 -->
+          <div class="mobile-header-nav-container">
+            <div class="top-wrap">
+
+              <!-- 로고 -->
+              <h1 class="logo">
+                <a href="index.html">
+                  <img src="assets/images/logo/logo-color.png" alt="">
+                </a>
+              </h1>
+
+              <!-- END 로고 -->
+              <button type="button" class="btn close-btn" onclick="closeMobileNav();">
+                <span class="txt-hidden">닫기</span>
+                <i class="ico ico-x"></i>
+              </button>
+            </div>
+            <div class="middle-wrap">
+              <ul class="nav-list-grp">
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-home"></i>
+                    <p class="txt">홈</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-user"></i>
+                    <p class="txt">계정관리</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-bell"></i>
+                    <p class="txt">
+                      <span>알림</span>
+                      <span class="red-txt">(10)</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-wordbook"></i>
+                    <p class="txt">내가 만든 단어장</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-like"></i>
+                    <p class="txt">즐겨찾기</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-mail"></i>
+                    <p class="txt">문의하기</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-logout"></i>
+                    <p class="txt">로그아웃</p>
+                  </a>
+                </li>
+              </ul>
+              <ul class="sns-list-grp">
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">페이스북</span>
+                    <i class="ico ico-facebook"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">핀터레스트</span>
+                    <i class="ico ico-pinterest"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">트위터</span>
+                    <i class="ico ico-twitter"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">공유하기</span>
+                    <i class="ico ico-share"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- END 모바일 전용 햄버거 네비게이션 페이지 -->
+        </div>
+      </div>
+
+      <!-- END PC 버전 헤더 -->
+
+      <!-- 페이지 -->
+      <div class="voca-main-page page-wrapper">
+        <div class="page-container">
+
+          <!-- 페이지 : 단어장 -->
+          <div class="page">
+
+            <!-- TODO: MOBILE 버전 헤더 -->
+            <div class="mobile-top-tabs">
+              <div class="tabs">
+                <button type="button" class="tab active">엔터프라이즈 문의</button>
+                <button type="button" class="tab">과목별 랭킹</button>
+                <button type="button" class="tab">전체상품</button>
+                <button type="button" class="tab">관리자 페이지</button>
+                <button type="button" class="tab">내 채널</button>
+              </div>
+            </div>
+
+            <!-- END MOBILE 버전 헤더 -->
+            <div class="page-inner">
+              <div class="voca-main-layout-container">
+                <div class="voca-main-container">
+                  <div class="voca-main-left">
+                    <div class="voca-left-container">
+                      <div class="left-content">
+                        <figure class="thumbnail">
+                          <img src="assets/images/sample/img-sample-thumbnail3.png" alt="프로필 이미지" class="thumbnail-img">
+                        </figure>
+                        <div class="left-content-info-wrap">
+                          <div class="card-badges">
+                            <div class="card-badge">
+                              <i class="ico ico-3d-star"></i>
+                              <span class="txt ylw-txt">벤리추천</span>
+                            </div>
+                            <div class="card-badge">
+                              <i class="ico ico-3d-dia"></i>
+                              <span class="txt blue-txt">채널프리미엄</span>
+                            </div>
+                          </div>
+                          <div class="card-ttl-wrap">
+                            <h3 class="card-ttl">중학교 2학년 2학기 과학 기말 (easy) 두줄일때</h3>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="left-content-info-wrap">
+                        <div class="card-class-wrap">
+                          <img src="assets/images/sample/img-sample-symbol.png" alt="" class="class-symbol">
+                          <span class="card-class">장쌤의 코딩 클래스</span>
+                        </div>
+                        <div class="card-etc-infos">
+                          <dl class="card-etc-info">
+                            <dt class="dt">기억률</dt>
+                            <dd class="dd"><b class="bold-txt">82%</b></dd>
+                          </dl>
+                          <dl class="card-etc-info">
+                            <dt class="dt">3일 전</dt>
+                            <dd class="dd">100% (18% 감소)</dd>
+                          </dl>
+                        </div>
+                        <div class="card-star-wrap">
+                          <div class="card-star">
+                            <i class="ico ico-stars ico-stars-05"></i>
+                            <span class="txt">(91)</span>
+                          </div>
+                        </div>
+                        <div class="card-play-count-wrap">
+                          <p class="card-play-count">8.5k+ 플레이</p>
+                        </div>
+                        <div class="card-etc-info02-wrap">
+                          <span class="card-etc-info02">등록정보 : 2022/07/25</span>
+                          <span class="card-etc-info02">객관식 게임</span>
+                        </div>
+                        <div class="card-badges02">
+                          <div class="card-badge type-02">
+                            <i class="ico ico-green-checked"></i>
+                            <span class="txt">클리어 3회</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="voca-main-right">
+                    <div class="voca-right-container">
+
+                      <!-- 탭 -->
+                      <div class="tabs">
+                        <button type="button" class="tab active">1. 파이썬 기본학습</button>
+                        <button type="button" class="tab">2. 코딩연습</button>
+                        <button type="button" class="tab">3. Html</button>
+                        <button type="button" class="tab">4. vue</button>
+                      </div>
+
+                      <!-- END 탭 -->
+                      <div class="option-container d-flex-row type-gap6">
+                        <button type="button" class="btn btn-type-05 blue-solid-btn">이어서 진행</button>
+                        <button type="button" class="btn btn-type-05 blue-bd-btn">오답 게임</button>
+                        <div class="hover-item refresh-hover-item">
+                          <div class="btn btn-type-15">
+                            <span class="txt">새로고침</span>
+                            <i class="ico ico-question"></i>
+                          </div>
+                          <div class="hover-after-item">
+                            <div class="inner-txt-box">
+                              <p class="txt">모든 데이터 및 그래프는 10분 후 자동 갱신됩니다.</p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- 1. 파이썬 기본 학습 -->
+                      <div class="voca-content-box">
+
+                        <!-- 제목 -->
+                        <div class="box-ttl-wrap">
+                          <div class="box-ttl-item">
+                            <h3 class="box-ttl">1. 파이썬 기본 학습</h3>
+                          </div>
+                          <div class="btn square-arrow-btn">
+                            <span class="txt">입장하기</span>
+                            <i class="ico ico-arrow-down"></i>
+                          </div>
+                        </div>
+
+                        <!-- END 제목 -->
+
+                        <!-- 내용 -->
+                        <div class="box-content type-01">
+                          <div class="box-cards">
+                            <div class="box-graph-card" onclick="$(this).toggleClass('active');">
+                              <div class="box-card">
+                                <p class="bc-sub-ttl">공부한 것 중 몇% 기억할까?</p>
+                                <div class="bc-ttl-wrap">
+                                  <h4 class="bc-ttl">실시간 기억률</h4>
+                                  <div class="bc-ttl-desc">
+                                    <span class="blue-txt">35%</span>
+                                  </div>
+                                </div>
+                                <p class="bc-desc">[실시간 기억률] 현재 53개의 기억 카드 중, <span class="blue-txt">16개(53%)</span>를 기억하고
+                                  있습니다.</p>
+                              </div>
+                              <div class="graph-card type-blue">
+                                <canvas id="myChart01"></canvas>
+                              </div>
+                            </div>
+                            <div class="box-graph-card" onclick="$(this).toggleClass('active');">
+                              <div class="box-card">
+                                <p class="bc-sub-ttl">외운 것 중 몇개나 기억할까?</p>
+                                <div class="bc-ttl-figure-wrap">
+                                  <i class="bc-ttl-figure type-01"></i>
+                                </div>
+                                <div class="bc-ttl-wrap">
+                                  <h4 class="bc-ttl">
+                                    현재 기억 중
+                                    </span>
+                                  </h4>
+                                  <div class="bc-ttl-desc">
+                                    <span class="blue-txt">22개</span>
+                                    <span class="txt sm-txt">(총 40개)</span>
+                                  </div>
+                                </div>
+                                <p class="bc-desc">[최근 학습] 가장 마지막 학습 게임에서, 53문제 중, <span class="blue-txt">32개(72%)</span>를
+                                  맞았습니다.</p>
+                              </div>
+                              <div class="graph-card type-blue">
+                                <canvas id="myChart02"></canvas>
+                              </div>
+                            </div>
+                            <div class="box-graph-card" onclick="$(this).toggleClass('active');">
+                              <div class="box-card">
+                                <p class="bc-sub-ttl">나의 망각 곡선</p>
+                                <div class="bc-ttl-figure-wrap">
+                                  <i class="bc-ttl-figure type-02"></i>
+                                </div>
+                                <div class="bc-ttl-wrap">
+                                  <h4 class="bc-ttl">지난번 보다</h4>
+                                  <div class="bc-ttl-desc">
+                                    <span class="pink-txt">26개</span>
+                                    <span class="txt">잊음</span>
+                                  </div>
+                                </div>
+                                <p class="bc-desc">[망각 곡선] 현재 지난번 학습했을때 기억했던 53개 중, <span class="pink-txt">24개(47%)</span>를 잊은
+                                  상태입니다. </p>
+                              </div>
+                              <div class="graph-card type-pink">
+                                <canvas id="myChart03"></canvas>
+                              </div>
+                            </div>
+                            <div class="box-card type-other">
+                              <dl class="card-dl-head">
+                                <dt class="dt">회독 수</dt>
+                                <dd class="dd">정답 수</dd>
+                              </dl>
+                              <dl class="card-dl">
+                                <dt class="dt">5회차</dt>
+                                <dd class="dd">
+                                  <span class="color-txt">12개</span>
+                                </dd>
+                              </dl>
+                              <dl class="card-dl">
+                                <dt class="dt">4회차</dt>
+                                <dd class="dd">
+                                  <span class="color-txt">9개</span>
+                                </dd>
+                              </dl>
+                              <dl class="card-dl">
+                                <dt class="dt">3회차</dt>
+                                <dd class="dd">
+                                  <span class="color-txt">7개</span>
+                                </dd>
+                              </dl>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- END 내용 -->
+                      </div>
+
+                      <!-- 2. 코딩연습 -->
+
+                      <!-- TODO: 열린 상태면 voca-content-box 에 active 클래스 추가해주세요 -->
+                      <div class="voca-content-box active">
+
+                        <!-- 제목 -->
+                        <div class="box-ttl-wrap">
+                          <div class="box-ttl-item">
+                            <h3 class="box-ttl">
+                              <span class="color-txt">2. 코딩연습</span>
+                            </h3>
+                          </div>
+                          <div class="btn square-arrow-btn active">
+                            <span class="txt">입장하기</span>
+                            <i class="ico ico-arrow-down"></i>
+                          </div>
+                        </div>
+
+                        <!-- END 제목 -->
+
+                        <!-- 내용 -->
+                        <div class="box-content type-01">
+                          <div class="box-cards">
+                            <div class="box-graph-card active" onclick="$(this).toggleClass('active');">
+                              <div class="box-card">
+                                <p class="bc-sub-ttl">공부한 것 중 몇% 기억할까?</p>
+                                <div class="bc-ttl-wrap">
+                                  <h4 class="bc-ttl">실시간 기억률</h4>
+                                  <div class="bc-ttl-desc">
+                                    <span class="blue-txt">35%</span>
+                                  </div>
+                                </div>
+                                <p class="bc-desc">[실시간 기억률] 현재 53개의 기억 카드 중, <span class="blue-txt">16개(53%)</span>를 기억하고
+                                  있습니다.</p>
+                              </div>
+                              <div class="graph-card type-blue">
+                                <canvas id="myChart04"></canvas>
+                              </div>
+                            </div>
+                            <div class="box-graph-card active" onclick="$(this).toggleClass('active');">
+                              <div class="box-card">
+                                <p class="bc-sub-ttl">외운 것 중 몇개나 기억할까?</p>
+                                <div class="bc-ttl-figure-wrap">
+                                  <i class="bc-ttl-figure type-01"></i>
+                                </div>
+                                <div class="bc-ttl-wrap">
+                                  <h4 class="bc-ttl">
+                                    현재 기억 중
+                                    </span>
+                                  </h4>
+                                  <div class="bc-ttl-desc">
+                                    <span class="blue-txt">22개</span>
+                                    <span class="txt sm-txt">(총 40개)</span>
+                                  </div>
+                                </div>
+                                <p class="bc-desc">[최근 학습] 가장 마지막 학습 게임에서, 53문제 중, <span class="blue-txt">32개(72%)</span>를
+                                  맞았습니다.</p>
+                              </div>
+                              <div class="graph-card type-blue">
+                                <canvas id="myChart05"></canvas>
+                              </div>
+                            </div>
+                            <div class="box-graph-card active" onclick="$(this).toggleClass('active');">
+                              <div class="box-card">
+                                <p class="bc-sub-ttl">나의 망각 곡선</p>
+                                <div class="bc-ttl-figure-wrap">
+                                  <i class="bc-ttl-figure type-02"></i>
+                                </div>
+                                <div class="bc-ttl-wrap">
+                                  <h4 class="bc-ttl">지난번 보다</h4>
+                                  <div class="bc-ttl-desc">
+                                    <span class="pink-txt">26개</span>
+                                    <span class="txt">잊음</span>
+                                  </div>
+                                </div>
+                                <p class="bc-desc">[망각 곡선] 현재 지난번 학습했을때 기억했던 53개 중, <span class="pink-txt">24개(47%)</span>를 잊은
+                                  상태입니다. </p>
+                              </div>
+                              <div class="graph-card type-pink">
+                                <canvas id="myChart06"></canvas>
+                              </div>
+                            </div>
+                            <div class="box-card type-other">
+                              <dl class="card-dl-head">
+                                <dt class="dt">회독 수</dt>
+                                <dd class="dd">정답 수</dd>
+                              </dl>
+                              <dl class="card-dl">
+                                <dt class="dt">5회차</dt>
+                                <dd class="dd">
+                                  <span class="color-txt">12개</span>
+                                </dd>
+                              </dl>
+                              <dl class="card-dl">
+                                <dt class="dt">4회차</dt>
+                                <dd class="dd">
+                                  <span class="color-txt">9개</span>
+                                </dd>
+                              </dl>
+                              <dl class="card-dl">
+                                <dt class="dt">3회차</dt>
+                                <dd class="dd">
+                                  <span class="color-txt">7개</span>
+                                </dd>
+                              </dl>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- END 내용 -->
+
+                        <!-- 펼치기 내용 -->
+                        <div class="box-content type-02">
+                          <div class="ttl-wrap">
+                            <div class="ttl-item">
+                              <i class="ico ico-cards"></i>
+                              <span class="txt">총 23개</span>
+                            </div>
+                            <p class="mg-left blue-txt">미리보기 미제공 콘텐츠입니다.</p>
+                          </div>
+                          <div class="inner-cards">
+                            <div class="inner-card">
+                              <p class="card-ttl-sub">1번째 카드</p>
+                              <div class="card-content">
+                                <p class="card-desc">
+                                  다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음
+                                  코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을
+                                  입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요
+                                </p>
+                                <img src="assets/images/sample/img-sample-quesion01.png" alt="" class="card-img">
+                              </div>
+                            </div>
+                            <div class="inner-card">
+                              <div class="card-content">
+                                <h3 class="card-ttl">정답은 “N=1*20”입니다.</h3>
+                                <p class="card-desc">
+                                  해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설
+                                  영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설
+                                  영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설
+                                  영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다.
+                                </p>
+                              </div>
+                            </div>
+                            <div class="inner-card">
+                              <p class="card-ttl-sub">3번째 카드</p>
+                              <div class="card-content">
+                                <p class="card-desc">
+                                  다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의
+                                  빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을
+                                  입력해주세요다음 코드의 빈칸을 입력해주세요
+                                </p>
+                              </div>
+                            </div>
+                            <div class="inner-card">
+                              <div class="card-content">
+                                <h3 class="card-ttl">정답은 “N=1*20”입니다.</h3>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- END 펼치기 내용 -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- END 페이지 : 단어장 -->
+        </div>
+      </div>
+
+      <!-- END 페이지 -->
+
+      <!-- 푸터 -->
+      <div class="footer-wrap">
+
+        <!-- 푸터 가이드 -->
+        <div class="footer-txt-container">
+          <p class="txt-sm">어떤 암기박스가 필요하신가요?</p>
+          <h3 class="txt-lg">원하는 암기박스가 없다면, <br>
+            벤리에게 신청하세요!</h3>
+          <button type="button" class="blue-txt-btn">암기박스 신청하기</button>
+        </div>
+
+        <!-- END 푸터 가이드 -->
+
+        <!-- 푸터 -->
+        <footer class="footer">
+          <div class="footer-inner">
+            <h6 class="logo">
+              <a href="#">
+                <img src="assets/images/logo/logo-white.svg" alt="">
+              </a>
+            </h6>
+            <div class="footer-info-wrap">
+              <ul class="info-list-grp">
+                <li class="list">업체명 : 벤리</li>
+                <li class="list">사업자등록번호 : 368-25-01378</li>
+                <li class="list">통신판매업신고번호 : 제 2022-서울송파-00240호</li>
+                <li class="list">대표이사 : 이정윤</li>
+                <li class="list">문의: help@office.benly.kr</li>
+              </ul>
+            </div>
+            <div class="footer-btn-wrap">
+              <ul class="btn-list-grp">
+                <li class="list">
+                  <a href="#" class="link">이용 약관</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">개인정보 취급방침</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">유료 이용약관</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">청소년 보호정책</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+        <!-- END 푸터 -->
+      </div>
+
+      <!-- END 푸터 -->
+    </div>
+    <script src="assets/js/ui.js"></script>
+
+    <!-- 1. 코딩연습 첫번째 그래프 -->
+    <script>
+      CanvasRenderingContext2D.prototype.roundRect = function(x, y, width, height, radius) {
+        if (width < 2 * radius) radius = width / 2;
+        if (height < 2 * radius) radius = height / 2;
+        this.beginPath();
+        this.moveTo(x + radius, y);
+        this.arcTo(x + width, y, x + width, y + height, radius);
+        this.arcTo(x + width, y + height, x, y + height, radius);
+        this.arcTo(x, y + height, x, y, radius);
+        this.arcTo(x, y, x + width, y, radius);
+        this.closePath();
+        return this;
+      };
+      const data01 = {
+        labels: ['12시간전', '9시간전', '3시간전', '1시간전', '지금'],
+        datasets: [{
+          label: 'Visits',
+          data: [100, 82, 76, 43, 35],
+          fill: false,
+          borderColor: '#017AFB',
+          backgroundColor: '#017AFB',
+          pointBorderColor: '#017AFB',
+          pointBackgroundColor: '#017AFB',
+          pointBackgroundColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#017AFB'],
+          pointRadius: 5,
+          pointHoverRadius: 7,
+          pointHitRadius: 30,
+          pointBorderWidth: 2,
+          showLine: true
+        }]
+      };
+      const config01 = {
+        type: 'line',
+        data: data01,
+        options: {
+          scales: {
+            y: {
+              display: false,
+              suggestedMax: Math.max(...data01.datasets[0].data) + 5,
+            },
+            x: {
+              display: true,
+              grid: {
+                drawBorder: false,
+                display: false
+              },
+              ticks: {
+                color: '#017AFB',
+                font: function(context) {
+                  if (context.tick.label === "지금") {
+                    return {
+                      size: 14,
+                      weight: 'bold'
+                    };
+                  } else {
+                    return {
+                      size: 14
+                    };
+                  }
+                }
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              enabled: false
+            }
+          },
+          elements: {
+            line: {
+              tension: 0.05
+            },
+            point: {
+              pointStyle: 'circle'
+            }
+          },
+          maintainAspectRatio: false,
+          layout: {
+            padding: {
+              right: 20, // 우측 패딩 추가
+              left: 20, // 우측 패딩 추가
+              top: 50 // 상단 패딩 추가
+            }
+          }
+        },
+        plugins: [{
+          id: 'dataValueLabels',
+          afterDatasetsDraw: function(chart, args, pluginOptions) {
+            const {
+              ctx,
+              chartArea: {
+                top,
+                right,
+                bottom,
+                left
+              }
+            } = chart;
+            chart.data.datasets.forEach((dataset, i) => {
+              const meta = chart.getDatasetMeta(i);
+              meta.data.forEach((element, index) => {
+                const value = dataset.data[index];
+                if (value !== null) {
+                  const {
+                    x,
+                    y
+                  } = element.getCenterPoint();
+                  const displayText = value.toString();
+                  ctx.fillStyle = '#017AFB';
+                  ctx.textAlign = 'center';
+                  ctx.textBaseline = 'middle';
+                  // 모든 데이터 포인트의 텍스트를 그립니다.
+                  // 마지막 데이터 포인트에 대해서만 "개"를 붙여 박스로 강조합니다.
+                  if (index === dataset.data.length - 1) {
+                    const adjustedY = y - 25; // 점으로부터 위로 조정
+                    const fullDisplayText = `${displayText}%`; // 마지막 텍스트에 '개'를 붙입니다.
+                    const textWidth = ctx.measureText(fullDisplayText).width;
+                    const boxWidth = textWidth + 10; // 텍스트 너비에 여백 추가
+                    const boxHeight = 27; // 고정된 박스 높이
+                    const boxX = x - (boxWidth / 2);
+                    const boxY = adjustedY - (boxHeight / 2);
+                    // 둥근 모서리 박스 그리기
+                    ctx.fillStyle = '#FFE9EE';
+                    ctx.roundRect(boxX, boxY, boxWidth, boxHeight, 5).fill();
+                    // 박스 안의 텍스트 그리기
+                    ctx.font = 'bold 14px Arial';
+                    ctx.fillStyle = '#017AFB';
+                    ctx.fillText(fullDisplayText, x, boxY + (boxHeight / 2));
+                  } else {
+                    // 다른 데이터 포인트들은 박스 없이 그냥 텍스트를 그립니다.
+                    ctx.font = '14px Arial';
+                    ctx.fillText(displayText, x, y - 15);
+                  }
+                }
+              });
+            });
+          }
+        }]
+      };
+      const ctx01 = document.getElementById('myChart01').getContext('2d');
+      new Chart(ctx01, config01); // 차트 초기화 및 생성
+    </script>
+
+    <!-- 2. 코딩연습 두번째 그래프 -->
+    <script>
+      CanvasRenderingContext2D.prototype.roundRect = function(x, y, width, height, radius) {
+        if (width < 2 * radius) radius = width / 2;
+        if (height < 2 * radius) radius = height / 2;
+        this.beginPath();
+        this.moveTo(x + radius, y);
+        this.arcTo(x + width, y, x + width, y + height, radius);
+        this.arcTo(x + width, y + height, x, y + height, radius);
+        this.arcTo(x, y + height, x, y, radius);
+        this.arcTo(x, y, x + width, y, radius);
+        this.closePath();
+        return this;
+      };
+      const data02 = {
+        labels: ['12시간전', '9시간전', '3시간전', '1시간전', '지금'],
+        datasets: [{
+          label: 'Visits',
+          data: [12, 14, 15, 19, 22],
+          fill: false,
+          borderColor: '#017AFB',
+          backgroundColor: '#017AFB',
+          pointBorderColor: '#017AFB',
+          pointBackgroundColor: '#017AFB',
+          pointBackgroundColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#017AFB'],
+          pointRadius: 5,
+          pointHoverRadius: 7,
+          pointHitRadius: 30,
+          pointBorderWidth: 2,
+          showLine: true
+        }]
+      };
+      const config02 = {
+        type: 'line',
+        data: data02,
+        options: {
+          scales: {
+            y: {
+              display: false,
+              suggestedMax: Math.max(...data02.datasets[0].data) + 5,
+            },
+            x: {
+              display: true,
+              grid: {
+                drawBorder: false,
+                display: false
+              },
+              ticks: {
+                color: '#017AFB',
+                font: function(context) {
+                  if (context.tick.label === "지금") {
+                    return {
+                      size: 14,
+                      weight: 'bold'
+                    };
+                  } else {
+                    return {
+                      size: 14
+                    };
+                  }
+                }
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              enabled: false
+            }
+          },
+          elements: {
+            line: {
+              tension: 0.05
+            },
+            point: {
+              pointStyle: 'circle'
+            }
+          },
+          maintainAspectRatio: false,
+          layout: {
+            padding: {
+              right: 20, // 우측 패딩 추가
+              left: 20, // 우측 패딩 추가
+              top: 50 // 상단 패딩 추가
+            }
+          }
+        },
+        plugins: [{
+          id: 'dataValueLabels',
+          afterDatasetsDraw: function(chart, args, pluginOptions) {
+            const {
+              ctx,
+              chartArea: {
+                top,
+                right,
+                bottom,
+                left
+              }
+            } = chart;
+            chart.data.datasets.forEach((dataset, i) => {
+              const meta = chart.getDatasetMeta(i);
+              meta.data.forEach((element, index) => {
+                const value = dataset.data[index];
+                if (value !== null) {
+                  const {
+                    x,
+                    y
+                  } = element.getCenterPoint();
+                  const displayText = value.toString();
+                  ctx.fillStyle = '#017AFB';
+                  ctx.textAlign = 'center';
+                  ctx.textBaseline = 'middle';
+                  // 모든 데이터 포인트의 텍스트를 그립니다.
+                  // 마지막 데이터 포인트에 대해서만 "개"를 붙여 박스로 강조합니다.
+                  if (index === dataset.data.length - 1) {
+                    const adjustedY = y - 25; // 점으로부터 위로 조정
+                    const fullDisplayText = `${displayText}개`; // 마지막 텍스트에 '개'를 붙입니다.
+                    const textWidth = ctx.measureText(fullDisplayText).width;
+                    const boxWidth = textWidth + 10; // 텍스트 너비에 여백 추가
+                    const boxHeight = 27; // 고정된 박스 높이
+                    const boxX = x - (boxWidth / 2);
+                    const boxY = adjustedY - (boxHeight / 2);
+                    // 둥근 모서리 박스 그리기
+                    ctx.fillStyle = '#FFE9EE';
+                    ctx.roundRect(boxX, boxY, boxWidth, boxHeight, 5).fill();
+                    // 박스 안의 텍스트 그리기
+                    ctx.font = 'bold 14px Arial';
+                    ctx.fillStyle = '#017AFB';
+                    ctx.fillText(fullDisplayText, x, boxY + (boxHeight / 2));
+                  } else {
+                    // 다른 데이터 포인트들은 박스 없이 그냥 텍스트를 그립니다.
+                    ctx.font = '14px Arial';
+                    ctx.fillText(displayText, x, y - 15);
+                  }
+                }
+              });
+            });
+          }
+        }]
+      };
+      const ctx02 = document.getElementById('myChart02').getContext('2d');
+      new Chart(ctx02, config02); // 차트 초기화 및 생성
+    </script>
+
+    <!-- 3. 코딩연습 세번째 그래프 -->
+    <script>
+      CanvasRenderingContext2D.prototype.roundRect = function(x, y, width, height, radius) {
+        if (width < 2 * radius) radius = width / 2;
+        if (height < 2 * radius) radius = height / 2;
+        this.beginPath();
+        this.moveTo(x + radius, y);
+        this.arcTo(x + width, y, x + width, y + height, radius);
+        this.arcTo(x + width, y + height, x, y + height, radius);
+        this.arcTo(x, y + height, x, y, radius);
+        this.arcTo(x, y, x + width, y, radius);
+        this.closePath();
+        return this;
+      };
+      const data03 = {
+        labels: ['12시간전', '9시간전', '3시간전', '1시간전', '지금'],
+        datasets: [{
+          label: 'Visits',
+          data: [48, 27, 40, 38, 26],
+          fill: false,
+          borderColor: 'rgb(255, 99, 132)',
+          backgroundColor: 'rgb(255, 99, 132)',
+          pointBorderColor: 'rgb(255, 99, 132)',
+          pointBackgroundColor: 'rgb(255, 99, 132)',
+          pointBackgroundColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', 'rgb(255, 99, 132)'],
+          pointRadius: 5,
+          pointHoverRadius: 7,
+          pointHitRadius: 30,
+          pointBorderWidth: 2,
+          showLine: true
+        }]
+      };
+      const config03 = {
+        type: 'line',
+        data: data03,
+        options: {
+          scales: {
+            y: {
+              display: false,
+              suggestedMax: Math.max(...data03.datasets[0].data) + 5,
+            },
+            x: {
+              display: true,
+              grid: {
+                drawBorder: false,
+                display: false
+              },
+              ticks: {
+                color: '#F75E83',
+                font: function(context) {
+                  if (context.tick.label === "지금") {
+                    return {
+                      size: 14,
+                      weight: 'bold'
+                    };
+                  } else {
+                    return {
+                      size: 14
+                    };
+                  }
+                }
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              enabled: false
+            }
+          },
+          elements: {
+            line: {
+              tension: 0.05
+            },
+            point: {
+              pointStyle: 'circle'
+            }
+          },
+          maintainAspectRatio: false,
+          layout: {
+            padding: {
+              right: 20, // 우측 패딩 추가
+              left: 20, // 우측 패딩 추가
+              top: 50 // 상단 패딩 추가
+            }
+          }
+        },
+        plugins: [{
+          id: 'dataValueLabels',
+          afterDatasetsDraw: function(chart, args, pluginOptions) {
+            const {
+              ctx,
+              chartArea: {
+                top,
+                right,
+                bottom,
+                left
+              }
+            } = chart;
+            chart.data.datasets.forEach((dataset, i) => {
+              const meta = chart.getDatasetMeta(i);
+              meta.data.forEach((element, index) => {
+                const value = dataset.data[index];
+                if (value !== null) {
+                  const {
+                    x,
+                    y
+                  } = element.getCenterPoint();
+                  const displayText = value.toString();
+                  ctx.fillStyle = '#F75E83';
+                  ctx.textAlign = 'center';
+                  ctx.textBaseline = 'middle';
+                  // 모든 데이터 포인트의 텍스트를 그립니다.
+                  // 마지막 데이터 포인트에 대해서만 "개"를 붙여 박스로 강조합니다.
+                  if (index === dataset.data.length - 1) {
+                    const adjustedY = y - 25; // 점으로부터 위로 조정
+                    const fullDisplayText = `${displayText}개`; // 마지막 텍스트에 '개'를 붙입니다.
+                    const textWidth = ctx.measureText(fullDisplayText).width;
+                    const boxWidth = textWidth + 10; // 텍스트 너비에 여백 추가
+                    const boxHeight = 27; // 고정된 박스 높이
+                    const boxX = x - (boxWidth / 2);
+                    const boxY = adjustedY - (boxHeight / 2);
+                    // 둥근 모서리 박스 그리기
+                    ctx.fillStyle = '#FFE9EE';
+                    ctx.roundRect(boxX, boxY, boxWidth, boxHeight, 5).fill();
+                    // 박스 안의 텍스트 그리기
+                    ctx.font = 'bold 14px Arial';
+                    ctx.fillStyle = '#F75E83';
+                    ctx.fillText(fullDisplayText, x, boxY + (boxHeight / 2));
+                  } else {
+                    // 다른 데이터 포인트들은 박스 없이 그냥 텍스트를 그립니다.
+                    ctx.font = '14px Arial';
+                    ctx.fillText(displayText, x, y - 15);
+                  }
+                }
+              });
+            });
+          }
+        }]
+      };
+      const ctx03 = document.getElementById('myChart03').getContext('2d');
+      new Chart(ctx03, config03); // 차트 초기화 및 생성
+    </script>
+
+    <!-- 4. 코딩연습 네번째 그래프 -->
+    <script>
+      CanvasRenderingContext2D.prototype.roundRect = function(x, y, width, height, radius) {
+        if (width < 2 * radius) radius = width / 2;
+        if (height < 2 * radius) radius = height / 2;
+        this.beginPath();
+        this.moveTo(x + radius, y);
+        this.arcTo(x + width, y, x + width, y + height, radius);
+        this.arcTo(x + width, y + height, x, y + height, radius);
+        this.arcTo(x, y + height, x, y, radius);
+        this.arcTo(x, y, x + width, y, radius);
+        this.closePath();
+        return this;
+      };
+      const data04 = {
+        labels: ['12시간전', '9시간전', '3시간전', '1시간전', '지금'],
+        datasets: [{
+          label: 'Visits',
+          data: [100, 82, 76, 43, 35],
+          fill: false,
+          borderColor: '#017AFB',
+          backgroundColor: '#017AFB',
+          pointBorderColor: '#017AFB',
+          pointBackgroundColor: '#017AFB',
+          pointBackgroundColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#017AFB'],
+          pointRadius: 5,
+          pointHoverRadius: 7,
+          pointHitRadius: 30,
+          pointBorderWidth: 2,
+          showLine: true
+        }]
+      };
+      const config04 = {
+        type: 'line',
+        data: data04,
+        options: {
+          scales: {
+            y: {
+              display: false,
+              suggestedMax: Math.max(...data04.datasets[0].data) + 5,
+            },
+            x: {
+              display: true,
+              grid: {
+                drawBorder: false,
+                display: false
+              },
+              ticks: {
+                color: '#017AFB',
+                font: function(context) {
+                  if (context.tick.label === "지금") {
+                    return {
+                      size: 14,
+                      weight: 'bold'
+                    };
+                  } else {
+                    return {
+                      size: 14
+                    };
+                  }
+                }
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              enabled: false
+            }
+          },
+          elements: {
+            line: {
+              tension: 0.05
+            },
+            point: {
+              pointStyle: 'circle'
+            }
+          },
+          maintainAspectRatio: false,
+          layout: {
+            padding: {
+              right: 20, // 우측 패딩 추가
+              left: 20, // 우측 패딩 추가
+              top: 50 // 상단 패딩 추가
+            }
+          }
+        },
+        plugins: [{
+          id: 'dataValueLabels',
+          afterDatasetsDraw: function(chart, args, pluginOptions) {
+            const {
+              ctx,
+              chartArea: {
+                top,
+                right,
+                bottom,
+                left
+              }
+            } = chart;
+            chart.data.datasets.forEach((dataset, i) => {
+              const meta = chart.getDatasetMeta(i);
+              meta.data.forEach((element, index) => {
+                const value = dataset.data[index];
+                if (value !== null) {
+                  const {
+                    x,
+                    y
+                  } = element.getCenterPoint();
+                  const displayText = value.toString();
+                  ctx.fillStyle = '#017AFB';
+                  ctx.textAlign = 'center';
+                  ctx.textBaseline = 'middle';
+                  // 모든 데이터 포인트의 텍스트를 그립니다.
+                  // 마지막 데이터 포인트에 대해서만 "개"를 붙여 박스로 강조합니다.
+                  if (index === dataset.data.length - 1) {
+                    const adjustedY = y - 25; // 점으로부터 위로 조정
+                    const fullDisplayText = `${displayText}%`; // 마지막 텍스트에 '개'를 붙입니다.
+                    const textWidth = ctx.measureText(fullDisplayText).width;
+                    const boxWidth = textWidth + 10; // 텍스트 너비에 여백 추가
+                    const boxHeight = 27; // 고정된 박스 높이
+                    const boxX = x - (boxWidth / 2);
+                    const boxY = adjustedY - (boxHeight / 2);
+                    // 둥근 모서리 박스 그리기
+                    ctx.fillStyle = '#FFE9EE';
+                    ctx.roundRect(boxX, boxY, boxWidth, boxHeight, 5).fill();
+                    // 박스 안의 텍스트 그리기
+                    ctx.font = 'bold 14px Arial';
+                    ctx.fillStyle = '#017AFB';
+                    ctx.fillText(fullDisplayText, x, boxY + (boxHeight / 2));
+                  } else {
+                    // 다른 데이터 포인트들은 박스 없이 그냥 텍스트를 그립니다.
+                    ctx.font = '14px Arial';
+                    ctx.fillText(displayText, x, y - 15);
+                  }
+                }
+              });
+            });
+          }
+        }]
+      };
+      const ctx04 = document.getElementById('myChart04').getContext('2d');
+      new Chart(ctx04, config04); // 차트 초기화 및 생성
+    </script>
+
+    <!-- 5. 코딩연습 다섯번째 그래프 -->
+    <script>
+      CanvasRenderingContext2D.prototype.roundRect = function(x, y, width, height, radius) {
+        if (width < 2 * radius) radius = width / 2;
+        if (height < 2 * radius) radius = height / 2;
+        this.beginPath();
+        this.moveTo(x + radius, y);
+        this.arcTo(x + width, y, x + width, y + height, radius);
+        this.arcTo(x + width, y + height, x, y + height, radius);
+        this.arcTo(x, y + height, x, y, radius);
+        this.arcTo(x, y, x + width, y, radius);
+        this.closePath();
+        return this;
+      };
+      const data05 = {
+        labels: ['12시간전', '9시간전', '3시간전', '1시간전', '지금'],
+        datasets: [{
+          label: 'Visits',
+          data: [12, 14, 15, 19, 22],
+          fill: false,
+          borderColor: '#017AFB',
+          backgroundColor: '#017AFB',
+          pointBorderColor: '#017AFB',
+          pointBackgroundColor: '#017AFB',
+          pointBackgroundColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', '#017AFB'],
+          pointRadius: 5,
+          pointHoverRadius: 7,
+          pointHitRadius: 30,
+          pointBorderWidth: 2,
+          showLine: true
+        }]
+      };
+      const config05 = {
+        type: 'line',
+        data: data05,
+        options: {
+          scales: {
+            y: {
+              display: false,
+              suggestedMax: Math.max(...data05.datasets[0].data) + 5,
+            },
+            x: {
+              display: true,
+              grid: {
+                drawBorder: false,
+                display: false
+              },
+              ticks: {
+                color: '#017AFB',
+                font: function(context) {
+                  if (context.tick.label === "지금") {
+                    return {
+                      size: 14,
+                      weight: 'bold'
+                    };
+                  } else {
+                    return {
+                      size: 14
+                    };
+                  }
+                }
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              enabled: false
+            }
+          },
+          elements: {
+            line: {
+              tension: 0.05
+            },
+            point: {
+              pointStyle: 'circle'
+            }
+          },
+          maintainAspectRatio: false,
+          layout: {
+            padding: {
+              right: 20, // 우측 패딩 추가
+              left: 20, // 우측 패딩 추가
+              top: 50 // 상단 패딩 추가
+            }
+          }
+        },
+        plugins: [{
+          id: 'dataValueLabels',
+          afterDatasetsDraw: function(chart, args, pluginOptions) {
+            const {
+              ctx,
+              chartArea: {
+                top,
+                right,
+                bottom,
+                left
+              }
+            } = chart;
+            chart.data.datasets.forEach((dataset, i) => {
+              const meta = chart.getDatasetMeta(i);
+              meta.data.forEach((element, index) => {
+                const value = dataset.data[index];
+                if (value !== null) {
+                  const {
+                    x,
+                    y
+                  } = element.getCenterPoint();
+                  const displayText = value.toString();
+                  ctx.fillStyle = '#017AFB';
+                  ctx.textAlign = 'center';
+                  ctx.textBaseline = 'middle';
+                  // 모든 데이터 포인트의 텍스트를 그립니다.
+                  // 마지막 데이터 포인트에 대해서만 "개"를 붙여 박스로 강조합니다.
+                  if (index === dataset.data.length - 1) {
+                    const adjustedY = y - 25; // 점으로부터 위로 조정
+                    const fullDisplayText = `${displayText}개`; // 마지막 텍스트에 '개'를 붙입니다.
+                    const textWidth = ctx.measureText(fullDisplayText).width;
+                    const boxWidth = textWidth + 10; // 텍스트 너비에 여백 추가
+                    const boxHeight = 27; // 고정된 박스 높이
+                    const boxX = x - (boxWidth / 2);
+                    const boxY = adjustedY - (boxHeight / 2);
+                    // 둥근 모서리 박스 그리기
+                    ctx.fillStyle = '#FFE9EE';
+                    ctx.roundRect(boxX, boxY, boxWidth, boxHeight, 5).fill();
+                    // 박스 안의 텍스트 그리기
+                    ctx.font = 'bold 14px Arial';
+                    ctx.fillStyle = '#017AFB';
+                    ctx.fillText(fullDisplayText, x, boxY + (boxHeight / 2));
+                  } else {
+                    // 다른 데이터 포인트들은 박스 없이 그냥 텍스트를 그립니다.
+                    ctx.font = '14px Arial';
+                    ctx.fillText(displayText, x, y - 15);
+                  }
+                }
+              });
+            });
+          }
+        }]
+      };
+      const ctx05 = document.getElementById('myChart05').getContext('2d');
+      new Chart(ctx05, config05); // 차트 초기화 및 생성
+    </script>
+
+    <!-- 6. 코딩연습 여섯번째 그래프 -->
+    <script>
+      CanvasRenderingContext2D.prototype.roundRect = function(x, y, width, height, radius) {
+        if (width < 2 * radius) radius = width / 2;
+        if (height < 2 * radius) radius = height / 2;
+        this.beginPath();
+        this.moveTo(x + radius, y);
+        this.arcTo(x + width, y, x + width, y + height, radius);
+        this.arcTo(x + width, y + height, x, y + height, radius);
+        this.arcTo(x, y + height, x, y, radius);
+        this.arcTo(x, y, x + width, y, radius);
+        this.closePath();
+        return this;
+      };
+      const data06 = {
+        labels: ['12시간전', '9시간전', '3시간전', '1시간전', '지금'],
+        datasets: [{
+          label: 'Visits',
+          data: [48, 27, 40, 38, 26],
+          fill: false,
+          borderColor: 'rgb(255, 99, 132)',
+          backgroundColor: 'rgb(255, 99, 132)',
+          pointBorderColor: 'rgb(255, 99, 132)',
+          pointBackgroundColor: 'rgb(255, 99, 132)',
+          pointBackgroundColor: ['#FFFFFF', '#FFFFFF', '#FFFFFF', '#FFFFFF', 'rgb(255, 99, 132)'],
+          pointRadius: 5,
+          pointHoverRadius: 7,
+          pointHitRadius: 30,
+          pointBorderWidth: 2,
+          showLine: true
+        }]
+      };
+      const config06 = {
+        type: 'line',
+        data: data06,
+        options: {
+          scales: {
+            y: {
+              display: false,
+              suggestedMax: Math.max(...data06.datasets[0].data) + 5,
+            },
+            x: {
+              display: true,
+              grid: {
+                drawBorder: false,
+                display: false
+              },
+              ticks: {
+                color: '#F75E83',
+                font: function(context) {
+                  if (context.tick.label === "지금") {
+                    return {
+                      size: 14,
+                      weight: 'bold'
+                    };
+                  } else {
+                    return {
+                      size: 14
+                    };
+                  }
+                }
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: false
+            },
+            tooltip: {
+              enabled: false
+            }
+          },
+          elements: {
+            line: {
+              tension: 0.05
+            },
+            point: {
+              pointStyle: 'circle'
+            }
+          },
+          maintainAspectRatio: false,
+          layout: {
+            padding: {
+              right: 20, // 우측 패딩 추가
+              left: 20, // 우측 패딩 추가
+              top: 50 // 상단 패딩 추가
+            }
+          }
+        },
+        plugins: [{
+          id: 'dataValueLabels',
+          afterDatasetsDraw: function(chart, args, pluginOptions) {
+            const {
+              ctx,
+              chartArea: {
+                top,
+                right,
+                bottom,
+                left
+              }
+            } = chart;
+            chart.data.datasets.forEach((dataset, i) => {
+              const meta = chart.getDatasetMeta(i);
+              meta.data.forEach((element, index) => {
+                const value = dataset.data[index];
+                if (value !== null) {
+                  const {
+                    x,
+                    y
+                  } = element.getCenterPoint();
+                  const displayText = value.toString();
+                  ctx.fillStyle = '#F75E83';
+                  ctx.textAlign = 'center';
+                  ctx.textBaseline = 'middle';
+                  // 모든 데이터 포인트의 텍스트를 그립니다.
+                  // 마지막 데이터 포인트에 대해서만 "개"를 붙여 박스로 강조합니다.
+                  if (index === dataset.data.length - 1) {
+                    const adjustedY = y - 25; // 점으로부터 위로 조정
+                    const fullDisplayText = `${displayText}개`; // 마지막 텍스트에 '개'를 붙입니다.
+                    const textWidth = ctx.measureText(fullDisplayText).width;
+                    const boxWidth = textWidth + 10; // 텍스트 너비에 여백 추가
+                    const boxHeight = 27; // 고정된 박스 높이
+                    const boxX = x - (boxWidth / 2);
+                    const boxY = adjustedY - (boxHeight / 2);
+                    // 둥근 모서리 박스 그리기
+                    ctx.fillStyle = '#FFE9EE';
+                    ctx.roundRect(boxX, boxY, boxWidth, boxHeight, 5).fill();
+                    // 박스 안의 텍스트 그리기
+                    ctx.font = 'bold 14px Arial';
+                    ctx.fillStyle = '#F75E83';
+                    ctx.fillText(fullDisplayText, x, boxY + (boxHeight / 2));
+                  } else {
+                    // 다른 데이터 포인트들은 박스 없이 그냥 텍스트를 그립니다.
+                    ctx.font = '14px Arial';
+                    ctx.fillText(displayText, x, y - 15);
+                  }
+                }
+              });
+            });
+          }
+        }]
+      };
+      const ctx06 = document.getElementById('myChart06').getContext('2d');
+      new Chart(ctx06, config06); // 차트 초기화 및 생성
+    </script>
+  </body>
+</html>

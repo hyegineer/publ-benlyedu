@@ -310,222 +310,285 @@
       <!-- END PC 버전 헤더 -->
 
       <!-- 페이지 -->
-      <div class="quiz-page page-wrapper">
+      <div class="inquiry-main-page page-wrapper">
         <div class="page-container">
 
-          <!-- 페이지 : 퀴즈 -->
+          <!-- 페이지 : 문의 -->
           <div class="page">
 
-            <!-- 순간 학습 -->
-            <div class="game-card-box">
-              <div class="card-box-top">
-                <button type="button" class="txt-btn">Skip</button>
-                <h3 class="game-card-box-ttl">순간 학습</h3>
-                <div class="game-card-box-status">
-                  <i class="ico ico-count-watch"></i>
-                  <span class="txt">9초 자동 넘어감</span>
-                </div>
-                <button type="button" class="btn square-list-btn">
-                  <span class="txt-hidden">버튼</span>
-                  <i class="ico ico-square-list"></i>
-                </button>
+            <!-- TODO: MOBILE 버전 헤더 -->
+            <div class="mobile-top-tabs">
+              <div class="tabs">
+                <button type="button" class="tab active">엔터프라이즈 문의</button>
+                <button type="button" class="tab">과목별 랭킹</button>
+                <button type="button" class="tab">전체상품</button>
+                <button type="button" class="tab">관리자 페이지</button>
+                <button type="button" class="tab">내 채널</button>
               </div>
+            </div>
 
-              <!-- 게임 카드 컨텐츠 -->
-              <div class="card-box-bottom">
-                <div class="moment-game-content">
+            <!-- END MOBILE 버전 헤더 -->
+            <section class="main-section section">
+              <div class="section-inner">
+                <h2 class="section-title">
+                  벤리 팀과 함께 하세요! <br>
+                  무엇에 대해 문의하고 싶으신가요?
+                </h2>
+                <img src="assets/images/img-inquiry-main.png" alt="벤리팀 이미지" class="inquiry-img">
+              </div>
+            </section>
+            <section class="inquiry-section section">
+              <div class="section-inner">
+                <div class="inquiry-section-grid">
+                  <div class="inner-grid">
+                    <h3 class="section-title">벤리와 함께 하길 원하는 서비스에 대해 문의하세요.</h3>
+                    <div class="form-white-box white-box">
+                      <div class="form-item-grp">
 
-                  <!-- FIXME: 0118 클릭시 뒤집어지는 효과 타겟 변경 -->
-                  <div class="moment-game-card-box" onclick="filpCard(this);">
-                    <div class="moment-game-card type-front">
-                      <div class="moment-game-card-top">
-                        <div class="d-iflex-row type-gap4">
-                          <button type="button" class="btn ico-btn">
-                            <span class="txt-hidden">듣기</span>
-                            <i class="ico ico-16 ico-blue-sound"></i>
-                          </button>
-                          <button type="button" class="btn ico-btn toggle-btn">
-                            <span class="txt-hidden">즐겨찾기</span>
-                            <i class="ico ico-16 ico-blue-star-on ico-on"></i>
-                            <i class="ico ico-16 ico-blue-star-off ico-off"></i>
-                          </button>
-                        </div>
-                        <button type="button" class="btn btn-type-13 theme-solid-btn">힌트 보기</button>
-                      </div>
-
-                      <!-- FIXME: 0118 이미지 삽입 및 클래스 변경 -->
-                      <div class="moment-game-card-middle">
-                        <div class="moment-game-inner-content-wrap">
-                          <div class="moment-game-inner-content">
-                            <div class="img-wrap">
-                              <img src="assets/images/sample/img-sample-quiz01.png" alt="">
+                        <!-- 회사 이메일 -->
+                        <div class="form-item">
+                          <label class="form-label">
+                            <span>회사 이메일</span>
+                            <span class="color-txt">*</span>
+                          </label>
+                          <div class="form-inp-wrap">
+                            <div class="inp-wrap">
+                              <input type="text" placeholder="이메일을 입력해 주세요." class="form-inp">
                             </div>
-                            <p class="word">대략, 관해서, 거의</p>
+                            <p class="form-msg">회사 이메일이 없는 경우 개인 이메일을 사용하세요.</p>
+                          </div>
+                        </div>
+
+                        <!-- END 회사 이메일 -->
+
+                        <!-- 이름 -->
+                        <div class="form-item">
+                          <label class="form-label">
+                            <span>이름</span>
+                            <span class="color-txt">*</span>
+                          </label>
+                          <div class="form-inp-wrap">
+                            <div class="inp-wrap">
+                              <input type="text" placeholder="이름을 입력해 주세요." class="form-inp">
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- END 이름 -->
+
+                        <!-- 회사, 직책 -->
+                        <div class="form-items">
+                          <div class="form-item-inner">
+
+                            <!-- 회사 -->
+                            <div class="form-item">
+                              <label class="form-label">
+                                <span>회사</span>
+                                <span class="color-txt">*</span>
+                              </label>
+                              <div class="form-inp-wrap">
+                                <div class="inp-wrap">
+                                  <input type="text" placeholder="회사명을 입력해 주세요." class="form-inp">
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- END 회사 -->
+
+                            <!-- 직책 -->
+                            <div class="form-item">
+                              <label class="form-label">
+                                <span>직책</span>
+                                <span class="color-txt">*</span>
+                              </label>
+                              <div class="form-inp-wrap">
+                                <div class="inp-wrap">
+                                  <input type="text" placeholder="직책을 입력해 주세요." class="form-inp">
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- END 직책 -->
+                          </div>
+                          <p class="form-msg">프리랜서의 경우, “프리랜서”라고 적어주세요. </p>
+                        </div>
+
+                        <!-- 제목 -->
+                        <div class="form-item">
+                          <label class="form-label">
+                            <span>제목</span>
+                            <span class="color-txt">*</span>
+                          </label>
+                          <div class="form-inp-wrap">
+                            <div class="inp-wrap">
+                              <input type="text" placeholder="이름을 입력해 주세요." class="form-inp">
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- END 제목 -->
+
+                        <!-- 내용 -->
+                        <div class="form-item">
+                          <label class="form-label">
+                            <span>내용</span>
+                            <span class="color-txt">*</span>
+                          </label>
+                          <div class="form-inp-wrap">
+                            <div class="inp-wrap">
+                              <textarea class="form-inp"></textarea>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- END 내용 -->
+                      </div>
+                    </div>
+                    <p class="desc-txt">이 페이지를 제출하는 것으로 Benly의 <a href="#" class="color-txt">개인정보 보호정책</a>에 동의합니다.</p>
+                  </div>
+                  <div class="inner-grid type-right">
+                    <h3 class="section-title">Benly가 궁금하세요?</h3>
+                    <div id="swiper-benly-cards" class="swiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <div class="inquiry-desc-card">
+                            <div class="card-content">
+                              <h4 class="card-ttl">학원</h4>
+                              <p class="card-desc">
+                                벤리에 입점하고, 학원 부수익을 창출하세요.
+                              </p>
+                            </div>
+                            <button type="button" class="btn btn-type-16">학원 제안서 다운로드</button>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="inquiry-desc-card">
+                            <div class="card-content">
+                              <h4 class="card-ttl">학교</h4>
+                              <p class="card-desc">
+                                우리 학교 범위에 맞도록 채널을 만드세요.
+                              </p>
+                            </div>
+                            <button type="button" class="btn btn-type-16">학교 제안서 다운로드</button>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="inquiry-desc-card">
+                            <div class="card-content">
+                              <h4 class="card-ttl">기업</h4>
+                              <p class="card-desc">
+                                기업 교육에 알맞는 채널을 만드세요.
+                              </p>
+                            </div>
+                            <button type="button" class="btn btn-type-16">기업 제안서 다운로드</button>
+                          </div>
+                        </div>
+                        <div class="swiper-slide">
+                          <div class="inquiry-desc-card">
+                            <div class="card-content">
+                              <h4 class="card-ttl">프리랜서</h4>
+                              <p class="card-desc">
+                                프리랜서 채널도 만들어 부수익을 만드세요.
+                              </p>
+                            </div>
+                            <button type="button" class="btn btn-type-16">프리랜서 제안서 다운로드</button>
                           </div>
                         </div>
                       </div>
-
-                      <!-- END 0118 이미지 삽입 및 클래스 변경 -->
-                      <div class="moment-game-card-bottom">
-                        <button type="button" class="btn bottom-btn btn-w100 theme-solid-btn">클릭하여
-                          카드를 뒤집으세요</button>
-                      </div>
-                    </div>
-                    <div class="moment-game-card type-back">
-                      <div class="moment-game-card-top">
-                        <div class="d-iflex-row type-gap4">
-                          <button type="button" class="btn ico-btn">
-                            <span class="txt-hidden">듣기</span>
-                            <i class="ico ico-16 ico-blue-sound"></i>
-                          </button>
-                          <button type="button" class="btn ico-btn toggle-btn">
-                            <span class="txt-hidden">즐겨찾기</span>
-                            <i class="ico ico-16 ico-blue-star-on ico-on"></i>
-                            <i class="ico ico-16 ico-blue-star-off ico-off"></i>
-                          </button>
-                        </div>
-                        <button type="button" class="btn btn-type-13 theme-solid-btn">힌트 보기</button>
-                      </div>
-
-                      <!-- FIXME: 0118 이미지 삽입 및 클래스 변경 -->
-                      <div class="moment-game-card-middle">
-                        <div class="moment-game-inner-content-wrap">
-                          <div class="moment-game-inner-content">
-                            <div class="img-wrap">
-                              <img src="assets/images/sample/img-sample-quiz01.png" alt="">
-                            </div>
-                            <p class="word">about</p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <!-- END 0118 이미지 삽입 및 클래스 변경 -->
-                      <div class="moment-game-card-bottom">
-                        <button type="button" class="btn bottom-btn btn-w100 theme-solid-btn">클릭하여
-                          카드를 뒤집으세요</button>
-                      </div>
-                    </div>
-                  </div>
-
-                  <!-- END 0118 클릭시 뒤집어지는 효과 타겟 변경 -->
-                  <div class="moment-game-ctrl-btns">
-                    <button type="button" class="btn">
-                      <span class="txt-hidden">이전 문제</span>
-                      <i class="ico ico-skip-prev"></i>
-                    </button>
-                    <p class="num-txt">1/6</p>
-                    <button type="button" class="btn">
-                      <span class="txt-hidden">다음 문제</span>
-                      <i class="ico ico-skip-next"></i>
-                    </button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- END 컨텐츠 -->
-            </div>
-
-            <!-- END 순간 학습 -->
-
-            <!-- 1분 외우기 -->
-            <div class="game-card-box">
-              <div class="card-box-top">
-                <button type="button" class="txt-btn">Skip</button>
-                <h3 class="game-card-box-ttl">1분 외우기</h3>
-                <div class="game-card-box-status">
-                  <i class="ico ico-count-watch"></i>
-                  <span class="txt">9초 자동 넘어감</span>
-                </div>
-                <button type="button" class="btn square-list-btn">
-                  <span class="txt-hidden">버튼</span>
-                  <i class="ico ico-square-list"></i>
-                </button>
-              </div>
-
-              <!-- 게임 카드 컨텐츠 -->
-              <div class="card-box-bottom">
-                <div class="memorize-game-content">
-                  <div class="memorize-game-row">
-                    <div class="row-cell row-ttl">
-                      고전기 인도의 굽타 제국을 황금
-                      기로 이끈 왕으로, 문학과 예술
-                      의 후원자로 유명한 인물
-                    </div>
-                    <div class="row-cell row-desc">
-                      찬드라굽타2세
-                    </div>
-                  </div>
-                  <div class="memorize-game-row">
-                    <div class="row-cell row-ttl">
-                      고전기 인도의 굽타 제국을 황금
-                      기로 이끈 왕으로, 문학과 예술
-                      의 후원자로 유명한 인물
-                    </div>
-                    <div class="row-cell row-desc">
-                      찬드라굽타2세
-                    </div>
-                  </div>
-                  <div class="memorize-game-row">
-                    <div class="row-cell row-ttl">
-                      고전기 인도의 굽타 제국을 황금
-                      기로 이끈 왕으로, 문학과 예술
-                      의 후원자로 유명한 인물
-                    </div>
-                    <div class="row-cell row-desc">
-                      찬드라굽타2세
-                    </div>
-                  </div>
-                  <div class="memorize-game-row">
-                    <div class="row-cell row-ttl">
-                      고전기 인도의 굽타 제국을 황금
-                      기로 이끈 왕으로, 문학과 예술
-                      의 후원자로 유명한 인물
-                    </div>
-                    <div class="row-cell row-desc">
-                      찬드라굽타2세
-                    </div>
-                  </div>
-                  <div class="memorize-game-row">
-                    <div class="row-cell row-ttl">
-                      고전기 인도의 굽타 제국을 황금
-                      기로 이끈 왕으로, 문학과 예술
-                      의 후원자로 유명한 인물
-                    </div>
-                    <div class="row-cell row-desc">
-                      찬드라굽타2세
-                    </div>
-                  </div>
-                  <div class="memorize-game-row">
-                    <div class="row-cell row-ttl">
-                      고전기 인도의 굽타 제국을 황금
-                      기로 이끈 왕으로, 문학과 예술
-                      의 후원자로 유명한 인물
-                    </div>
-                    <div class="row-cell row-desc">
-                      찬드라굽타2세
                     </div>
                   </div>
                 </div>
+                <button type="button" class="theme-btn btn">제출</button>
               </div>
-
-              <!-- END 컨텐츠 -->
-            </div>
-
-            <!-- END 1분 외우기 -->
+            </section>
           </div>
 
-          <!-- END 페이지 : 퀴즈 -->
+          <!-- END 페이지 : 문의 -->
         </div>
       </div>
 
       <!-- END 페이지 -->
+
+      <!-- 푸터 -->
+      <div class="footer-wrap">
+
+        <!-- 푸터 가이드 -->
+        <div class="footer-txt-container">
+          <p class="txt-sm">어떤 암기박스가 필요하신가요?</p>
+          <h3 class="txt-lg">원하는 암기박스가 없다면, <br>
+            벤리에게 신청하세요!</h3>
+          <button type="button" class="blue-txt-btn">암기박스 신청하기</button>
+        </div>
+
+        <!-- END 푸터 가이드 -->
+
+        <!-- 푸터 -->
+        <footer class="footer">
+          <div class="footer-inner">
+            <h6 class="logo">
+              <a href="#">
+                <img src="assets/images/logo/logo-white.svg" alt="">
+              </a>
+            </h6>
+            <div class="footer-info-wrap">
+              <ul class="info-list-grp">
+                <li class="list">업체명 : 벤리</li>
+                <li class="list">사업자등록번호 : 368-25-01378</li>
+                <li class="list">통신판매업신고번호 : 제 2022-서울송파-00240호</li>
+                <li class="list">대표이사 : 이정윤</li>
+                <li class="list">문의: help@office.benly.kr</li>
+              </ul>
+            </div>
+            <div class="footer-btn-wrap">
+              <ul class="btn-list-grp">
+                <li class="list">
+                  <a href="#" class="link">이용 약관</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">개인정보 취급방침</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">유료 이용약관</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">청소년 보호정책</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+        <!-- END 푸터 -->
+      </div>
+
+      <!-- END 푸터 -->
     </div>
     <script src="assets/js/ui.js"></script>
     <script>
-      // FIXME: 0118 카드 뒤집어지는 효과 타겟 바꿈
-      function filpCard(element) {
-        $(element).toggleClass('active');
+      var ww = $(window).width();
+      var mySwiper = undefined;
+      function initSwiper() {
+        if (ww < 991 && mySwiper == undefined) {
+          mySwiper = new Swiper("#swiper-benly-cards", {
+            slidesPerView: 1.1,
+            spaceBetween: 20,
+            simulateTouch: true,
+            breakpoints: {
+              768: {
+                slidesPerView: 2,
+              }
+            }
+          });
+        } else if (ww >= 991 && mySwiper != undefined) {
+          mySwiper.destroy();
+          mySwiper = undefined;
+        }
       }
+      initSwiper();
+      $(window).on('resize', function() {
+        ww = $(window).width();
+        initSwiper();
+      });
     </script>
   </body>
 </html>
