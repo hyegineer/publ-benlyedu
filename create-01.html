@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>벤리에듀</title>
+
+    <!-- Open Graph -->
+    <meta name="title" content="Benly Edu">
+    <meta name="author" content="벤리에듀">
+    <meta name="description" content="벤리에듀 - AI 기억력 강화 e러닝 솔루션">
+    <meta name="keywords" content="benlyedu, Benlyedu, 벤리에듀, AI, 기억력, 강화, e러닝, 솔루션">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+
+    <!-- TODO: web url 설정해야합니다 -->
+
+    <!-- <meta property="og:url" content="해당 웹 url"> -->
+    <meta property="og:title" content="벤리에듀 (Benly Edu)">
+    <meta property="og:description" content="AI 기억력 강화 e러닝 솔루션">
+
+    <!-- TODO: meta thumbnail 설정 -->
+    <meta property="og:image" content="assets/images/og/og-thumbnail.png">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-36x36.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-72x72.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-256x256.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#017afb">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/odometer.css">
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/new.css">
+
+    <!-- JS -->
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/vendor/odometer.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('https://unpkg.com/smooth-corners');
+    </script>
+  </head>
+  <body ontouchstart>
+    <div id="app">
+
+      <!-- TODO: PC 버전 헤더 -->
+      <div class="header">
+        <div class="header-inner">
+
+          <!-- 로고 -->
+          <h1 class="logo">
+            <a href="index.html">
+              <img src="assets/images/logo/logo-color.png" alt="">
+            </a>
+          </h1>
+
+          <!-- END 로고 -->
+
+          <!-- 네비 -->
+          <div class="header-nav-wrap">
+            <button type="button" class="header-gnb-btn">
+              <span class="txt">메뉴</span>
+              <i class="ico ico-arrow-down ico-dark"></i>
+            </button>
+            <div class="header-gnb-wrap">
+              <ul class="nav-list-grp">
+                <li class="list active">
+                  <a href="#" class="link">홈</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">엔터프라이즈 문의</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">과목별 랭킹</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">전체상품</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">관리자 페이지</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">내 채널</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- END 네비 -->
+
+          <!-- 우측 버튼들 -->
+          <div class="header-btn-wrap">
+            <ul class="btn-list-grp">
+              <li class="list mb-none">
+                <div class="header-search-inp">
+                  <i class="ico ico-40 ico-search"></i>
+                  <input type="text" placeholder="검색" class="inp">
+                  <button type="button" class="btn del-btn">
+                    <span class="txt-hidden">검색어 지우기</span>
+                    <i class="ico ico-18 ico-search-x"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="list mb-none">
+                <button type="button" class="header-btn">
+                  <span class="txt-hidden">알림</span>
+                  <i class="ico ico-40 ico-alarm"></i>
+                </button>
+              </li>
+              <li class="list mb-none list-sub-nav">
+                <button type="button" class="header-btn myinfo-btn">
+                  <span class="txt-hidden">내 정보</span>
+                  <figure class="thumbnail circle">
+                    <img src="assets/images/sample/img-sample-hdprofile.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <i class="ico ico-arrow-down ico-dark"></i>
+                </button>
+                <div class="sub-nav-list-wrap">
+                  <ul class="sub-nav-list-grp">
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-user"></i>
+                        <span class="txt">계정 관리</span>
+                      </a>
+                    </li>
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-wordbook"></i>
+                        <span class="txt">내가 만든 단어장</span>
+                      </a>
+                    </li>
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-like"></i>
+                        <span class="txt">찜목록</span>
+                      </a>
+                    </li>
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-logout"></i>
+                        <span class="txt">로그아웃</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="list mb-none">
+                <button type="button" class="btn btn-type-02 blue-solid-btn">암기박스 신청</button>
+              </li>
+              <li class="list mb-show">
+                <button type="button" class="header-btn" onclick="openMobileSearch();">
+                  <span class="txt-hidden">모바일 검색하기</span>
+                  <i class="ico ico-40 ico-search"></i>
+                </button>
+              </li>
+              <li class="list mb-show">
+
+                <!-- TODO: 만약 알림이 있을 시 active 클래스가 추가되고, 빨간 뱃지가 보입니다 -->
+                <button type="button" class="header-btn badge-header-btn active" onclick="openMobileNav();">
+                  <span class="txt-hidden">모바일 메뉴</span>
+                  <i class="ico ico-40 ico-navlist"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- END 우측 버튼들 -->
+
+          <!-- 모바일 전용 검색영역 -->
+
+          <!-- FIXME: 0118 수정 -->
+          <div class="mobile-header-search-wrap">
+            <div class="mobile-header-search-inp">
+              <i class="ico ico-18 ico-search-mobile"></i>
+              <input type="text" class="inp" placeholder="검색어를 입력하세요.">
+              <button type="button" class="btn del-btn">
+                <span class="txt-hidden">검색어 지우기</span>
+                <i class="ico ico-18 ico-search-x"></i>
+              </button>
+            </div>
+            <button type="button" class="btn cancel-btn">취소</button>
+          </div>
+
+          <!-- END 0118 수정 -->
+
+          <!-- END 모바일 전용 검색영역 -->
+
+          <!-- 모바일 전용 햄버거 네비게이션 페이지 -->
+          <div class="mobile-header-nav-container">
+            <div class="top-wrap">
+
+              <!-- 로고 -->
+              <h1 class="logo">
+                <a href="index.html">
+                  <img src="assets/images/logo/logo-color.png" alt="">
+                </a>
+              </h1>
+
+              <!-- END 로고 -->
+              <button type="button" class="btn close-btn" onclick="closeMobileNav();">
+                <span class="txt-hidden">닫기</span>
+                <i class="ico ico-x"></i>
+              </button>
+            </div>
+            <div class="middle-wrap">
+              <ul class="nav-list-grp">
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-home"></i>
+                    <p class="txt">홈</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-user"></i>
+                    <p class="txt">계정관리</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-bell"></i>
+                    <p class="txt">
+                      <span>알림</span>
+                      <span class="red-txt">(10)</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-wordbook"></i>
+                    <p class="txt">내가 만든 단어장</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-like"></i>
+                    <p class="txt">즐겨찾기</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-mail"></i>
+                    <p class="txt">문의하기</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-logout"></i>
+                    <p class="txt">로그아웃</p>
+                  </a>
+                </li>
+              </ul>
+              <ul class="sns-list-grp">
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">페이스북</span>
+                    <i class="ico ico-facebook"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">핀터레스트</span>
+                    <i class="ico ico-pinterest"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">트위터</span>
+                    <i class="ico ico-twitter"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">공유하기</span>
+                    <i class="ico ico-share"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- END 모바일 전용 햄버거 네비게이션 페이지 -->
+        </div>
+      </div>
+
+      <!-- END PC 버전 헤더 -->
+
+      <!-- 페이지 -->
+      <div class="page-wrapper create-01-page-wrapper">
+        <div class="page-container">
+
+          <!-- 페이지 : 문제집 생성 -->
+          <div class="create-01-page page">
+            <div class="create-page-top-section section">
+              <div class="inner">
+                <div class="create-page-inner-section">
+                  <button type="button" class="btn direct-q-btn active">
+                    <span class="txt">문제집</span>
+                    <i class="ico ico-arrow-right"></i>
+                  </button>
+                </div>
+                <div class="create-page-inner-section">
+                  <h1 class="create-page-ttl">문제집 생성</h1>
+                  <button type="button" onclick="openModal('popup-2');" class="btn btn-type-05 blue-bd-btn">
+                    <i class="ico ico-green-x"></i>
+                    <span class="txt">한번에 추가하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <section class="em-content-section section">
+              <div class="inner">
+                <div class="section-content">
+
+                  <!-- TODO: 새로운 슬라이드 추가를 누르면 하단에 해당 요소가 생깁니다 -->
+                  <div class="slide-content-container">
+                    <div class="slide-content">
+
+                      <!-- 섹션 제목 -->
+                      <div class="ttl-wrap">
+
+                        <!-- TODO: 수정버튼 누르기 전에 보이는 제목입니다 -->
+                        <div class="ttl-item">
+                          <h3 class="ttl">책장 1</h3>
+                          <button type="button" class="btn">
+                            <span class="txt-hidden">수정하기</span>
+                            <i class="ico ico-pen"></i>
+                          </button>
+                        </div>
+
+                        <!-- END 수정버튼 누르기 전에 보이는 제목입니다 -->
+
+                        <!-- TODO: 수정버튼 누른 후에 보이는 제목 편집요소입니다 -->
+                        <div class="ttl-item" style="display: none;">
+                          <div class="inp-btn-item">
+                            <input type="text" placeholder="챕터 제목을 입력해 주세요." class="inp">
+                            <button type="button" class="btn ib-btn gray-bd-btn">저장</button>
+                          </div>
+                        </div>
+
+                        <!-- END 수정버튼 누른 후에 보이는 제목 편집요소입니다 -->
+                      </div>
+
+                      <!-- END 섹션 제목 -->
+
+                      <!-- 섹션 내용 -->
+                      <article class="content">
+                        <div class="grid-list-grp">
+
+                          <!-- 리스트 -->
+
+                          <!-- TODO: 새로운 문제집 카드입니다. -->
+                          <div class="list">
+
+                            <!-- 카드 -->
+                            <div class="box-card-item type-create">
+                              <div class="txt-wrap">
+                                <div class="circle">
+                                  <i class="ico ico-box-q-book"></i>
+                                </div>
+                                <span class="txt">새로운 문제집</span>
+                              </div>
+                            </div>
+
+                            <!-- END 카드 -->
+                          </div>
+
+                          <!-- END 리스트 -->
+
+                          <!-- 리스트 -->
+                          <div class="list">
+
+                            <!-- 카드 -->
+                            <div class="box-card-item">
+                              <div class="box-card-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-book01.png" alt="" class="thumbnail-default-img type-full">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-pdf.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                                <ul class="card-information">
+                                  <li>
+                                    <div class="card-top-wrap">
+                                      <div class="d-iflex-row type-gap7">
+                                        <span class="btn btn-type-06 light-blue-solid-btn">책1</span>
+
+                                        <!-- <span class="btn btn-type-06 gray-solid-btn">MY</span> -->
+
+                                        <!-- <span class="btn btn-type-06 green-solid-btn">책1</span> -->
+
+                                        <!-- <span class="btn btn-type-06 red-solid-btn">비공개</span> -->
+                                      </div>
+                                      <div class="mg-left d-iflex-row type-gap5">
+                                        <div class="btn-set d-iflex-row">
+                                          <button type="button" class="btn bsbtn">
+                                            <span class="txt-hidden">설정하기</span>
+                                            <i class="ico ico-dots"></i>
+                                          </button>
+                                          <div class="btn-set-wrap">
+                                            <ul class="btn-set-list-grp">
+                                              <li class="btn-set-list">
+                                                <button type="button" onclick="openModal('popup-1');" class="btn">표지
+                                                  꾸미기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공개로 전환</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn"><span class="blue-txt">비공개로
+                                              전환</span></button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">복제</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공유하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn"><span class="red-txt">삭제</span></button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <h4 class="card-name">수능 전용 사자성어 300제수능 전용 사자성어 300제수능 전용 사자성어 300...</h4>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="box-card-bottom">
+                                <div class="box-dl-grp">
+                                  <dl class="box-dl">
+                                    <dt>공개여부</dt>
+                                    <dd>
+                                      <span class="color-txt">공개</span>
+                                    </dd>
+                                  </dl>
+                                  <dl class="box-dl">
+                                    <dt>챕터</dt>
+                                    <dd>
+                                      <span class="color-txt">0개</span>
+                                    </dd>
+                                  </dl>
+                                  <dl class="box-dl">
+                                    <dt>카드</dt>
+                                    <dd>
+                                      <span class="color-txt">0개</span>
+                                    </dd>
+                                  </dl>
+                                </div>
+
+                                <!-- TODO: 시작하기 버튼 활성화 되기 전 type-before 클래스가 있습니다 -->
+                                <button type="button" class="btn btn-w100 btn-type-07 blue-solid-btn type-before">만들기</button>
+                              </div>
+                            </div>
+
+                            <!-- END 카드 -->
+                          </div>
+
+                          <!-- END 리스트 -->
+
+                          <!-- 리스트 -->
+                          <div class="list">
+
+                            <!-- 카드 -->
+                            <div class="box-card-item">
+                              <div class="box-card-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-book02.png" alt="" class="thumbnail-default-img type-full">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-pdf.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                                <ul class="card-information">
+                                  <li>
+                                    <div class="card-top-wrap">
+                                      <div class="d-iflex-row type-gap7">
+                                        <span class="btn btn-type-06 light-blue-solid-btn">책2</span>
+
+                                        <!-- <span class="btn btn-type-06 gray-solid-btn">MY</span> -->
+
+                                        <!-- <span class="btn btn-type-06 green-solid-btn">책1</span> -->
+
+                                        <!-- <span class="btn btn-type-06 red-solid-btn">비공개</span> -->
+                                      </div>
+                                      <div class="mg-left d-iflex-row type-gap5">
+                                        <div class="btn-set d-iflex-row">
+                                          <button type="button" class="btn bsbtn">
+                                            <span class="txt-hidden">설정하기</span>
+                                            <i class="ico ico-dots"></i>
+                                          </button>
+                                          <div class="btn-set-wrap">
+                                            <ul class="btn-set-list-grp">
+                                              <li class="btn-set-list">
+                                                <button onclick="openModal('popup-1')" type="button" class="btn">표지
+                                                  꾸미기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공개로 전환</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn"><span class="blue-txt">비공개로
+                                              전환</span></button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">복제</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공유하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn"><span class="red-txt">삭제</span></button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <h4 class="card-name">수능 전용 사자성어 300제수능 전용 사자성어 300제수능 전용 사자성어 300...</h4>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="box-card-bottom">
+                                <div class="box-dl-grp">
+                                  <dl class="box-dl">
+                                    <dt>공개여부</dt>
+                                    <dd>
+                                      <span class="color-txt red-txt">비공개</span>
+                                    </dd>
+                                  </dl>
+                                  <dl class="box-dl">
+                                    <dt>챕터</dt>
+                                    <dd>
+                                      <span class="color-txt">0개</span>
+                                    </dd>
+                                  </dl>
+                                  <dl class="box-dl">
+                                    <dt>카드</dt>
+                                    <dd>
+                                      <span class="color-txt">0개</span>
+                                    </dd>
+                                  </dl>
+                                </div>
+
+                                <!-- TODO: 시작하기 버튼 활성화 되기 전 type-before 클래스가 있습니다 -->
+                                <button type="button" class="btn btn-w100 btn-type-07 blue-solid-btn">만들기</button>
+                              </div>
+                            </div>
+
+                            <!-- END 카드 -->
+                          </div>
+
+                          <!-- END 리스트 -->
+
+                          <!-- 리스트 -->
+                          <div class="list">
+
+                            <!-- 카드 -->
+                            <div class="box-card-item">
+                              <div class="box-card-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-book03.png" alt="" class="thumbnail-default-img type-full">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-pdf.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                                <ul class="card-information">
+                                  <li>
+                                    <div class="card-top-wrap">
+                                      <div class="d-iflex-row type-gap7">
+                                        <span class="btn btn-type-06 light-blue-solid-btn">책3</span>
+
+                                        <!-- <span class="btn btn-type-06 gray-solid-btn">MY</span> -->
+
+                                        <!-- <span class="btn btn-type-06 green-solid-btn">책1</span> -->
+
+                                        <!-- <span class="btn btn-type-06 red-solid-btn">비공개</span> -->
+                                      </div>
+                                      <div class="mg-left d-iflex-row type-gap5">
+                                        <div class="btn-set d-iflex-row">
+                                          <button type="button" class="btn bsbtn">
+                                            <span class="txt-hidden">설정하기</span>
+                                            <i class="ico ico-dots"></i>
+                                          </button>
+                                          <div class="btn-set-wrap">
+                                            <ul class="btn-set-list-grp">
+                                              <li class="btn-set-list">
+                                                <button type="button" onclick="openModal('popup-1');" class="btn">표지
+                                                  꾸미기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공개로 전환</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn"><span class="blue-txt">비공개로
+                                              전환</span></button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">복제</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공유하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn"><span class="red-txt">삭제</span></button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <h4 class="card-name">수능 전용 사자성어 300제수능 전용 사자성어 300제수능 전용 사자성어 300...</h4>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="box-card-bottom">
+                                <div class="box-dl-grp">
+                                  <dl class="box-dl">
+                                    <dt>공개여부</dt>
+                                    <dd>
+                                      <span class="color-txt red-txt">비공개</span>
+                                    </dd>
+                                  </dl>
+                                  <dl class="box-dl">
+                                    <dt>챕터</dt>
+                                    <dd>
+                                      <span class="color-txt">0개</span>
+                                    </dd>
+                                  </dl>
+                                  <dl class="box-dl">
+                                    <dt>카드</dt>
+                                    <dd>
+                                      <span class="color-txt">0개</span>
+                                    </dd>
+                                  </dl>
+                                </div>
+
+                                <!-- TODO: 시작하기 버튼 활성화 되기 전 type-before 클래스가 있습니다 -->
+                                <button type="button" class="btn btn-w100 btn-type-07 blue-solid-btn">만들기</button>
+                              </div>
+                            </div>
+
+                            <!-- END 카드 -->
+                          </div>
+
+                          <!-- END 리스트 -->
+
+                          <!-- 리스트 -->
+                          <div class="list">
+
+                            <!-- 카드 -->
+                            <div class="box-card-item">
+                              <div class="box-card-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-book04.png" alt="" class="thumbnail-default-img type-full">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-pdf.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                                <ul class="card-information">
+                                  <li>
+                                    <div class="card-top-wrap">
+                                      <div class="d-iflex-row type-gap7">
+                                        <span class="btn btn-type-06 light-blue-solid-btn">책4</span>
+
+                                        <!-- <span class="btn btn-type-06 gray-solid-btn">MY</span> -->
+
+                                        <!-- <span class="btn btn-type-06 green-solid-btn">책1</span> -->
+
+                                        <!-- <span class="btn btn-type-06 red-solid-btn">비공개</span> -->
+                                      </div>
+                                      <div class="mg-left d-iflex-row type-gap5">
+                                        <div class="btn-set d-iflex-row">
+                                          <button type="button" class="btn bsbtn">
+                                            <span class="txt-hidden">설정하기</span>
+                                            <i class="ico ico-dots"></i>
+                                          </button>
+                                          <div class="btn-set-wrap">
+                                            <ul class="btn-set-list-grp">
+                                              <li class="btn-set-list">
+                                                <button type="button" onclick="openModal('popup-1');" class="btn">표지
+                                                  꾸미기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공개로 전환</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn"><span class="blue-txt">비공개로
+                                              전환</span></button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">복제</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공유하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn"><span class="red-txt">삭제</span></button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <h4 class="card-name">수능 전용 사자성어 300제수능 전용 사자성어 300제수능 전용 사자성어 300...</h4>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="box-card-bottom">
+                                <div class="box-dl-grp">
+                                  <dl class="box-dl">
+                                    <dt>공개여부</dt>
+                                    <dd>
+                                      <span class="color-txt red-txt">비공개</span>
+                                    </dd>
+                                  </dl>
+                                  <dl class="box-dl">
+                                    <dt>챕터</dt>
+                                    <dd>
+                                      <span class="color-txt">0개</span>
+                                    </dd>
+                                  </dl>
+                                  <dl class="box-dl">
+                                    <dt>카드</dt>
+                                    <dd>
+                                      <span class="color-txt">0개</span>
+                                    </dd>
+                                  </dl>
+                                </div>
+
+                                <!-- TODO: 시작하기 버튼 활성화 되기 전 type-before 클래스가 있습니다 -->
+                                <button type="button" class="btn btn-w100 btn-type-07 blue-solid-btn">만들기</button>
+                              </div>
+                            </div>
+
+                            <!-- END 카드 -->
+                          </div>
+
+                          <!-- END 리스트 -->
+
+                          <!-- 리스트 -->
+                          <div class="list">
+
+                            <!-- 카드 -->
+                            <div class="box-card-item">
+                              <div class="box-card-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-book05.png" alt="" class="thumbnail-default-img type-full">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-pdf.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                                <ul class="card-information">
+                                  <li>
+                                    <div class="card-top-wrap">
+                                      <div class="d-iflex-row type-gap7">
+                                        <span class="btn btn-type-06 light-blue-solid-btn">책5</span>
+
+                                        <!-- <span class="btn btn-type-06 gray-solid-btn">MY</span> -->
+
+                                        <!-- <span class="btn btn-type-06 green-solid-btn">책1</span> -->
+
+                                        <!-- <span class="btn btn-type-06 red-solid-btn">비공개</span> -->
+                                      </div>
+                                      <div class="mg-left d-iflex-row type-gap5">
+                                        <div class="btn-set d-iflex-row">
+                                          <button type="button" class="btn bsbtn">
+                                            <span class="txt-hidden">설정하기</span>
+                                            <i class="ico ico-dots"></i>
+                                          </button>
+                                          <div class="btn-set-wrap">
+                                            <ul class="btn-set-list-grp">
+                                              <li class="btn-set-list">
+                                                <button type="button" onclick="openModal('popup-1');" class="btn">표지
+                                                  꾸미기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공개로 전환</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn"><span class="blue-txt">비공개로
+                                              전환</span></button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">복제</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공유하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn"><span class="red-txt">삭제</span></button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <h4 class="card-name">수능 전용 사자성어 300제수능 전용 사자성어 300제수능 전용 사자성어 300...</h4>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="box-card-bottom">
+                                <div class="box-dl-grp">
+                                  <dl class="box-dl">
+                                    <dt>공개여부</dt>
+                                    <dd>
+                                      <span class="color-txt red-txt">비공개</span>
+                                    </dd>
+                                  </dl>
+                                  <dl class="box-dl">
+                                    <dt>챕터</dt>
+                                    <dd>
+                                      <span class="color-txt">0개</span>
+                                    </dd>
+                                  </dl>
+                                  <dl class="box-dl">
+                                    <dt>카드</dt>
+                                    <dd>
+                                      <span class="color-txt">0개</span>
+                                    </dd>
+                                  </dl>
+                                </div>
+
+                                <!-- TODO: 시작하기 버튼 활성화 되기 전 type-before 클래스가 있습니다 -->
+                                <button type="button" class="btn btn-w100 btn-type-07 blue-solid-btn">만들기</button>
+                              </div>
+                            </div>
+
+                            <!-- END 카드 -->
+                          </div>
+
+                          <!-- END 리스트 -->
+                        </div>
+                      </article>
+
+                      <!-- END 섹션 내용 -->
+                    </div>
+                    <section class="btn-container">
+                      <button type="button" class="btn btn-type-08 blue-bd-btn">+ 새로운 슬라이드 추가</button>
+
+                      <!-- <button type="button" class="btn btn-type-08 gray-bd-btn">+ 슬라이드는 최대 6개 입니다.</button> -->
+                    </section>
+                  </div>
+
+                  <!-- END 새로운 슬라이드 추가를 누르면 하단에 해당 요소가 생깁니다 -->
+
+                  <!-- TODO: 새로운 슬라이드 추가를 누르면 하단에 해당 요소가 생깁니다 -->
+                  <div class="slide-content-container">
+                    <div class="slide-content">
+
+                      <!-- 섹션 제목 -->
+                      <div class="ttl-wrap">
+
+                        <!-- TODO: 수정버튼 누르기 전에 보이는 제목입니다 -->
+                        <div class="ttl-item" style="display: none;">
+                          <h3 class="ttl"></h3>
+                          <button type="button" class="btn">
+                            <span class="txt-hidden">수정하기</span>
+                            <i class="ico ico-pen"></i>
+                          </button>
+                        </div>
+
+                        <!-- END 수정버튼 누르기 전에 보이는 제목입니다 -->
+
+                        <!-- TODO: 수정버튼 누른 후에 보이는 제목 편집요소입니다 -->
+                        <div class="ttl-item">
+                          <div class="inp-btn-item">
+                            <input type="text" placeholder="책장 제목을 입력해 주세요." class="inp">
+                            <button type="button" class="btn ib-btn gray-bd-btn">저장</button>
+                          </div>
+                        </div>
+
+                        <!-- END 수정버튼 누른 후에 보이는 제목 편집요소입니다 -->
+                      </div>
+
+                      <!-- END 섹션 제목 -->
+
+                      <!-- 섹션 내용 -->
+                      <article class="content">
+                        <div class="grid-list-grp">
+
+                          <!-- 리스트 -->
+
+                          <!-- TODO: 새로운 문제집 카드입니다. -->
+                          <div class="list">
+
+                            <!-- 카드 -->
+                            <div class="box-card-item type-create">
+                              <div class="txt-wrap">
+                                <div class="circle">
+                                  <i class="ico ico-box-q-book"></i>
+                                </div>
+                                <span class="txt">새로운 문제집</span>
+                              </div>
+                            </div>
+
+                            <!-- END 카드 -->
+                          </div>
+
+                          <!-- END 리스트 -->
+
+                          <!-- 리스트 -->
+                          <div class="list">
+
+                            <!-- 카드 -->
+                            <div class="box-card-item">
+                              <div class="box-card-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-book01.png" alt="" class="thumbnail-default-img type-full">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-pdf.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                                <ul class="card-information">
+                                  <li>
+                                    <div class="card-top-wrap">
+                                      <div class="d-iflex-row type-gap7">
+                                        <span class="btn btn-type-06 light-blue-solid-btn">책1</span>
+
+                                        <!-- <span class="btn btn-type-06 gray-solid-btn">MY</span> -->
+
+                                        <!-- <span class="btn btn-type-06 green-solid-btn">책1</span> -->
+
+                                        <!-- <span class="btn btn-type-06 red-solid-btn">비공개</span> -->
+                                      </div>
+                                      <div class="mg-left d-iflex-row type-gap5">
+                                        <div class="btn-set d-iflex-row">
+                                          <button type="button" class="btn bsbtn">
+                                            <span class="txt-hidden">설정하기</span>
+                                            <i class="ico ico-dots"></i>
+                                          </button>
+                                          <div class="btn-set-wrap">
+                                            <ul class="btn-set-list-grp">
+                                              <li class="btn-set-list">
+                                                <button type="button" onclick="openModal('popup-1');" class="btn">표지
+                                                  꾸미기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공개로 전환</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn"><span class="blue-txt">비공개로
+                                              전환</span></button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">복제</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공유하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn"><span class="red-txt">삭제</span></button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <h4 class="card-name">수능 전용 사자성어 300제수능 전용 사자성어 300제수능 전용 사자성어 300...</h4>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="box-card-bottom">
+                                <div class="box-dl-grp">
+                                  <dl class="box-dl">
+                                    <dt>공개여부</dt>
+                                    <dd>
+                                      <span class="color-txt">공개</span>
+                                    </dd>
+                                  </dl>
+                                  <dl class="box-dl">
+                                    <dt>챕터</dt>
+                                    <dd>
+                                      <span class="color-txt">0개</span>
+                                    </dd>
+                                  </dl>
+                                  <dl class="box-dl">
+                                    <dt>카드</dt>
+                                    <dd>
+                                      <span class="color-txt">0개</span>
+                                    </dd>
+                                  </dl>
+                                </div>
+
+                                <!-- TODO: 시작하기 버튼 활성화 되기 전 type-before 클래스가 있습니다 -->
+                                <button type="button" class="btn btn-w100 btn-type-07 blue-solid-btn type-before">만들기</button>
+                              </div>
+                            </div>
+
+                            <!-- END 카드 -->
+                          </div>
+
+                          <!-- END 리스트 -->
+
+                          <!-- 리스트 -->
+                          <div class="list">
+
+                            <!-- 카드 -->
+                            <div class="box-card-item">
+                              <div class="box-card-top">
+                                <figure class="thumbnail">
+
+                                  <!-- TODO: 이미지가 없을 때는 해당 default 이미지를 사용해주시고, 클래스는 thumbnail-default-img로 달아주세요 -->
+                                  <img src="assets/images/sample/img-thumbnail-book02.png" alt="" class="thumbnail-default-img type-full">
+
+                                  <!-- TODO: 이미지가 있을 때는 썸네일 이미지를 사용해주시고, 클래스는 thumbnail-img로 달아주세요 -->
+
+                                  <!-- <img src="assets/images/sample/img-sample-pdf.png" alt="" class="thumbnail-img"> -->
+                                </figure>
+                                <ul class="card-information">
+                                  <li>
+                                    <div class="card-top-wrap">
+                                      <div class="d-iflex-row type-gap7">
+                                        <span class="btn btn-type-06 light-blue-solid-btn">책2</span>
+
+                                        <!-- <span class="btn btn-type-06 gray-solid-btn">MY</span> -->
+
+                                        <!-- <span class="btn btn-type-06 green-solid-btn">책1</span> -->
+
+                                        <!-- <span class="btn btn-type-06 red-solid-btn">비공개</span> -->
+                                      </div>
+                                      <div class="mg-left d-iflex-row type-gap5">
+                                        <div class="btn-set d-iflex-row">
+                                          <button type="button" class="btn bsbtn">
+                                            <span class="txt-hidden">설정하기</span>
+                                            <i class="ico ico-dots"></i>
+                                          </button>
+                                          <div class="btn-set-wrap">
+                                            <ul class="btn-set-list-grp">
+                                              <li class="btn-set-list">
+                                                <button type="button" onclick="openModal('popup-1');" class="btn">표지
+                                                  꾸미기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공개로 전환</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn"><span class="blue-txt">비공개로
+                                              전환</span></button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">복제</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn">공유하기</button>
+                                              </li>
+                                              <li class="btn-set-list">
+                                                <button type="button" class="btn"><span class="red-txt">삭제</span></button>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li>
+                                    <h4 class="card-name">수능 전용 사자성어 300제수능 전용 사자성어 300제수능 전용 사자성어 300...</h4>
+                                  </li>
+                                </ul>
+                              </div>
+                              <div class="box-card-bottom">
+                                <div class="box-dl-grp">
+                                  <dl class="box-dl">
+                                    <dt>공개여부</dt>
+                                    <dd>
+                                      <span class="color-txt red-txt">비공개</span>
+                                    </dd>
+                                  </dl>
+                                  <dl class="box-dl">
+                                    <dt>챕터</dt>
+                                    <dd>
+                                      <span class="color-txt">0개</span>
+                                    </dd>
+                                  </dl>
+                                  <dl class="box-dl">
+                                    <dt>카드</dt>
+                                    <dd>
+                                      <span class="color-txt">0개</span>
+                                    </dd>
+                                  </dl>
+                                </div>
+
+                                <!-- TODO: 시작하기 버튼 활성화 되기 전 type-before 클래스가 있습니다 -->
+                                <button type="button" class="btn btn-w100 btn-type-07 blue-solid-btn">만들기</button>
+                              </div>
+                            </div>
+
+                            <!-- END 카드 -->
+                          </div>
+
+                          <!-- END 리스트 -->
+                        </div>
+                      </article>
+
+                      <!-- END 섹션 내용 -->
+                    </div>
+                    <section class="btn-container">
+                      <button type="button" class="btn btn-type-08 blue-bd-btn">+ 새로운 슬라이드 추가</button>
+
+                      <!-- <button type="button" class="btn btn-type-08 gray-bd-btn">+ 슬라이드는 최대 6개 입니다.</button> -->
+                    </section>
+                  </div>
+
+                  <!-- END 새로운 슬라이드 추가를 누르면 하단에 해당 요소가 생깁니다 -->
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- END 페이지 : 문제집 생성 -->
+
+          <!-- 팝업: 표지 꾸미기 -->
+          <div id="popup-1" class="popup-wrapper">
+            <div class="popup-overlay" onclick="closeModal('popup-1');"></div>
+            <div class="custom-popup popup sign-deco-popup">
+
+              <!-- 팝업 제목 -->
+              <div class="popup-ttl-wrap">
+                <div class="d-iflex-row type-gap11">
+                  <div class="popup-ttl-item">
+                    <h3 class="popup-ttl">표지 꾸미기</h3>
+                  </div>
+                </div>
+                <button type="button" onclick="closeModal('popup-1');" class="popup-close-btn">
+                  <span class="txt-hidden">팝업 닫기</span>
+                  <i class="ico ico-x"></i>
+                </button>
+              </div>
+
+              <!-- END 팝업 제목 -->
+
+              <!-- 팝업 내용 -->
+              <div class="popup-content">
+                <div class="content">
+                  <div class="form-item-grp">
+                    <div class="form-item">
+                      <label class="form-label">책 이름</label>
+                      <div class="form-inp-wrap">
+                        <input type="text" class="inp" placeholder="책 이름을 입력해 주세요. 예시 : 2학년 과학">
+                      </div>
+                    </div>
+                    <div class="form-item">
+                      <label class="form-label">표지 업로드</label>
+                      <div class="form-inp-wrap">
+                        <div class="file-upload-inp-wrap">
+                          <input type="file" id="file01" class="none">
+                          <label for="file01" class="file-upload-label">
+                            <div class="before-upload">
+                              <img src="assets/images/ico/ico-photo-upload.png" alt="" class="img-ico">
+                              <span class="txt">
+                          110 x 110px (1:1 비율) <br>10Mb 이하
+                        </span>
+                            </div>
+
+                            <!-- TODO: 업로드 시 before-after 안에 이미지 삽입됩니다. -->
+                            <div class="before-after" style="display: none;">
+                              <img src="assets/images/sample/img-sample-thumbnail4.png" alt="" class="img">
+                            </div>
+                          </label>
+                        </div>
+                        <p class="warning-txt">파일 용량이 초과되었습니다.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-btn-wrap">
+
+                  <!-- TODO: 업로드 완료시 type-before 클래스 지워주세요 -->
+                  <button type="button" onclick="openModal('modal-3');" class="btn btn-type-07 blue-solid-btn save-btn type-before">저장</button>
+                </div>
+              </div>
+
+              <!-- END 팝업 내용 -->
+            </div>
+          </div>
+
+          <!-- END 팝업: 표지 꾸미기 -->
+
+          <!-- 팝업: 한번에 추가 -->
+          <div id="popup-2" class="popup-wrapper">
+            <div class="popup-overlay" onclick="closeModal('popup-2');"></div>
+            <div class="custom-popup popup total-add-popup">
+
+              <!-- 팝업 제목 -->
+              <div class="popup-ttl-wrap">
+                <div class="d-iflex-row type-gap11">
+                  <div class="popup-ttl-item">
+                    <h3 class="popup-ttl">한번에 추가</h3>
+                  </div>
+                </div>
+                <button type="button" onclick="closeModal('popup-2');" class="popup-close-btn">
+                  <span class="txt-hidden">팝업 닫기</span>
+                  <i class="ico ico-x"></i>
+                </button>
+              </div>
+
+              <!-- END 팝업 제목 -->
+
+              <!-- 팝업 내용 -->
+              <div class="popup-content">
+                <div class="content">
+                  <p class="txt">엑셀로 최대 300개까지 한 번에 추가할 수 있어요!</p>
+                </div>
+                <div class="content-btn-wrap">
+                  <button type="button" class="btn btn-type-07 blue-bd-btn">엑셀 양식 다운로드</button>
+                  <button type="button" class="btn btn-type-07 blue-solid-btn">엑셀 업로드</button>
+                </div>
+              </div>
+
+              <!-- END 팝업 내용 -->
+            </div>
+          </div>
+
+          <!-- END 팝업: 한번에 추가 -->
+        </div>
+      </div>
+
+      <!-- END 페이지 -->
+
+      <!-- 푸터 -->
+      <div class="footer-wrap">
+
+        <!-- 푸터 가이드 -->
+        <div class="footer-txt-container">
+          <p class="txt-sm">어떤 암기박스가 필요하신가요?</p>
+          <h3 class="txt-lg">원하는 암기박스가 없다면, <br>
+            벤리에게 신청하세요!</h3>
+          <button type="button" class="blue-txt-btn">암기박스 신청하기</button>
+        </div>
+
+        <!-- END 푸터 가이드 -->
+
+        <!-- 푸터 -->
+        <footer class="footer">
+          <div class="footer-inner">
+            <h6 class="logo">
+              <a href="#">
+                <img src="assets/images/logo/logo-white.svg" alt="">
+              </a>
+            </h6>
+            <div class="footer-info-wrap">
+              <ul class="info-list-grp">
+                <li class="list">업체명 : 벤리</li>
+                <li class="list">사업자등록번호 : 368-25-01378</li>
+                <li class="list">통신판매업신고번호 : 제 2022-서울송파-00240호</li>
+                <li class="list">대표이사 : 이정윤</li>
+                <li class="list">문의: help@office.benly.kr</li>
+              </ul>
+            </div>
+            <div class="footer-btn-wrap">
+              <ul class="btn-list-grp">
+                <li class="list">
+                  <a href="#" class="link">이용 약관</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">개인정보 취급방침</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">유료 이용약관</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">청소년 보호정책</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+        <!-- END 푸터 -->
+      </div>
+
+      <!-- END 푸터 -->
+    </div>
+    <script src="assets/js/ui.js"></script>
+  </body>
+</html>

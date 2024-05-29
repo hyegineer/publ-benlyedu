@@ -354,7 +354,7 @@
                         </div>
                       </div>
                       <div class="left-content-info-wrap">
-                        <div class="card-class-wrap">
+                        <div onclick="location.href='channel-main.html';" class="card-class-wrap">
                           <img src="assets/images/sample/img-sample-symbol.png" alt="" class="class-symbol">
                           <span class="card-class">장쌤의 코딩 클래스</span>
                         </div>
@@ -368,13 +368,13 @@
                             <dd class="dd">100% (18% 감소)</dd>
                           </dl>
                         </div>
-                        <div class="card-star-wrap">
+                        <div onclick="location.href='channel-main.html';" class="card-star-wrap">
                           <div class="card-star">
                             <i class="ico ico-stars ico-stars-05"></i>
                             <span class="txt">(91)</span>
                           </div>
                         </div>
-                        <div class="card-play-count-wrap">
+                        <div onclick="location.href='channel-main.html';" class="card-play-count-wrap">
                           <p class="card-play-count">8.5k+ 플레이</p>
                         </div>
                         <div class="card-etc-info02-wrap">
@@ -395,8 +395,8 @@
 
                       <!-- 탭 -->
                       <div class="tabs">
-                        <button type="button" class="tab active">1. 파이썬 기본학습</button>
-                        <button type="button" class="tab">2. 코딩연습</button>
+                        <button data-tab-button="tab01" type="button" class="tab active">1. 파이썬 기본학습</button>
+                        <button data-tab-button="tab02" type="button" class="tab">2. 코딩연습</button>
                         <button type="button" class="tab">3. Html</button>
                         <button type="button" class="tab">4. vue</button>
                       </div>
@@ -419,7 +419,7 @@
                       </div>
 
                       <!-- 1. 파이썬 기본 학습 -->
-                      <div class="voca-content-box">
+                      <div id="tab01" class="voca-content-box">
 
                         <!-- 제목 -->
                         <div class="box-ttl-wrap">
@@ -440,6 +440,9 @@
                             <div class="box-graph-card" onclick="$(this).toggleClass('active');">
                               <div class="box-card">
                                 <p class="bc-sub-ttl">공부한 것 중 몇% 기억할까?</p>
+                                <div class="bc-ttl-figure-wrap">
+                                  <i class="bc-ttl-figure type-01"></i>
+                                </div>
                                 <div class="bc-ttl-wrap">
                                   <h4 class="bc-ttl">실시간 기억률</h4>
                                   <div class="bc-ttl-desc">
@@ -529,7 +532,7 @@
                       <!-- 2. 코딩연습 -->
 
                       <!-- TODO: 열린 상태면 voca-content-box 에 active 클래스 추가해주세요 -->
-                      <div class="voca-content-box active">
+                      <div id="tab02" class="voca-content-box active">
 
                         <!-- 제목 -->
                         <div class="box-ttl-wrap">
@@ -647,41 +650,92 @@
                             <p class="mg-left blue-txt">미리보기 미제공 콘텐츠입니다.</p>
                           </div>
                           <div class="inner-cards">
-                            <div class="inner-card">
-                              <p class="card-ttl-sub">1번째 카드</p>
-                              <div class="card-content">
-                                <p class="card-desc">
-                                  다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음
-                                  코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을
-                                  입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요
-                                </p>
-                                <img src="assets/images/sample/img-sample-quesion01.png" alt="" class="card-img">
+                            <div class="inner-flip-card" onclick="$(this).toggleClass('active');">
+                              <div class="inner-card type-front">
+                                <p class="card-ttl-sub">1번째 카드</p>
+                                <div class="card-content">
+                                  <p class="card-desc">
+                                    다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음
+                                    코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의
+                                    빈칸을
+                                    입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요
+                                  </p>
+                                  <img src="assets/images/sample/img-sample-quesion01.png" alt="" class="card-img">
+                                </div>
+                              </div>
+                              <div class="inner-card type-back">
+                                <div class="card-content">
+                                  <h3 class="card-ttl">정답은 “N=1*20”입니다.</h3>
+                                  <p class="card-desc">
+                                    해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다.
+                                    해설
+                                    영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설
+                                    영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설
+                                    영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다.
+                                  </p>
+                                </div>
                               </div>
                             </div>
-                            <div class="inner-card">
-                              <div class="card-content">
-                                <h3 class="card-ttl">정답은 “N=1*20”입니다.</h3>
-                                <p class="card-desc">
-                                  해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설
-                                  영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설
-                                  영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설
-                                  영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다.
-                                </p>
+                            <div class="inner-flip-card" onclick="$(this).toggleClass('active');">
+                              <div class="inner-card type-front">
+                                <div class="card-content">
+                                  <h3 class="card-ttl">정답은 “N=1*20”입니다.</h3>
+                                  <p class="card-desc">
+                                    해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다.
+                                    해설
+                                    영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설
+                                    영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설
+                                    영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다. 해설 영역입니다.
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="inner-card type-back">
+                                <p class="card-ttl-sub">1번째 카드</p>
+                                <div class="card-content">
+                                  <p class="card-desc">
+                                    다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음
+                                    코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의
+                                    빈칸을
+                                    입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요
+                                  </p>
+                                  <img src="assets/images/sample/img-sample-quesion01.png" alt="" class="card-img">
+                                </div>
                               </div>
                             </div>
-                            <div class="inner-card">
-                              <p class="card-ttl-sub">3번째 카드</p>
-                              <div class="card-content">
-                                <p class="card-desc">
-                                  다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의
-                                  빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을
-                                  입력해주세요다음 코드의 빈칸을 입력해주세요
-                                </p>
+                            <div class="inner-flip-card" onclick="$(this).toggleClass('active');">
+                              <div class="inner-card type-front">
+                                <p class="card-ttl-sub">3번째 카드</p>
+                                <div class="card-content">
+                                  <p class="card-desc">
+                                    다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음
+                                    코드의
+                                    빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을
+                                    입력해주세요다음 코드의 빈칸을 입력해주세요
+                                  </p>
+                                </div>
+                              </div>
+                              <div class="inner-card type-back">
+                                <div class="card-content">
+                                  <h3 class="card-ttl">정답은 “N=1*20”입니다.</h3>
+                                </div>
                               </div>
                             </div>
-                            <div class="inner-card">
-                              <div class="card-content">
-                                <h3 class="card-ttl">정답은 “N=1*20”입니다.</h3>
+                            <div class="inner-flip-card" onclick="$(this).toggleClass('active');">
+                              <div class="inner-card type-front">
+                                <div class="card-content">
+                                  <h3 class="card-ttl">정답은 “N=1*20”입니다.</h3>
+                                </div>
+                              </div>
+                              <div class="inner-card type-back">
+                                <p class="card-ttl-sub">3번째 카드</p>
+                                <div class="card-content">
+                                  <p class="card-desc">
+                                    다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음
+                                    코드의
+                                    빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을 입력해주세요다음 코드의 빈칸을
+                                    입력해주세요다음 코드의 빈칸을 입력해주세요
+                                  </p>
+                                </div>
                               </div>
                             </div>
                           </div>
@@ -690,6 +744,15 @@
                         <!-- END 펼치기 내용 -->
                       </div>
                     </div>
+                    <script>
+                      $('[data-tab-button]').on('click', function() {
+                        var tabId = $(this).attr('data-tab-button');
+                        var tabTop = $('#' + tabId).offset().top;
+                        $('html, body').animate({
+                          scrollTop: $('#' + tabId).offset().top - 130
+                        });
+                      })
+                    </script>
                   </div>
                 </div>
               </div>

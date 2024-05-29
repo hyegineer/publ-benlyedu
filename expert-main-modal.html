@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>벤리에듀</title>
+
+    <!-- Open Graph -->
+    <meta name="title" content="Benly Edu">
+    <meta name="author" content="벤리에듀">
+    <meta name="description" content="벤리에듀 - AI 기억력 강화 e러닝 솔루션">
+    <meta name="keywords" content="benlyedu, Benlyedu, 벤리에듀, AI, 기억력, 강화, e러닝, 솔루션">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+
+    <!-- TODO: web url 설정해야합니다 -->
+
+    <!-- <meta property="og:url" content="해당 웹 url"> -->
+    <meta property="og:title" content="벤리에듀 (Benly Edu)">
+    <meta property="og:description" content="AI 기억력 강화 e러닝 솔루션">
+
+    <!-- TODO: meta thumbnail 설정 -->
+    <meta property="og:image" content="assets/images/og/og-thumbnail.png">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-36x36.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-48x48.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-72x72.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-96x96.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-144x144.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-256x256.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/android-chrome-512x512.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/images/favicon/safari-pinned-tab.svg" color="#017afb">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/vendor/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/vendor/odometer.css">
+    <link rel="stylesheet" href="assets/css/vendor/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/new.css">
+
+    <!-- JS -->
+    <script src="assets/js/vendor/jquery-3.6.1.min.js"></script>
+    <script src="assets/js/vendor/odometer.js"></script>
+    <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      if (CSS && 'paintWorklet' in CSS) CSS.paintWorklet.addModule('https://unpkg.com/smooth-corners');
+    </script>
+  </head>
+  <body ontouchstart>
+    <div id="app">
+
+      <!-- TODO: PC 버전 헤더 -->
+      <div class="header">
+        <div class="header-inner">
+
+          <!-- 로고 -->
+          <h1 class="logo">
+            <a href="index.html">
+              <img src="assets/images/logo/logo-color.png" alt="">
+            </a>
+          </h1>
+
+          <!-- END 로고 -->
+
+          <!-- 네비 -->
+          <div class="header-nav-wrap">
+            <button type="button" class="header-gnb-btn">
+              <span class="txt">메뉴</span>
+              <i class="ico ico-arrow-down ico-dark"></i>
+            </button>
+            <div class="header-gnb-wrap">
+              <ul class="nav-list-grp">
+                <li class="list active">
+                  <a href="#" class="link">홈</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">엔터프라이즈 문의</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">과목별 랭킹</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">전체상품</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">관리자 페이지</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">내 채널</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- END 네비 -->
+
+          <!-- 우측 버튼들 -->
+          <div class="header-btn-wrap">
+            <ul class="btn-list-grp">
+              <li class="list mb-none">
+                <div class="header-search-inp">
+                  <i class="ico ico-40 ico-search"></i>
+                  <input type="text" placeholder="검색" class="inp">
+                  <button type="button" class="btn del-btn">
+                    <span class="txt-hidden">검색어 지우기</span>
+                    <i class="ico ico-18 ico-search-x"></i>
+                  </button>
+                </div>
+              </li>
+              <li class="list mb-none">
+                <button type="button" class="header-btn">
+                  <span class="txt-hidden">알림</span>
+                  <i class="ico ico-40 ico-alarm"></i>
+                </button>
+              </li>
+              <li class="list mb-none list-sub-nav">
+                <button type="button" class="header-btn myinfo-btn">
+                  <span class="txt-hidden">내 정보</span>
+                  <figure class="thumbnail circle">
+                    <img src="assets/images/sample/img-sample-hdprofile.png" alt="" class="thumbnail-img">
+                  </figure>
+                  <i class="ico ico-arrow-down ico-dark"></i>
+                </button>
+                <div class="sub-nav-list-wrap">
+                  <ul class="sub-nav-list-grp">
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-user"></i>
+                        <span class="txt">계정 관리</span>
+                      </a>
+                    </li>
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-wordbook"></i>
+                        <span class="txt">내가 만든 단어장</span>
+                      </a>
+                    </li>
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-like"></i>
+                        <span class="txt">찜목록</span>
+                      </a>
+                    </li>
+                    <li class="sub-nav-list">
+                      <a href="" class="sub-nav-link">
+                        <i class="ico ico-logout"></i>
+                        <span class="txt">로그아웃</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="list mb-none">
+                <button type="button" class="btn btn-type-02 blue-solid-btn">암기박스 신청</button>
+              </li>
+              <li class="list mb-show">
+                <button type="button" class="header-btn" onclick="openMobileSearch();">
+                  <span class="txt-hidden">모바일 검색하기</span>
+                  <i class="ico ico-40 ico-search"></i>
+                </button>
+              </li>
+              <li class="list mb-show">
+
+                <!-- TODO: 만약 알림이 있을 시 active 클래스가 추가되고, 빨간 뱃지가 보입니다 -->
+                <button type="button" class="header-btn badge-header-btn active" onclick="openMobileNav();">
+                  <span class="txt-hidden">모바일 메뉴</span>
+                  <i class="ico ico-40 ico-navlist"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <!-- END 우측 버튼들 -->
+
+          <!-- 모바일 전용 검색영역 -->
+
+          <!-- FIXME: 0118 수정 -->
+          <div class="mobile-header-search-wrap">
+            <div class="mobile-header-search-inp">
+              <i class="ico ico-18 ico-search-mobile"></i>
+              <input type="text" class="inp" placeholder="검색어를 입력하세요.">
+              <button type="button" class="btn del-btn">
+                <span class="txt-hidden">검색어 지우기</span>
+                <i class="ico ico-18 ico-search-x"></i>
+              </button>
+            </div>
+            <button type="button" class="btn cancel-btn">취소</button>
+          </div>
+
+          <!-- END 0118 수정 -->
+
+          <!-- END 모바일 전용 검색영역 -->
+
+          <!-- 모바일 전용 햄버거 네비게이션 페이지 -->
+          <div class="mobile-header-nav-container">
+            <div class="top-wrap">
+
+              <!-- 로고 -->
+              <h1 class="logo">
+                <a href="index.html">
+                  <img src="assets/images/logo/logo-color.png" alt="">
+                </a>
+              </h1>
+
+              <!-- END 로고 -->
+              <button type="button" class="btn close-btn" onclick="closeMobileNav();">
+                <span class="txt-hidden">닫기</span>
+                <i class="ico ico-x"></i>
+              </button>
+            </div>
+            <div class="middle-wrap">
+              <ul class="nav-list-grp">
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-home"></i>
+                    <p class="txt">홈</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-user"></i>
+                    <p class="txt">계정관리</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-bell"></i>
+                    <p class="txt">
+                      <span>알림</span>
+                      <span class="red-txt">(10)</span>
+                    </p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-wordbook"></i>
+                    <p class="txt">내가 만든 단어장</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-like"></i>
+                    <p class="txt">즐겨찾기</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-mail"></i>
+                    <p class="txt">문의하기</p>
+                  </a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">
+                    <i class="ico ico-logout"></i>
+                    <p class="txt">로그아웃</p>
+                  </a>
+                </li>
+              </ul>
+              <ul class="sns-list-grp">
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">페이스북</span>
+                    <i class="ico ico-facebook"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">핀터레스트</span>
+                    <i class="ico ico-pinterest"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">트위터</span>
+                    <i class="ico ico-twitter"></i>
+                  </button>
+                </li>
+                <li class="list">
+                  <button type="button" class="sns-btn">
+                    <span class="txt-hidden">공유하기</span>
+                    <i class="ico ico-share"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- END 모바일 전용 햄버거 네비게이션 페이지 -->
+        </div>
+      </div>
+
+      <!-- END PC 버전 헤더 -->
+
+      <!-- 페이지 -->
+      <div class="page-wrapper">
+        <div class="page-container">
+          <div class="page">
+            <section class="em-top-section section">
+              <div class="inner">
+                <button type="button" onclick="openModal('popup-2');" class="btn btn-type-03 gray-bd-btn">
+                  <i class="ico ico-20 ico-edit"></i>
+                  <span class="txt">채널편집</span>
+                </button>
+              </div>
+            </section>
+          </div>
+
+          <!-- 팝업 : 채널 편집 -->
+          <div id="popup-2" class="popup-wrapper">
+            <div class="popup-overlay" onclick="closeModal('popup-2');"></div>
+            <div class="custom-popup popup channel-edit-popup channel-edit-popup-02">
+
+              <!-- 팝업 제목 -->
+              <div class="popup-ttl-wrap">
+                <div class="d-iflex-row type-gap11">
+                  <div class="popup-ttl-item">
+                    <h3 class="popup-ttl">채널 편집</h3>
+                  </div>
+                </div>
+                <button type="button" onclick="closeModal('popup-2');" class="popup-close-btn">
+                  <span class="txt-hidden">팝업 닫기</span>
+                  <i class="ico ico-x"></i>
+                </button>
+              </div>
+
+              <!-- END 팝업 제목 -->
+
+              <!-- 팝업 내용 -->
+              <div class="popup-content">
+                <div class="content">
+                  <div class="form-item-grp">
+                    <div class="form-item">
+                      <label class="form-label">결제 설정</label>
+                      <div class="form-inp-wrap">
+                        <div class="pay-setting-inp-wrap">
+                          <div class="checkbox-item">
+                            <input id="option01" type="radio" class="custom-checkbox-inp none">
+                            <label for="option01" class="custom-checkbox type-circle"></label>
+                            <label for="option01" class="txt">무료</label>
+                          </div>
+                          <div class="checkbox-item">
+                            <input id="option02" type="checkbox" class="custom-checkbox-inp none">
+                            <label for="option02" class="custom-checkbox type-circle"></label>
+                            <label for="option02" class="txt">월 구독료</label>
+                            <div class="inp-txt-item type-month-charge">
+
+                              <!-- TODO: 월 구독료 체크를 하면 disabled 속성이 사라집니다. -->
+                              <input type="text" class="inp" disabled>
+                              <span class="txt">원</span>
+                            </div>
+                            <p class="guide-txt">
+                              <span class="blue-txt">★ <u>전문가 등록</u></span>
+                              으로 구독료 설정이 가능합니다.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-item">
+                      <label class="form-label">채널명</label>
+                      <div class="form-inp-wrap">
+                        <input type="text" class="inp" placeholder="이름을 입력해 주세요." />
+                      </div>
+                    </div>
+                    <div class="form-item">
+                      <label class="form-label">채널 설명</label>
+                      <div class="form-inp-wrap">
+                        <textarea class="inp" placeholder="채널을 설명하는 문구를 작성해주세요."></textarea>
+                      </div>
+                    </div>
+                    <div class="form-item">
+                      <label class="form-label">전자책 등록</label>
+                      <div class="form-inp-wrap">
+                        <div class="pay-setting-inp-wrap type-pb0">
+                          <div class="checkbox-item">
+                            <input id="ebook-yes" type="radio" name="ebook" class="custom-checkbox-inp none">
+                            <label for="ebook-yes" class="custom-checkbox type-circle"></label>
+                            <label for="ebook-yes" class="txt">등록</label>
+                          </div>
+                          <div class="checkbox-item">
+                            <input id="ebook-no" type="radio" name="ebook" class="custom-checkbox-inp none">
+                            <label for="ebook-no" class="custom-checkbox type-circle"></label>
+                            <label for="ebook-no" class="txt">미등록</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- TODO: 전자책 등록 시 나타나는 요소들입니다 -->
+                    <div class="ebook-form-items">
+                      <div class="form-item">
+                        <label class="form-label">이미지 등록</label>
+                        <div class="form-inp-wrap">
+                          <div class="file-upload-inp-wrap">
+                            <input type="file" id="file01" class="none">
+                            <div class="upload-btn-txt-wrap">
+                              <label for="file01" class="upload-btn btn">
+                                <i class="ico ico-upload-file"></i>
+                                <span class="txt">이미지 업로드</span>
+                              </label>
+                              <p class="red-txt">이미지는 1개만 업로드 가능합니다.</p>
+                            </div>
+
+                            <!-- TODO: 파일 업로드하면 active 클래스가 inactive로 바뀝니다. -->
+                            <div class="desc-box active">
+                              <div class="desc-box-folded-ment">
+                                <span>주의사항 보기</span>
+                                <i class="ico ico-arrow-down"></i>
+                              </div>
+                              <ul>
+                                <li>311 x 311px (1:1 비율)</li>
+                                <li>저작권 침해 이미지(무단복제, 도용)</li>
+                                <li>사용자의 프로필 사진과 동일 또는 유사 이미지</li>
+                                <li>임의로 제작된 인증 마크, 라벨, 할인표기</li>
+                                <li>검증 불가한 정보를 포함한 내용 (최초, 구독 수, 금액, 유일, 무제한, 1위 등)</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="file-upload-list-wrap">
+                            <div class="input-file-list">
+                              <span class="file-txt">png파일</span>
+                              <button type="button" class="input-file-btn">
+                                <span class="txt">image2222sdsdsdsdsdsd2.png</span>
+                                <i class="ico ico-x"></i>
+                              </button>
+                            </div>
+                            <img src="assets/images/sample/img-upload-pngfile.png" alt="" class="file-upload-img">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-item">
+                        <label class="form-label">PDF 등록</label>
+                        <div class="form-inp-wrap">
+                          <div class="file-upload-inp-wrap">
+                            <input type="file" id="file02" class="none">
+                            <div class="upload-btn-txt-wrap">
+                              <label for="file02" class="upload-btn btn">
+                                <i class="ico ico-upload-file"></i>
+                                <span class="txt">전자책 업로드</span>
+                              </label>
+                              <p class="red-txt">PDF는 여러개 업로드가 가능합니다.</p>
+                            </div>
+
+                            <!-- TODO: 파일 업로드하면 active 클래스가 inactive로 바뀝니다. -->
+                            <div class="desc-box active">
+                              <div class="desc-box-folded-ment">
+                                <span>주의사항 보기</span>
+                                <i class="ico ico-arrow-down"></i>
+                              </div>
+                              <ul>
+                                <li>합계 100mb 이하의 PDF 파일을 등록하실 수 있습니다.</li>
+                                <li>본인이 저작권을 소유한 전자책만 업로드 할 수 있습니다.</li>
+                                <li>제3자의 저작권을 침해하는 전자책 업로드 시, 법적 처벌을 받을 수 있습니다.</li>
+                                <li>개인 이메일, 전화, 주소는 등록할 수 없습니다.</li>
+                                <li>상업적인 이용 및 허가에 대한 부분을 확인하시어 등록해주시기 바랍니다.</li>
+                              </ul>
+                            </div>
+                          </div>
+                          <div class="file-upload-list-wrap">
+                            <div class="input-file-list">
+                              <span class="file-txt">pdf파일</span>
+                              <button type="button" class="input-file-btn">
+                                <span class="txt">image2222sdsdsdsdsdsd2.pdf</span>
+                                <i class="ico ico-x"></i>
+                              </button>
+                            </div>
+                            <div class="input-file-list">
+                              <span class="file-txt">pdf파일</span>
+                              <button type="button" class="input-file-btn">
+                                <span class="txt">image2222sdsdsdsdsdsd2.pdf</span>
+                                <i class="ico ico-x"></i>
+                              </button>
+                            </div>
+                            <div class="input-file-list">
+                              <span class="file-txt">pdf파일</span>
+                              <button type="button" class="input-file-btn">
+                                <span class="txt">image2222sdsdsdsdsdsd2.pdf</span>
+                                <i class="ico ico-x"></i>
+                              </button>
+                            </div>
+                            <div class="input-file-list">
+                              <span class="file-txt">pdf파일</span>
+                              <button type="button" class="input-file-btn">
+                                <span class="txt">image2222sdsdsdsdsdsd2.pdf</span>
+                                <i class="ico ico-x"></i>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-item">
+                        <label class="form-label">전자책 설명</label>
+                        <div class="form-inp-wrap">
+                          <textarea class="inp" placeholder="전자책에 대해 설명하는 문구를 작성해주세요."></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="content-btn-wrap">
+                  <button type="button" onclick="closeModal('popup-2');" class="btn btn-type-07 gray-solid-btn">취소</button>
+                  <button type="button" onclick="openModal('modal-3');" class="btn btn-type-07 blue-solid-btn">보내기</button>
+                </div>
+              </div>
+
+              <!-- END 팝업 내용 -->
+            </div>
+          </div>
+
+          <!-- END 팝업 : 채널 편집 -->
+        </div>
+      </div>
+
+      <!-- END 페이지 -->
+
+      <!-- 푸터 -->
+      <div class="footer-wrap">
+
+        <!-- 푸터 가이드 -->
+        <div class="footer-txt-container">
+          <p class="txt-sm">어떤 암기박스가 필요하신가요?</p>
+          <h3 class="txt-lg">원하는 암기박스가 없다면, <br>
+            벤리에게 신청하세요!</h3>
+          <button type="button" class="blue-txt-btn">암기박스 신청하기</button>
+        </div>
+
+        <!-- END 푸터 가이드 -->
+
+        <!-- 푸터 -->
+        <footer class="footer">
+          <div class="footer-inner">
+            <h6 class="logo">
+              <a href="#">
+                <img src="assets/images/logo/logo-white.svg" alt="">
+              </a>
+            </h6>
+            <div class="footer-info-wrap">
+              <ul class="info-list-grp">
+                <li class="list">업체명 : 벤리</li>
+                <li class="list">사업자등록번호 : 368-25-01378</li>
+                <li class="list">통신판매업신고번호 : 제 2022-서울송파-00240호</li>
+                <li class="list">대표이사 : 이정윤</li>
+                <li class="list">문의: help@office.benly.kr</li>
+              </ul>
+            </div>
+            <div class="footer-btn-wrap">
+              <ul class="btn-list-grp">
+                <li class="list">
+                  <a href="#" class="link">이용 약관</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">개인정보 취급방침</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">유료 이용약관</a>
+                </li>
+                <li class="list">
+                  <a href="#" class="link">청소년 보호정책</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </footer>
+
+        <!-- END 푸터 -->
+      </div>
+
+      <!-- END 푸터 -->
+    </div>
+    <script src="assets/js/ui.js"></script>
+    <script>
+      // 전자책 등록 체크시 나타나는 항목들
+      $('[name="ebook"]').on('change', function() {
+        if ($('#ebook-yes').is(':checked')) {
+          $('.ebook-form-items').css('display', 'block');
+        } else {
+          $('.ebook-form-items').css('display', 'none');
+        }
+      })
+    </script>
+  </body>
+</html>
